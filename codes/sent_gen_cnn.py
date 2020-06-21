@@ -36,6 +36,11 @@ for each in test_data:
 	f.write(each[0]+"\t"+str(each[1])+"\n")
 f.close()
 
+f = open("../data/full_data_cnn", "w")
+for each in final_data:
+	f.write(each[0]+"\t"+str(each[1])+"\n")
+f.close()
+
 print("Complete")
 # pu.db
 
