@@ -1,1 +1,1 @@
-{'not-a-strategy': 0, 'attack-credibility': 1, 'nitpicking': 2, 'personal-choice': 3, 'direct-rejection': 4, 'hesitance': 5, 'organization-inquiry': 6, 'deflect-responsibility': 7, 'self-pity': 8, 'delay-tactic': 9}
+{'not-a-strategy': -1, 'nitpicking': 0, 'deflect-responsibility': 1, 'direct-rejection': 2, 'delay-tactic': 3, 'organization-inquiry': 4, 'personal-choice': 5, 'self-pity': 6, 'hesitance': 7, 'attack-credibility': 8}
