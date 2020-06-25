@@ -20,14 +20,6 @@ def get_chunks_num(inp_list, num_chunks):
 	chunk_size = int(len(inp_list)/num_chunks)
 	return [inp_list[int(x* chunk_size):min(int((x+1)*chunk_size),len(inp_list))] for x in range(num_chunks)]
 
-def load_pickle(file):
-	with open(file,'rb') as handle:
-		return pickle.load(handle)
-
-def dump_pickle(file, obj):
-	with open(file,'wb') as handle:
-		pickle.dump(file, handle)
-
 DATA_PATH = '/projects/persuasionforgood-master/Face_acts/dialogue_act_prediction/resisting-persuasion/data'
 
 
