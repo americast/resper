@@ -3,7 +3,8 @@
 
 # In[45]:
 
-
+from collections import Counter
+import pudb
 import sys; sys.path.append('common/');
 from helper import *
 
@@ -137,7 +138,72 @@ print_label_dist('resistance_labels')
 
 
 # In[ ]:
+# Persuasion to resistance Mappings
+def get_map(donor_id = None):
+    df_req = df[['B2', 'B4', 'er_label_1', 'fine_labels']]
+
+    per_label = []
+    rest_label = []
+    mappings = {}
+
+    for i, row in df_req.iterrows():
+        # if donor_id is not None:
+        #     pu.db
+        if donor_id is None or row['B2'] in donor_id:
+            if row['B4'] == 0:
+                if i != 0:
+                    for label in per_label:
+                        if label in mappings:
+                            mappings[label].extend(rest_label)
+                        else:
+                            mappings[label] = rest_label
+                    per_label = []
+                per_label.append(row['er_label_1'])
+                rest_label = []
+            else:
+                rest_label.append(row['fine_labels'])
 
 
+    for each_map in mappings:
+        mappings[each_map] = dict(Counter(mappings[each_map]))
+        sum_ = 0
+        here = 0
+        name = ""
+        for i, each in enumerate(mappings[each_map]):
+            if i == 0:
+                name = each
+            sum_ += mappings[each_map][each]
+        try:
+            here = mappings[each_map][name]
+        except: pass
 
+        try:
+            mappings[each_map] = name+": "+str(int(100 * here/sum_))+"%"
+        except:
+            pass
+
+    print("Persuasion: ")
+    for each in mappings:
+        print(each)
+    print("\nResistance: ")
+    for each in mappings:
+        try:
+            print(mappings[each].split(':')[0])
+        except:
+            pass
+    print("\nPercentage: ")
+    for each in mappings:
+        try:
+            print(mappings[each].split(':')[1])
+        except:
+            pass
+
+print("all")
+get_map()
+
+print("\n\ndonors: ")
+get_map(sincere_donors_ids)
+
+print("\n\nnon-donors: ")
+get_map(sincere_nondonors_ids)
 
