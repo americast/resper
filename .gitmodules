@@ -1,3 +1,6 @@
+[submodule "persuasionforgood"]
+	path = persuasionforgood
+	url = https://github.com/americast/persuasionforgood.git
 [submodule "cnn-text-classification-pytorch"]
 	path = cnn-text-classification-pytorch
-	url = https://github.com/americast/cnn-text-classification-pytorch.git
+	url = git@github.com:americast/cnn-text-classification-pytorch.git
