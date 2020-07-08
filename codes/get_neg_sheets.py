@@ -15,8 +15,24 @@ while True:
 	done.append(line.strip())
 f.close()
 
-indices = list(indices - set(done))
+f = open("../data/neg.pkl", "rb")
+neg_pickle = pickle.load(f)
+f.close()
 
+valid = []
+
+for i in range(len(neg_pickle["train"])):
+	valid.append(neg_pickle["train"][i]["uuid"])
+
+for i in range(len(neg_pickle["test"])):
+	valid.append(neg_pickle["test"][i]["uuid"])
+
+for i in range(len(neg_pickle["valid"])):
+	valid.append(neg_pickle["valid"][i]["uuid"])
+
+valid = set(valid)
+indices = indices - set(done)
+indices = list(indices.intersection(valid))
 random.shuffle(indices)
 
 ids = {}
