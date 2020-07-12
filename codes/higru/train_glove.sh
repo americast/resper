@@ -1,0 +1,31 @@
+#!bin/bash
+LR=1e-3
+LR2=2e-5
+GPU=3
+du_bert=768
+du_glove=300
+dc=300
+seed=100
+
+# python EmoMain.py -lr  $LR -gpu 0 -type bert-higru-f -d_h1 $du_bert -d_h2 $dc -epochs 50 -report_loss 720 -data_path ../../data/higru_bert_data/resisting0_bert_data.pt -vocab_path ../../data/higru_bert_data/resisting0_vocab_bert.pt -emodict_path ../../data/higru_bert_data/resisting0_coarse_labels_dict_bert.pt -tr_emodict_path ../../data/higru_bert_data/resisting0_tr_coarse_labels_dict_bert.pt -dataset resisting0 -seed $seed -embedding ../../data/higru_bert_data/resisting0_embedding.pt -bert 1 &
+
+# python EmoMain.py -lr  $LR -gpu 1 -type higru-f -d_h1 $du_glove -d_h2 $dc -epochs 50 -report_loss 720 -data_path ../../data/higru_bert_data/resisting0_bert_data.pt -vocab_path ../../data/higru_bert_data/resisting0_vocab_bert.pt -emodict_path ../../data/higru_bert_data/resisting0_coarse_labels_dict_bert.pt -tr_emodict_path ../../data/higru_bert_data/resisting0_tr_coarse_labels_dict_bert.pt -dataset resisting0 -seed $seed -embedding ../../data/higru_bert_data/resisting0_embedding.pt -bert 0 &
+
+
+for model in bert-higru-f bert-higru-sf bert-higru bert-bigru-f bert-bigru bert-bigru-sf
+do
+
+	python EmoMain.py -lr  $LR -gpu 1 -type $model -d_h1 $du_glove -d_h2 $dc -epochs 50 -report_loss 720 -data_path ../../data/higru_bert_data/resisting0_bert_data.pt -vocab_path ../../data/higru_bert_data/resisting0_vocab_bert.pt -emodict_path ../../data/higru_bert_data/resisting0_coarse_labels_dict_bert.pt -tr_emodict_path ../../data/higru_bert_data/resisting0_tr_coarse_labels_dict_bert.pt -dataset resisting0 -seed $seed -embedding ../../data/higru_bert_data/resisting0_embedding.pt -bert 0 -label_type coarse&
+	python EmoMain.py -lr  $LR -gpu 2 -type $model -d_h1 $du_glove -d_h2 $dc -epochs 50 -report_loss 720 -data_path ../../data/higru_bert_data/resisting1_bert_data.pt -vocab_path ../../data/higru_bert_data/resisting1_vocab_bert.pt -emodict_path ../../data/higru_bert_data/resisting1_coarse_labels_dict_bert.pt -tr_emodict_path ../../data/higru_bert_data/resisting1_tr_coarse_labels_dict_bert.pt -dataset resisting1 -seed $seed -embedding ../../data/higru_bert_data/resisting1_embedding.pt -bert 0 -label_type coarse&
+	python EmoMain.py -lr  $LR -gpu 1 -type $model -d_h1 $du_glove -d_h2 $dc -epochs 50 -report_loss 720 -data_path ../../data/higru_bert_data/resisting2_bert_data.pt -vocab_path ../../data/higru_bert_data/resisting2_vocab_bert.pt -emodict_path ../../data/higru_bert_data/resisting2_coarse_labels_dict_bert.pt -tr_emodict_path ../../data/higru_bert_data/resisting2_tr_coarse_labels_dict_bert.pt -dataset resisting2 -seed $seed -embedding ../../data/higru_bert_data/resisting2_embedding.pt -bert 0 -label_type coarse&
+	python EmoMain.py -lr  $LR -gpu 2 -type $model -d_h1 $du_glove -d_h2 $dc -epochs 50 -report_loss 720 -data_path ../../data/higru_bert_data/resisting3_bert_data.pt -vocab_path ../../data/higru_bert_data/resisting3_vocab_bert.pt -emodict_path ../../data/higru_bert_data/resisting3_coarse_labels_dict_bert.pt -tr_emodict_path ../../data/higru_bert_data/resisting3_tr_coarse_labels_dict_bert.pt -dataset resisting3 -seed $seed -embedding ../../data/higru_bert_data/resisting3_embedding.pt -bert 0 -label_type coarse&
+	python EmoMain.py -lr  $LR -gpu 2 -type $model -d_h1 $du_glove -d_h2 $dc -epochs 50 -report_loss 720 -data_path ../../data/higru_bert_data/resisting4_bert_data.pt -vocab_path ../../data/higru_bert_data/resisting4_vocab_bert.pt -emodict_path ../../data/higru_bert_data/resisting4_coarse_labels_dict_bert.pt -tr_emodict_path ../../data/higru_bert_data/resisting4_tr_coarse_labels_dict_bert.pt -dataset resisting4 -seed $seed -embedding ../../data/higru_bert_data/resisting4_embedding.pt -bert 0 -label_type coarse&
+
+	python EmoMain.py -lr  $LR -gpu 1 -type $model -d_h1 $du_glove -d_h2 $dc -epochs 50 -report_loss 720 -data_path ../../data/higru_bert_data/resisting0_bert_data.pt -vocab_path ../../data/higru_bert_data/resisting0_vocab_bert.pt -emodict_path ../../data/higru_bert_data/resisting0_fine_labels_dict_bert.pt -tr_emodict_path ../../data/higru_bert_data/resisting0_tr_fine_labels_dict_bert.pt -dataset resisting0 -seed $seed -embedding ../../data/higru_bert_data/resisting0_embedding.pt -bert 0 -label_type fine&
+	python EmoMain.py -lr  $LR -gpu 2 -type $model -d_h1 $du_glove -d_h2 $dc -epochs 50 -report_loss 720 -data_path ../../data/higru_bert_data/resisting1_bert_data.pt -vocab_path ../../data/higru_bert_data/resisting1_vocab_bert.pt -emodict_path ../../data/higru_bert_data/resisting1_fine_labels_dict_bert.pt -tr_emodict_path ../../data/higru_bert_data/resisting1_tr_fine_labels_dict_bert.pt -dataset resisting1 -seed $seed -embedding ../../data/higru_bert_data/resisting1_embedding.pt -bert 0 -label_type fine&
+	python EmoMain.py -lr  $LR -gpu 1 -type $model -d_h1 $du_glove -d_h2 $dc -epochs 50 -report_loss 720 -data_path ../../data/higru_bert_data/resisting2_bert_data.pt -vocab_path ../../data/higru_bert_data/resisting2_vocab_bert.pt -emodict_path ../../data/higru_bert_data/resisting2_fine_labels_dict_bert.pt -tr_emodict_path ../../data/higru_bert_data/resisting2_tr_fine_labels_dict_bert.pt -dataset resisting2 -seed $seed -embedding ../../data/higru_bert_data/resisting2_embedding.pt -bert 0 -label_type fine&
+	python EmoMain.py -lr  $LR -gpu 2 -type $model -d_h1 $du_glove -d_h2 $dc -epochs 50 -report_loss 720 -data_path ../../data/higru_bert_data/resisting3_bert_data.pt -vocab_path ../../data/higru_bert_data/resisting3_vocab_bert.pt -emodict_path ../../data/higru_bert_data/resisting3_fine_labels_dict_bert.pt -tr_emodict_path ../../data/higru_bert_data/resisting3_tr_fine_labels_dict_bert.pt -dataset resisting3 -seed $seed -embedding ../../data/higru_bert_data/resisting3_embedding.pt -bert 0 -label_type fine&
+	python EmoMain.py -lr  $LR -gpu 1 -type $model -d_h1 $du_glove -d_h2 $dc -epochs 50 -report_loss 720 -data_path ../../data/higru_bert_data/resisting4_bert_data.pt -vocab_path ../../data/higru_bert_data/resisting4_vocab_bert.pt -emodict_path ../../data/higru_bert_data/resisting4_fine_labels_dict_bert.pt -tr_emodict_path ../../data/higru_bert_data/resisting4_tr_fine_labels_dict_bert.pt -dataset resisting4 -seed $seed -embedding ../../data/higru_bert_data/resisting4_embedding.pt -bert 0 -label_type fine&
+
+	wait
+done
