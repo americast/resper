@@ -425,6 +425,7 @@ class BERT_HiGRU(nn.Module):
 		:param lens: 1 x batch
 		:return:
 		"""
+		
 		if len(sents.size()) < 2:
 			sents = sents.unsqueeze(0)
 

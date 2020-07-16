@@ -6,13 +6,18 @@ dir_name='../../data/higru_bert_data/results/'
 
 files= os.listdir(dir_name)
 
+dataset = sys.argv[1]
+
 file_dict={}
 
 for file in sorted(files):
 	# print(file)
 	fp= open(dir_name+file)
 
-	file = file.replace('resisting0','').replace('resisting1','').replace('resisting2','').replace('resisting3','').replace('resisting4','')
+	if dataset =='neg':
+		file = file.replace('negotiation0','').replace('negotiation1','').replace('negotiation2','').replace('negotiation3','').replace('negotiation4','')
+	else:	
+		file = file.replace('resisting0','').replace('resisting1','').replace('resisting2','').replace('resisting3','').replace('resisting4','')
 		
 	if file not in file_dict:
 		file_dict[file]={}

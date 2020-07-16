@@ -253,7 +253,7 @@ def get_sent_pad_attn(seq_q):
 
 # Pad for utterances with variable lengths and maintain the order of them after GRU
 class GRUencoder(nn.Module):
-	def __init__(self, d_emb, d_out, num_layers, encoder_type='GRU'):
+	def __init__(self, d_emb, d_out, num_layers, encoder_type='GRU', bidirectional=False):
 		super(GRUencoder, self).__init__()
 		# default encoder 2 layers
 
@@ -261,10 +261,10 @@ class GRUencoder(nn.Module):
 
 		if encoder_type =='GRU':
 			self.gru = nn.GRU(input_size=d_emb, hidden_size=d_out,
-							  bidirectional=False, num_layers=num_layers, dropout=0.3)
+							  bidirectional=bidirectional, num_layers=num_layers, dropout=0.3)
 		elif encoder_type =='LSTM':
 			self.gru = nn.LSTM(input_size=d_emb, hidden_size=d_out,
-							  bidirectional=False, num_layers=num_layers, dropout=0.3)
+							  bidirectional=bidirectional, num_layers=num_layers, dropout=0.3)
 
 	def forward(self, sent, sent_lens):
 		"""
@@ -299,10 +299,380 @@ class GRUencoder(nn.Module):
 
 		return output
 
+class UttEncoder(nn.Module):
+	def __init__(self, d_word_vec, d_h1, args, encoder_type='GRU', bidirectional = False):
+		super(UttEncoder, self).__init__()
+		self.encoder = GRUencoder(d_word_vec, d_h1, num_layers=1, encoder_type=encoder_type, bidirectional=bidirectional)
 
-class SeqEncoder(nn.Module):
+		dir_num=1
+		if bidirectional:
+			dir_num=2
+		self.d_input = dir_num * d_h1
+
+		self.model = args.text_model
+		if self.model == 'higru-f':
+			self.d_input = dir_num * d_h1 + d_word_vec
+		if self.model == 'higru-sf':
+			self.d_input = 2*dir_num * d_h1 + d_word_vec
+
+		self.output1 = nn.Sequential(
+			nn.Linear(self.d_input, d_h1),
+			nn.Tanh()
+		)
+
+	def forward(self, sents, lengths, sa_mask=None):
+		"""
+		:param sents: batch x seq_len x 2*d_h1
+		:param lengths: numpy array 1 x batch
+		:return: batch x d_h1
+		"""
+		w_context = self.encoder(sents, lengths)
+		combined = w_context
+
+		if self.model == 'higru-f':
+			w_lcont, w_rcont = w_context.chunk(2, -1)
+			combined = [w_lcont, sents, w_rcont]
+			combined = torch.cat(combined, dim=-1)
+		if self.model == 'higru-sf':
+			w_lcont, w_rcont = w_context.chunk(2, -1)
+			sa_lcont, _ = get_attention(w_lcont, w_lcont, w_lcont, attn_mask=sa_mask)
+			sa_rcont, _ = get_attention(w_rcont, w_rcont, w_rcont, attn_mask=sa_mask)
+			combined = [sa_lcont, w_lcont, sents, w_rcont, sa_rcont]
+			combined = torch.cat(combined, dim=-1)
+
+		output1 = self.output1(combined)
+		output = torch.max(output1, dim=1)[0]
+
+		return output
+
+
+# class SeqEncoder(nn.Module):
+# 	def __init__(self, d_h1, tagidx, args):
+# 		super(SeqEncoder, self).__init__()
+# 		self.d_input = d_h1
+# 		self.embeddings = nn.Embedding(len(tagidx), d_h1)
+# 		torch.nn.init.uniform_(self.embeddings.weight, -0.25, 0.25)
+# 		self.embeddings.weight.requires_grad = True
+
+# 		self.encoder = GRUencoder(d_h1, d_h1, num_layers=1, encoder_type=args.model_type)
+
+# 		self.output1 = nn.Sequential(
+# 			nn.Linear(d_h1, d_h1),
+# 			nn.Tanh()
+# 		)
+# 		self.dropout_mid = nn.Dropout(0.5)
+
+		
+# 		self.num_classes = 2
+
+# 		self.classifier = nn.Sequential(
+# 			nn.Linear(d_h1, d_h1),
+# 			nn.Dropout(0.5),
+# 			nn.Linear(d_h1, self.num_classes)
+# 		)
+
+# 		self.pool_type = args.pool_type
+
+
+# 	def forward(self, sents, lengths):
+# 		"""
+# 		:param sents: batch x seq_len x 2*d_h1
+# 		:param lengths: numpy array 1 x batch
+# 		:return: batch x d_h1
+# 		"""
+# 		if len(sents.size()) < 2:
+# 			sents = sents.unsqueeze(0)
+
+# 		utt_embed = self.embeddings(sents)
+# 		sa_mask = get_attn_pad_mask(sents, sents)
+		
+# 		# s_embed = self.uttenc(w_embed, lens, sa_mask)
+# 		# s_embed = self.dropout_in(s_embed)  # batch x d_h1
+# 		combined = self.encoder(utt_embed, lengths)
+
+# 		output1  = self.output1(combined)
+		
+# 		if self.pool_type =='max':
+# 			output1  = torch.max(output1, dim=1)[0]
+# 		elif self.pool_type == 'last':
+# 			output1  = output1[:,-1,:]
+# 		elif self.pool_type == 'mean':
+# 			output1  = torch.mean(output1, dim=1)[0]
+
+# 		output1  = self.dropout_mid(output1)
+# 		output   = self.classifier(output1)
+# 		pred_scores = F.log_softmax(output, dim=1)
+
+# 		return pred_scores
+
+
+# class TextEncoder(nn.Module):
+# 	def __init__(self, d_word_vec, d_h1, d_h2, args, bert_type='base', encoder_type='GRU', trainable= False):
+# 		super(TextEncoder, self).__init__()
+
+		
+		
+# 		from transformers import BertModel
+# 		if bert_type =='base':
+# 			self.bert = BertModel.from_pretrained('bert-base-uncased')
+# 			self.bert_emb_dim=768
+# 		else:
+# 			self.bert = BertModel.from_pretrained('bert-large-uncased')
+# 			self.bert_emb_dim=768
+
+# 		for p in self.bert.parameters():
+# 			p.requires_grad = trainable
+			
+# 		self.uttenc  = UttEncoder(self.bert_emb_dim, d_h1, args,encoder_type= encoder_type, bidirectional=True)
+
+# 		if encoder_type =='GRU':
+# 			self.contenc = nn.GRU(d_h1, d_h2, num_layers=1, bidirectional=False)
+# 		else:
+# 			self.contenc = nn.LSTM(d_h1, d_h2, num_layers=1, bidirectional=False)
+
+
+# 		self.dropout_in = nn.Dropout(0.1)
+
+# 		self.output1 = nn.Sequential(
+# 			nn.Linear(d_h2, d_h2),
+# 			nn.Tanh()
+# 		)
+# 		self.dropout_mid = nn.Dropout(0.1)
+
+		
+# 		self.num_classes = 2
+
+# 		self.classifier = nn.Sequential(
+# 			nn.Linear(d_h2, d_h2),
+# 			nn.Dropout(0.1),
+# 			nn.Linear(d_h2, self.num_classes)
+# 		)
+
+# 		self.pool_type = args.pool_type
+
+
+# 	def forward(self, sents, lens):
+# 		"""
+# 		:param sents: batch x seq_len
+# 		:param lens: 1 x batch
+# 		:return:
+# 		"""
+		
+# 		if len(sents.size()) < 2:
+# 			sents = sents.unsqueeze(0)
+
+# 		# w_embed = self.embeddings(sents)
+# 		sa_mask = get_attn_pad_mask(sents, sents)
+		
+# 		bert_sa_mask = get_word_pad_attns(sents)
+
+# 		# import pdb; pdb.set_trace()
+# 		outputs = self.bert(input_ids = sents, attention_mask = bert_sa_mask, token_type_ids=None, position_ids= None, head_mask= None, inputs_embeds= None)
+# 		# s_embed = outputs[1]    # This is the BERT sentence embedding              # BERT CLS TOKEN
+# 		# w_embed = self.bert_dropout(outputs[0]) # This is the bert word embeddings
+
+# 		w_embed = outputs[0]
+# 		s_embed = self.uttenc(w_embed, lens, sa_mask)           # HIGRU utterance encoder
+# 		s_embed = self.dropout_in(s_embed)  # batch x d_h1
+
+# 		s_context = self.contenc(s_embed.unsqueeze(1))[0]
+# 		combined = s_context.transpose(0,1).contiguous()
+		
+# 		output1  = self.output1(combined)
+		
+# 		if self.pool_type =='max':
+# 			output1  = torch.max(output1, dim=1)[0]
+# 		elif self.pool_type == 'last':
+# 			output1  = output1[:,-1,:]
+# 		elif self.pool_type == 'mean':
+# 			output1  = torch.mean(output1, dim=1)[0]
+
+# 		output1  = self.dropout_mid(output1)
+# 		output   = self.classifier(output1)
+# 		pred_scores = F.log_softmax(output, dim=1)
+
+# 		return pred_scores
+		
+
+# class TextSeqEncoder(nn.Module):
+# 	def __init__(self, d_word_vec, d_h1, d_h2, d_tag, args, tagidx, bert_type='base', encoder_type='GRU', trainable= False):
+# 		super(TextSeqEncoder, self).__init__()
+
+		
+		
+# 		from transformers import BertModel
+# 		if bert_type =='base':
+# 			self.bert = BertModel.from_pretrained('bert-base-uncased')
+# 			self.bert_emb_dim=768
+# 		else:
+# 			self.bert = BertModel.from_pretrained('bert-large-uncased')
+# 			self.bert_emb_dim=768
+
+# 		for p in self.bert.parameters():
+# 			p.requires_grad = trainable
+			
+# 		self.uttenc  = UttEncoder(self.bert_emb_dim, d_h1, args,encoder_type= encoder_type, bidirectional=True)
+
+# 		if encoder_type =='GRU':
+# 			self.contenc = nn.GRU(d_h1, d_h2, num_layers=1, bidirectional=False)
+# 		else:
+# 			self.contenc = nn.LSTM(d_h1, d_h2, num_layers=1, bidirectional=False)
+
+
+# 		self.dropout_small = nn.Dropout(0.1)
+
+# 		self.output1 = nn.Sequential(
+# 			nn.Linear(d_h2, d_h2),
+# 			nn.Tanh()
+# 		)
+# 		self.dropout_mid = nn.Dropout(0.5)
+
+
+# 		self.embeddings = nn.Embedding(len(tagidx), d_tag)
+# 		torch.nn.init.uniform_(self.embeddings.weight, -0.25, 0.25)
+# 		self.embeddings.weight.requires_grad = True
+
+# 		self.encoder = GRUencoder(d_tag, d_tag, num_layers=1, encoder_type=args.model_type)
+
+# 		self.output2 = nn.Sequential(
+# 			nn.Linear(d_tag, d_tag),
+# 			nn.Tanh()
+# 		)
+
+		
+# 		self.num_classes = 2
+
+# 		self.classifier = nn.Sequential(
+# 			nn.Linear(d_h2+d_tag, d_h2+d_tag),
+# 			nn.Dropout(0.1),
+# 			nn.Linear(d_h2+d_tag, self.num_classes)
+# 		)
+
+# 		self.pool_type = args.pool_type
+
+
+# 	def forward(self, sents, lens, tags, taglens):
+# 		"""
+# 		:param sents: batch x seq_len
+# 		:param lens: 1 x batch
+# 		:return:
+# 		"""
+# 		# import pdb; pdb.set_trace()
+
+# 		if len(sents.size()) < 2:
+# 			sents = sents.unsqueeze(0)
+
+# 		# w_embed = self.embeddings(sents)
+# 		sa_mask = get_attn_pad_mask(sents, sents)
+		
+# 		bert_sa_mask = get_word_pad_attns(sents)
+
+# 		# import pdb; pdb.set_trace()
+# 		outputs = self.bert(input_ids = sents, attention_mask = bert_sa_mask, token_type_ids=None, position_ids= None, head_mask= None, inputs_embeds= None)
+# 		# s_embed = outputs[1]    # This is the BERT sentence embedding              # BERT CLS TOKEN
+# 		# w_embed = self.bert_dropout(outputs[0]) # This is the bert word embeddings
+
+# 		w_embed = outputs[0]
+# 		s_embed = self.uttenc(w_embed, lens, sa_mask)           # HIGRU utterance encoder
+# 		s_embed = self.dropout_small(s_embed)  # batch x d_h1
+
+# 		s_context = self.contenc(s_embed.unsqueeze(1))[0]
+# 		s_context = s_context.transpose(0,1).contiguous()
+# 		output1  = self.output1(s_context)
+
+# 		# output1  = self.dropout_small(output1)
+
+# 		if len(tags.size()) < 2:
+# 			tags = tags.unsqueeze(0)
+
+# 		tag_embed = self.embeddings(tags)
+# 		tag_mask = get_attn_pad_mask(tags, tags)
+
+# 		tag_context = self.encoder(tag_embed, taglens)
+# 		output2     = self.output2(tag_context)
+
+# 		# output2     = self.dropout_mid(output2)
+
+# 		combined = torch.cat([output1,output2], dim=2)
+
+# 		if self.pool_type =='max':
+# 			combined  = torch.max(combined, dim=1)[0]
+# 		elif self.pool_type == 'last':
+# 			combined  = combined[:,-1,:]
+# 		elif self.pool_type == 'mean':
+# 			combined  = torch.mean(combined, dim=1)[0]
+
+# 		combined = self.dropout_mid(combined)
+# 		output   = self.classifier(combined)
+# 		pred_scores = F.log_softmax(output, dim=1)
+
+# 		return pred_scores
+		
+
+# class CTransformer(nn.Module):
+# 	"""
+# 	Transformer for classifying sequences
+# 	"""
+
+# 	def __init__(self, emb, heads, depth, seq_length, num_tokens, num_classes, args, dropout=0.0, wide=False):
+# 		"""
+# 		:param emb: Embedding dimension
+# 		:param heads: nr. of attention heads
+# 		:param depth: Number of transformer blocks
+# 		:param seq_length: Expected maximum sequence length
+# 		:param num_tokens: Number of tokens (usually words) in the vocabulary
+# 		:param num_classes: Number of classes.
+# 		:param max_pool: If true, use global max pooling in the last layer. If false, use global
+# 						 average pooling.
+# 		"""
+# 		super().__init__()
+
+# 		self.num_tokens = num_tokens
+
+# 		self.token_embedding = nn.Embedding(embedding_dim=emb, num_embeddings=num_tokens)
+# 		self.pos_embedding = nn.Embedding(embedding_dim=emb, num_embeddings=seq_length)
+
+# 		tblocks = []
+# 		for i in range(depth):
+# 			tblocks.append(
+# 				TransformerBlock(emb=emb, heads=heads, seq_length=seq_length, mask=False, dropout=dropout, wide=wide))
+
+# 		self.tblocks = nn.Sequential(*tblocks)
+
+# 		self.pool_type = args.pool_type
+
+# 		self.toprobs = nn.Linear(emb, num_classes)
+
+# 		self.do = nn.Dropout(dropout)
+
+# 	def forward(self, x):
+# 		"""
+# 		:param x: A batch by sequence length integer tensor of token indices.
+# 		:return: predicted log-probability vectors for each token based on the preceding tokens.
+# 		"""
+# 		tokens = self.token_embedding(x)
+# 		if len(tokens.size()) <=2:
+# 			tokens = tokens.unsqueeze(0)
+
+# 		b, t, e = tokens.size()
+
+# 		positions = self.pos_embedding(torch.arange(t, device=x.device))[None, :, :].expand(b, t, e)
+# 		x = tokens + positions
+# 		x = self.do(x)
+
+# 		x = self.tblocks(x)
+
+# 		x = x.max(dim=1)[0] if self.pool_type=='max' else x.mean(dim=1) # pool over the time dimension
+
+# 		x = self.toprobs(x)
+
+# 		return F.log_softmax(x, dim=1)
+
+
+
+class SeqEncoderOnly(nn.Module):
 	def __init__(self, d_h1, tagidx, args):
-		super(SeqEncoder, self).__init__()
+		super(SeqEncoderOnly, self).__init__()
 		self.d_input = d_h1
 		self.embeddings = nn.Embedding(len(tagidx), d_h1)
 		torch.nn.init.uniform_(self.embeddings.weight, -0.25, 0.25)
@@ -314,17 +684,10 @@ class SeqEncoder(nn.Module):
 			nn.Linear(d_h1, d_h1),
 			nn.Tanh()
 		)
-		self.dropout_mid = nn.Dropout(0.5)
 
-		self.num_classes = 2
-		self.classifier = nn.Sequential(
-			nn.Linear(d_h1, d_h1),
-			nn.Dropout(0.5),
-			nn.Linear(d_h1, self.num_classes)
-		)
-
-		self.pool_type = args.pool_type
-
+		self.dropout_small = nn.Dropout(0.1)
+		self.dropout_mid   = nn.Dropout(0.5)
+		self.pool_type     = args.pool_type
 
 	def forward(self, sents, lengths):
 		"""
@@ -343,7 +706,8 @@ class SeqEncoder(nn.Module):
 		combined = self.encoder(utt_embed, lengths)
 
 		output1  = self.output1(combined)
-		
+		output1  = self.dropout_mid(output1)
+
 		if self.pool_type =='max':
 			output1  = torch.max(output1, dim=1)[0]
 		elif self.pool_type == 'last':
@@ -351,98 +715,51 @@ class SeqEncoder(nn.Module):
 		elif self.pool_type == 'mean':
 			output1  = torch.mean(output1, dim=1)[0]
 
-		output1  = self.dropout_mid(output1)
-		output   = self.classifier(output1)
-		pred_scores = F.log_softmax(output, dim=1)
+		return output1
 
-		return pred_scores
+class TextEncoderOnly(nn.Module):
+	def __init__(self, d_word_vec, d_h1, d_h2, args, bert_type='base', encoder_type='GRU', trainable= False):
+		super(TextEncoderOnly, self).__init__()
 
-
-
-
-class BERT_HiGRU(nn.Module):
-	def __init__(self, d_word_vec, d_h1, d_h2, d_fc, emodict, worddict, embedding, type='higru', bert_flag=False, don_model=0, trainable= False, feature_dim= 0):
-		super(BERT_HiGRU, self).__init__()
-		self.model = type
-		self.max_length = worddict.max_length
-		self.max_dialog = worddict.max_dialog
-		self.d_h2 = d_h2
-		self.bert_emb_dim=768
-		# load word2vec
-		self.embeddings = embedding
-		self.feature_dim = feature_dim
+		
 		from transformers import BertModel
-		self.bert = BertModel.from_pretrained('bert-base-uncased')
+		if bert_type =='base':
+			self.bert = BertModel.from_pretrained('bert-base-uncased')
+			self.bert_emb_dim=768
+		else:
+			self.bert = BertModel.from_pretrained('bert-large-uncased')
+			self.bert_emb_dim=768
 
 		for p in self.bert.parameters():
 			p.requires_grad = trainable
-			# if trainable == 1:
-			# 	p.requires_grad = True
-			# if trainable == 0:
-			# 	p.requires_grad = False
+			
+		self.uttenc  = UttEncoder(self.bert_emb_dim, d_h1, args,encoder_type= encoder_type, bidirectional=True)
 
-		self.uttenc = UttEncoder(self.bert_emb_dim, d_h1, self.model)
-		self.dropout_in = nn.Dropout(0.5)
-
-		self.bidirectional= False
-		# self.bert_flag= False
-		self.contenc = nn.GRU(d_h1, d_h2, num_layers=1, bidirectional=self.bidirectional)
-		self.don_model = don_model
-
-		if self.bidirectional==False:
-			self.d_input= d_h2
-			if self.model == 'higru-f':
-				self.d_input = d_h2 + d_h1
-			if self.model == 'higru-sf':
-				self.d_input = 2 * d_h2 + d_h1
-
+		if encoder_type =='GRU':
+			self.contenc = nn.GRU(d_h1, d_h2, num_layers=1, bidirectional=False)
 		else:
-			self.d_input = 2 * d_h2
-			if self.model == 'higru-f':
-				self.d_input = 2 * d_h2 + d_h1
-			if self.model == 'higru-sf':
-				self.d_input = 4 * d_h2 + d_h1
-
-		# if self.bert_flag:
-		# 	self.d_input= self.d_input+ self.bert_emb_dim
+			self.contenc = nn.LSTM(d_h1, d_h2, num_layers=1, bidirectional=False)
 
 		self.output1 = nn.Sequential(
-			nn.Linear(self.d_input, d_h2),
+			nn.Linear(d_h2, d_h2),
 			nn.Tanh()
 		)
-		self.dropout_mid = nn.Dropout(0.5)
 
-		self.num_classes = emodict.n_words
-		self.classifier = nn.Sequential(
-			nn.Linear(d_h2 + feature_dim, d_fc),
-			nn.Dropout(0.5),
-			nn.Linear(d_fc, self.num_classes)
-		)
-
-		self.num_outcomes = 2
-		self.classifier2 = nn.Sequential(
-			nn.Linear(d_h2 + feature_dim, d_fc),
-			nn.Dropout(0.5),
-			nn.Linear(d_fc, self.num_outcomes)
-		)
-
-		self.fc_score = nn.Sequential(
-			nn.Linear(d_h2 + feature_dim, d_fc),
-			nn.Dropout(0.5),
-			nn.Linear(d_fc, 1)
-		)
+		self.dropout_small = nn.Dropout(0.1)
+		self.dropout_mid   = nn.Dropout(0.5)
+		self.pool_type     = args.pool_type
 
 
-	def forward(self, sents, lens, addn_feats = None):
+	def forward(self, sents, lens):
 		"""
 		:param sents: batch x seq_len
 		:param lens: 1 x batch
 		:return:
 		"""
+		
 		if len(sents.size()) < 2:
 			sents = sents.unsqueeze(0)
 
-		
 		# w_embed = self.embeddings(sents)
 		sa_mask = get_attn_pad_mask(sents, sents)
 		
@@ -455,70 +772,97 @@ class BERT_HiGRU(nn.Module):
 
 		w_embed = outputs[0]
 		s_embed = self.uttenc(w_embed, lens, sa_mask)           # HIGRU utterance encoder
-		s_embed = self.dropout_in(s_embed)  # batch x d_h1
+		s_embed = self.dropout_small(s_embed)  # batch x d_h
 
 		s_context = self.contenc(s_embed.unsqueeze(1))[0]
-		s_context = s_context.transpose(0,1).contiguous()
-		Combined = s_context
+		combined = s_context.transpose(0,1).contiguous()
+		
+		output1  = self.output1(combined)
+		output1  = self.dropout_mid(output1)
 
-		if self.bidirectional==False:
-			if self.model == 'higru-f':
-				# s_lcont, s_rcont = s_context.chunk(2,-1)
-				Combined = [s_context, s_embed.unsqueeze(0)]
-				Combined = torch.cat(Combined, dim=-1)		
-			if self.model == 'higru-sf':
-				s_context    = s_context.squeeze(dim=0)
-				context_mask = get_sent_pad_attn(s_context)
-				SA_cont, _   = get_sent_attention(s_context, s_context,s_context, context_mask)
-				# SA_cont, _   = get_attention(s_context, s_context, s_context)
-				# Combined = [SA_cont, s_context, s_embed.unsqueeze(0)]
-				Combined = [SA_cont, s_context, s_embed]
-				Combined = torch.cat(Combined, dim=-1)
-				Combined = Combined.unsqueeze(dim=0)
+		if self.pool_type =='max':
+			output1  = torch.max(output1, dim=1)[0]
+		elif self.pool_type == 'last':
+			output1  = output1[:,-1,:]
+		elif self.pool_type == 'mean':
+			output1  = torch.mean(output1, dim=1)[0]
+
+		return output1
+		
+
+class TextSeqEncoderSuper(nn.Module):
+	def __init__(self, d_word_vec, d_h1, d_h2, d_tag, args, tag2idx, bert_type='base', encoder_type='GRU', trainable= False):
+		super(TextSeqEncoderSuper, self).__init__()
+
+		self.text_encoder  =  TextEncoderOnly(d_word_vec, d_h1, d_h2, args)
+		self.tag_encoder0  =  SeqEncoderOnly(d_tag,tag2idx,args)
+		self.num_tags      =  1
+		self.text_encoder1 =  None
+		self.tag_encoder1  =  None
+
+		if 'negotiation' in args.dataset:
+			self.tag_encoder1  =  SeqEncoderOnly(d_tag,tag2idx,args)
+			self.num_tags =  2
+
+		if args.encoder == 'text_seq_encoder':
+			self.input_dim  = d_h2+d_tag*self.num_tags
+		elif args.encoder == 'text_encoder':
+			self.input_dim  = d_h2
+		elif args.encoder == 'seq_encoder':
+			self.input_dim  = d_tag*self.num_tags
+
+		self.num_classes=2
+		self.classifier = nn.Sequential(
+			nn.Linear(self.input_dim, self.input_dim),
+			nn.Dropout(0.5),
+			nn.Linear(self.input_dim, self.num_classes)
+		)
+
+		self.dropout_mid     = nn.Dropout(0.5)
+		self.dropout_small   = nn.Dropout(0.1)
+		self.pool_type = args.pool_type
+		self.encoder   = args.encoder
+		self.dataset   = args.dataset
+
+
+	def forward(self, sents, lens, tags, taglens,  tags2= None, taglens2= None):
+		"""
+		:param sents: batch x seq_len
+		:param lens: 1 x batch
+		:return:
+		"""
+
+		if self.encoder == 'text_seq_encoder':
+			sent_output0 =  self.text_encoder(sents, lens)
+			tag_output0  =  self.tag_encoder0(tags, taglens)
+
+			if 'negotiation' in self.dataset:
+				tag_output1 = self.tag_encoder1(tags2, taglens2)
+				combined    = torch.cat([sent_output0, tag_output0, tag_output1], dim =1)
+			else:
+				combined    = torch.cat([sent_output0, tag_output0], dim =1)
+
+		elif self.encoder == 'text_encoder':
+			sent_output0 =  self.text_encoder(sents, lens)
+			combined     =  sent_output0
+
+		elif self.encoder == 'seq_encoder':
+			tag_output0  =  self.tag_encoder0(tags, taglens)
+			
+			if 'negotiation' in self.dataset:
+				tag_output1 = self.tag_encoder1(tags2, taglens2)
+				combined    = torch.cat([tag_output0, tag_output1], dim =1)
+			else:
+				combined    = tag_output0
+
 
 		
-		else:
-			if self.model == 'higru-f':
-				s_lcont, s_rcont = s_context.chunk(2,-1)
-				Combined = [s_lcont, s_embed.unsqueeze(0), s_rcont]
-				Combined = torch.cat(Combined, dim=-1)
-			if self.model == 'higru-sf':
-				s_lcont, s_rcont = s_context.chunk(2, -1)
-				SA_lcont, _ = get_attention(s_lcont, s_lcont, s_lcont)
-				SA_rcont, _ = get_attention(s_rcont, s_rcont, s_rcont)
-				Combined = [SA_lcont, s_lcont, s_embed.unsqueeze(0), s_rcont, SA_rcont]
-				Combined = torch.cat(Combined, dim=-1)
+		combined = self.dropout_small(combined)
+		output   = self.classifier(combined)
+		pred_scores = F.log_softmax(output, dim=1)
 
-		# if self.bert_flag == True:
-		# 	Combined= torch.cat([Combined,bert_emb.unsqueeze(0)], dim=-1)
-
-		output1 = self.output1(Combined.squeeze(0))
-		output1 = self.dropout_mid(output1)
-
-		if self.feature_dim > 0:
-			# import pdb; pdb.set_trace()
-			output1 = torch.cat([output1, addn_feats], dim=1)
-
-
-		output  = self.classifier(output1)
-		log_pred_scores = F.log_softmax(output, dim=1)
-		pred_scores = F.softmax(output, dim=1)
-
-		# pred_scores = output
-
-
-		# computes the sentence mask of the attention, essentially creating a lower traingular matrix.
-		sent_mask = get_sent_pad_attn(sents)
-		sent_output, sent_attn =  get_sent_attention(output1, output1, output1, sent_mask)
-
-		output2  = None
-		pred_outs = None
-		don_prob  = None
-
-		return log_pred_scores, pred_outs, don_prob
-
-
-
+		return pred_scores
+		
 
 class CTransformer(nn.Module):
 	"""
@@ -578,4 +922,8 @@ class CTransformer(nn.Module):
 		x = self.toprobs(x)
 
 		return F.log_softmax(x, dim=1)
+
+
+
+
 

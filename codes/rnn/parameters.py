@@ -4,7 +4,7 @@ import torch.nn as nn
 import torch.nn.functional as F
 
 UNIT = "word" # unit of tokenization (char, word)
-RNN_TYPE = "GRU" # LSTM, GRU
+RNN_TYPE = "LSTM" # LSTM, GRU
 NUM_DIRS = 2 # unidirectional: 1, bidirectional: 2
 NUM_LAYERS = 1
 BATCH_SIZE = 32

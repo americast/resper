@@ -111,7 +111,10 @@ def emotrain(model, data_loader, tr_emodict, emodict, args, focus_emo):
 			# Tensorize a dialogue, a dialogue is a batch
 			feat, lens = Utils.ToTensor(feats[bz], is_len=True)
 			label = Utils.ToTensor(labels[bz])
-			mask  = torch.LongTensor([int(i) for i in speakers[bz]])
+			if 'negotiation' in args.dataset:
+				mask  = torch.LongTensor([1 for i in speakers[bz]])
+			else:
+				mask  = torch.LongTensor([int(i) for i in speakers[bz]])
 			addn_feature = None
 			
 			# EE_mask= torch.LongTensor([int(i) for i in speakers[bz]])
@@ -347,7 +350,11 @@ def emoeval(model, data_loader, tr_emodict, emodict, args, focus_emo):
 
 		# donor_label= torch.LongTensor(donors[bz]).unsqueeze(dim=1)
 		
-		mask= torch.LongTensor([int(i) for i in speakers[bz]])
+		if 'negotiation' in args.dataset:
+			mask  = torch.LongTensor([1 for i in speakers[bz]])
+		else:
+			mask  = torch.LongTensor([int(i) for i in speakers[bz]])
+
 		addn_feature = None
 		# if args.mask=='EE':
 		# 	mask= torch.LongTensor([int(i) for i in speakers[bz]])

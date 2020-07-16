@@ -27,7 +27,7 @@ epochs_num=100
 model=bert-higru-f
 model2=bert-higru-sf
 
-for feature in emo_features liwc_features face_features norm_er_strategies ee_DAs norm_er_DAs sentiment_features all none
+for feature in emo_features liwc_features sentiment_features none all
 do
 
 	python EmoMain.py -lr  $LR2 -gpu 3 -type $model -d_h1 $du_bert -d_h2 $dc -epochs $epochs_num -report_loss 720 -data_path ../../data/higru_bert_data/resisting0_bert_data.pt -vocab_path ../../data/higru_bert_data/resisting0_vocab_bert.pt -emodict_path ../../data/higru_bert_data/resisting0_resistance_labels_dict_bert.pt -tr_emodict_path ../../data/higru_bert_data/resisting0_tr_resistance_labels_dict_bert.pt -dataset resisting0 -seed $seed -embedding ../../data/higru_bert_data/resisting0_embedding.pt -bert 1 -label_type resistance -bert_train 0 -addn_features $feature&
