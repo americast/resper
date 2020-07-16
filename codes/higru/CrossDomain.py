@@ -74,6 +74,8 @@ def main():
 						help='how many steps to report loss')
 	parser.add_argument('-bert', type=int, default=0,	# Report loss interval, default the number of dialogues
 						help='include bert or not')
+	parser.add_argument('-k', type=int, default=0,	# Cross val
+						help='cross val')
 
 	# parser.add_argument('-mask', type=str, default='all',	# Choice of mask for ER, EE, or all
 	# 					help='include mask type')
@@ -112,6 +114,7 @@ def main():
 	if args.addn_features in feature_dim_dict:
 		feature_dim = feature_dim_dict[args.addn_features]
 
+	k_here = args.k
 
 	# Load vocabs
 	print("Loading vocabulary...")
@@ -238,18 +241,20 @@ def main():
 	print("Load best models for testing!")
 
 	file_str = Utils.return_file_path(args)
+	print(file_str)
+	# file_str = "_addn_features_all_bert_train_0_dataset__epochs_100_label_type_resistance_lr_0.0001_seed_11747_type_bert-higru-sf.txt"
 	# model = model.load_state_dict(args.save_dir+'/'+file_str+'.pt', map_location='cpu')
 
 	model = torch.load(args.save_dir+'/'+file_str+'_model.pt', map_location='cpu')
 	# model = torch.load_state_dict(args.save_dir+'/'+file_str+'.pt', map_location='cpu')
 
-	# pu.db
 	pAccs, acc, mf1, = emoeval(model=model,
 					data_loader=test_loader,
 					tr_emodict=tr_emodict,
 					emodict=emodict,
 					args=args,
-					focus_emo=focus_emo)
+					focus_emo=focus_emo,
+					k = k_here)
 
 
 	print("Test: ACCs-WA-UWA {}".format(pAccs))

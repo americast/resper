@@ -14,6 +14,7 @@ from sklearn.metrics import f1_score, confusion_matrix, accuracy_score, classifi
 import pandas as pd
 import pdb
 from sklearn.utils.class_weight import compute_sample_weight
+import pickle
 
 
 def return_addn_features(data_loader, args):
@@ -281,7 +282,7 @@ def loss_weight(tr_ladict, ladict, focus_dict, rate=1.0):
 	return weight
 
 
-def emoeval(model, data_loader, tr_emodict, emodict, args, focus_emo):
+def emoeval(model, data_loader, tr_emodict, emodict, args, focus_emo, k):
 	""" data_loader only input 'dev' """
 	model.eval()
 
@@ -549,6 +550,17 @@ def emoeval(model, data_loader, tr_emodict, emodict, args, focus_emo):
 
 
 	print(classification_report(y_true, y_pred))
+
+	f = open("y_true_"+str(k), "wb")
+	pickle.dump(y_true, f)
+	# f.write(str(y_true)+"\n")
+	f.close()
+
+	f = open("y_pred_"+str(k), "wb")
+	pickle.dump(y_pred, f)
+	# f.write(str(y_pred)+"\n")
+	f.close()
+
 
 	# if old_mf1 > mf1:
 	# 	 pdb.set_trace()

@@ -64,7 +64,7 @@ def return_file_path(args):
 	d=vars(args)
 
 	not_d=['patience','d_fc', 'd_h1', 'd_h2', 'd_word_vec','data_path','vocab_path','save_dir', \
-	'emodict_path','tr_emodict_path','patience','report_loss','decay','embedding','gpu','max_seq_len', 'bert']
+	'emodict_path','tr_emodict_path','patience','report_loss','decay','embedding','gpu','max_seq_len', 'bert', 'k']
 
 	file_str= ''
 	for elem in sorted(d):
@@ -72,7 +72,6 @@ def return_file_path(args):
 			continue
 		
 		file_str= file_str+'_'+str(elem)+'_'+str(d[elem])
-
 	return file_str
 
 
