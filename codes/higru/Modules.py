@@ -42,14 +42,14 @@ def get_attn_pad_mask(seq_q, seq_k):
 	pad_attn_mask = pad_attn_mask.eq(Const.PAD)  # b_size x 1 x len_k
 	#print(pad_attn_mask)
 
-	return pad_attn_mask.cuda(seq_k.device)
+	return pad_attn_mask
 
 def get_word_pad_attns(seq_q):
 
 	pad_word_mask = seq_q.clone()
 	pad_word_mask[pad_word_mask!=0]=1
 
-	return pad_word_mask.cuda(seq_q.device)
+	return pad_word_mask
 
 	# pad_word_mask = np.ones((seq_q.shape[0],seq_q.shape[1]))
 
@@ -58,7 +58,7 @@ def get_word_pad_attns(seq_q):
 	# 		if seq_q[i,j] ==0:
 	# 			pad_word_mask[i,j]=0
 
-	# pad_word_mask = torch.FloatTensor(pad_word_mask).cuda(seq_q.device)
+	# pad_word_mask = torch.FloatTensor(pad_word_mask)
 
 	# return pad_word_mask
 
@@ -68,7 +68,7 @@ def get_sent_pad_attn(seq_q):
 		pad_sent_mask[i,:(i+1)] =     1
 		pad_sent_mask[i,i+1:]   = -1e10
 
-	pad_sent_mask = torch.FloatTensor(pad_sent_mask).cuda(seq_q.device)
+	pad_sent_mask = torch.FloatTensor(pad_sent_mask)
 	return pad_sent_mask
 
 
@@ -97,7 +97,7 @@ class GRUencoder(nn.Module):
 		idx_unsort = np.argsort(idx_sort)
 
 
-		idx_sort = torch.from_numpy(idx_sort).cuda(device)
+		idx_sort = torch.from_numpy(idx_sort)
 		s_embs = sent_embs.index_select(1, Variable(idx_sort))
 
 		# padding
@@ -106,7 +106,7 @@ class GRUencoder(nn.Module):
 		sent_output = pad_packed_sequence(sent_output, total_length=sent.size(1))[0]
 
 		# unsort by length
-		idx_unsort = torch.from_numpy(idx_unsort).cuda(device)
+		idx_unsort = torch.from_numpy(idx_unsort)
 		sent_output = sent_output.index_select(1, Variable(idx_unsort))
 
 		# batch x seq_len x 2*d_out
@@ -309,7 +309,7 @@ class HiGRU(nn.Module):
 			# pred_outs   = F.log_softmax(output2, dim=1)
 			
 			outs = F.softmax(output2, dim =1)
-			don_prob = torch.zeros((len(outs),1)).cuda(sents.device)
+			don_prob = torch.zeros((len(outs),1))
 			don_prob[0] = outs[0][1]
 
 			for i in range(1, len(outs)):
@@ -320,7 +320,7 @@ class HiGRU(nn.Module):
 			tanh        = torch.nn.Tanh()
 
 			outs        = tanh(output2)
-			don_prob    = torch.zeros((len(outs),1)).cuda(sents.device)
+			don_prob    = torch.zeros((len(outs),1))
 			don_prob[0] = torch.sigmoid(outs[0])
 
 			for i in range(1,len(outs)):
@@ -332,7 +332,7 @@ class HiGRU(nn.Module):
 			tanh        = torch.nn.Tanh()
 
 			outs        = tanh(output2)
-			don_prob    = torch.zeros((len(outs),1)).cuda(sents.device)
+			don_prob    = torch.zeros((len(outs),1))
 			don_prob[0] = torch.sigmoid(outs[0])
 
 			for i in range(1,len(outs)):
@@ -516,7 +516,7 @@ class BERT_HiGRU(nn.Module):
 			# pred_outs   = F.log_softmax(output2, dim=1)
 			
 			outs = F.softmax(output2, dim =1)
-			don_prob = torch.zeros((len(outs),1)).cuda(sents.device)
+			don_prob = torch.zeros((len(outs),1))
 			don_prob[0] = outs[0][1]
 
 			for i in range(1, len(outs)):
@@ -527,7 +527,7 @@ class BERT_HiGRU(nn.Module):
 			tanh        = torch.nn.Tanh()
 
 			outs        = tanh(output2)
-			don_prob    = torch.zeros((len(outs),1)).cuda(sents.device)
+			don_prob    = torch.zeros((len(outs),1))
 			don_prob[0] = torch.sigmoid(outs[0])
 
 			for i in range(1,len(outs)):
@@ -539,7 +539,7 @@ class BERT_HiGRU(nn.Module):
 			tanh        = torch.nn.Tanh()
 
 			outs        = tanh(output2)
-			don_prob    = torch.zeros((len(outs),1)).cuda(sents.device)
+			don_prob    = torch.zeros((len(outs),1))
 			don_prob[0] = torch.sigmoid(outs[0])
 
 			for i in range(1,len(outs)):
@@ -698,7 +698,7 @@ class BiGRU(nn.Module):
 			# pred_outs   = F.log_softmax(output2, dim=1)
 			
 			outs = F.softmax(output2, dim =1)
-			don_prob = torch.zeros((len(outs),1)).cuda(sents.device)
+			don_prob = torch.zeros((len(outs),1))
 			don_prob[0] = outs[0][1]
 
 			for i in range(1, len(outs)):
@@ -709,7 +709,7 @@ class BiGRU(nn.Module):
 			tanh        = torch.nn.Tanh()
 
 			outs        = tanh(output2)
-			don_prob    = torch.zeros((len(outs),1)).cuda(sents.device)
+			don_prob    = torch.zeros((len(outs),1))
 			don_prob[0] = torch.sigmoid(outs[0])
 
 			for i in range(1,len(outs)):
@@ -721,7 +721,7 @@ class BiGRU(nn.Module):
 			tanh        = torch.nn.Tanh()
 
 			outs        = tanh(output2)
-			don_prob    = torch.zeros((len(outs),1)).cuda(sents.device)
+			don_prob    = torch.zeros((len(outs),1))
 			don_prob[0] = torch.sigmoid(outs[0])
 
 			for i in range(1,len(outs)):
@@ -849,7 +849,7 @@ class BERT_BiGRU(nn.Module):
 			# pred_outs   = F.log_softmax(output2, dim=1)
 			
 			outs = F.softmax(output2, dim =1)
-			don_prob = torch.zeros((len(outs),1)).cuda(sents.device)
+			don_prob = torch.zeros((len(outs),1))
 			don_prob[0] = outs[0][1]
 
 			for i in range(1, len(outs)):
@@ -860,7 +860,7 @@ class BERT_BiGRU(nn.Module):
 			tanh        = torch.nn.Tanh()
 
 			outs        = tanh(output2)
-			don_prob    = torch.zeros((len(outs),1)).cuda(sents.device)
+			don_prob    = torch.zeros((len(outs),1))
 			don_prob[0] = torch.sigmoid(outs[0])
 
 			for i in range(1,len(outs)):
@@ -872,7 +872,7 @@ class BERT_BiGRU(nn.Module):
 			tanh        = torch.nn.Tanh()
 
 			outs        = tanh(output2)
-			don_prob    = torch.zeros((len(outs),1)).cuda(sents.device)
+			don_prob    = torch.zeros((len(outs),1))
 			don_prob[0] = torch.sigmoid(outs[0])
 
 			for i in range(1,len(outs)):

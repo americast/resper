@@ -130,7 +130,7 @@ def emotrain(model, data_loader, tr_emodict, emodict, args, focus_emo):
 			label = Variable(label)
 			# bert_emb= Variable(bert_emb)
 
-			if args.gpu != None:
+			if args.gpu != "cpu":
 				os.environ['CUDA_VISIBLE_DEVICES'] = args.gpu
 				device = torch.device("cuda: 0")
 				model.cuda(device)
@@ -377,7 +377,7 @@ def emoeval(model, data_loader, tr_emodict, emodict, args, focus_emo):
 		label = Variable(label)
 		# bert_emb= Variable(bert_emb)
 		
-		if args.gpu != None:
+		if args.gpu != "cpu":
 			os.environ['CUDA_VISIBLE_DEVICES'] = args.gpu
 			device = torch.device("cuda: 0")
 			model.cuda(device)
