@@ -1,20 +1,21 @@
 import os
 import numpy as np
 import sys
+import csv
 
-dir_name='../../data/higru_bert_data/results/'
+dir_name = '../../data/higru_bert_data/results/'
 
-files= os.listdir(dir_name)
+files = os.listdir(dir_name)
 
 dataset = sys.argv[1]
 
-file_dict={}
+file_dict = {}
 
 for file in sorted(files):
 	# print(file)
-	fp= open(dir_name+file)
+	fp = open(dir_name + file)
 
-	if dataset =='neg':
+	if dataset == 'neg':
 		file = file.replace('negotiation0','').replace('negotiation1','').replace('negotiation2','').replace('negotiation3','').replace('negotiation4','')
 	else:	
 		file = file.replace('resisting0','').replace('resisting1','').replace('resisting2','').replace('resisting3','').replace('resisting4','')
@@ -24,21 +25,18 @@ for file in sorted(files):
 		file_dict[file]['acc']=[]
 		file_dict[file]['f1']=[]
 
-	
-
 	accs=[]
 	f1s=[]
-	
 
 	for line in fp:
-		line= line.strip().split('\t')
+		line = line.strip().split('\t')
 		try:
 			accs.append(float(line[1]))
 			f1s.append(float(line[2]))
 		except Exception as e:
 			continue
 
-	if accs==[] or f1s==[]:
+	if not accs or not f1s:
 		continue
 
 	# file_dict[file]['acc'].append(max(accs))
@@ -86,24 +84,27 @@ EE_seed_file_dict={}
 ER_seed_file_dict={}
 all_seed_file_dict={}
 
+
+output_list = []
 for file in sorted(file_dict):
-	if len(file_dict[file]['f1'])!=5:
+	if len(file_dict[file]['f1']) != 5:
 		continue
 
 	model_type = get_model_type(file)	
 	acc = round(np.mean(file_dict[file]['acc']),2)
 	f1  = round(np.mean(file_dict[file]['f1']),2)
 
-	# if 'EE' in file:
-	# 	EE_seed_file_dict[model_type] = (acc, f1)
-	# elif 'ER' in file:
-	# 	ER_seed_file_dict[model_type] = (acc, f1)
-	# elif 'all' in file:
-		# all_seed_file_dict[model_type] = (acc, f1)
-
-
 	print('{}\t{}\t{}'.format(file, round(np.mean(file_dict[file]['acc']),3), round(np.mean(file_dict[file]['f1']),3)))#,round(np.mean(file_dict[file]['don_acc']),3), round(np.mean(file_dict[file]['don_f1']),3)))
+	record = {"file": file, "acc": round(np.mean(file_dict[file]['acc']),3), "f1": round(np.mean(file_dict[file]['f1']),3)}
+	output_list.append(record)
 
+
+output_file_name = "file_acc_f1_neg.csv" if dataset == "neg" else "file_acc_f1_res.csv"
+
+with open(output_file_name, 'w', encoding='utf8', newline='') as output_file:
+    csv_w = csv.DictWriter(output_file, fieldnames=output_list[0].keys(),)
+    csv_w.writeheader()
+    csv_w.writerows(output_list)
 
 # for model in sorted(all_seed_file_dict):
 # 	ER_acc = ER_seed_file_dict[model][0]
