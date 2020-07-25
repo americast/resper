@@ -36,7 +36,7 @@ def main():
 	parser.add_argument('-epochs', type=int, default=200)		# Defualt epochs 200
 	parser.add_argument('-patience', type=int, default=10,		# Patience of early stopping 10 epochs
 						help='patience for early stopping')
-	parser.add_argument('-save_dir', type=str, default="/data/politeness_datasets/snapshot_models",	# Save the model and results in snapshot/
+	parser.add_argument('-save_dir', type=str, default="../../data/higru_bert_data/models",	# Save the model and results in snapshot/
 						help='where to save the models')
 	# Data
 	parser.add_argument('-dataset', type=str, default='Teaching0',	
@@ -146,7 +146,23 @@ def main():
 
 	# Choose the model
 	
-	if args.type.startswith('bert-higru'):
+	if args.type.startswith('bert-higru-sent-attn'):
+		model = BERT_HiGRU_sent_attn(d_word_vec=args.d_word_vec,
+					  d_h1=args.d_h1,
+					  d_h2=args.d_h2,
+					  d_fc=args.d_fc,
+					  emodict=emodict,
+					  worddict=worddict,
+					  embedding=embedding,
+					  type=args.type[5:],
+					  # bert_flag= args.bert,
+					  # don_model= args.don_model,
+					  trainable= trainable,
+					  feature_dim = feature_dim
+					  )
+					  #speaker_flag= args.sf)
+
+	elif args.type.startswith('bert-higru'):
 		model = BERT_HiGRU(d_word_vec=args.d_word_vec,
 					  d_h1=args.d_h1,
 					  d_h2=args.d_h2,
@@ -161,6 +177,7 @@ def main():
 					  feature_dim = feature_dim
 					  )
 					  #speaker_flag= args.sf)
+
 	elif args.type.startswith('higru'):
 		model = HiGRU(d_word_vec=args.d_word_vec,
 					  d_h1=args.d_h1,

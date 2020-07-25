@@ -13,6 +13,7 @@ import math
 from sklearn.metrics import f1_score, confusion_matrix, accuracy_score, classification_report, precision_recall_fscore_support, confusion_matrix
 import pandas as pd
 import pdb
+import pudb
 from sklearn.utils.class_weight import compute_sample_weight
 
 
@@ -85,7 +86,7 @@ def emotrain(model, data_loader, tr_emodict, emodict, args, focus_emo):
 	
 
 	f=open('../../data/higru_bert_data/results/'+file_str+ '.txt','w')
-	
+
 
 	over_fitting = 0
 	cur_best = -1e10
@@ -162,8 +163,7 @@ def emotrain(model, data_loader, tr_emodict, emodict, args, focus_emo):
 			# if all_loss !=all_loss:
 
 			# import pdb; pdb.set_trace()
-
-			loss  = -(all_loss*mask).sum()/mask.sum()
+			loss  = -(all_loss*mask.float()).sum()/mask.sum()
 
 			if loss !=loss:
 				import pdb; pdb.set_trace()
@@ -241,7 +241,8 @@ def emotrain(model, data_loader, tr_emodict, emodict, args, focus_emo):
 		
 
 		f.write(str(epoch)+'\t'+str(acc)+'\t'+str(mf1)+'\n')
-
+		f.flush()
+		print("Wrote details to file")
 		# last_don_best= don_mf1
 		last_best = mf1
 
