@@ -147,7 +147,25 @@ def main():
 	# Choose the model
 	
 	if args.type.startswith('bert-higru-sent-attn'):
+		print("Training sentence-based attention")
 		model = BERT_HiGRU_sent_attn(d_word_vec=args.d_word_vec,
+					  d_h1=args.d_h1,
+					  d_h2=args.d_h2,
+					  d_fc=args.d_fc,
+					  emodict=emodict,
+					  worddict=worddict,
+					  embedding=embedding,
+					  type=args.type[5:],
+					  # bert_flag= args.bert,
+					  # don_model= args.don_model,
+					  trainable= trainable,
+					  feature_dim = feature_dim
+					  )
+					  #speaker_flag= args.sf)
+
+	elif args.type.startswith('bert-higru-uttr-attn'):
+		print("Training utterance-based attention")
+		model = BERT_HiGRU_uttr_attn(d_word_vec=args.d_word_vec,
 					  d_h1=args.d_h1,
 					  d_h2=args.d_h2,
 					  d_fc=args.d_fc,
