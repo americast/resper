@@ -145,8 +145,24 @@ def main():
 	embedding.weight.requires_grad = trainable
 
 	# Choose the model
-	
-	if args.type.startswith('bert-higru-sent-attn'):
+	if args.type.startswith('bert-higru-sent-attn-2'):
+		print("Training sentence-based attention second")
+		model = BERT_HiGRU_sent_attn_2(d_word_vec=args.d_word_vec,
+					  d_h1=args.d_h1,
+					  d_h2=args.d_h2,
+					  d_fc=args.d_fc,
+					  emodict=emodict,
+					  worddict=worddict,
+					  embedding=embedding,
+					  type=args.type[5:],
+					  # bert_flag= args.bert,
+					  # don_model= args.don_model,
+					  trainable= trainable,
+					  feature_dim = feature_dim
+					  )
+					  #speaker_flag= args.sf)
+
+	elif args.type.startswith('bert-higru-sent-attn'):
 		print("Training sentence-based attention")
 		model = BERT_HiGRU_sent_attn(d_word_vec=args.d_word_vec,
 					  d_h1=args.d_h1,
@@ -166,6 +182,23 @@ def main():
 	elif args.type.startswith('bert-higru-uttr-attn-2'):
 		print("Training utterance-based attention double level")
 		model = BERT_HiGRU_uttr_attn_2(d_word_vec=args.d_word_vec,
+					  d_h1=args.d_h1,
+					  d_h2=args.d_h2,
+					  d_fc=args.d_fc,
+					  emodict=emodict,
+					  worddict=worddict,
+					  embedding=embedding,
+					  type=args.type[5:],
+					  # bert_flag= args.bert,
+					  # don_model= args.don_model,
+					  trainable= trainable,
+					  feature_dim = feature_dim
+					  )
+					  #speaker_flag= args.sf)
+
+	elif args.type.startswith('bert-higru-uttr-attn-3'):
+		print("Training utterance-based attention second level only")
+		model = BERT_HiGRU_uttr_attn_3(d_word_vec=args.d_word_vec,
 					  d_h1=args.d_h1,
 					  d_h2=args.d_h2,
 					  d_fc=args.d_fc,
