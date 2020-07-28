@@ -1029,9 +1029,8 @@ class BERT_HiGRU_sent_attn_2(nn.Module):
 		)
 		self.dropout_mid = nn.Dropout(0.5)
 
-		self.output1_gru = nn.Sequential(
-			nn.GRU(self.d_input + 512 + feature_dim, 512),
-		)
+		self.output1_gru = nn.GRU(self.d_input + 512 + feature_dim, 512)
+		
 		self.relu_gru = nn.ReLU()
 
 		self.dropout_mid = nn.Dropout(0.5)
@@ -1123,7 +1122,7 @@ class BERT_HiGRU_sent_attn_2(nn.Module):
 			Combined = torch.cat(Combined, dim=-1).squeeze(0)
 
 		results = torch.zeros((Combined.shape[0], self.num_classes)).cuda()
-		context = torch.zeros((512)).cuda()
+		context = torch.zeros((1, 1, 512)).cuda()
 		for i in range(Combined.shape[0]):
 			vec_here = Combined[i, :]
 			total_here = torch.cat([vec_here, context.squeeze(0).squeeze(0)], dim = -1)
@@ -1132,10 +1131,10 @@ class BERT_HiGRU_sent_attn_2(nn.Module):
 				total_here = torch.cat([total_here, addn_feats[i,:]], dim=-1)
 			
 			attn_vec = self.higru_sent_attn(total_here) * total_here
-			output1, _ = self.output1_gru(attn_vec.unsqueeze(0).unsqueeze(0))
-			output1 = self.relu_gru(output1)
-			context = output1
-			output1 = self.output1(output1)
+			out_here, _ = self.output1_gru(attn_vec.unsqueeze(0).unsqueeze(0), context)
+			out_here = self.relu_gru(out_here)
+			context = out_here
+			output1 = self.output1(out_here)
 			output1 = self.dropout_mid(output1)
 
 			# if self.bert_flag == True:
