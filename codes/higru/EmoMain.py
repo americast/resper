@@ -162,7 +162,7 @@ def main():
 					  #speaker_flag= args.sf)
 	elif args.type.startswith('bert-higru-sent-conn-mask'):
 		print("Training sentence-based masked connections")
-		model = BERT_HiGRU_sent_conn(d_word_vec=args.d_word_vec,
+		model = BERT_HiGRU_sent_conn_mask(d_word_vec=args.d_word_vec,
 					  d_h1=args.d_h1,
 					  d_h2=args.d_h2,
 					  d_fc=args.d_fc,

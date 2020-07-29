@@ -1438,6 +1438,7 @@ class BERT_HiGRU_sent_conn_mask(nn.Module):
 		self.max_length = worddict.max_length
 		self.max_dialog = worddict.max_dialog
 		self.d_h2 = d_h2
+		self.d_h1 = d_h1
 		self.bert_emb_dim=768
 		# load word2vec
 		self.embeddings = embedding
@@ -1452,12 +1453,12 @@ class BERT_HiGRU_sent_conn_mask(nn.Module):
 			# if trainable == 0:
 			# 	p.requires_grad = False
 
-		self.uttenc = UttEncoder(self.bert_emb_dim, d_h1, d_h2, self.model)
+		self.uttenc = UttEncoder(self.bert_emb_dim, d_h1, self.model)
 		self.dropout_in = nn.Dropout(0.5)
 
-		self.bidirectional= True
+		self.bidirectional= False
 		# self.bert_flag= False
-		self.contenc = nn.GRU(d_h1, d_h2, num_layers=1, bidirectional=self.bidirectional)
+		self.contenc = nn.GRU(d_h1 + self.feature_dim, d_h2, num_layers=1, bidirectional=self.bidirectional)
 		self.don_model = don_model
 
 		if self.bidirectional==False:
@@ -1465,22 +1466,29 @@ class BERT_HiGRU_sent_conn_mask(nn.Module):
 			if self.model == 'higru-f':
 				self.d_input = d_h2 + d_h1
 			if self.model == 'higru-sf' or self.model == 'higru-sent-conn-mask':
-				self.d_input = 2 * d_h2 + d_h1
+				self.d_input = 2 * self.d_h2 + self.d_h1 + self.feature_dim
 
 		else:
 			self.d_input = 2 * d_h2
 			if self.model == 'higru-f':
 				self.d_input = 2 * d_h2 + d_h1
 			if self.model == 'higru-sf' or self.model == 'higru-sent-conn-mask':
-				self.d_input = 4 * d_h2 + d_h1
+				self.d_input = 4 * d_h2 + d_h1 + self.feature_dim
 
 		# if self.bert_flag:
 		# 	self.d_input= self.d_input+ self.bert_emb_dim
 
+		self.dropout_mid = nn.Dropout(0.5)
+		self.context_dim = 512
+
 		self.output1 = nn.Sequential(
-			nn.Linear(self.d_input, d_h2),
+			nn.Linear(self.context_dim, d_h2 + feature_dim),
 			nn.Tanh()
 		)
+		self.output1_gru = nn.GRU(self.d_input + self.context_dim, self.context_dim)
+		
+		self.relu_gru = nn.ReLU()
+
 		self.dropout_mid = nn.Dropout(0.5)
 
 		self.num_classes = emodict.n_words
@@ -1497,6 +1505,28 @@ class BERT_HiGRU_sent_conn_mask(nn.Module):
 			nn.Linear(d_fc, self.num_outcomes)
 		)
 
+
+		self.final_attn = nn.Sequential(
+			nn.Linear(self.d_input, 2048),
+			nn.ReLU(),
+			nn.Linear(2048, self.context_dim),
+			nn.ReLU(),
+			nn.Linear(self.context_dim, 1),
+			nn.Tanh()
+			)
+
+		self.higru_sent_attn = nn.Sequential(
+			nn.Linear(self.d_input + self.feature_dim + self.context_dim, 2048),
+			nn.ReLU(),
+			nn.Linear(2048, 2048),
+			nn.ReLU(),
+			nn.Linear(2048, 1),
+			nn.Tanh()
+			)
+
+
+		self.num_classes = emodict.n_words
+
 		self.fc_score = nn.Sequential(
 			nn.Linear(d_h2 + feature_dim, d_fc),
 			nn.Dropout(0.5),
@@ -1504,7 +1534,8 @@ class BERT_HiGRU_sent_conn_mask(nn.Module):
 		)
 
 
-	def forward(self, sents, lens, addn_feats = None):
+
+	def forward(self, sents, lens, addn_feats, mask):
 		"""
 		:param sents: batch x seq_len
 		:param lens: 1 x batch
@@ -1529,11 +1560,9 @@ class BERT_HiGRU_sent_conn_mask(nn.Module):
 		s_embed = self.uttenc(w_embed, lens, sa_mask)           # HIGRU utterance encoder
 		s_embed = self.dropout_in(s_embed)  # batch x d_h1
 
-		pu.db
-
 		if self.feature_dim > 0:
 			# import pdb; pdb.set_trace()
-			output1 = torch.cat([output1, addn_feats], dim=1)
+			s_embed = torch.cat([s_embed, addn_feats], dim=1)
 
 		s_context = self.contenc(s_embed.unsqueeze(1))[0]
 		s_context = s_context.transpose(0,1).contiguous()
@@ -1547,8 +1576,7 @@ class BERT_HiGRU_sent_conn_mask(nn.Module):
 			# SA_cont, _   = get_attention(s_context, s_context, s_context)
 			# Combined = [SA_cont, s_context, s_embed.unsqueeze(0)]
 			Combined = [SA_cont, s_context, s_embed]
-			Combined = torch.cat(Combined, dim = -1)
-			Combined = Combined.unsqueeze(dim=0)
+			Combined = torch.cat(Combined, dim = -1).squeeze(0)
 
 		
 		else:
@@ -1556,25 +1584,38 @@ class BERT_HiGRU_sent_conn_mask(nn.Module):
 			SA_lcont, _ = get_attention(s_lcont, s_lcont, s_lcont)
 			SA_rcont, _ = get_attention(s_rcont, s_rcont, s_rcont)
 			Combined = [SA_lcont, s_lcont, s_embed.unsqueeze(0), s_rcont, SA_rcont]
-			Combined = torch.cat(Combined, dim=-1)
+			Combined = torch.cat(Combined, dim=-1).squeeze(0)
 
+
+		results = torch.zeros((Combined.shape[0], self.num_classes)).cuda()
+		context = torch.zeros((1, 1, self.context_dim)).cuda()
+		for i in range(Combined.shape[0]):
+			vec_here = Combined[i, :]
+			total_here = torch.cat([vec_here, context.squeeze(0).squeeze(0)], dim = -1)
+			
+			out_here, _ = self.output1_gru(total_here.unsqueeze(0).unsqueeze(0), context)
+			out_here = self.relu_gru(out_here)
+			if mask[i] == 1:
+				context = out_here
+			output1 = self.output1(out_here)
+			output1 = self.dropout_mid(output1)
+
+			# if self.bert_flag == True:
+			# 	Combined= torch.cat([Combined,bert_emb.unsqueeze(0)], dim=-1)
+
+			output  = self.classifier(output1.squeeze(0))
+			results[i, :] = output
 		# if self.bert_flag == True:
 		# 	Combined= torch.cat([Combined,bert_emb.unsqueeze(0)], dim=-1)
-		output1 = self.output1(Combined.squeeze(0))
-		output1 = self.dropout_mid(output1)
-
-
-
-		output  = self.classifier(output1)
-		log_pred_scores = F.log_softmax(output, dim=1)
-		pred_scores = F.softmax(output, dim=1)
+		log_pred_scores = F.log_softmax(results, dim=1)
+		pred_scores = F.softmax(results, dim=1)
 
 		# pred_scores = output
 
 
 		# computes the sentence mask of the attention, essentially creating a lower traingular matrix.
-		sent_mask = get_sent_pad_attn(sents)
-		sent_output, sent_attn =  get_sent_attention(output1, output1, output1, sent_mask)
+		# sent_mask = get_sent_pad_attn(sents)
+		# sent_output, sent_attn =  get_sent_attention(output1, output1, output1, sent_mask)
 
 		output2  = None
 		pred_outs = None
