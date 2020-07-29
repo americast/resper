@@ -18,8 +18,13 @@ from sklearn.utils.class_weight import compute_sample_weight
 
 
 def return_addn_features(data_loader, args):
+	if 'resisting' in args.dataset:
+		feat_names = ['vad_features', 'affect_features', 'emo_features', 'liwc_features', 'sentiment_features', 'face_features', 'norm_er_strategies', 'norm_er_DAs', 'ee_DAs']
 
-	feat_names = ['vad_features', 'affect_features', 'emo_features', 'liwc_features', 'sentiment_features', 'face_features', 'norm_er_strategies', 'norm_er_DAs', 'ee_DAs']
+	elif 'negotiation' in args.dataset:
+		feat_names = ['vad_features', 'affect_features', 'emo_features', 'liwc_features', 'sentiment_features']
+
+	# feat_names = ['vad_features', 'affect_features', 'emo_features', 'liwc_features', 'sentiment_features', 'face_features', 'norm_er_strategies', 'norm_er_DAs', 'ee_DAs']
 
 	if args.addn_features in feat_names:
 		return data_loader[args.addn_features]
@@ -156,8 +161,10 @@ def emotrain(model, data_loader, tr_emodict, emodict, args, focus_emo):
 			
 			
 
-
-			log_prob,  log_donor_prob, pred_outs = model(feat, lens, addn_feature)
+			if 'mask' in args.type:
+				log_prob,  log_donor_prob, pred_outs = model(feat, lens, addn_feature, mask)
+			else:
+				log_prob,  log_donor_prob, pred_outs = model(feat, lens, addn_feature)
 			target   = label
 			all_loss = torch.gather(log_prob, 1, target).squeeze(1)				
 			# if all_loss !=all_loss:
@@ -397,7 +404,10 @@ def emoeval(model, data_loader, tr_emodict, emodict, args, focus_emo):
 			addn_feature = Variable(addn_feature)
 			addn_feature = addn_feature.cuda(device)
 
-		log_prob, log_donor_prob, pred_outs = model(feat, lens, addn_feature)
+		if 'mask' in args.type:
+			log_prob, log_donor_prob, pred_outs = model(feat, lens, addn_feature, mask)
+		else:
+			log_prob, log_donor_prob, pred_outs = model(feat, lens, addn_feature)
 
 		# val loss
 		# loss = comput_class_loss(log_prob, label, weights)

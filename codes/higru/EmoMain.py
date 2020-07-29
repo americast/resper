@@ -100,7 +100,6 @@ def main():
 	print(args, '\n')
 
 	seed_everything(args.seed)
-
 	if 'resisting' in args.dataset:
 		feature_dim_dict = {'vad_features': 3, 'affect_features': 4, 'emo_features': 10, 'liwc_features': 64, 'sentiment_features': 3, 'face_features': 8, 'norm_er_strategies': 10, 'norm_er_DAs': 17, 'ee_DAs': 23, 'all': 3+4+10+64+3+8+10+17+23}
 
@@ -145,7 +144,41 @@ def main():
 	embedding.weight.requires_grad = trainable
 
 	# Choose the model
-	if args.type.startswith('bert-higru-sent-attn-2'):
+	if args.type.startswith('bert-higru-sent-attn-mask'):
+		print("Training sentence-based masked attention")
+		model = BERT_HiGRU_sent_attn_mask(d_word_vec=args.d_word_vec,
+					  d_h1=args.d_h1,
+					  d_h2=args.d_h2,
+					  d_fc=args.d_fc,
+					  emodict=emodict,
+					  worddict=worddict,
+					  embedding=embedding,
+					  type=args.type[5:],
+					  # bert_flag= args.bert,
+					  # don_model= args.don_model,
+					  trainable= trainable,
+					  feature_dim = feature_dim
+					  )
+					  #speaker_flag= args.sf)
+	elif args.type.startswith('bert-higru-sent-conn-mask'):
+		print("Training sentence-based masked connections")
+		model = BERT_HiGRU_sent_conn(d_word_vec=args.d_word_vec,
+					  d_h1=args.d_h1,
+					  d_h2=args.d_h2,
+					  d_fc=args.d_fc,
+					  emodict=emodict,
+					  worddict=worddict,
+					  embedding=embedding,
+					  type=args.type[5:],
+					  # bert_flag= args.bert,
+					  # don_model= args.don_model,
+					  trainable= trainable,
+					  feature_dim = feature_dim
+					  )
+					  #speaker_flag= args.sf)
+
+	# Choose the model
+	elif args.type.startswith('bert-higru-sent-attn-2'):
 		print("Training sentence-based attention second")
 		model = BERT_HiGRU_sent_attn_2(d_word_vec=args.d_word_vec,
 					  d_h1=args.d_h1,
