@@ -1473,15 +1473,15 @@ class BERT_HiGRU_sent_conn_mask(nn.Module):
 
 		if self.bidirectional==False:
 			self.d_input= d_h2
-			if self.model == 'higru-f':
-				self.d_input = d_h2 + d_h1
+			if '-f' in self.model:
+				self.d_input = d_h2 + d_h1 + self.feature_dim
 			if self.model == 'higru-sf' or self.model == 'higru-sent-conn-mask':
 				self.d_input = 2 * self.d_h2 + self.d_h1 + self.feature_dim
 
 		else:
 			self.d_input = 2 * d_h2
-			if self.model == 'higru-f':
-				self.d_input = 2 * d_h2 + d_h1
+			if '-f' in self.model:
+				self.d_input = 2 * d_h2 + d_h1 + self.feature_dim
 			if self.model == 'higru-sf' or self.model == 'higru-sent-conn-mask':
 				self.d_input = 4 * d_h2 + d_h1 + self.feature_dim
 
@@ -1580,21 +1580,32 @@ class BERT_HiGRU_sent_conn_mask(nn.Module):
 
 
 		if self.bidirectional==False:
-			s_context    = s_context.squeeze(dim=0)
-			context_mask = get_sent_pad_attn(s_context)
-			SA_cont, _   = get_sent_attention(s_context, s_context,s_context, context_mask)
-			# SA_cont, _   = get_attention(s_context, s_context, s_context)
-			# Combined = [SA_cont, s_context, s_embed.unsqueeze(0)]
-			Combined = [SA_cont, s_context, s_embed]
-			Combined = torch.cat(Combined, dim = -1).squeeze(0)
-
+			if '-f' in self.model:
+				# s_lcont, s_rcont = s_context.chunk(2,-1)
+				Combined = [s_context, s_embed.unsqueeze(0)]
+				Combined = torch.cat(Combined, dim=-1).squeeze(0)
+			else:
+				s_context    = s_context.squeeze(dim=0)
+				context_mask = get_sent_pad_attn(s_context)
+				SA_cont, _   = get_sent_attention(s_context, s_context,s_context, context_mask)
+				# SA_cont, _   = get_attention(s_context, s_context, s_context)
+				# Combined = [SA_cont, s_context, s_embed.unsqueeze(0)]
+				Combined = [SA_cont, s_context, s_embed]
+				Combined = torch.cat(Combined, dim=-1)
+				# Combined = Combined.unsqueeze(dim=0)
 		
 		else:
-			s_lcont, s_rcont = s_context.chunk(2, -1)
-			SA_lcont, _ = get_attention(s_lcont, s_lcont, s_lcont)
-			SA_rcont, _ = get_attention(s_rcont, s_rcont, s_rcont)
-			Combined = [SA_lcont, s_lcont, s_embed.unsqueeze(0), s_rcont, SA_rcont]
-			Combined = torch.cat(Combined, dim=-1).squeeze(0)
+			if '-f' in self.model:
+				s_lcont, s_rcont = s_context.chunk(2,-1)
+				Combined = [s_lcont, s_embed.unsqueeze(0), s_rcont]
+				Combined = torch.cat(Combined, dim=-1).squeeze(0)
+			else:
+				s_lcont, s_rcont = s_context.chunk(2, -1)
+				SA_lcont, _ = get_attention(s_lcont, s_lcont, s_lcont)
+				SA_rcont, _ = get_attention(s_rcont, s_rcont, s_rcont)
+				Combined = [SA_lcont, s_lcont, s_embed.unsqueeze(0), s_rcont, SA_rcont]
+				Combined = torch.cat(Combined, dim=-1).squeeze(0)
+
 
 
 		results = torch.zeros((Combined.shape[0], self.num_classes)).cuda()
@@ -1602,7 +1613,6 @@ class BERT_HiGRU_sent_conn_mask(nn.Module):
 		for i in range(Combined.shape[0]):
 			vec_here = Combined[i, :]
 			total_here = torch.cat([vec_here, context.squeeze(0).squeeze(0)], dim = -1)
-			
 			out_here, _ = self.output1_gru(total_here.unsqueeze(0).unsqueeze(0), context)
 			out_here = self.relu_gru(out_here)
 			if mask[i] == 1:
