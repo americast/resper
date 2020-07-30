@@ -122,10 +122,10 @@ class UttEncoder(nn.Module):
 		self.encoder = GRUencoder(d_word_vec, d_h1, num_layers=1)
 		self.d_input = 2 * d_h1
 		self.model = type
-		if self.model == 'higru-f':
-			self.d_input = 2 * d_h1 + d_word_vec
-		if self.model == 'higru-sf':
+		if '-f' not in self.model:
 			self.d_input = 4 * d_h1 + d_word_vec
+		else:
+			self.d_input = 2 * d_h1 + d_word_vec
 		self.output1 = nn.Sequential(
 			nn.Linear(self.d_input, d_h1),
 			nn.Tanh()
@@ -140,16 +140,17 @@ class UttEncoder(nn.Module):
 		w_context = self.encoder(sents, lengths)
 		combined = w_context
 
-		if self.model == 'higru-f':
-			w_lcont, w_rcont = w_context.chunk(2, -1)
-			combined = [w_lcont, sents, w_rcont]
-			combined = torch.cat(combined, dim=-1)
-		if self.model == 'higru-sf':
+		if '-f' not in self.model:
 			w_lcont, w_rcont = w_context.chunk(2, -1)
 			sa_lcont, _ = get_attention(w_lcont, w_lcont, w_lcont, attn_mask=sa_mask)
 			sa_rcont, _ = get_attention(w_rcont, w_rcont, w_rcont, attn_mask=sa_mask)
 			combined = [sa_lcont, w_lcont, sents, w_rcont, sa_rcont]
 			combined = torch.cat(combined, dim=-1)
+		else:
+			w_lcont, w_rcont = w_context.chunk(2, -1)
+			combined = [w_lcont, sents, w_rcont]
+			combined = torch.cat(combined, dim=-1)
+
 
 		output1 = self.output1(combined)
 		output = torch.max(output1, dim=1)[0]
@@ -681,7 +682,7 @@ class BERT_HiGRU(nn.Module):
 
 		output1 = self.output1(Combined.squeeze(0))
 		output1 = self.dropout_mid(output1)
-
+		pu.db
 		if self.feature_dim > 0:
 			# import pdb; pdb.set_trace()
 			output1 = torch.cat([output1, addn_feats], dim=1)
@@ -983,6 +984,7 @@ class BERT_HiGRU_sent_attn_2(nn.Module):
 		self.max_length = worddict.max_length
 		self.max_dialog = worddict.max_dialog
 		self.d_h2 = d_h2
+		self.d_h1 = d_h1
 		self.bert_emb_dim=768
 		# load word2vec
 		self.embeddings = embedding
@@ -1000,21 +1002,21 @@ class BERT_HiGRU_sent_attn_2(nn.Module):
 		self.uttenc = UttEncoder(self.bert_emb_dim, d_h1, self.model)
 		self.dropout_in = nn.Dropout(0.5)
 
-		self.bidirectional= True
+		self.bidirectional= False
 		# self.bert_flag= False
 		self.contenc = nn.GRU(d_h1, d_h2, num_layers=1, bidirectional=self.bidirectional)
 		self.don_model = don_model
 
 		if self.bidirectional==False:
 			self.d_input= d_h2
-			if self.model == 'higru-f':
+			if self.model == 'higru-f' or self.model == 'higru-sent-attn-2-f':
 				self.d_input = d_h2 + d_h1
 			if self.model == 'higru-sf' or self.model == 'higru-sent-attn-2':
 				self.d_input = 2 * d_h2 + d_h1
 
 		else:
 			self.d_input = 2 * d_h2
-			if self.model == 'higru-f':
+			if self.model == 'higru-f' or self.model == 'higru-sent-attn-2-f':
 				self.d_input = 2 * d_h2 + d_h1
 			if self.model == 'higru-sf' or self.model == 'higru-sent-attn-2':
 				self.d_input = 4 * d_h2 + d_h1
@@ -1102,24 +1104,33 @@ class BERT_HiGRU_sent_attn_2(nn.Module):
 		s_context = s_context.transpose(0,1).contiguous()
 		Combined = s_context
 
-		if self.bidirectional==False:
-			s_context    = s_context.squeeze(dim=0)
-			context_mask = get_sent_pad_attn(s_context)
-			SA_cont, _   = get_sent_attention(s_context, s_context,s_context, context_mask)
-			# SA_cont, _   = get_attention(s_context, s_context, s_context)
-			# Combined = [SA_cont, s_context, s_embed.unsqueeze(0)]
-			Combined = [SA_cont, s_context, s_embed]
-			Combined = self.higru_attn(Combined)
-			Combined = Combined.unsqueeze(dim=0)
 
-		
+		if self.bidirectional==False:
+			if '-f' in self.model:
+				# s_lcont, s_rcont = s_context.chunk(2,-1)
+				Combined = [s_context, s_embed.unsqueeze(0)]
+				Combined = torch.cat(Combined, dim=-1).squeeze(0)
+			else:
+				s_context    = s_context.squeeze(dim=0)
+				context_mask = get_sent_pad_attn(s_context)
+				SA_cont, _   = get_sent_attention(s_context, s_context,s_context, context_mask)
+				# SA_cont, _   = get_attention(s_context, s_context, s_context)
+				# Combined = [SA_cont, s_context, s_embed.unsqueeze(0)]
+				Combined = [SA_cont, s_context, s_embed]
+				Combined = torch.cat(Combined, dim=-1).squeeze(0)
+				# Combined = Combined.unsqueeze(dim=0)
+
 		else:
-			s_lcont, s_rcont = s_context.chunk(2, -1)
-			SA_lcont, _ = get_attention(s_lcont, s_lcont, s_lcont)
-			SA_rcont, _ = get_attention(s_rcont, s_rcont, s_rcont)
-			Combined = [SA_lcont, s_lcont, s_embed.unsqueeze(0), s_rcont, SA_rcont]
-			# Combined = self.higru_attn(Combined)
-			Combined = torch.cat(Combined, dim=-1).squeeze(0)
+			if '-f' in self.model:
+				s_lcont, s_rcont = s_context.chunk(2,-1)
+				Combined = [s_lcont, s_embed.unsqueeze(0), s_rcont]
+				Combined = torch.cat(Combined, dim=-1).squeeze(0)
+			else:
+				s_lcont, s_rcont = s_context.chunk(2, -1)
+				SA_lcont, _ = get_attention(s_lcont, s_lcont, s_lcont)
+				SA_rcont, _ = get_attention(s_rcont, s_rcont, s_rcont)
+				Combined = [SA_lcont, s_lcont, s_embed.unsqueeze(0), s_rcont, SA_rcont]
+				Combined = torch.cat(Combined, dim=-1).squeeze(0)
 
 		results = torch.zeros((Combined.shape[0], self.num_classes)).cuda()
 		context = torch.zeros((1, 1, 512)).cuda()
@@ -1129,7 +1140,6 @@ class BERT_HiGRU_sent_attn_2(nn.Module):
 			if self.feature_dim > 0:
 				# import pdb; pdb.set_trace()
 				total_here = torch.cat([total_here, addn_feats[i,:]], dim=-1)
-			
 			attn_vec = self.higru_sent_attn(total_here) * total_here
 			out_here, _ = self.output1_gru(attn_vec.unsqueeze(0).unsqueeze(0), context)
 			out_here = self.relu_gru(out_here)
