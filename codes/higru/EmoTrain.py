@@ -138,26 +138,26 @@ def emotrain(model, data_loader, tr_emodict, emodict, args, focus_emo):
 
 			if args.gpu != None:
 				os.environ['CUDA_VISIBLE_DEVICES'] = args.gpu
-				device = torch.device("cuda: 0")
-				model.cuda(device)
-				feat = feat.cuda(device)
-				label = label.cuda(device)
-				mask= mask.cuda(device)
+				# device = torch.device("cuda: 0")
+				model = torch.nn.DataParallel(model).cuda()
+				feat = feat.cuda()
+				label = label.cuda()
+				mask= mask.cuda()
 
 
-				# donor_mask= donor_mask.cuda(device)
-				# donor_label= donor_label.cuda(device)
-				# donor_float_label = donor_float_label.cuda(device)
-				# EE_mask = EE_mask.cuda(device)
-				# ER_mask = ER_mask.cuda(device)
-				# ER_weights = ER_weights.cuda(device)
-				# EE_weights = EE_weights.cuda(device)
-				# weights = weights.cuda(device)
+				# donor_mask= donor_mask.cuda()
+				# donor_label= donor_label.cuda()
+				# donor_float_label = donor_float_label.cuda()
+				# EE_mask = EE_mask.cuda()
+				# ER_mask = ER_mask.cuda()
+				# ER_weights = ER_weights.cuda()
+				# EE_weights = EE_weights.cuda()
+				# weights = weights.cuda()
 
 			if addn_features != None:
 				addn_feature = torch.FloatTensor(addn_features[bz])
 				addn_feature = Variable(addn_feature)
-				addn_feature = addn_feature.cuda(device)
+				addn_feature = addn_feature.cuda()
 			
 			
 
@@ -189,7 +189,7 @@ def emotrain(model, data_loader, tr_emodict, emodict, args, focus_emo):
 			# 		logits = torch.log(pred_outs/(1+eps-pred_outs))
 			# 		loss2  = F.binary_cross_entropy_with_logits(logits, donor_float_label,reduction='none')
 
-			# 		# loss2  = F.binary_cross_entropy_with_logits(logits, donor_float_label, pos_weight=torch.Tensor([0.2]).cuda(device),reduction='none')
+			# 		# loss2  = F.binary_cross_entropy_with_logits(logits, donor_float_label, pos_weight=torch.Tensor([0.2]).cuda(),reduction='none')
 			# 		loss2  = (loss2.squeeze(1)*donor_mask).sum()
 			# 		# loss2 = F.binary_cross_entropy(pred_outs.reshape(-1, 1), donor_float_label, weights=sample_weights[bz])
 			# 		# loss2 = criterion(pred_outs.reshape(-1,1), donor_float_label)*donor_mask
@@ -387,22 +387,22 @@ def emoeval(model, data_loader, tr_emodict, emodict, args, focus_emo):
 		
 		if args.gpu != None:
 			os.environ['CUDA_VISIBLE_DEVICES'] = args.gpu
-			device = torch.device("cuda: 0")
-			model.cuda(device)
-			feat = feat.cuda(device)
-			label = label.cuda(device)
-			# bert_emb= bert_emb.cuda(device)
-			mask= mask.cuda(device)
-			# donor_label= donor_label.cuda(device)
-			# donor_mask= donor_mask.cuda(device)
-			# EE_weights= EE_weights.cuda(device)
-			# ER_weights= ER_weights.cuda(device)
-			# weights = weights.cuda(device)
+			# device = torch.device("cuda: 0")
+			model = torch.nn.DataParallel(model).cuda()
+			feat = feat.cuda()
+			label = label.cuda()
+			# bert_emb= bert_emb.cuda()
+			mask= mask.cuda()
+			# donor_label= donor_label.cuda()
+			# donor_mask= donor_mask.cuda()
+			# EE_weights= EE_weights.cuda()
+			# ER_weights= ER_weights.cuda()
+			# weights = weights.cuda()
 
 		if addn_features != None:
 			addn_feature = torch.FloatTensor(addn_features[bz])
 			addn_feature = Variable(addn_feature)
-			addn_feature = addn_feature.cuda(device)
+			addn_feature = addn_feature.cuda()
 
 		if 'mask' in args.type:
 			log_prob, log_donor_prob, pred_outs = model(feat, lens, addn_feature, mask)
@@ -671,16 +671,16 @@ def tune_thresholds(labels, logits, method = 'tune'):
 		
 # 		if args.gpu != None:
 # 			os.environ['CUDA_VISIBLE_DEVICES'] = args.gpu
-# 			device = torch.device("cuda: 0")
-# 			model.cuda(device)
-# 			feat = feat.cuda(device)
-# 			label = label.cuda(device)
-# 			bert_emb= bert_emb.cuda(device)
-# 			mask= mask.cuda(device)
-# 			donor_label= donor_label.cuda(device)
-# 			donor_mask= donor_mask.cuda(device)
+			# device = torch.device("cuda: 0")
+# 			model.cuda()
+# 			feat = feat.cuda()
+# 			label = label.cuda()
+# 			bert_emb= bert_emb.cuda()
+# 			mask= mask.cuda()
+# 			donor_label= donor_label.cuda()
+# 			donor_mask= donor_mask.cuda()
 			
-# 			# weights = weights.cuda(device)
+# 			# weights = weights.cuda()
 
 # 		log_prob, log_donor_prob,_ = model(feat, lens, bert_emb)#, speaker_em)
 

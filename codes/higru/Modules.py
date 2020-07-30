@@ -366,7 +366,10 @@ class HiGRU(nn.Module):
 		self.max_length = worddict.max_length
 		self.max_dialog = worddict.max_dialog
 		self.d_h2 = d_h2
-		self.bert_emb_dim=768
+		if long_bert == 2:
+			self.bert_emb_dim=1024
+		else:
+			self.bert_emb_dim=768
 		# load word2vec
 		self.embeddings = embedding
 
@@ -548,18 +551,26 @@ class HiGRU(nn.Module):
 
 
 class BERT_HiGRU(nn.Module):
-	def __init__(self, d_word_vec, d_h1, d_h2, d_fc, emodict, worddict, embedding, type='higru', bert_flag=False, don_model=0, trainable= False, feature_dim= 0):
+	def __init__(self, d_word_vec, d_h1, d_h2, d_fc, emodict, worddict, embedding, type='higru', bert_flag=False, don_model=0, trainable= False, feature_dim= 0, long_bert = 0):
 		super(BERT_HiGRU, self).__init__()
 		self.model = type
 		self.max_length = worddict.max_length
 		self.max_dialog = worddict.max_dialog
 		self.d_h2 = d_h2
-		self.bert_emb_dim=768
+		if long_bert == 2:
+			self.bert_emb_dim=1024
+		else:
+			self.bert_emb_dim=768
 		# load word2vec
 		self.embeddings = embedding
 		self.feature_dim = feature_dim
 		from transformers import BertModel
-		self.bert = BertModel.from_pretrained('bert-base-uncased')
+		if long_bert == 2:
+			self.bert = BertModel.from_pretrained('bert-large-uncased')
+			print("Large BERT chosen")
+		if long_bert == 1:
+			self.bert = BertModel.from_pretrained('bert-base-uncased')
+			print("Base BERT chosen")
 
 		for p in self.bert.parameters():
 			p.requires_grad = trainable
@@ -682,7 +693,6 @@ class BERT_HiGRU(nn.Module):
 
 		output1 = self.output1(Combined.squeeze(0))
 		output1 = self.dropout_mid(output1)
-		pu.db
 		if self.feature_dim > 0:
 			# import pdb; pdb.set_trace()
 			output1 = torch.cat([output1, addn_feats], dim=1)
@@ -750,18 +760,26 @@ class BERT_HiGRU(nn.Module):
 		return log_pred_scores, pred_outs, don_prob
 
 class BERT_HiGRU_sent_attn(nn.Module):
-	def __init__(self, d_word_vec, d_h1, d_h2, d_fc, emodict, worddict, embedding, type='higru', bert_flag=False, don_model=0, trainable= False, feature_dim= 0):
+	def __init__(self, d_word_vec, d_h1, d_h2, d_fc, emodict, worddict, embedding, type='higru', bert_flag=False, don_model=0, trainable= False, feature_dim= 0, long_bert = 0):
 		super(BERT_HiGRU_sent_attn, self).__init__()
 		self.model = type
 		self.max_length = worddict.max_length
 		self.max_dialog = worddict.max_dialog
 		self.d_h2 = d_h2
-		self.bert_emb_dim=768
+		if long_bert == 2:
+			self.bert_emb_dim=1024
+		else:
+			self.bert_emb_dim=768
 		# load word2vec
 		self.embeddings = embedding
 		self.feature_dim = feature_dim
 		from transformers import BertModel
-		self.bert = BertModel.from_pretrained('bert-base-uncased')
+		if long_bert == 2:
+			self.bert = BertModel.from_pretrained('bert-large-uncased')
+			print("Large BERT chosen")
+		if long_bert == 1:
+			self.bert = BertModel.from_pretrained('bert-base-uncased')
+			print("Base BERT chosen")
 
 		for p in self.bert.parameters():
 			p.requires_grad = trainable
@@ -978,19 +996,27 @@ class BERT_HiGRU_sent_attn(nn.Module):
 		return log_pred_scores, pred_outs, don_prob
 
 class BERT_HiGRU_sent_attn_2(nn.Module):
-	def __init__(self, d_word_vec, d_h1, d_h2, d_fc, emodict, worddict, embedding, type='higru', bert_flag=False, don_model=0, trainable= False, feature_dim= 0):
+	def __init__(self, d_word_vec, d_h1, d_h2, d_fc, emodict, worddict, embedding, type='higru', bert_flag=False, don_model=0, trainable= False, feature_dim= 0, long_bert = 0):
 		super(BERT_HiGRU_sent_attn_2, self).__init__()
 		self.model = type
 		self.max_length = worddict.max_length
 		self.max_dialog = worddict.max_dialog
 		self.d_h2 = d_h2
 		self.d_h1 = d_h1
-		self.bert_emb_dim=768
+		if long_bert == 2:
+			self.bert_emb_dim=1024
+		else:
+			self.bert_emb_dim=768
 		# load word2vec
 		self.embeddings = embedding
 		self.feature_dim = feature_dim
 		from transformers import BertModel
-		self.bert = BertModel.from_pretrained('bert-base-uncased')
+		if long_bert == 2:
+			self.bert = BertModel.from_pretrained('bert-large-uncased')
+			print("Large BERT chosen")
+		if long_bert == 1:
+			self.bert = BertModel.from_pretrained('bert-base-uncased')
+			print("Base BERT chosen")
 
 		for p in self.bert.parameters():
 			p.requires_grad = trainable
@@ -1214,18 +1240,26 @@ class BERT_HiGRU_sent_attn_2(nn.Module):
 		return log_pred_scores, pred_outs, don_prob
 
 class BERT_HiGRU_sent_attn_mask(nn.Module):
-	def __init__(self, d_word_vec, d_h1, d_h2, d_fc, emodict, worddict, embedding, type='higru', bert_flag=False, don_model=0, trainable= False, feature_dim= 0):
+	def __init__(self, d_word_vec, d_h1, d_h2, d_fc, emodict, worddict, embedding, type='higru', bert_flag=False, don_model=0, trainable= False, feature_dim= 0, long_bert = 0):
 		super(BERT_HiGRU_sent_attn_mask, self).__init__()
 		self.model = type
 		self.max_length = worddict.max_length
 		self.max_dialog = worddict.max_dialog
 		self.d_h2 = d_h2
-		self.bert_emb_dim=768
+		if long_bert == 2:
+			self.bert_emb_dim=1024
+		else:
+			self.bert_emb_dim=768
 		# load word2vec
 		self.embeddings = embedding
 		self.feature_dim = feature_dim
 		from transformers import BertModel
-		self.bert = BertModel.from_pretrained('bert-base-uncased')
+		if long_bert == 2:
+			self.bert = BertModel.from_pretrained('bert-large-uncased')
+			print("Large BERT chosen")
+		if long_bert == 1:
+			self.bert = BertModel.from_pretrained('bert-base-uncased')
+			print("Base BERT chosen")
 
 		for p in self.bert.parameters():
 			p.requires_grad = trainable
@@ -1442,19 +1476,27 @@ class BERT_HiGRU_sent_attn_mask(nn.Module):
 
 
 class BERT_HiGRU_sent_conn_mask(nn.Module):
-	def __init__(self, d_word_vec, d_h1, d_h2, d_fc, emodict, worddict, embedding, type='higru', bert_flag=False, don_model=0, trainable= False, feature_dim= 0):
+	def __init__(self, d_word_vec, d_h1, d_h2, d_fc, emodict, worddict, embedding, type='higru', bert_flag=False, don_model=0, trainable= False, feature_dim= 0, long_bert = 0):
 		super(BERT_HiGRU_sent_conn_mask, self).__init__()
 		self.model = type
 		self.max_length = worddict.max_length
 		self.max_dialog = worddict.max_dialog
 		self.d_h2 = d_h2
 		self.d_h1 = d_h1
-		self.bert_emb_dim=768
+		if long_bert == 2:
+			self.bert_emb_dim=1024
+		else:
+			self.bert_emb_dim=768
 		# load word2vec
 		self.embeddings = embedding
 		self.feature_dim = feature_dim
 		from transformers import BertModel
-		self.bert = BertModel.from_pretrained('bert-base-uncased')
+		if long_bert == 2:
+			self.bert = BertModel.from_pretrained('bert-large-uncased')
+			print("Large BERT chosen")
+		if long_bert == 1:
+			self.bert = BertModel.from_pretrained('bert-base-uncased')
+			print("Base BERT chosen")
 
 		for p in self.bert.parameters():
 			p.requires_grad = trainable
@@ -1690,18 +1732,26 @@ class BERT_HiGRU_sent_conn_mask(nn.Module):
 
 
 class BERT_HiGRU_uttr_attn(nn.Module):
-	def __init__(self, d_word_vec, d_h1, d_h2, d_fc, emodict, worddict, embedding, type='higru', bert_flag=False, don_model=0, trainable= False, feature_dim= 0):
+	def __init__(self, d_word_vec, d_h1, d_h2, d_fc, emodict, worddict, embedding, type='higru', bert_flag=False, don_model=0, trainable= False, feature_dim= 0, long_bert = 0):
 		super(BERT_HiGRU_uttr_attn, self).__init__()
 		self.model = type
 		self.max_length = worddict.max_length
 		self.max_dialog = worddict.max_dialog
 		self.d_h2 = d_h2
-		self.bert_emb_dim=768
+		if long_bert == 2:
+			self.bert_emb_dim=1024
+		else:
+			self.bert_emb_dim=768
 		# load word2vec
 		self.embeddings = embedding
 		self.feature_dim = feature_dim
 		from transformers import BertModel
-		self.bert = BertModel.from_pretrained('bert-base-uncased')
+		if long_bert == 2:
+			self.bert = BertModel.from_pretrained('bert-large-uncased')
+			print("Large BERT chosen")
+		if long_bert == 1:
+			self.bert = BertModel.from_pretrained('bert-base-uncased')
+			print("Base BERT chosen")
 
 		for p in self.bert.parameters():
 			p.requires_grad = trainable
@@ -1882,18 +1932,26 @@ class BERT_HiGRU_uttr_attn(nn.Module):
 
 
 class BERT_HiGRU_uttr_attn_2(nn.Module):
-	def __init__(self, d_word_vec, d_h1, d_h2, d_fc, emodict, worddict, embedding, type='higru', bert_flag=False, don_model=0, trainable= False, feature_dim= 0):
+	def __init__(self, d_word_vec, d_h1, d_h2, d_fc, emodict, worddict, embedding, type='higru', bert_flag=False, don_model=0, trainable= False, feature_dim= 0, long_bert = 0):
 		super(BERT_HiGRU_uttr_attn_2, self).__init__()
 		self.model = type
 		self.max_length = worddict.max_length
 		self.max_dialog = worddict.max_dialog
 		self.d_h2 = d_h2
-		self.bert_emb_dim=768
+		if long_bert == 2:
+			self.bert_emb_dim=1024
+		else:
+			self.bert_emb_dim=768
 		# load word2vec
 		self.embeddings = embedding
 		self.feature_dim = feature_dim
 		from transformers import BertModel
-		self.bert = BertModel.from_pretrained('bert-base-uncased')
+		if long_bert == 2:
+			self.bert = BertModel.from_pretrained('bert-large-uncased')
+			print("Large BERT chosen")
+		if long_bert == 1:
+			self.bert = BertModel.from_pretrained('bert-base-uncased')
+			print("Base BERT chosen")
 
 		for p in self.bert.parameters():
 			p.requires_grad = trainable
@@ -2073,18 +2131,26 @@ class BERT_HiGRU_uttr_attn_2(nn.Module):
 		return log_pred_scores, pred_outs, don_prob
 
 class BERT_HiGRU_uttr_attn_3(nn.Module):
-	def __init__(self, d_word_vec, d_h1, d_h2, d_fc, emodict, worddict, embedding, type='higru', bert_flag=False, don_model=0, trainable= False, feature_dim= 0):
+	def __init__(self, d_word_vec, d_h1, d_h2, d_fc, emodict, worddict, embedding, type='higru', bert_flag=False, don_model=0, trainable= False, feature_dim= 0, long_bert = 0):
 		super(BERT_HiGRU_uttr_attn_3, self).__init__()
 		self.model = type
 		self.max_length = worddict.max_length
 		self.max_dialog = worddict.max_dialog
 		self.d_h2 = d_h2
-		self.bert_emb_dim=768
+		if long_bert == 2:
+			self.bert_emb_dim=1024
+		else:
+			self.bert_emb_dim=768
 		# load word2vec
 		self.embeddings = embedding
 		self.feature_dim = feature_dim
 		from transformers import BertModel
-		self.bert = BertModel.from_pretrained('bert-base-uncased')
+		if long_bert == 2:
+			self.bert = BertModel.from_pretrained('bert-large-uncased')
+			print("Large BERT chosen")
+		if long_bert == 1:
+			self.bert = BertModel.from_pretrained('bert-base-uncased')
+			print("Base BERT chosen")
 
 		for p in self.bert.parameters():
 			p.requires_grad = trainable
@@ -2458,13 +2524,21 @@ class BERT_BiGRU(nn.Module):
 		self.max_length = worddict.max_length
 		self.max_dialog = worddict.max_dialog
 		self.d_h2 = d_h2
-		self.bert_emb_dim = 768
+		if long_bert == 2:
+			self.bert_emb_dim = 1024
+		else:
+			self.bert_emb_dim = 768
 		# load word2vec
 		self.embeddings = embedding
 		self.feature_dim = feature_dim
 
 		from transformers import BertModel
-		self.bert = BertModel.from_pretrained('bert-base-uncased')
+		if long_bert == 2:
+			self.bert = BertModel.from_pretrained('bert-large-uncased')
+			print("Large BERT chosen")
+		if long_bert == 1:
+			self.bert = BertModel.from_pretrained('bert-base-uncased')
+			print("Base BERT chosen")
 
 		for p in self.bert.parameters():
 			p.requires_grad= trainable

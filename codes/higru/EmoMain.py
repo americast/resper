@@ -157,7 +157,8 @@ def main():
 					  # bert_flag= args.bert,
 					  # don_model= args.don_model,
 					  trainable= trainable,
-					  feature_dim = feature_dim
+					  feature_dim = feature_dim,
+					  long_bert = args.bert
 					  )
 					  #speaker_flag= args.sf)
 	elif args.type.startswith('bert-higru-sent-conn-mask'):
@@ -173,7 +174,8 @@ def main():
 					  # bert_flag= args.bert,
 					  # don_model= args.don_model,
 					  trainable= trainable,
-					  feature_dim = feature_dim
+					  feature_dim = feature_dim,
+					  long_bert = args.bert
 					  )
 					  #speaker_flag= args.sf)
 
@@ -191,7 +193,8 @@ def main():
 					  # bert_flag= args.bert,
 					  # don_model= args.don_model,
 					  trainable= trainable,
-					  feature_dim = feature_dim
+					  feature_dim = feature_dim,
+					  long_bert = args.bert
 					  )
 					  #speaker_flag= args.sf)
 
@@ -208,7 +211,8 @@ def main():
 					  # bert_flag= args.bert,
 					  # don_model= args.don_model,
 					  trainable= trainable,
-					  feature_dim = feature_dim
+					  feature_dim = feature_dim,
+					  long_bert = args.bert
 					  )
 					  #speaker_flag= args.sf)
 
@@ -225,7 +229,8 @@ def main():
 					  # bert_flag= args.bert,
 					  # don_model= args.don_model,
 					  trainable= trainable,
-					  feature_dim = feature_dim
+					  feature_dim = feature_dim,
+					  long_bert = args.bert
 					  )
 					  #speaker_flag= args.sf)
 
@@ -242,7 +247,8 @@ def main():
 					  # bert_flag= args.bert,
 					  # don_model= args.don_model,
 					  trainable= trainable,
-					  feature_dim = feature_dim
+					  feature_dim = feature_dim,
+					  long_bert = args.bert
 					  )
 					  #speaker_flag= args.sf)
 
@@ -259,7 +265,8 @@ def main():
 					  # bert_flag= args.bert,
 					  # don_model= args.don_model,
 					  trainable= trainable,
-					  feature_dim = feature_dim
+					  feature_dim = feature_dim,
+					  long_bert = args.bert
 					  )
 					  #speaker_flag= args.sf)
 
@@ -275,7 +282,8 @@ def main():
 					  # bert_flag= args.bert,
 					  # don_model= args.don_model,
 					  trainable= trainable,
-					  feature_dim = feature_dim
+					  feature_dim = feature_dim,
+					  long_bert = args.bert
 					  )
 					  #speaker_flag= args.sf)
 
@@ -290,7 +298,8 @@ def main():
 					  type=args.type,
 					  # bert= args.bert,
 					  # don_model= args.don_model
-					  feature_dim = feature_dim
+					  feature_dim = feature_dim,
+					  long_bert = args.bert
 					  )
 
 
@@ -307,7 +316,8 @@ def main():
 					  # don_model= args.don_model
 					  trainable=trainable,
 					  feature_dim = feature_dim
-
+,
+long_bert = args.bert
 					  )
 
 
@@ -322,7 +332,8 @@ def main():
 					  type=args.type.replace('bigru','higru'),
 					  # bert= args.bert,
 					  # don_model= args.don_model
-					  feature_dim = feature_dim
+					  feature_dim = feature_dim,
+					  long_bert = args.bert
 					  )
 
 

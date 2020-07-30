@@ -73,6 +73,10 @@ def return_file_path(args):
 		
 		file_str= file_str+'_'+str(elem)+'_'+str(d[elem])
 
+	if args.bert == 2:
+		file_str += '_long-bert'
+
+
 	return file_str
 
 
