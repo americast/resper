@@ -139,7 +139,7 @@ def emotrain(model, data_loader, tr_emodict, emodict, args, focus_emo):
 			if args.gpu != None:
 				os.environ['CUDA_VISIBLE_DEVICES'] = args.gpu
 				# device = torch.device("cuda: 0")
-				model = torch.nn.DataParallel(model).cuda()
+				model = model.cuda()
 				feat = feat.cuda()
 				label = label.cuda()
 				mask= mask.cuda()
@@ -388,7 +388,7 @@ def emoeval(model, data_loader, tr_emodict, emodict, args, focus_emo):
 		if args.gpu != None:
 			os.environ['CUDA_VISIBLE_DEVICES'] = args.gpu
 			# device = torch.device("cuda: 0")
-			model = torch.nn.DataParallel(model).cuda()
+			model = model.cuda()
 			feat = feat.cuda()
 			label = label.cuda()
 			# bert_emb= bert_emb.cuda()
