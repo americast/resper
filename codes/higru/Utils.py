@@ -172,7 +172,7 @@ def load_pretrain(d_word_vec, diadict, type='word2vec'):
 		filename = 'word2vec300.bin'
 		word2vec = load_bin_vec(filename, diadict.word2index)
 	elif type == 'glove':
-		filename = '/data/glove_vector/glove.6B.300d.txt'
+		filename = '../../data/glove_vector/glove.6B.300d.txt'
 		word2vec = load_txt_glove(filename, diadict.word2index)
 
 	# initialize a numpy tensor

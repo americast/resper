@@ -697,7 +697,6 @@ class BERT_HiGRU(nn.Module):
 			# import pdb; pdb.set_trace()
 			output1 = torch.cat([output1, addn_feats], dim=1)
 
-
 		output  = self.classifier(output1)
 		log_pred_scores = F.log_softmax(output, dim=1)
 		pred_scores = F.softmax(output, dim=1)

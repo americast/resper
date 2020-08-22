@@ -19,7 +19,8 @@ from sklearn.utils.class_weight import compute_sample_weight
 
 def return_addn_features(data_loader, args):
 	if 'resisting' in args.dataset:
-		feat_names = ['vad_features', 'affect_features', 'emo_features', 'liwc_features', 'sentiment_features', 'face_features', 'norm_er_strategies', 'norm_er_DAs', 'ee_DAs']
+		# feat_names = ['vad_features', 'affect_features', 'emo_features', 'liwc_features', 'sentiment_features', 'face_features', 'norm_er_strategies', 'norm_er_DAs', 'ee_DAs']
+		feat_names = ['vad_features', 'affect_features', 'emo_features', 'liwc_features', 'sentiment_features']
 
 	elif 'negotiation' in args.dataset:
 		feat_names = ['vad_features', 'affect_features', 'emo_features', 'liwc_features', 'sentiment_features']

@@ -101,7 +101,8 @@ def main():
 
 	seed_everything(args.seed)
 	if 'resisting' in args.dataset:
-		feature_dim_dict = {'vad_features': 3, 'affect_features': 4, 'emo_features': 10, 'liwc_features': 64, 'sentiment_features': 3, 'face_features': 8, 'norm_er_strategies': 10, 'norm_er_DAs': 17, 'ee_DAs': 23, 'all': 3+4+10+64+3+8+10+17+23}
+		# feature_dim_dict = {'vad_features': 3, 'affect_features': 4, 'emo_features': 10, 'liwc_features': 64, 'sentiment_features': 3, 'face_features': 8, 'norm_er_strategies': 10, 'norm_er_DAs': 17, 'ee_DAs': 23, 'all': 3+4+10+64+3+8+10+17+23}
+		feature_dim_dict = {'vad_features': 3, 'affect_features': 4, 'emo_features': 10, 'liwc_features': 64, 'sentiment_features': 3, 'all': 3+4+10+64+3}
 
 	elif 'negotiation' in args.dataset:
 		feature_dim_dict = {'vad_features': 3, 'affect_features': 4, 'emo_features': 10, 'liwc_features': 64, 'sentiment_features': 3, 'all': 3+4+10+64+3}

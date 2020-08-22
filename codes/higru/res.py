@@ -93,6 +93,7 @@ for file in sorted(file_dict):
 	model_type = get_model_type(file)	
 	acc = round(np.mean(file_dict[file]['acc']),2)
 	f1  = round(np.mean(file_dict[file]['f1']),2)
+	sd  = round(np.std(file_dict[file]['f1']),2)
 
 	# if 'EE' in file:
 	# 	EE_seed_file_dict[model_type] = (acc, f1)
@@ -102,7 +103,7 @@ for file in sorted(file_dict):
 		# all_seed_file_dict[model_type] = (acc, f1)
 
 
-	print('{}\t{}\t{}'.format(file, round(np.mean(file_dict[file]['acc']),3), round(np.mean(file_dict[file]['f1']),3)))#,round(np.mean(file_dict[file]['don_acc']),3), round(np.mean(file_dict[file]['don_f1']),3)))
+	print('{}\t{}\t{}\t{}'.format(file, round(np.mean(file_dict[file]['acc']),3), round(np.mean(file_dict[file]['f1']),3), round(np.std(file_dict[file]['f1']),3)))#,round(np.mean(file_dict[file]['don_acc']),3), round(np.mean(file_dict[file]['don_f1']),3)))
 
 
 # for model in sorted(all_seed_file_dict):
