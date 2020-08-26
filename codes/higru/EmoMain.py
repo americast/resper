@@ -7,7 +7,7 @@ import sys; sys.path.append('../')
 from helper import *
 # from Preprocess import Dictionary # import the object for pickle loading
 from Modules import *
-from EmoTrain import emotrain, emoeval
+from EmoTrain import emotrain, emoeval, emotrain_combo
 from datetime import datetime
 import math
 import time
@@ -143,9 +143,41 @@ def main():
 			Utils.saveToPickle(args.embedding, np_embedding)
 		embedding.weight.data.copy_(torch.from_numpy(np_embedding))
 	embedding.weight.requires_grad = trainable
-
+	# pu.db
 	# Choose the model
-	if args.type.startswith('bert-higru-sent-attn-mask'):
+	if args.type.startswith('combo'):
+		print("Training the combo model")
+		model_bin = combo_bin(d_word_vec=args.d_word_vec,
+					  d_h1=args.d_h1,
+					  d_h2=args.d_h2,
+					  d_fc=args.d_fc,
+					  emodict=emodict,
+					  worddict=worddict,
+					  embedding=embedding,
+					  type=args.type[5:],
+					  # bert_flag= args.bert,
+					  # don_model= args.don_model,
+					  trainable= trainable,
+					  feature_dim = feature_dim,
+					  long_bert = args.bert
+					  )
+					  #speaker_flag= args.sf)
+		model_multi = combo_multi(d_word_vec=args.d_word_vec,
+					  d_h1=args.d_h1,
+					  d_h2=args.d_h2,
+					  d_fc=args.d_fc,
+					  emodict=emodict,
+					  worddict=worddict,
+					  embedding=embedding,
+					  type=args.type[5:],
+					  # bert_flag= args.bert,
+					  # don_model= args.don_model,
+					  trainable= trainable,
+					  feature_dim = feature_dim,
+					  long_bert = args.bert
+					  )
+					  #speaker_flag= args.sf)
+	elif args.type.startswith('bert-higru-sent-attn-mask'):
 		print("Training sentence-based masked attention")
 		model = BERT_HiGRU_sent_attn_mask(d_word_vec=args.d_word_vec,
 					  d_h1=args.d_h1,
@@ -356,7 +388,16 @@ long_bert = args.bert
 	focus_emo = []
 
 	# Train the model
-	emotrain(model=model,
+	if args.type.startswith('combo'):
+		emotrain_combo(model_bin=model_bin,
+			 model_multi=model_multi,
+			 data_loader=field,
+			 tr_emodict=tr_emodict,
+			 emodict=emodict,
+			 args=args,
+			 focus_emo=focus_emo)
+	else:
+		emotrain(model=model,
 			 data_loader=field,
 			 tr_emodict=tr_emodict,
 			 emodict=emodict,

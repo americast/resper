@@ -270,6 +270,254 @@ def emotrain(model, data_loader, tr_emodict, emodict, args, focus_emo):
 			print("Best performance before breaking acc {} f1 {} ".format(acc, mf1))
 			break
 
+def emotrain_combo(model_bin, model_multi, data_loader, tr_emodict, emodict, args, focus_emo):
+	"""
+	:data_loader input the whole field
+	"""
+	# start time
+	time_st = time.time()
+	decay_rate = args.decay
+	alpha= 1.0
+
+	# Load in the training set and validation set
+	train_loader   =   data_loader['train']
+	dev_loader     =   data_loader['test']
+
+
+	if args.bert == 1:
+		feats = train_loader['bert-feat']
+	else:
+		feats = train_loader['feat']
+
+	labels  =   train_loader[args.label_type+'_labels']
+
+	speakers       =   train_loader['speaker']
+	addn_features  =   return_addn_features(train_loader, args)
+
+	# Optimizer
+	lr = args.lr
+	model_opt_bin = optim.Adam(model_bin.parameters(), lr=lr)
+	model_opt_multi = optim.Adam(model_multi.parameters(), lr=lr)
+
+	# Weight for loss
+
+	'''
+	Removing the auxillary weights condition. 
+	'''
+
+	# Raise the .train() flag before training
+	model_bin.train()
+	model_multi.train()
+
+	# criterion = torch.nn.BCELoss(pos_weights=torch.Tensor([0.2]), reduction='none')
+
+	file_str = Utils.return_file_path(args)
+	
+
+	f=open('../../data/higru_bert_data/results/'+file_str+ '.txt','w')
+
+
+	over_fitting = 0
+	cur_best = -1e10
+	cur_face_best = -1e10
+	glob_steps = 0
+	report_loss_bin = 0
+	report_loss_multi = 0
+	eps = 1e-10
+	for epoch in range(1, args.epochs + 1):
+		model_opt_multi.param_groups[0]['lr'] *= decay_rate	# Decay the lr every epoch
+		model_opt_bin.param_groups[0]['lr'] *= decay_rate	# Decay the lr every epoch
+
+		# import pdb; pdb.set_trace()
+
+		if addn_features != None:
+			feats, labels, speakers, addn_features= Utils.shuffle_lists(feats, labels, speakers, addn_features)
+		else:
+			feats, labels, speakers = Utils.shuffle_lists(feats, labels, speakers)
+		
+			# sample_weights)	# Shuffle the training set every epoch
+		print("===========Epoch==============")
+		print("-{}-{}".format(epoch, Utils.timeSince(time_st)))
+
+		for bz in range(len(labels)):
+			# pu.db
+			# Tensorize a dialogue, a dialogue is a batch
+			feat, lens = Utils.ToTensor(feats[bz], is_len=True)
+			label = Utils.ToTensor(labels[bz])
+			if 'negotiation' in args.dataset:
+				mask  = torch.LongTensor([1 for i in speakers[bz]])
+			else:
+				mask  = torch.LongTensor([int(i) for i in speakers[bz]])
+
+			mask_bin = torch.LongTensor([0 if i == 0 else 1 for i in label])
+			addn_feature = None
+			
+			feats# EE_mask= torch.LongTensor([int(i) for i in speakers[bz]])
+			# ER_mask = torch.LongTensor([1-int(i) for i in speakers[bz]])
+
+			# EE_weights = torch.FloatTensor([0 if i in ['4'] else 1 for i,j in emodict.word2index.items()])
+			# ER_weights = torch.FloatTensor([0 if i in ['0','7'] else 1 for i,j in emodict.word2index.items()])
+
+			# donor_mask= torch.LongTensor([0 for i in range(len(speakers[bz]))])	
+			# donor_mask[len(donor_mask)-args.ldm:]=1
+
+			feat = Variable(feat)
+			label = Variable(label)
+			# bert_emb= Variable(bert_emb)
+
+			if args.gpu != None:
+				os.environ['CUDA_VISIBLE_DEVICES'] = args.gpu
+				# device = torch.device("cuda: 0")
+				model_bin = model_bin.cuda()
+				model_multi = model_multi.cuda()
+				feat = feat.cuda()
+				label = label.cuda()
+				mask= mask.cuda()
+				mask_bin= mask_bin.cuda()
+
+
+				# donor_mask= donor_mask.cuda()
+				# donor_label= donor_label.cuda()
+				# donor_float_label = donor_float_label.cuda()
+				# EE_mask = EE_mask.cuda()
+				# ER_mask = ER_mask.cuda()
+				# ER_weights = ER_weights.cuda()
+				# EE_weights = EE_weights.cuda()
+				# weights = weights.cuda()
+
+			if addn_features != None:
+				addn_feature = torch.FloatTensor(addn_features[bz])
+				addn_feature = Variable(addn_feature)
+				addn_feature = addn_feature.cuda()
+			
+			
+
+			if 'mask' in args.type:
+				log_prob_bin,  log_donor_prob_bin, pred_outs_bin = model_bin(feat, lens, addn_feature, mask)
+				log_prob_multi,  log_donor_prob_multi, pred_outs_multi = model_multi(feat, lens, addn_feature, mask)
+			else:
+				log_prob_bin,  log_donor_prob_bin, pred_outs_bin = model_bin(feat, lens, addn_feature)
+				log_prob_multi,  log_donor_prob_multi, pred_outs_multi = model_multi(feat, lens, addn_feature)
+			
+			target_bin   = mask_bin.unsqueeze(-1)
+			target_multi = label - 1
+			zeros_here = torch.zeros(target_multi.shape).cuda().long()
+			target_multi = torch.where(target_multi < 1, zeros_here, target_multi)
+			all_loss_bin = torch.gather(log_prob_bin, 1, target_bin).squeeze(1)
+			all_loss_multi = torch.gather(log_prob_multi, 1, target_multi).squeeze(1)
+			# if all_loss !=all_loss:
+
+			# import pdb; pdb.set_trace()
+			loss_bin  = -(all_loss_bin*mask.float()).sum()/mask.sum()
+			loss_multi  = -(all_loss_multi*mask.float()*mask_bin.float()).sum()/mask.sum()
+
+			if loss_bin !=loss_bin:
+				import pdb; pdb.set_trace()
+
+			if loss_multi !=loss_multi:
+				import pdb; pdb.set_trace()
+
+			loss_bin.backward()
+			loss_multi.backward()
+
+			loss2 = None
+
+			# if log_donor_prob == None:
+			# 	if args.sec_loss =='mse':
+			# 		mse   = torch.nn.MSELoss(reduction='sum')
+			# 		loss2 = mse(pred_outs[-1],donor_float_label[-1])
+
+			# 	else:
+
+			# 		logits = torch.log(pred_outs/(1+eps-pred_outs))
+			# 		loss2  = F.binary_cross_entropy_with_logits(logits, donor_float_label,reduction='none')
+
+			# 		# loss2  = F.binary_cross_entropy_with_logits(logits, donor_float_label, pos_weight=torch.Tensor([0.2]).cuda(),reduction='none')
+			# 		loss2  = (loss2.squeeze(1)*donor_mask).sum()
+			# 		# loss2 = F.binary_cross_entropy(pred_outs.reshape(-1, 1), donor_float_label, weights=sample_weights[bz])
+			# 		# loss2 = criterion(pred_outs.reshape(-1,1), donor_float_label)*donor_mask
+
+			# 	if loss2!=loss2:
+			# 		import pdb; pdb.set_trace()
+				
+
+			# else:
+			# 	loss2 = torch.gather(log_donor_prob, 1, donor_label).squeeze(1)*donor_mask
+			# 	loss2 = -loss2.sum()/donor_mask.sum()
+	
+			# if args.interpret  =='combined_trainable_loss': # add both losses as it happens
+			# 	loss = loss + loss2
+			# 	loss.backward()
+			# elif args.interpret == 'single_loss':  # add them in a weighed fashion
+			# 	loss = alpha*loss + (1- alpha)*loss2
+			# 	loss.backward()
+			# elif args.interpret =='combined_non_trainable_loss':
+			# 	loss.backward(retain_graph=True)
+			# 	param_list=[]
+			# 	for name, param in model.named_parameters():
+			# 		if name.startswith('classifier2')==False and param.requires_grad:
+			# 			param.requires_grad=False
+			# 			param_list.append((name, param))
+			# 	loss2.backward()
+			# else:
+			# 	loss.backward()
+
+
+			report_loss_bin += loss_bin.item()
+			report_loss_multi += loss_multi.item()
+			glob_steps += 1
+
+			# gradient clip
+			torch.nn.utils.clip_grad_norm_(model_bin.parameters(), max_norm=5)
+			torch.nn.utils.clip_grad_norm_(model_multi.parameters(), max_norm=5)
+
+			model_opt_bin.step()
+			model_opt_multi.step()
+			
+			model_opt_bin.zero_grad()
+			model_opt_multi.zero_grad()
+
+			if glob_steps % args.report_loss == 0:
+				print("Steps: {} Loss bin: {} Loss multi: {} LR: {}".format(glob_steps, report_loss_bin/args.report_loss, report_loss_multi/args.report_loss, model_opt.param_groups[0]['lr']))
+				report_loss = 0
+		
+		pAccs, acc, mf1 = emoeval_combo(model_bin=model_bin, model_multi=model_multi, data_loader=train_loader, tr_emodict=tr_emodict, emodict=emodict, args=args, focus_emo=focus_emo)
+
+		print("Train acc = {}".format(acc))
+		print("Train F1 = {}".format(mf1))
+		
+
+		# validate
+		pAccs, acc, mf1 = emoeval_combo(model_bin=model_bin, model_multi=model_multi, data_loader=dev_loader, tr_emodict=tr_emodict, emodict=emodict, args=args, focus_emo=focus_emo)
+
+		# print("Validate: ACCs-WA-UWA {}".format(pAccs))
+		print("Validation acc = {}".format(acc))
+		print("Validation F1 = {}".format(mf1))
+		
+
+		f.write(str(epoch)+'\t'+str(acc)+'\t'+str(mf1)+'\n')
+		f.flush()
+		print("Wrote details to file")
+		# last_don_best= don_mf1
+		last_best = mf1
+
+		if last_best > cur_face_best:
+			# torch.save(model.state_dict(), args.save_dir+'/'+file_str+'.pt')
+
+			torch.save(model_bin, args.save_dir+'/'+file_str+'_model_bin.pt')
+			torch.save(model_multi, args.save_dir+'/'+file_str+'_model_multi.pt')
+			
+			# Utils.model_saver(model, args.save_dir, args.type, args.dataset, args)
+			cur_face_best = last_best
+			over_fitting = 0
+		else:
+			over_fitting += 1
+
+
+		if over_fitting > args.patience:
+			print("Best performance before breaking acc {} f1 {} ".format(acc, mf1))
+			break
+
 
 def comput_class_loss(log_prob, target, weights):
 	""" Weighted loss function """
