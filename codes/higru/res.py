@@ -78,6 +78,8 @@ def get_model_type(file):
 		model_type = 'bigru-f'
 	elif 'bigru' in file:
 		model_type = 'bigru'
+	elif 'combo' in file:
+		model_type = 'combo'
 	
 	return model_type
 	

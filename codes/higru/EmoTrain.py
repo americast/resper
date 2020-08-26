@@ -15,7 +15,7 @@ import pandas as pd
 import pdb
 import pudb
 from sklearn.utils.class_weight import compute_sample_weight
-
+from tqdm import tqdm
 
 def return_addn_features(data_loader, args):
 	if 'resisting' in args.dataset:
@@ -114,7 +114,7 @@ def emotrain(model, data_loader, tr_emodict, emodict, args, focus_emo):
 		print("===========Epoch==============")
 		print("-{}-{}".format(epoch, Utils.timeSince(time_st)))
 
-		for bz in range(len(labels)):
+		for bz in tqdm(range(len(labels))):
 			# Tensorize a dialogue, a dialogue is a batch
 			feat, lens = Utils.ToTensor(feats[bz], is_len=True)
 			label = Utils.ToTensor(labels[bz])
@@ -339,7 +339,7 @@ def emotrain_combo(model_bin, model_multi, data_loader, tr_emodict, emodict, arg
 		print("===========Epoch==============")
 		print("-{}-{}".format(epoch, Utils.timeSince(time_st)))
 
-		for bz in range(len(labels)):
+		for bz in tqdm(range(len(labels))):
 			# pu.db
 			# Tensorize a dialogue, a dialogue is a batch
 			feat, lens = Utils.ToTensor(feats[bz], is_len=True)
@@ -478,7 +478,7 @@ def emotrain_combo(model_bin, model_multi, data_loader, tr_emodict, emodict, arg
 			model_opt_multi.zero_grad()
 
 			if glob_steps % args.report_loss == 0:
-				print("Steps: {} Loss bin: {} Loss multi: {} LR: {}".format(glob_steps, report_loss_bin/args.report_loss, report_loss_multi/args.report_loss, model_opt.param_groups[0]['lr']))
+				print("Steps: {} Loss bin: {} Loss multi: {} LR_bin: {} LR_multi: {}".format(glob_steps, report_loss_bin/args.report_loss, report_loss_multi/args.report_loss, model_opt_bin.param_groups[0]['lr'], model_opt_multi.param_groups[0]['lr']))
 				report_loss = 0
 		
 		pAccs, acc, mf1 = emoeval_combo(model_bin=model_bin, model_multi=model_multi, data_loader=train_loader, tr_emodict=tr_emodict, emodict=emodict, args=args, focus_emo=focus_emo)
@@ -594,7 +594,7 @@ def emoeval(model, data_loader, tr_emodict, emodict, args, focus_emo):
 
 	# curr_conv_id = int(args.dataset[-1])*60
 
-	for bz in range(len(labels)):
+	for bz in tqdm(range(len(labels))):
 		if texts!=None:
 			turns = texts[bz]
 
@@ -824,6 +824,309 @@ def emoeval(model, data_loader, tr_emodict, emodict, args, focus_emo):
 	return Total, acc, mf1#, don_acc, don_mf1, donor_probs  
 
 
+
+def emoeval_combo(model_bin, model_multi, data_loader, tr_emodict, emodict, args, focus_emo):
+	""" data_loader only input 'dev' """
+	model_bin.eval()
+	model_multi.eval()
+
+	if args.bert == True:
+		feats = data_loader['bert-feat']
+	else:
+		feats = data_loader['feat']
+
+	labels  =   data_loader[args.label_type+'_labels']
+
+	# feats, labels = data_loader['feat'], data_loader['label']
+	texts         = data_loader['text']
+	# bert_embs     = data_loader['bert-feat']
+	speakers      = data_loader['speaker']
+
+	# df_dict = {}
+	# df_dict['conversation_id'] =  []
+	# df_dict['speaker']         =  []
+	# df_dict['utterance']       =  []
+	# df_dict['predicted_face']  =  []
+	# df_dict['true_face']       =  []
+	# df_dict['actual_donation'] =  []
+	# df_dict['donation_prob']   =  []
+
+	addn_features = return_addn_features(data_loader, args)
+	
+
+	alpha= 1.0
+	# donors= data_loader['donor']
+
+	# donor_probs=[]
+
+	val_loss = 0
+	y_true=[]
+	y_pred_bin=[]
+	y_pred_multi=[]
+
+	# old_y_true = []
+	# old_y_pred = []
+
+	# donor_true=[]
+	# donor_pred=[]
+
+	# donor_labels = []
+	# donor_logits = []
+
+	# EE_true = []
+	# EE_pred = []
+	# ER_true = []
+	# ER_pred = []
+
+	# pred_face_arr = []
+	# true_face_arr = []
+
+	# curr_conv_id = int(args.dataset[-1])*60
+
+	for bz in tqdm(range(len(labels))):
+		if texts!=None:
+			turns = texts[bz]
+
+		feat, lens = Utils.ToTensor(feats[bz], is_len=True)
+		label = Utils.ToTensor(labels[bz])
+
+
+		# bert_emb = np.zeros((len(bert_embs[bz]),max([len(b) for b in bert_embs[bz]])+2))
+		# bert_emb = torch.FloatTensor(bert_embs[bz])
+
+		# donor_label= torch.LongTensor(donors[bz]).unsqueeze(dim=1)
+		
+		if 'negotiation' in args.dataset:
+			mask  = torch.LongTensor([1 for i in speakers[bz]])
+		else:
+			mask  = torch.LongTensor([int(i) for i in speakers[bz]])
+
+		addn_feature = None
+		# if args.mask=='EE':
+		# 	mask= torch.LongTensor([int(i) for i in speakers[bz]])
+		# elif args.mask=='ER':
+		# 	mask = torch.LongTensor([1-int(i) for i in speakers[bz]])
+		# else:
+		# 	mask= torch.LongTensor([1 for i in speakers[bz]])
+
+		# EE_mask = np.array([int(i) for i in speakers[bz]])
+		# ER_mask = np.array([1-int(i) for i in speakers[bz]])
+
+		# EE_weights = torch.FloatTensor([0 if i in ['4'] else 1 for i,j in emodict.word2index.items()])
+		# ER_weights = torch.FloatTensor([0 if i in ['0','7'] else 1 for i,j in emodict.word2index.items()])
+
+
+		# donor_mask= torch.LongTensor([0 for i in range(len(speakers[bz]))])	
+		# donor_mask[len(donor_mask)-args.ldm:]=1
+
+		feat = Variable(feat)
+		label = Variable(label)
+		# bert_emb= Variable(bert_emb)
+		
+		if args.gpu != None:
+			os.environ['CUDA_VISIBLE_DEVICES'] = args.gpu
+			# device = torch.device("cuda: 0")
+			model_bin = model_bin.cuda()
+			model_multi = model_multi.cuda()
+			feat = feat.cuda()
+			label = label.cuda()
+			# bert_emb= bert_emb.cuda()
+			mask= mask.cuda()
+			# donor_label= donor_label.cuda()
+			# donor_mask= donor_mask.cuda()
+			# EE_weights= EE_weights.cuda()
+			# ER_weights= ER_weights.cuda()
+			# weights = weights.cuda()
+
+		if addn_features != None:
+			addn_feature = torch.FloatTensor(addn_features[bz])
+			addn_feature = Variable(addn_feature)
+			addn_feature = addn_feature.cuda()
+
+		if 'mask' in args.type:
+			log_prob_bin, log_donor_prob_bin, pred_outs_bin = model_bin(feat, lens, addn_feature, mask)
+			log_prob_multi, log_donor_prob_multi, pred_outs_multi = model_multi(feat, lens, addn_feature, mask)
+		else:
+			log_prob_bin, log_donor_prob_bin, pred_outs_bin = model_bin(feat, lens, addn_feature)
+			log_prob_multi, log_donor_prob_multi, pred_outs_multi = model_multi(feat, lens, addn_feature)
+
+		# val loss
+		# loss = comput_class_loss(log_prob, label, weights)
+		target=label
+		emo_true = label.view(label.size(0))
+		emo_true = np.array(emo_true.cpu())
+
+
+		# Avoid computing loss since it is not used for computation here. 
+
+		# face act prediction stuff done here.......
+
+		face_pred = []
+		face_true = []
+
+		'''
+		if args.mask =='all':
+			# old_predidx = torch.argmax(log_prob,)
+			#  pdb.set_trace()
+
+			old_predidx = torch.argmax(log_prob, dim =1)
+			old_predidx = np.array(old_predidx.cpu())
+
+			face_prob = torch.exp(log_prob)
+			EE_face   = face_prob*EE_weights
+			ER_face   = face_prob*ER_weights
+
+			# ensures that the unwanted faces are obscured for EE_face and ER_face
+
+			ER_predidx= torch.argmax(ER_face, dim=1)
+			EE_predidx= torch.argmax(EE_face, dim=1)
+
+			ER_predidx= np.array(ER_predidx.cpu())
+			EE_predidx= np.array(EE_predidx.cpu())
+
+			ER_pred.extend([i for i,j in zip(ER_predidx, ER_mask) if j==1])
+			ER_true.extend([i for i,j in zip(emo_true, ER_mask) if j==1])
+
+			EE_pred.extend([i for i,j in zip(EE_predidx, EE_mask) if j==1])
+			EE_true.extend([i for i,j in zip(emo_true, EE_mask) if j==1])
+
+			y_pred.extend([i for i,j in zip(ER_predidx, ER_mask) if j==1])
+			y_true.extend([i for i,j in zip(emo_true, ER_mask) if j==1])
+			y_pred.extend([i for i,j in zip(EE_predidx, EE_mask) if j==1])
+			y_true.extend([i for i,j in zip(emo_true, EE_mask) if j==1])
+
+			mask= np.array(mask.cpu())
+			old_y_pred.extend([i for i,j in zip(old_predidx, mask) if j==1])
+			old_y_true.extend([i for i,j in zip(emo_true, mask) if j==1])
+
+
+			inv_face_act = {'0':'spos-', '1':'hpos+', '2':'other', '3':'spos+', '4':'hneg+','5':'hpos-','6':'hneg-','7':'sneg+'}
+
+			for i in range(len(emo_true)):
+				face_true.append(inv_face_act[emodict.index2word[emo_true[i]]])
+				if ER_mask[i] == 1:
+					face_pred.append(inv_face_act[emodict.index2word[ER_predidx[i]]])
+				else:
+					face_pred.append(inv_face_act[emodict.index2word[EE_predidx[i]]])
+
+			pred_face_arr.append(face_pred)
+			true_face_arr.append(face_true)
+
+		'''
+		
+
+		emo_predidx_bin = torch.argmax(log_prob_bin, dim=1)
+		emo_predidx_multi = torch.argmax(log_prob_multi, dim=1)
+		# emo_true = label.view(label.size(0))
+		emo_predidx_bin= np.array(emo_predidx_bin.cpu())
+		emo_predidx_multi= np.array(emo_predidx_multi.cpu())
+		# emo_true= np.array(emo_true.cpu())
+		mask= np.array(mask.cpu())
+		y_pred_bin.extend([i for i,j in zip(emo_predidx_bin, mask) if j==1])
+		y_pred_multi.extend([i for i,j in zip(emo_predidx_multi, mask) if j==1])
+		y_true.extend([i for i,j in zip(emo_true, mask) if j==1])
+
+
+		# donor prediction and accuracy computed here. 
+
+		# donor_trueidx= donor_label.view(donor_label.size(0))
+		# donor_trueidx= np.array(donor_trueidx.cpu())
+		# donor_mask= np.array(donor_mask.cpu())
+
+		# donor_predidx = None
+		# dons = None
+
+		# if log_donor_prob !=None:
+
+		# 	dons=np.array(F.softmax(log_donor_prob, dim=1).cpu().detach())
+		# 	donor_probs.append(dons)
+		# 	donor_predidx= torch.argmax(log_donor_prob, dim=1)
+		# 	donor_predidx= np.array(donor_predidx.cpu())
+			
+			
+		# else:
+		# 	dons = np.array(pred_outs.cpu().detach())
+		# 	donor_probs.append(dons)
+		# 	# donor_predidx =[1 if elem[0] >args.thresh_reg else 0 for elem in dons]
+		# 	donor_predidx =[1 if elem[0] >0.45 else 0 for elem in dons]
+
+
+
+		
+		# donor_pred.extend([i for i,j in zip(donor_predidx, donor_mask) if j==1])
+		# donor_true.extend([i for i,j in zip(donor_trueidx, donor_mask) if j==1])
+
+		# donor_logits.extend([i for i,j in zip([elem[0] for elem in dons], donor_mask) if j==1])
+
+		# face_labels =  {'spos-': 7, 'hpos+': 1, 'other': 0, 'spos+': 3, 'hneg+': 5, 'hpos-': 4, 'hneg-': 2, 'sneg+': 6}
+		# inv_face_labels = {}
+		# for face_act in face_labels:
+		# 	inv_face_labels[face_labels[face_act]] = face_act
+
+
+	# 	if texts!=None:
+	# 		for turn, emo, emo_true, don, act_don, speaker in zip(turns, face_pred, face_true, dons, donor_trueidx, speakers[bz]):
+	# 			df_dict['conversation_id'].append(curr_conv_id)
+	# 			df_dict['speaker'].append(speaker)
+	# 			df_dict['utterance'].append(turn)
+	# 			df_dict['donation_prob'].append(don[-1])
+	# 			df_dict['predicted_face'].append(emo)
+	# 			df_dict['true_face'].append(emo_true)
+	# 			df_dict['actual_donation'].append(act_don)
+				
+
+	# 	curr_conv_id +=1
+
+	# df = pd.DataFrame(df_dict)
+	# file_str = Utils.return_file_path(args)
+
+	# df.to_csv('/projects/persuasionforgood-master/MIT-projects/results/'+file_str+ '.csv')
+	# # df.to_csv('result_csv/'+str(file_str)+'.csv')
+
+	model_bin.train()
+	model_multi.train()
+	Total=val_loss
+
+	# pu.db
+	y_pred_bin = np.array(y_pred_bin)
+	y_pred_multi = np.array(y_pred_multi) + 1
+	y_pred = np.where(y_pred_bin == 0, y_pred_bin, y_pred_multi)
+
+	acc=accuracy_score(y_true,y_pred)
+	mf1= f1_score(y_true,y_pred,average='macro')
+
+	# don_acc= accuracy_score(donor_true, donor_pred)
+	# don_mf1= f1_score(donor_true, donor_pred, average='macro')
+
+	# t, max_f1 = tune_thresholds(np.array(donor_true).reshape(-1,1), np.array(donor_logits).reshape(-1,1))
+	
+	# new_donor_pred = [1 if elem > t else 0 for elem in donor_logits]
+
+	# new_don_acc= accuracy_score(donor_true, new_donor_pred)
+	# new_don_mf1= f1_score(donor_true, new_donor_pred, average='macro')
+
+	# # print(donor_logits)
+	# # print(donor_true)
+
+
+	print(classification_report(y_true, y_pred))
+
+	# if old_mf1 > mf1:
+	# 	 pdb.set_trace()
+
+	# print(classification_report(ER_true, ER_pred))
+	# print(classification_report(EE_true, EE_pred))
+
+	print(acc, mf1)
+	# print(don_acc, don_mf1)
+	# print(new_don_mf1, new_don_mf1)
+	# print(t)	
+
+	return Total, acc, mf1#, don_acc, don_mf1, donor_probs  
+
+
+
+
 def tune_thresholds(labels, logits, method = 'tune'):
 	'''
 	Takes labels and logits and tunes the thresholds using two methods
@@ -895,7 +1198,7 @@ def tune_thresholds(labels, logits, method = 'tune'):
 
 # 	out_arr=[]
 
-# 	for bz in range(len(labels)):
+# 	for bz in tqdm(range(len(labels))):
 # 		turns = texts[bz]
 # 		feat, lens = Utils.ToTensor(feats[bz], is_len=True)
 # 		label = Utils.ToTensor(labels[bz])
