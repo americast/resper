@@ -589,14 +589,14 @@ class combo_bin(nn.Module):
 			self.d_input= d_h2
 			if self.model == 'higru-f':
 				self.d_input = d_h2 + d_h1
-			if self.model == 'higru-sf':
+			if self.model == 'higru-sf' or self.model == 'combo_bin':
 				self.d_input = 2 * d_h2 + d_h1
 
 		else:
 			self.d_input = 2 * d_h2
 			if self.model == 'higru-f':
 				self.d_input = 2 * d_h2 + d_h1
-			if self.model == 'higru-sf':
+			if self.model == 'higru-sf' or self.model == 'combo_bin':
 				self.d_input = 4 * d_h2 + d_h1
 
 		# if self.bert_flag:
@@ -663,7 +663,7 @@ class combo_bin(nn.Module):
 				# s_lcont, s_rcont = s_context.chunk(2,-1)
 				Combined = [s_context, s_embed.unsqueeze(0)]
 				Combined = torch.cat(Combined, dim=-1)		
-			if self.model == 'higru-sf':
+			if self.model == 'higru-sf' or self.model == 'combo_bin':
 				s_context    = s_context.squeeze(dim=0)
 				context_mask = get_sent_pad_attn(s_context)
 				SA_cont, _   = get_sent_attention(s_context, s_context,s_context, context_mask)
@@ -679,7 +679,7 @@ class combo_bin(nn.Module):
 				s_lcont, s_rcont = s_context.chunk(2,-1)
 				Combined = [s_lcont, s_embed.unsqueeze(0), s_rcont]
 				Combined = torch.cat(Combined, dim=-1)
-			if self.model == 'higru-sf':
+			if self.model == 'higru-sf' or self.model == 'combo_bin':
 				s_lcont, s_rcont = s_context.chunk(2, -1)
 				SA_lcont, _ = get_attention(s_lcont, s_lcont, s_lcont)
 				SA_rcont, _ = get_attention(s_rcont, s_rcont, s_rcont)
@@ -797,14 +797,14 @@ class combo_multi(nn.Module):
 			self.d_input= d_h2
 			if self.model == 'higru-f':
 				self.d_input = d_h2 + d_h1
-			if self.model == 'higru-sf':
+			if self.model == 'higru-sf' or self.model == 'combo_multi':
 				self.d_input = 2 * d_h2 + d_h1
 
 		else:
 			self.d_input = 2 * d_h2
 			if self.model == 'higru-f':
 				self.d_input = 2 * d_h2 + d_h1
-			if self.model == 'higru-sf':
+			if self.model == 'higru-sf' or self.model == 'combo_multi':
 				self.d_input = 4 * d_h2 + d_h1
 
 		# if self.bert_flag:
@@ -843,7 +843,6 @@ class combo_multi(nn.Module):
 		:param lens: 1 x batch
 		:return:
 		"""
-		
 		if len(sents.size()) < 2:
 			sents = sents.unsqueeze(0)
 
@@ -871,7 +870,7 @@ class combo_multi(nn.Module):
 				# s_lcont, s_rcont = s_context.chunk(2,-1)
 				Combined = [s_context, s_embed.unsqueeze(0)]
 				Combined = torch.cat(Combined, dim=-1)		
-			if self.model == 'higru-sf':
+			if self.model == 'higru-sf' or self.model == 'combo_multi':
 				s_context    = s_context.squeeze(dim=0)
 				context_mask = get_sent_pad_attn(s_context)
 				SA_cont, _   = get_sent_attention(s_context, s_context,s_context, context_mask)
@@ -887,7 +886,7 @@ class combo_multi(nn.Module):
 				s_lcont, s_rcont = s_context.chunk(2,-1)
 				Combined = [s_lcont, s_embed.unsqueeze(0), s_rcont]
 				Combined = torch.cat(Combined, dim=-1)
-			if self.model == 'higru-sf':
+			if self.model == 'higru-sf' or self.model == 'combo_multi':
 				s_lcont, s_rcont = s_context.chunk(2, -1)
 				SA_lcont, _ = get_attention(s_lcont, s_lcont, s_lcont)
 				SA_rcont, _ = get_attention(s_rcont, s_rcont, s_rcont)

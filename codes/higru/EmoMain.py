@@ -7,7 +7,7 @@ import sys; sys.path.append('../')
 from helper import *
 # from Preprocess import Dictionary # import the object for pickle loading
 from Modules import *
-from EmoTrain import emotrain, emoeval, emotrain_combo
+from EmoTrain import emotrain, emoeval, emotrain_combo, emoeval_combo
 from datetime import datetime
 import math
 import time
@@ -154,7 +154,7 @@ def main():
 					  emodict=emodict,
 					  worddict=worddict,
 					  embedding=embedding,
-					  type=args.type[5:],
+					  type=args.type+"_bin",
 					  # bert_flag= args.bert,
 					  # don_model= args.don_model,
 					  trainable= trainable,
@@ -169,7 +169,7 @@ def main():
 					  emodict=emodict,
 					  worddict=worddict,
 					  embedding=embedding,
-					  type=args.type[5:],
+					  type=args.type+"_multi",
 					  # bert_flag= args.bert,
 					  # don_model= args.don_model,
 					  trainable= trainable,
@@ -409,16 +409,25 @@ long_bert = args.bert
 
 	file_str = Utils.return_file_path(args)
 	# model = model.load_state_dict(args.save_dir+'/'+file_str+'.pt', map_location='cpu')
-
-	model = torch.load(args.save_dir+'/'+file_str+'_model.pt', map_location='cpu')
-	# model = torch.load_state_dict(args.save_dir+'/'+file_str+'.pt', map_location='cpu')
-
-	pAccs, acc, mf1, = emoeval(model=model,
-					data_loader=test_loader,
-					tr_emodict=tr_emodict,
-					emodict=emodict,
-					args=args,
-					focus_emo=focus_emo)
+	if args.type.startswith('combo'):
+		model_bin   = torch.load(args.save_dir+'/'+file_str+'_model_bin.pt', map_location='cpu')
+		model_multi = torch.load(args.save_dir+'/'+file_str+'_model_multi.pt', map_location='cpu')
+		pAccs, acc, mf1, = emoeval_combo(model_bin=model_bin,
+						model_multi=model_multi,
+						data_loader=test_loader,
+						tr_emodict=tr_emodict,
+						emodict=emodict,
+						args=args,
+						focus_emo=focus_emo)
+	else:
+		model = torch.load(args.save_dir+'/'+file_str+'_model.pt', map_location='cpu')
+		# model = torch.load_state_dict(args.save_dir+'/'+file_str+'.pt', map_location='cpu')
+		pAccs, acc, mf1, = emoeval(model=model,
+						data_loader=test_loader,
+						tr_emodict=tr_emodict,
+						emodict=emodict,
+						args=args,
+						focus_emo=focus_emo)
 
 
 	print("Test: ACCs-WA-UWA {}".format(pAccs))
