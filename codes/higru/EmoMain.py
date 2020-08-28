@@ -32,7 +32,7 @@ def main():
 
 	# Learning
 	parser.add_argument('-lr', type=float, default=2.5e-4)		# Learning rate: 2.5e-4 for Friends and EmotionPush, 1e-4 for IEMOCAP
-	parser.add_argument('-decay', type=float, default=math.pow(0.5, 1/20))	# half lr every 20 epochs
+	parser.add_argument('-decay', type=float, default=math.pow(0.5, 1/40))	# half lr every 20 epochs
 	parser.add_argument('-epochs', type=int, default=200)		# Defualt epochs 200
 	parser.add_argument('-patience', type=int, default=10,		# Patience of early stopping 10 epochs
 						help='patience for early stopping')
