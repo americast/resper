@@ -140,25 +140,25 @@ def emotrain(model, data_loader, tr_emodict, emodict, args, focus_emo):
 			if args.gpu != None:
 				os.environ['CUDA_VISIBLE_DEVICES'] = args.gpu
 				# device = torch.device("cuda: 0")
-				model = model.cuda()
-				feat = feat.cuda()
-				label = label.cuda()
-				mask= mask.cuda()
+				model = model
+				feat = feat
+				label = label
+				mask= mask
 
 
-				# donor_mask= donor_mask.cuda()
-				# donor_label= donor_label.cuda()
-				# donor_float_label = donor_float_label.cuda()
-				# EE_mask = EE_mask.cuda()
-				# ER_mask = ER_mask.cuda()
-				# ER_weights = ER_weights.cuda()
-				# EE_weights = EE_weights.cuda()
-				# weights = weights.cuda()
+				# donor_mask= donor_mask
+				# donor_label= donor_label
+				# donor_float_label = donor_float_label
+				# EE_mask = EE_mask
+				# ER_mask = ER_mask
+				# ER_weights = ER_weights
+				# EE_weights = EE_weights
+				# weights = weights
 
 			if addn_features != None:
 				addn_feature = torch.FloatTensor(addn_features[bz])
 				addn_feature = Variable(addn_feature)
-				addn_feature = addn_feature.cuda()
+				addn_feature = addn_feature
 			
 			
 
@@ -190,7 +190,7 @@ def emotrain(model, data_loader, tr_emodict, emodict, args, focus_emo):
 			# 		logits = torch.log(pred_outs/(1+eps-pred_outs))
 			# 		loss2  = F.binary_cross_entropy_with_logits(logits, donor_float_label,reduction='none')
 
-			# 		# loss2  = F.binary_cross_entropy_with_logits(logits, donor_float_label, pos_weight=torch.Tensor([0.2]).cuda(),reduction='none')
+			# 		# loss2  = F.binary_cross_entropy_with_logits(logits, donor_float_label, pos_weight=torch.Tensor([0.2]),reduction='none')
 			# 		loss2  = (loss2.squeeze(1)*donor_mask).sum()
 			# 		# loss2 = F.binary_cross_entropy(pred_outs.reshape(-1, 1), donor_float_label, weights=sample_weights[bz])
 			# 		# loss2 = criterion(pred_outs.reshape(-1,1), donor_float_label)*donor_mask
@@ -368,27 +368,27 @@ def emotrain_combo(model_bin, model_multi, data_loader, tr_emodict, emodict, arg
 			if args.gpu != None:
 				os.environ['CUDA_VISIBLE_DEVICES'] = args.gpu
 				# device = torch.device("cuda: 0")
-				model_bin = model_bin.cuda()
-				model_multi = model_multi.cuda()
-				feat = feat.cuda()
-				label = label.cuda()
-				mask= mask.cuda()
-				mask_bin= mask_bin.cuda()
+				model_bin = model_bin
+				model_multi = model_multi
+				feat = feat
+				label = label
+				mask= mask
+				mask_bin= mask_bin
 
 
-				# donor_mask= donor_mask.cuda()
-				# donor_label= donor_label.cuda()
-				# donor_float_label = donor_float_label.cuda()
-				# EE_mask = EE_mask.cuda()
-				# ER_mask = ER_mask.cuda()
-				# ER_weights = ER_weights.cuda()
-				# EE_weights = EE_weights.cuda()
-				# weights = weights.cuda()
+				# donor_mask= donor_mask
+				# donor_label= donor_label
+				# donor_float_label = donor_float_label
+				# EE_mask = EE_mask
+				# ER_mask = ER_mask
+				# ER_weights = ER_weights
+				# EE_weights = EE_weights
+				# weights = weights
 
 			if addn_features != None:
 				addn_feature = torch.FloatTensor(addn_features[bz])
 				addn_feature = Variable(addn_feature)
-				addn_feature = addn_feature.cuda()
+				addn_feature = addn_feature
 			
 			
 
@@ -401,7 +401,7 @@ def emotrain_combo(model_bin, model_multi, data_loader, tr_emodict, emodict, arg
 			
 			target_bin   = mask_bin.unsqueeze(-1)
 			target_multi = label - 1
-			zeros_here = torch.zeros(target_multi.shape).cuda().long()
+			zeros_here = torch.zeros(target_multi.shape).long()
 			target_multi = torch.where(target_multi < 1, zeros_here, target_multi)
 			all_loss_bin = torch.gather(log_prob_bin, 1, target_bin).squeeze(1)
 			all_loss_multi = torch.gather(log_prob_multi, 1, target_multi).squeeze(1)
@@ -432,7 +432,7 @@ def emotrain_combo(model_bin, model_multi, data_loader, tr_emodict, emodict, arg
 			# 		logits = torch.log(pred_outs/(1+eps-pred_outs))
 			# 		loss2  = F.binary_cross_entropy_with_logits(logits, donor_float_label,reduction='none')
 
-			# 		# loss2  = F.binary_cross_entropy_with_logits(logits, donor_float_label, pos_weight=torch.Tensor([0.2]).cuda(),reduction='none')
+			# 		# loss2  = F.binary_cross_entropy_with_logits(logits, donor_float_label, pos_weight=torch.Tensor([0.2]),reduction='none')
 			# 		loss2  = (loss2.squeeze(1)*donor_mask).sum()
 			# 		# loss2 = F.binary_cross_entropy(pred_outs.reshape(-1, 1), donor_float_label, weights=sample_weights[bz])
 			# 		# loss2 = criterion(pred_outs.reshape(-1,1), donor_float_label)*donor_mask
@@ -637,21 +637,21 @@ def emoeval(model, data_loader, tr_emodict, emodict, args, focus_emo):
 		if args.gpu != None:
 			os.environ['CUDA_VISIBLE_DEVICES'] = args.gpu
 			# device = torch.device("cuda: 0")
-			model = model.cuda()
-			feat = feat.cuda()
-			label = label.cuda()
-			# bert_emb= bert_emb.cuda()
-			mask= mask.cuda()
-			# donor_label= donor_label.cuda()
-			# donor_mask= donor_mask.cuda()
-			# EE_weights= EE_weights.cuda()
-			# ER_weights= ER_weights.cuda()
-			# weights = weights.cuda()
+			model = model
+			feat = feat
+			label = label
+			# bert_emb= bert_emb
+			mask= mask
+			# donor_label= donor_label
+			# donor_mask= donor_mask
+			# EE_weights= EE_weights
+			# ER_weights= ER_weights
+			# weights = weights
 
 		if addn_features != None:
 			addn_feature = torch.FloatTensor(addn_features[bz])
 			addn_feature = Variable(addn_feature)
-			addn_feature = addn_feature.cuda()
+			addn_feature = addn_feature
 
 		if 'mask' in args.type:
 			log_prob, log_donor_prob, pred_outs = model(feat, lens, addn_feature, mask)
@@ -926,22 +926,22 @@ def emoeval_combo(model_bin, model_multi, data_loader, tr_emodict, emodict, args
 		if args.gpu != None:
 			os.environ['CUDA_VISIBLE_DEVICES'] = args.gpu
 			# device = torch.device("cuda: 0")
-			model_bin = model_bin.cuda()
-			model_multi = model_multi.cuda()
-			feat = feat.cuda()
-			label = label.cuda()
-			# bert_emb= bert_emb.cuda()
-			mask= mask.cuda()
-			# donor_label= donor_label.cuda()
-			# donor_mask= donor_mask.cuda()
-			# EE_weights= EE_weights.cuda()
-			# ER_weights= ER_weights.cuda()
-			# weights = weights.cuda()
+			model_bin = model_bin
+			model_multi = model_multi
+			feat = feat
+			label = label
+			# bert_emb= bert_emb
+			mask= mask
+			# donor_label= donor_label
+			# donor_mask= donor_mask
+			# EE_weights= EE_weights
+			# ER_weights= ER_weights
+			# weights = weights
 
 		if addn_features != None:
 			addn_feature = torch.FloatTensor(addn_features[bz])
 			addn_feature = Variable(addn_feature)
-			addn_feature = addn_feature.cuda()
+			addn_feature = addn_feature
 
 		if 'mask' in args.type:
 			log_prob_bin, log_donor_prob_bin, pred_outs_bin = model_bin(feat, lens, addn_feature, mask)
@@ -1224,15 +1224,15 @@ def tune_thresholds(labels, logits, method = 'tune'):
 # 		if args.gpu != None:
 # 			os.environ['CUDA_VISIBLE_DEVICES'] = args.gpu
 			# device = torch.device("cuda: 0")
-# 			model.cuda()
-# 			feat = feat.cuda()
-# 			label = label.cuda()
-# 			bert_emb= bert_emb.cuda()
-# 			mask= mask.cuda()
-# 			donor_label= donor_label.cuda()
-# 			donor_mask= donor_mask.cuda()
+# 			model
+# 			feat = feat
+# 			label = label
+# 			bert_emb= bert_emb
+# 			mask= mask
+# 			donor_label= donor_label
+# 			donor_mask= donor_mask
 			
-# 			# weights = weights.cuda()
+# 			# weights = weights
 
 # 		log_prob, log_donor_prob,_ = model(feat, lens, bert_emb)#, speaker_em)
 
