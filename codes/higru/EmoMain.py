@@ -177,6 +177,23 @@ def main():
 					  long_bert = args.bert
 					  )
 					  #speaker_flag= args.sf)
+	elif args.type.startswith('bert-lstm'):
+		print("Word-level BiGRU baseline")
+		model = BERT_LSTM(d_word_vec=args.d_word_vec,
+					  d_h1=args.d_h1,
+					  d_h2=args.d_h2,
+					  d_fc=args.d_fc,
+					  emodict=emodict,
+					  worddict=worddict,
+					  embedding=embedding,
+					  type=args.type[5:],
+					  # bert_flag= args.bert,
+					  # don_model= args.don_model,
+					  trainable= trainable,
+					  feature_dim = feature_dim,
+					  long_bert = args.bert
+					  )
+					  #speaker_flag= args.sf)
 	elif args.type.startswith('bert-higru-sent-attn-mask'):
 		print("Training sentence-based masked attention")
 		model = BERT_HiGRU_sent_attn_mask(d_word_vec=args.d_word_vec,
