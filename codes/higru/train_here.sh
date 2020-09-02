@@ -40,6 +40,7 @@ model12=combo
 model13=bert-lstm
 model14=bert-higru-base
 model15=bert-cnn
+model16=bert-higru-sent-conn-mask-mid
 # attn 3 has only bahdanau attn
 
 for feature in all
