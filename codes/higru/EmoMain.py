@@ -7,7 +7,7 @@ import sys; sys.path.append('../')
 from helper import *
 # from Preprocess import Dictionary # import the object for pickle loading
 from Modules import *
-from EmoTrain import emotrain, emoeval
+from EmoTrain import emotrain, emoeval, emotrain_combo, emoeval_combo
 from datetime import datetime
 import math
 import time
@@ -32,11 +32,11 @@ def main():
 
 	# Learning
 	parser.add_argument('-lr', type=float, default=2.5e-4)		# Learning rate: 2.5e-4 for Friends and EmotionPush, 1e-4 for IEMOCAP
-	parser.add_argument('-decay', type=float, default=math.pow(0.5, 1/20))	# half lr every 20 epochs
+	parser.add_argument('-decay', type=float, default=math.pow(0.5, 1/40))	# half lr every 20 epochs
 	parser.add_argument('-epochs', type=int, default=200)		# Defualt epochs 200
 	parser.add_argument('-patience', type=int, default=10,		# Patience of early stopping 10 epochs
 						help='patience for early stopping')
-	parser.add_argument('-save_dir', type=str, default="/data/politeness_datasets/snapshot_models",	# Save the model and results in snapshot/
+	parser.add_argument('-save_dir', type=str, default="../../data/higru_bert_data/models",	# Save the model and results in snapshot/
 						help='where to save the models')
 	# Data
 	parser.add_argument('-dataset', type=str, default='Teaching0',	
@@ -100,9 +100,9 @@ def main():
 	print(args, '\n')
 
 	seed_everything(args.seed)
-
 	if 'resisting' in args.dataset:
-		feature_dim_dict = {'vad_features': 3, 'affect_features': 4, 'emo_features': 10, 'liwc_features': 64, 'sentiment_features': 3, 'face_features': 8, 'norm_er_strategies': 10, 'norm_er_DAs': 17, 'ee_DAs': 23, 'all': 3+4+10+64+3+8+10+17+23}
+		# feature_dim_dict = {'vad_features': 3, 'affect_features': 4, 'emo_features': 10, 'liwc_features': 64, 'sentiment_features': 3, 'face_features': 8, 'norm_er_strategies': 10, 'norm_er_DAs': 17, 'ee_DAs': 23, 'all': 3+4+10+64+3+8+10+17+23}
+		feature_dim_dict = {'vad_features': 3, 'affect_features': 4, 'emo_features': 10, 'liwc_features': 64, 'sentiment_features': 3, 'all': 3+4+10+64+3}
 
 	elif 'negotiation' in args.dataset:
 		feature_dim_dict = {'vad_features': 3, 'affect_features': 4, 'emo_features': 10, 'liwc_features': 64, 'sentiment_features': 3, 'all': 3+4+10+64+3}
@@ -143,10 +143,167 @@ def main():
 			Utils.saveToPickle(args.embedding, np_embedding)
 		embedding.weight.data.copy_(torch.from_numpy(np_embedding))
 	embedding.weight.requires_grad = trainable
+	# pu.db
+	# Choose the model
+	if args.type.startswith('combo'):
+		print("Training the combo model")
+		model_bin = combo_bin(d_word_vec=args.d_word_vec,
+					  d_h1=args.d_h1,
+					  d_h2=args.d_h2,
+					  d_fc=args.d_fc,
+					  emodict=emodict,
+					  worddict=worddict,
+					  embedding=embedding,
+					  type=args.type+"_bin",
+					  # bert_flag= args.bert,
+					  # don_model= args.don_model,
+					  trainable= trainable,
+					  feature_dim = feature_dim,
+					  long_bert = args.bert
+					  )
+					  #speaker_flag= args.sf)
+		model_multi = combo_multi(d_word_vec=args.d_word_vec,
+					  d_h1=args.d_h1,
+					  d_h2=args.d_h2,
+					  d_fc=args.d_fc,
+					  emodict=emodict,
+					  worddict=worddict,
+					  embedding=embedding,
+					  type=args.type+"_multi",
+					  # bert_flag= args.bert,
+					  # don_model= args.don_model,
+					  trainable= trainable,
+					  feature_dim = feature_dim,
+					  long_bert = args.bert
+					  )
+					  #speaker_flag= args.sf)
+	elif args.type.startswith('bert-higru-sent-attn-mask'):
+		print("Training sentence-based masked attention")
+		model = BERT_HiGRU_sent_attn_mask(d_word_vec=args.d_word_vec,
+					  d_h1=args.d_h1,
+					  d_h2=args.d_h2,
+					  d_fc=args.d_fc,
+					  emodict=emodict,
+					  worddict=worddict,
+					  embedding=embedding,
+					  type=args.type[5:],
+					  # bert_flag= args.bert,
+					  # don_model= args.don_model,
+					  trainable= trainable,
+					  feature_dim = feature_dim,
+					  long_bert = args.bert
+					  )
+					  #speaker_flag= args.sf)
+	elif args.type.startswith('bert-higru-sent-conn-mask'):
+		print("Training sentence-based masked connections")
+		model = BERT_HiGRU_sent_conn_mask(d_word_vec=args.d_word_vec,
+					  d_h1=args.d_h1,
+					  d_h2=args.d_h2,
+					  d_fc=args.d_fc,
+					  emodict=emodict,
+					  worddict=worddict,
+					  embedding=embedding,
+					  type=args.type[5:],
+					  # bert_flag= args.bert,
+					  # don_model= args.don_model,
+					  trainable= trainable,
+					  feature_dim = feature_dim,
+					  long_bert = args.bert
+					  )
+					  #speaker_flag= args.sf)
 
 	# Choose the model
-	
-	if args.type.startswith('bert-higru'):
+	elif args.type.startswith('bert-higru-sent-attn-2'):
+		print("Training sentence-based attention second")
+		model = BERT_HiGRU_sent_attn_2(d_word_vec=args.d_word_vec,
+					  d_h1=args.d_h1,
+					  d_h2=args.d_h2,
+					  d_fc=args.d_fc,
+					  emodict=emodict,
+					  worddict=worddict,
+					  embedding=embedding,
+					  type=args.type[5:],
+					  # bert_flag= args.bert,
+					  # don_model= args.don_model,
+					  trainable= trainable,
+					  feature_dim = feature_dim,
+					  long_bert = args.bert
+					  )
+					  #speaker_flag= args.sf)
+
+	elif args.type.startswith('bert-higru-sent-attn'):
+		print("Training sentence-based attention")
+		model = BERT_HiGRU_sent_attn(d_word_vec=args.d_word_vec,
+					  d_h1=args.d_h1,
+					  d_h2=args.d_h2,
+					  d_fc=args.d_fc,
+					  emodict=emodict,
+					  worddict=worddict,
+					  embedding=embedding,
+					  type=args.type[5:],
+					  # bert_flag= args.bert,
+					  # don_model= args.don_model,
+					  trainable= trainable,
+					  feature_dim = feature_dim,
+					  long_bert = args.bert
+					  )
+					  #speaker_flag= args.sf)
+
+	elif args.type.startswith('bert-higru-uttr-attn-2'):
+		print("Training utterance-based attention double level")
+		model = BERT_HiGRU_uttr_attn_2(d_word_vec=args.d_word_vec,
+					  d_h1=args.d_h1,
+					  d_h2=args.d_h2,
+					  d_fc=args.d_fc,
+					  emodict=emodict,
+					  worddict=worddict,
+					  embedding=embedding,
+					  type=args.type[5:],
+					  # bert_flag= args.bert,
+					  # don_model= args.don_model,
+					  trainable= trainable,
+					  feature_dim = feature_dim,
+					  long_bert = args.bert
+					  )
+					  #speaker_flag= args.sf)
+
+	elif args.type.startswith('bert-higru-uttr-attn-3'):
+		print("Training utterance-based attention second level only")
+		model = BERT_HiGRU_uttr_attn_3(d_word_vec=args.d_word_vec,
+					  d_h1=args.d_h1,
+					  d_h2=args.d_h2,
+					  d_fc=args.d_fc,
+					  emodict=emodict,
+					  worddict=worddict,
+					  embedding=embedding,
+					  type=args.type[5:],
+					  # bert_flag= args.bert,
+					  # don_model= args.don_model,
+					  trainable= trainable,
+					  feature_dim = feature_dim,
+					  long_bert = args.bert
+					  )
+					  #speaker_flag= args.sf)
+
+	elif args.type.startswith('bert-higru-uttr-attn'):
+		print("Training utterance-based attention")
+		model = BERT_HiGRU_uttr_attn(d_word_vec=args.d_word_vec,
+					  d_h1=args.d_h1,
+					  d_h2=args.d_h2,
+					  d_fc=args.d_fc,
+					  emodict=emodict,
+					  worddict=worddict,
+					  embedding=embedding,
+					  type=args.type[5:],
+					  # bert_flag= args.bert,
+					  # don_model= args.don_model,
+					  trainable= trainable,
+					  feature_dim = feature_dim,
+					  long_bert = args.bert
+					  )
+					  #speaker_flag= args.sf)
+
+	elif args.type.startswith('bert-higru'):
 		model = BERT_HiGRU(d_word_vec=args.d_word_vec,
 					  d_h1=args.d_h1,
 					  d_h2=args.d_h2,
@@ -158,9 +315,11 @@ def main():
 					  # bert_flag= args.bert,
 					  # don_model= args.don_model,
 					  trainable= trainable,
-					  feature_dim = feature_dim
+					  feature_dim = feature_dim,
+					  long_bert = args.bert
 					  )
 					  #speaker_flag= args.sf)
+
 	elif args.type.startswith('higru'):
 		model = HiGRU(d_word_vec=args.d_word_vec,
 					  d_h1=args.d_h1,
@@ -172,7 +331,8 @@ def main():
 					  type=args.type,
 					  # bert= args.bert,
 					  # don_model= args.don_model
-					  feature_dim = feature_dim
+					  feature_dim = feature_dim,
+					  long_bert = args.bert
 					  )
 
 
@@ -189,7 +349,8 @@ def main():
 					  # don_model= args.don_model
 					  trainable=trainable,
 					  feature_dim = feature_dim
-
+,
+long_bert = args.bert
 					  )
 
 
@@ -204,7 +365,8 @@ def main():
 					  type=args.type.replace('bigru','higru'),
 					  # bert= args.bert,
 					  # don_model= args.don_model
-					  feature_dim = feature_dim
+					  feature_dim = feature_dim,
+					  long_bert = args.bert
 					  )
 
 
@@ -226,7 +388,16 @@ def main():
 	focus_emo = []
 
 	# Train the model
-	emotrain(model=model,
+	if args.type.startswith('combo'):
+		emotrain_combo(model_bin=model_bin,
+			 model_multi=model_multi,
+			 data_loader=field,
+			 tr_emodict=tr_emodict,
+			 emodict=emodict,
+			 args=args,
+			 focus_emo=focus_emo)
+	else:
+		emotrain(model=model,
 			 data_loader=field,
 			 tr_emodict=tr_emodict,
 			 emodict=emodict,
@@ -238,16 +409,25 @@ def main():
 
 	file_str = Utils.return_file_path(args)
 	# model = model.load_state_dict(args.save_dir+'/'+file_str+'.pt', map_location='cpu')
-
-	model = torch.load(args.save_dir+'/'+file_str+'_model.pt', map_location='cpu')
-	# model = torch.load_state_dict(args.save_dir+'/'+file_str+'.pt', map_location='cpu')
-
-	pAccs, acc, mf1, = emoeval(model=model,
-					data_loader=test_loader,
-					tr_emodict=tr_emodict,
-					emodict=emodict,
-					args=args,
-					focus_emo=focus_emo)
+	if args.type.startswith('combo'):
+		model_bin   = torch.load(args.save_dir+'/'+file_str+'_model_bin.pt', map_location='cpu')
+		model_multi = torch.load(args.save_dir+'/'+file_str+'_model_multi.pt', map_location='cpu')
+		pAccs, acc, mf1, = emoeval_combo(model_bin=model_bin,
+						model_multi=model_multi,
+						data_loader=test_loader,
+						tr_emodict=tr_emodict,
+						emodict=emodict,
+						args=args,
+						focus_emo=focus_emo)
+	else:
+		model = torch.load(args.save_dir+'/'+file_str+'_model.pt', map_location='cpu')
+		# model = torch.load_state_dict(args.save_dir+'/'+file_str+'.pt', map_location='cpu')
+		pAccs, acc, mf1, = emoeval(model=model,
+						data_loader=test_loader,
+						tr_emodict=tr_emodict,
+						emodict=emodict,
+						args=args,
+						focus_emo=focus_emo)
 
 
 	print("Test: ACCs-WA-UWA {}".format(pAccs))

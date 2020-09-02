@@ -76,6 +76,8 @@ def get_model_type(file):
 		model_type = 'bigru-f'
 	elif 'bigru' in file:
 		model_type = 'bigru'
+	elif 'combo' in file:
+		model_type = 'combo'
 	
 	return model_type
 	
@@ -93,13 +95,14 @@ for file in sorted(file_dict):
 	model_type = get_model_type(file)	
 	acc = round(np.mean(file_dict[file]['acc']),2)
 	f1  = round(np.mean(file_dict[file]['f1']),2)
+	sd  = round(np.std(file_dict[file]['f1']),2)
 
-	print('{}\t{}\t{}'.format(file, round(np.mean(file_dict[file]['acc']),3), round(np.mean(file_dict[file]['f1']),3)))#,round(np.mean(file_dict[file]['don_acc']),3), round(np.mean(file_dict[file]['don_f1']),3)))
 	record = {"file": file, "acc": round(np.mean(file_dict[file]['acc']),3), "f1": round(np.mean(file_dict[file]['f1']),3)}
 	output_list.append(record)
 
 
-output_file_name = "file_acc_f1_neg.csv" if dataset == "neg" else "file_acc_f1_res.csv"
+	output_file_name = "file_acc_f1_neg.csv" if dataset == "neg" else "file_acc_f1_res.csv"
+	print('{}\t{}\t{}\t{}'.format(file, round(np.mean(file_dict[file]['acc']),3), round(np.mean(file_dict[file]['f1']),3), round(np.std(file_dict[file]['f1']),3)))#,round(np.mean(file_dict[file]['don_acc']),3), round(np.mean(file_dict[file]['don_f1']),3)))
 
 with open(output_file_name, 'w', encoding='utf8', newline='') as output_file:
     csv_w = csv.DictWriter(output_file, fieldnames=output_list[0].keys(),)
