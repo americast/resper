@@ -145,7 +145,41 @@ def main():
 	embedding.weight.requires_grad = trainable
 	# pu.db
 	# Choose the model
-	if args.type.startswith('combo'):
+	if args.type.startswith('bert-cnn'):
+		print("Training the bert cnn model")
+		model = BERT_CNN(d_word_vec=args.d_word_vec,
+					  d_h1=args.d_h1,
+					  d_h2=args.d_h2,
+					  d_fc=args.d_fc,
+					  emodict=emodict,
+					  worddict=worddict,
+					  embedding=embedding,
+					  type=args.type[5:],
+					  # bert_flag= args.bert,
+					  # don_model= args.don_model,
+					  trainable= trainable,
+					  feature_dim = feature_dim,
+					  long_bert = args.bert
+					  )
+					  #speaker_flag= args.sf)
+	elif args.type.startswith('bert-higru-base'):
+		print("Training the higru baseline model")
+		model = BERT_HiGRU_base(d_word_vec=args.d_word_vec,
+					  d_h1=args.d_h1,
+					  d_h2=args.d_h2,
+					  d_fc=args.d_fc,
+					  emodict=emodict,
+					  worddict=worddict,
+					  embedding=embedding,
+					  type=args.type[5:],
+					  # bert_flag= args.bert,
+					  # don_model= args.don_model,
+					  trainable= trainable,
+					  feature_dim = feature_dim,
+					  long_bert = args.bert
+					  )
+					  #speaker_flag= args.sf)
+	elif args.type.startswith('combo'):
 		print("Training the combo model")
 		model_bin = combo_bin(d_word_vec=args.d_word_vec,
 					  d_h1=args.d_h1,
@@ -170,6 +204,23 @@ def main():
 					  worddict=worddict,
 					  embedding=embedding,
 					  type=args.type+"_multi",
+					  # bert_flag= args.bert,
+					  # don_model= args.don_model,
+					  trainable= trainable,
+					  feature_dim = feature_dim,
+					  long_bert = args.bert
+					  )
+					  #speaker_flag= args.sf)
+	elif args.type.startswith('bert-lstm'):
+		print("Word-level BiGRU baseline")
+		model = BERT_LSTM(d_word_vec=args.d_word_vec,
+					  d_h1=args.d_h1,
+					  d_h2=args.d_h2,
+					  d_fc=args.d_fc,
+					  emodict=emodict,
+					  worddict=worddict,
+					  embedding=embedding,
+					  type=args.type[5:],
 					  # bert_flag= args.bert,
 					  # don_model= args.don_model,
 					  trainable= trainable,
