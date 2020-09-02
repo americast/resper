@@ -1,0 +1,11 @@
+file,acc,f1,stddev
+_addn_features_all_bert_train_0_dataset__epochs_100_label_type_resistance_lr_0.0001_seed_11747_type_bert-higru-f.txt,0.762,0.65,0.012
+_addn_features_all_bert_train_0_dataset__epochs_100_label_type_resistance_lr_0.0001_seed_11747_type_bert-higru-f_long-bert.txt,0.567,0.266,0.032
+_addn_features_all_bert_train_0_dataset__epochs_100_label_type_resistance_lr_0.0001_seed_11747_type_bert-higru-sent-attn-2-f.txt,0.759,0.645,0.013
+_addn_features_all_bert_train_0_dataset__epochs_100_label_type_resistance_lr_0.0001_seed_11747_type_bert-higru-sent-attn-2.txt,0.764,0.649,0.011
+_addn_features_all_bert_train_0_dataset__epochs_100_label_type_resistance_lr_0.0001_seed_11747_type_bert-higru-sent-attn-2_long-bert.txt,0.553,0.275,0.011
+_addn_features_all_bert_train_0_dataset__epochs_100_label_type_resistance_lr_0.0001_seed_11747_type_bert-higru-sent-attn-mask.txt,0.758,0.641,0.013
+_addn_features_all_bert_train_0_dataset__epochs_100_label_type_resistance_lr_0.0001_seed_11747_type_bert-higru-sent-conn-mask-f.txt,0.759,0.645,0.022
+_addn_features_all_bert_train_0_dataset__epochs_100_label_type_resistance_lr_0.0001_seed_11747_type_bert-higru-sent-conn-mask.txt,0.756,0.64,0.011
+_addn_features_all_bert_train_0_dataset__epochs_100_label_type_resistance_lr_0.0001_seed_11747_type_bert-higru-sf.txt,0.748,0.598,0.115
+_addn_features_all_bert_train_0_dataset__epochs_100_label_type_resistance_lr_0.0001_seed_11747_type_bert-higru-uttr-attn-3.txt,0.76,0.649,0.01
