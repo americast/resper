@@ -179,6 +179,38 @@ def main():
 					  long_bert = args.bert
 					  )
 					  #speaker_flag= args.sf)
+	elif args.type.startswith('combo-f'):
+		print("Training the combo model")
+		model_bin = combo_bin(d_word_vec=args.d_word_vec,
+					  d_h1=args.d_h1,
+					  d_h2=args.d_h2,
+					  d_fc=args.d_fc,
+					  emodict=emodict,
+					  worddict=worddict,
+					  embedding=embedding,
+					  type=args.type+"_bin",
+					  # bert_flag= args.bert,
+					  # don_model= args.don_model,
+					  trainable= trainable,
+					  feature_dim = feature_dim,
+					  long_bert = args.bert
+					  )
+					  #speaker_flag= args.sf)
+		model_multi = combo_multi(d_word_vec=args.d_word_vec,
+					  d_h1=args.d_h1,
+					  d_h2=args.d_h2,
+					  d_fc=args.d_fc,
+					  emodict=emodict,
+					  worddict=worddict,
+					  embedding=embedding,
+					  type=args.type+"_multi",
+					  # bert_flag= args.bert,
+					  # don_model= args.don_model,
+					  trainable= trainable,
+					  feature_dim = feature_dim,
+					  long_bert = args.bert
+					  )
+					  #speaker_flag= args.sf)
 	elif args.type.startswith('combo'):
 		print("Training the combo model")
 		model_bin = combo_bin(d_word_vec=args.d_word_vec,
@@ -263,6 +295,24 @@ def main():
 					  long_bert = args.bert
 					  )
 					  #speaker_flag= args.sf)
+	elif args.type.startswith('bert-higru-sent-conn-mask-turn'):
+		print("Training sentence-based masked connections intraturn")
+		model = BERT_HiGRU_sent_conn_mask_turn(d_word_vec=args.d_word_vec,
+					  d_h1=args.d_h1,
+					  d_h2=args.d_h2,
+					  d_fc=args.d_fc,
+					  emodict=emodict,
+					  worddict=worddict,
+					  embedding=embedding,
+					  type=args.type[5:],
+					  # bert_flag= args.bert,
+					  # don_model= args.don_model,
+					  trainable= trainable,
+					  feature_dim = feature_dim,
+					  long_bert = args.bert
+					  )
+					  #speaker_flag= args.sf)
+
 	elif args.type.startswith('bert-higru-sent-conn-mask'):
 		print("Training sentence-based masked connections")
 		model = BERT_HiGRU_sent_conn_mask(d_word_vec=args.d_word_vec,
