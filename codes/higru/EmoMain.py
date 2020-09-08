@@ -295,6 +295,40 @@ def main():
 					  long_bert = args.bert
 					  )
 					  #speaker_flag= args.sf)
+	elif args.type.startswith('bert-higru-sent-conn-mask-turn-noenc'):
+		print("Training sentence-based masked connections intraturn without enc")
+		model = BERT_HiGRU_sent_conn_mask_turn_noenc(d_word_vec=args.d_word_vec,
+					  d_h1=args.d_h1,
+					  d_h2=args.d_h2,
+					  d_fc=args.d_fc,
+					  emodict=emodict,
+					  worddict=worddict,
+					  embedding=embedding,
+					  type=args.type[5:],
+					  # bert_flag= args.bert,
+					  # don_model= args.don_model,
+					  trainable= trainable,
+					  feature_dim = feature_dim,
+					  long_bert = args.bert
+					  )
+					  #speaker_flag= args.sf)
+	elif args.type.startswith('bert-higru-sent-conn-mask-interturn'):
+		print("Training sentence-based masked connections with enc inter turn")
+		model = BERT_HiGRU_sent_conn_mask_interturn(d_word_vec=args.d_word_vec,
+					  d_h1=args.d_h1,
+					  d_h2=args.d_h2,
+					  d_fc=args.d_fc,
+					  emodict=emodict,
+					  worddict=worddict,
+					  embedding=embedding,
+					  type=args.type[5:],
+					  # bert_flag= args.bert,
+					  # don_model= args.don_model,
+					  trainable= trainable,
+					  feature_dim = feature_dim,
+					  long_bert = args.bert
+					  )
+					  #speaker_flag= args.sf)				  
 	elif args.type.startswith('bert-higru-sent-conn-mask-turn'):
 		print("Training sentence-based masked connections intraturn")
 		model = BERT_HiGRU_sent_conn_mask_turn(d_word_vec=args.d_word_vec,
