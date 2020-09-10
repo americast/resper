@@ -531,14 +531,14 @@ def loss_weight(tr_ladict, ladict, focus_dict, rate=1.0):
 	""" Loss weights """
 	min_emo = float(min([tr_ladict.word2count[w] for w in focus_dict]))
 	weight = [math.pow(min_emo / tr_ladict.word2count[k], rate) if k in focus_dict
-	          else 0 for k,v in ladict.word2count.items()]
+			  else 0 for k,v in ladict.word2count.items()]
 	weight = np.array(weight)
 	weight /= np.sum(weight)
 
 	return weight
 
 
-def emoeval(model, data_loader, tr_emodict, emodict, args, focus_emo):
+def emoeval(model, data_loader, tr_emodict, emodict, args, focus_emo, name="model"):
 	""" data_loader only input 'dev' """
 	model.eval()
 
@@ -553,7 +553,6 @@ def emoeval(model, data_loader, tr_emodict, emodict, args, focus_emo):
 	texts         = data_loader['text']
 	# bert_embs     = data_loader['bert-feat']
 	speakers      = data_loader['speaker']
-
 	# df_dict = {}
 	# df_dict['conversation_id'] =  []
 	# df_dict['speaker']         =  []
@@ -574,6 +573,8 @@ def emoeval(model, data_loader, tr_emodict, emodict, args, focus_emo):
 	val_loss = 0
 	y_true=[]
 	y_pred=[]
+	text_all = []
+	turn_all = []
 
 	# old_y_true = []
 	# old_y_pred = []
@@ -730,6 +731,16 @@ def emoeval(model, data_loader, tr_emodict, emodict, args, focus_emo):
 		mask= np.array(mask.cpu())
 		y_pred.extend([i for i,j in zip(emo_predidx, mask) if j==1])
 		y_true.extend([i for i,j in zip(emo_true, mask) if j==1])
+		text_all.extend([i for i,j in zip(texts[bz], mask) if j==1])
+		turn_here = []
+		turn_num = 0 
+		for i in mask: 
+			turn_here.append(turn_num) 
+			if mask[i] == 0 and mask[i - 1] == 1: 
+				turn_num += 1 
+
+		turn_all.extend([i for i,j in zip(turn_here, mask) if j==1])
+
 
 
 		# donor prediction and accuracy computed here. 
@@ -787,7 +798,14 @@ def emoeval(model, data_loader, tr_emodict, emodict, args, focus_emo):
 
 	# df.to_csv('/projects/persuasionforgood-master/MIT-projects/results/'+file_str+ '.csv')
 	# # df.to_csv('result_csv/'+str(file_str)+'.csv')
-
+	data = {
+		"Turn": turn_all,
+		"Text": text_all,
+		"True": y_true,
+		"Pred": y_pred
+	}
+	df = pd.DataFrame(data)
+	df.to_csv("outputs/"+args.type+"_"+args.dataset+".csv")
 	model.train()
 	Total=val_loss
 
