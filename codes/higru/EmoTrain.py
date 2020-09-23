@@ -63,7 +63,7 @@ def emotrain(model, data_loader, tr_emodict, emodict, args, focus_emo):
 	dev_loader     =   data_loader['test']
 
 
-	if args.bert == 1:
+	if args.bert == 1 or args.bert == 2:
 		feats = train_loader['bert-feat']
 	else:
 		feats = train_loader['feat']

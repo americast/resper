@@ -116,6 +116,47 @@ class GRUencoder(nn.Module):
 
 
 # Utterance encoder with three types: higru, higru-f, and higru-sf
+class UttEncoder_basic(nn.Module):
+	def __init__(self, d_word_vec, d_h1, type):
+		super(UttEncoder_basic, self).__init__()
+		self.encoder = GRUencoder(d_word_vec, d_h1, num_layers=1)
+		self.d_input = 2 * d_h1
+		self.model = type
+		# if '-f' not in self.model:
+		# 	self.d_input = 4 * d_h1 + d_word_vec
+		# else:
+		# 	self.d_input = 2 * d_h1 + d_word_vec
+		self.output1 = nn.Sequential(
+			nn.Linear(self.d_input, d_h1),
+			nn.Tanh()
+		)
+
+	def forward(self, sents, lengths, sa_mask=None):
+		"""
+		:param sents: batch x seq_len x 2*d_h1
+		:param lengths: numpy array 1 x batch
+		:return: batch x d_h1
+		"""
+		w_context = self.encoder(sents, lengths)
+		combined = w_context
+
+		# if '-f' not in self.model:
+		# 	w_lcont, w_rcont = w_context.chunk(2, -1)
+		# 	sa_lcont, _ = get_attention(w_lcont, w_lcont, w_lcont, attn_mask=sa_mask)
+		# 	sa_rcont, _ = get_attention(w_rcont, w_rcont, w_rcont, attn_mask=sa_mask)
+		# 	combined = [sa_lcont, w_lcont, sents, w_rcont, sa_rcont]
+		# 	combined = torch.cat(combined, dim=-1)
+		# else:
+		# 	w_lcont, w_rcont = w_context.chunk(2, -1)
+		# 	combined = [w_lcont, sents, w_rcont]
+		# 	combined = torch.cat(combined, dim=-1)
+
+		output1 = self.output1(combined)
+		output = torch.max(output1, dim=1)[0]
+
+		return output
+
+# Utterance encoder with three types: higru, higru-f, and higru-sf
 class UttEncoder(nn.Module):
 	def __init__(self, d_word_vec, d_h1, type):
 		super(UttEncoder, self).__init__()
@@ -156,6 +197,7 @@ class UttEncoder(nn.Module):
 		output = torch.max(output1, dim=1)[0]
 
 		return output
+
 
 # Utterance encoder with three types: higru, higru-f, and higru-sf
 class UttEncoder_attn(nn.Module):
@@ -365,10 +407,13 @@ class BERT_HiGRU_base(nn.Module):
 		self.max_dialog = worddict.max_dialog
 		self.d_h1 = d_h1
 		self.d_h2 = d_h2
+		self.long_bert = long_bert
 		if long_bert == 2:
 			self.bert_emb_dim=1024
-		else:
+		elif long_bert == 1:
 			self.bert_emb_dim=768
+		else:
+			self.bert_emb_dim=300
 		# load word2vec
 		self.embeddings = embedding
 		self.feature_dim = feature_dim
@@ -380,12 +425,13 @@ class BERT_HiGRU_base(nn.Module):
 			self.bert = BertModel.from_pretrained('bert-base-uncased')
 			print("Base BERT chosen")
 
-		for p in self.bert.parameters():
-			p.requires_grad = trainable
-			# if trainable == 1:
-			# 	p.requires_grad = True
-			# if trainable == 0:
-			# 	p.requires_grad = False
+		if long_bert:
+			for p in self.bert.parameters():
+				p.requires_grad = trainable
+				# if trainable == 1:
+				# 	p.requires_grad = True
+				# if trainable == 0:
+				# 	p.requires_grad = False
 
 		self.uttenc = UttEncoder(self.bert_emb_dim, d_h1, self.model)
 		self.dropout_in = nn.Dropout(0.5)
@@ -450,17 +496,19 @@ class BERT_HiGRU_base(nn.Module):
 			sents = sents.unsqueeze(0)
 
 		
-		# w_embed = self.embeddings(sents)
 		sa_mask = get_attn_pad_mask(sents, sents)
-		
-		bert_sa_mask = get_word_pad_attns(sents)
+		if self.long_bert:
+			
+			bert_sa_mask = get_word_pad_attns(sents)
 
-		# import pdb; pdb.set_trace()
-		outputs = self.bert(input_ids = sents, attention_mask = bert_sa_mask, token_type_ids=None, position_ids= None, head_mask= None, inputs_embeds= None)
-		# s_embed = outputs[1]    # This is the BERT sentence embedding              # BERT CLS TOKEN
-		# w_embed = self.bert_dropout(outputs[0]) # This is the bert word embeddings
+			# import pdb; pdb.set_trace()
+			outputs = self.bert(input_ids = sents, attention_mask = bert_sa_mask, token_type_ids=None, position_ids= None, head_mask= None, inputs_embeds= None)
+			# s_embed = outputs[1]    # This is the BERT sentence embedding              # BERT CLS TOKEN
+			# w_embed = self.bert_dropout(outputs[0]) # This is the bert word embeddings
+			w_embed = outputs[0]
+		else:
+			w_embed = self.embeddings(sents)
 
-		w_embed = outputs[0]
 		s_embed = self.uttenc(w_embed, lens, sa_mask)           # HIGRU utterance encoder
 		s_embed = self.dropout_in(s_embed)  # batch x d_h1
 
@@ -565,8 +613,6 @@ class BERT_HiGRU_base(nn.Module):
 
 		'''
 		return log_pred_scores, pred_outs, don_prob
-
-
 
 
 
@@ -1383,6 +1429,223 @@ class BERT_HiGRU(nn.Module):
 		'''
 		return log_pred_scores, pred_outs, don_prob
 
+class BERT_HiGRU_basic(nn.Module):
+	def __init__(self, d_word_vec, d_h1, d_h2, d_fc, emodict, worddict, embedding, type='higru', bert_flag=False, don_model=0, trainable= False, feature_dim= 0, long_bert = 0):
+		super(BERT_HiGRU_basic, self).__init__()
+		self.model = type
+		self.max_length = worddict.max_length
+		self.max_dialog = worddict.max_dialog
+		self.d_h2 = d_h2
+		self.long_bert = long_bert
+		if long_bert == 2:
+			self.bert_emb_dim=1024
+		elif long_bert == 1:
+			self.bert_emb_dim=768
+		else:
+			self.bert_emb_dim=300
+		# load word2vec
+		self.embeddings = embedding
+		self.feature_dim = feature_dim
+		from transformers import BertModel
+		if long_bert == 2:
+			self.bert = BertModel.from_pretrained('bert-large-uncased')
+			print("Large BERT chosen")
+		if long_bert == 1:
+			self.bert = BertModel.from_pretrained('bert-base-uncased')
+			print("Base BERT chosen")
+
+		for p in self.bert.parameters():
+			p.requires_grad = trainable
+			# if trainable == 1:
+			# 	p.requires_grad = True
+			# if trainable == 0:
+			# 	p.requires_grad = False
+
+		self.uttenc = UttEncoder_basic(self.bert_emb_dim, d_h1, self.model)
+		self.dropout_in = nn.Dropout(0.5)
+
+		self.bidirectional= False
+		# self.bert_flag= False
+		self.contenc = nn.GRU(d_h1, d_h2, num_layers=1, bidirectional=self.bidirectional)
+		self.don_model = don_model
+
+		if self.bidirectional==False:
+			self.d_input= d_h2
+			if self.model == 'higru-f':
+				self.d_input = d_h2 + d_h1
+			if self.model == 'higru-sf' or self.model == 'bert-higru-basic':
+				self.d_input = 2 * d_h2 + d_h1
+
+		else:
+			self.d_input = 2 * d_h2
+			if self.model == 'higru-f':
+				self.d_input = 2 * d_h2 + d_h1
+			if self.model == 'higru-sf' or self.model == 'bert-higru-basic':
+				self.d_input = 4 * d_h2 + d_h1
+
+		# if self.bert_flag:
+		# 	self.d_input= self.d_input+ self.bert_emb_dim
+
+		self.output1 = nn.Sequential(
+			nn.Linear(self.d_input, d_h2),
+			nn.Tanh()
+		)
+		self.dropout_mid = nn.Dropout(0.5)
+
+		self.num_classes = emodict.n_words
+		self.classifier = nn.Sequential(
+			nn.Linear(d_h2 + feature_dim, d_fc),
+			nn.Dropout(0.5),
+			nn.Linear(d_fc, self.num_classes)
+		)
+
+		self.num_outcomes = 2
+		self.classifier2 = nn.Sequential(
+			nn.Linear(d_h2 + feature_dim, d_fc),
+			nn.Dropout(0.5),
+			nn.Linear(d_fc, self.num_outcomes)
+		)
+
+		self.fc_score = nn.Sequential(
+			nn.Linear(d_h2 + feature_dim, d_fc),
+			nn.Dropout(0.5),
+			nn.Linear(d_fc, 1)
+		)
+
+
+	def forward(self, sents, lens, addn_feats = None):
+		"""
+		:param sents: batch x seq_len
+		:param lens: 1 x batch
+		:return:
+		"""
+		
+		if len(sents.size()) < 2:
+			sents = sents.unsqueeze(0)
+
+		
+		sa_mask = get_attn_pad_mask(sents, sents)
+		
+		if self.long_bert:
+			bert_sa_mask = get_word_pad_attns(sents)
+
+			# import pdb; pdb.set_trace()
+			outputs = self.bert(input_ids = sents, attention_mask = bert_sa_mask, token_type_ids=None, position_ids= None, head_mask= None, inputs_embeds= None)
+			# s_embed = outputs[1]    # This is the BERT sentence embedding              # BERT CLS TOKEN
+			# w_embed = self.bert_dropout(outputs[0]) # This is the bert word embeddings
+
+			w_embed = outputs[0]
+		else:
+			w_embed = self.embeddings(sents)
+
+		# pu.db
+		s_embed = self.uttenc(w_embed, lens, sa_mask)           # HIGRU utterance encoder
+		s_embed = self.dropout_in(s_embed)  # batch x d_h1
+
+		s_context = self.contenc(s_embed.unsqueeze(1))[0]
+		s_context = s_context.transpose(0,1).contiguous()
+		Combined = s_context
+
+		# if self.bidirectional==False:
+		# 	if self.model == 'higru-f':
+		# 		# s_lcont, s_rcont = s_context.chunk(2,-1)
+		# 		Combined = [s_context, s_embed.unsqueeze(0)]
+		# 		Combined = torch.cat(Combined, dim=-1)		
+		# 	if self.model == 'higru-sf' or self.model == 'bert-higru-basic':
+		# 		s_context    = s_context.squeeze(dim=0)
+		# 		context_mask = get_sent_pad_attn(s_context)
+		# 		SA_cont, _   = get_sent_attention(s_context, s_context,s_context, context_mask)
+		# 		# SA_cont, _   = get_attention(s_context, s_context, s_context)
+		# 		# Combined = [SA_cont, s_context, s_embed.unsqueeze(0)]
+		# 		Combined = [SA_cont, s_context, s_embed]
+		# 		Combined = torch.cat(Combined, dim=-1)
+		# 		Combined = Combined.unsqueeze(dim=0)
+
+		
+		# else:
+		# 	if self.model == 'higru-f':
+		# 		s_lcont, s_rcont = s_context.chunk(2,-1)
+		# 		Combined = [s_lcont, s_embed.unsqueeze(0), s_rcont]
+		# 		Combined = torch.cat(Combined, dim=-1)
+		# 	if self.model == 'higru-sf' or self.model == 'bert-higru-basic':
+		# 		s_lcont, s_rcont = s_context.chunk(2, -1)
+		# 		SA_lcont, _ = get_attention(s_lcont, s_lcont, s_lcont)
+		# 		SA_rcont, _ = get_attention(s_rcont, s_rcont, s_rcont)
+		# 		Combined = [SA_lcont, s_lcont, s_embed.unsqueeze(0), s_rcont, SA_rcont]
+		# 		Combined = torch.cat(Combined, dim=-1)
+
+		# if self.bert_flag == True:
+		# 	Combined= torch.cat([Combined,bert_emb.unsqueeze(0)], dim=-1)
+
+		output1 = self.output1(Combined.squeeze(0))
+		output1 = self.dropout_mid(output1)
+		if self.feature_dim > 0:
+			# import pdb; pdb.set_trace()
+			output1 = torch.cat([output1, addn_feats], dim=1)
+
+		output  = self.classifier(output1)
+		log_pred_scores = F.log_softmax(output, dim=1)
+		pred_scores = F.softmax(output, dim=1)
+
+		# pred_scores = output
+
+
+		# computes the sentence mask of the attention, essentially creating a lower traingular matrix.
+		sent_mask = get_sent_pad_attn(sents)
+		sent_output, sent_attn =  get_sent_attention(output1, output1, output1, sent_mask)
+
+		output2  = None
+		pred_outs = None
+		don_prob  = None
+
+		'''
+		if self.don_model == 0:   # mask last leg, consider only the last hidden stage
+			output2  = self.classifier2(output1)
+			pred_outs= F.log_softmax(output2, dim=1)
+ 
+		if self.don_model == 1:   # do self attention on the hidden states, mask the last one only
+			output2  = self.classifier2(sent_output)
+			pred_outs= F.log_softmax(output2, dim=1)
+
+		if self.don_model == 2:  # do some smoothing over the preds 
+			output2     = self.classifier2(sent_output)
+			# pred_outs   = F.log_softmax(output2, dim=1)
+			
+			outs = F.softmax(output2, dim =1)
+			don_prob = torch.zeros((len(outs),1)).cuda(sents.device)
+			don_prob[0] = outs[0][1]
+
+			for i in range(1, len(outs)):
+				don_prob[i] = 0.5*don_prob[i-1]+ 0.5*outs[i][1]
+
+		if self.don_model==3:
+			output2     = self.fc_score(sent_output)
+			tanh        = torch.nn.Tanh()
+
+			outs        = tanh(output2)
+			don_prob    = torch.zeros((len(outs),1)).cuda(sents.device)
+			don_prob[0] = torch.sigmoid(outs[0])
+
+			for i in range(1,len(outs)):
+				don_prob[i] = tanh(0.5*don_prob[i-1]+ 0.5* outs[i])
+		
+
+		if self.don_model==4:
+			output2     = self.fc_score(sent_output)
+			tanh        = torch.nn.Tanh()
+
+			outs        = tanh(output2)
+			don_prob    = torch.zeros((len(outs),1)).cuda(sents.device)
+			don_prob[0] = torch.sigmoid(outs[0])
+
+			for i in range(1,len(outs)):
+				don_prob[i] = torch.sigmoid(don_prob[i-1]+outs[i])
+
+		'''
+		return log_pred_scores, pred_outs, don_prob
+
+
+
 class BERT_LSTM(nn.Module):
 	def __init__(self, d_word_vec, d_h1, d_h2, d_fc, emodict, worddict, embedding, type='higru', bert_flag=False, don_model=0, trainable= False, feature_dim= 0, long_bert = 0):
 		super(BERT_LSTM, self).__init__()
@@ -1605,6 +1868,7 @@ class BERT_CNN(nn.Module):
 		self.max_dialog = worddict.max_dialog
 		self.d_h1 = d_h1
 		self.d_h2 = d_h2
+		self.long_bert = long_bert
 		if long_bert == 2:
 			self.bert_emb_dim=1024
 		else:
@@ -1621,13 +1885,16 @@ class BERT_CNN(nn.Module):
 			self.bert = BertModel.from_pretrained('bert-base-uncased')
 			print("Base BERT chosen")
 			kernel_map_2 = 768
+		if long_bert == 0:
+			kernel_map_2 = 300
 
-		for p in self.bert.parameters():
-			p.requires_grad = trainable
-			# if trainable == 1:
-			# 	p.requires_grad = True
-			# if trainable == 0:
-			# 	p.requires_grad = False
+		if long_bert:
+			for p in self.bert.parameters():
+				p.requires_grad = trainable
+				# if trainable == 1:
+				# 	p.requires_grad = True
+				# if trainable == 0:
+				# 	p.requires_grad = False
 
 		# self.uttenc = UttEncoder(self.bert_emb_dim, d_h1, self.model)
 		# self.dropout_in = nn.Dropout(0.5)
@@ -1703,22 +1970,24 @@ class BERT_CNN(nn.Module):
 		:param lens: 1 x batch
 		:return:
 		"""
+		# pu.db
 		
 		if len(sents.size()) < 2:
 			sents = sents.unsqueeze(0)
 
-		
-		# w_embed = self.embeddings(sents)
-		sa_mask = get_attn_pad_mask(sents, sents)
-		
-		bert_sa_mask = get_word_pad_attns(sents)
+		if self.long_bert:
+			sa_mask = get_attn_pad_mask(sents, sents)
+			
+			bert_sa_mask = get_word_pad_attns(sents)
 
-		# import pdb; pdb.set_trace()
-		outputs = self.bert(input_ids = sents, attention_mask = bert_sa_mask, token_type_ids=None, position_ids= None, head_mask= None, inputs_embeds= None)
-		# s_embed = outputs[1]    # This is the BERT sentence embedding              # BERT CLS TOKEN
-		# w_embed = self.bert_dropout(outputs[0]) # This is the bert word embeddings
+			# import pdb; pdb.set_trace()
+			outputs = self.bert(input_ids = sents, attention_mask = bert_sa_mask, token_type_ids=None, position_ids= None, head_mask= None, inputs_embeds= None)
+			# s_embed = outputs[1]    # This is the BERT sentence embedding              # BERT CLS TOKEN
+			# w_embed = self.bert_dropout(outputs[0]) # This is the bert word embeddings
 
-		w_embed = outputs[0]
+			w_embed = outputs[0]
+		else:
+			w_embed = self.embeddings(sents)
 		# w_embed = self.wordenc(w_embed.permute(1, 0, 2))[1]
 		# w_embed = self.relu(torch.cat([w_embed[0], w_embed[1]], dim=-1))
 
