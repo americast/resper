@@ -1454,12 +1454,13 @@ class BERT_HiGRU_basic(nn.Module):
 			self.bert = BertModel.from_pretrained('bert-base-uncased')
 			print("Base BERT chosen")
 
-		for p in self.bert.parameters():
-			p.requires_grad = trainable
-			# if trainable == 1:
-			# 	p.requires_grad = True
-			# if trainable == 0:
-			# 	p.requires_grad = False
+		if long_bert:
+			for p in self.bert.parameters():
+				p.requires_grad = trainable
+				# if trainable == 1:
+				# 	p.requires_grad = True
+				# if trainable == 0:
+				# 	p.requires_grad = False
 
 		self.uttenc = UttEncoder_basic(self.bert_emb_dim, d_h1, self.model)
 		self.dropout_in = nn.Dropout(0.5)

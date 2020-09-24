@@ -145,7 +145,7 @@ def main():
 	embedding.weight.requires_grad = trainable
 	# pu.db
 	# Choose the model
-	if args.type.startswith('bert-higru-basic') or args.type.startswith('bert-higru-basic'):
+	if args.type.startswith('bert-higru-basic') or args.type.startswith('only-higru-basic'):
 		print("Training the bert basic model")
 		model = BERT_HiGRU_basic(d_word_vec=args.d_word_vec,
 					  d_h1=args.d_h1,
