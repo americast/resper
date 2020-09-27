@@ -86,7 +86,7 @@ def main():
 	# 					help ='name of the file to be saved')
 
 	# parser.add_argument('-ldm', type=int, default=1, help = 'how many last utterances used for the donor loss contribution') # last donor mask
-	# parser.add_argument('-don_model', type=int, default=1, help = 'how to compute the donation probability') # last donor mask
+	parser.add_argument('-don_model', type=int, default=0, help = 'how to compute the donation probability') # last donor mask
 
 	# parser.add_argument('-thresh_reg', type=float, default=0.0, help = 'how to choose threshold for the models 2 and 3') # last donor mask
 
@@ -145,7 +145,24 @@ def main():
 	embedding.weight.requires_grad = trainable
 	# pu.db
 	# Choose the model
-	if args.type.startswith('bert-higru-basic') or args.type.startswith('only-higru-basic'):
+	if args.type.startswith('bert-higru-masked-outcome'):
+		print("Training the duo model")
+		model = BERT_HiGRU_mask_outcome(d_word_vec=args.d_word_vec,
+					  d_h1=args.d_h1,
+					  d_h2=args.d_h2,
+					  d_fc=args.d_fc,
+					  emodict=emodict,
+					  worddict=worddict,
+					  embedding=embedding,
+					  type=args.type[5:],
+					  # bert_flag= args.bert,
+					  don_model= args.don_model,
+					  trainable= trainable,
+					  feature_dim = feature_dim,
+					  long_bert = args.bert
+					  )
+					  #speaker_flag= args.sf)
+	elif args.type.startswith('bert-higru-basic') or args.type.startswith('only-higru-basic'):
 		print("Training the bert basic model")
 		model = BERT_HiGRU_basic(d_word_vec=args.d_word_vec,
 					  d_h1=args.d_h1,

@@ -72,6 +72,8 @@ def emotrain(model, data_loader, tr_emodict, emodict, args, focus_emo):
 
 	speakers       =   train_loader['speaker']
 	addn_features  =   return_addn_features(train_loader, args)
+	pu.db
+	donors         =   train_loader['donor']
 
 	# Optimizer
 	lr = args.lr
@@ -106,9 +108,9 @@ def emotrain(model, data_loader, tr_emodict, emodict, args, focus_emo):
 		# import pdb; pdb.set_trace()
 
 		if addn_features != None:
-			feats, labels, speakers, addn_features= Utils.shuffle_lists(feats, labels, speakers, addn_features)
+			feats, labels, speakers, addn_features, donors = Utils.shuffle_lists(feats, labels, speakers, addn_features, donors)
 		else:
-			feats, labels, speakers = Utils.shuffle_lists(feats, labels, speakers)
+			feats, labels, speakers, donors = Utils.shuffle_lists(feats, labels, speakers, donors)
 		
 			# sample_weights)	# Shuffle the training set every epoch
 		print("===========Epoch==============")
@@ -137,6 +139,13 @@ def emotrain(model, data_loader, tr_emodict, emodict, args, focus_emo):
 			label = Variable(label)
 			# bert_emb= Variable(bert_emb)
 
+
+			donor_label= torch.LongTensor(donors[bz]).unsqueeze(dim=1)
+			donor_float_label= torch.FloatTensor(donors[bz]).unsqueeze(dim=1)
+
+			donor_mask= torch.LongTensor([0 for i in range(len(speakers[bz]))])	
+			donor_mask[len(donor_mask)-args.ldm:]=1
+
 			if args.gpu != None:
 				os.environ['CUDA_VISIBLE_DEVICES'] = args.gpu
 				# device = torch.device("cuda: 0")
@@ -144,11 +153,10 @@ def emotrain(model, data_loader, tr_emodict, emodict, args, focus_emo):
 				feat = feat.cuda()
 				label = label.cuda()
 				mask= mask.cuda()
+				donor_mask= donor_mask.cuda()
+				donor_label= donor_label.cuda()
+				donor_float_label = donor_float_label.cuda()
 
-
-				# donor_mask= donor_mask.cuda()
-				# donor_label= donor_label.cuda()
-				# donor_float_label = donor_float_label.cuda()
 				# EE_mask = EE_mask.cuda()
 				# ER_mask = ER_mask.cuda()
 				# ER_weights = ER_weights.cuda()
@@ -167,7 +175,7 @@ def emotrain(model, data_loader, tr_emodict, emodict, args, focus_emo):
 			else:
 				log_prob,  log_donor_prob, pred_outs = model(feat, lens, addn_feature)
 			target   = label
-			all_loss = torch.gather(log_prob, 1, target).squeeze(1)				
+			all_loss = torch.gather(log_prob, 1, target).squeeze(1)
 			# if all_loss !=all_loss:
 
 			# import pdb; pdb.set_trace()
@@ -176,9 +184,39 @@ def emotrain(model, data_loader, tr_emodict, emodict, args, focus_emo):
 			if loss !=loss:
 				import pdb; pdb.set_trace()
 
-			loss.backward()
+			# loss.backward()
 
 			loss2 = None
+
+			if log_donor_prob == None:
+				if args.sec_loss =='mse':
+					mse   = torch.nn.MSELoss(reduction='sum')
+					loss2 = mse(pred_outs[-1],donor_float_label[-1])
+
+				else:
+
+					logits = torch.log(pred_outs/(1+eps-pred_outs))
+					loss2  = F.binary_cross_entropy_with_logits(logits, donor_float_label,reduction='none')
+
+					# loss2  = F.binary_cross_entropy_with_logits(logits, donor_float_label, pos_weight=torch.Tensor([0.2]).cuda(device),reduction='none')
+					loss2  = (loss2.squeeze(1)*donor_mask).sum()
+					# loss2 = F.binary_cross_entropy(pred_outs.reshape(-1, 1), donor_float_label, weights=sample_weights[bz])
+					# loss2 = criterion(pred_outs.reshape(-1,1), donor_float_label)*donor_mask
+
+				if loss2!=loss2:
+					pu.db
+				
+
+			else:
+				loss2 = torch.gather(log_donor_prob, 1, donor_label).squeeze(1)*donor_mask
+				loss2 = -loss2.sum()/donor_mask.sum()
+			
+			if args.interpret  =='combined_trainable_loss': # add both losses as it happens
+				loss = loss + loss2
+				loss.backward()
+			elif args.interpret == 'single_loss':  # add them in a weighed fashion
+				loss = alpha*loss + (1- alpha)*loss2
+				loss.backward()
 
 			# if log_donor_prob == None:
 			# 	if args.sec_loss =='mse':
@@ -234,18 +272,22 @@ def emotrain(model, data_loader, tr_emodict, emodict, args, focus_emo):
 				print("Steps: {} Loss: {} LR: {}".format(glob_steps, report_loss/args.report_loss, model_opt.param_groups[0]['lr']))
 				report_loss = 0
 		
-		pAccs, acc, mf1 = emoeval(model=model, data_loader=train_loader, tr_emodict=tr_emodict, emodict=emodict, args=args, focus_emo=focus_emo)
+		pAccs, acc, mf1, don_acc, don_mf1, _  = emoeval(model=model, data_loader=train_loader, tr_emodict=tr_emodict, emodict=emodict, args=args, focus_emo=focus_emo)
 
 		print("Train acc = {}".format(acc))
 		print("Train F1 = {}".format(mf1))
-		
-
+		print("Train donor_acc = {}".format(don_acc))
+		print("Train donor_F1 = {}".format(don_mf1))
+		print()
 		# validate
 		pAccs, acc, mf1 = emoeval(model=model, data_loader=dev_loader, tr_emodict=tr_emodict, emodict=emodict, args=args, focus_emo=focus_emo)
 
 		# print("Validate: ACCs-WA-UWA {}".format(pAccs))
 		print("Validation acc = {}".format(acc))
 		print("Validation F1 = {}".format(mf1))
+		print("Validation donor_acc = {}".format(don_acc))
+		print("Validation donor_F1 = {}".format(don_mf1))
+		print()
 		
 
 		f.write(str(epoch)+'\t'+str(acc)+'\t'+str(mf1)+'\n')
