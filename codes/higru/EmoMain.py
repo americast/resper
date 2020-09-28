@@ -73,7 +73,8 @@ def main():
 						help='how many steps to report loss')
 	parser.add_argument('-bert', type=int, default=0,	# Report loss interval, default the number of dialogues
 						help='include bert or not')
-
+	parser.add_argument('-sec_loss', type=str, default=None,	# Stored embedding path
+						help='loss for the outcome prediction')
 	# parser.add_argument('-mask', type=str, default='all',	# Choice of mask for ER, EE, or all
 	# 					help='include mask type')
 
@@ -93,8 +94,10 @@ def main():
 	parser.add_argument('-bert_train', type=int, default=0, help = 'choose 0 or 1') # last donor mask
 
 	parser.add_argument('-addn_features', type =str, default='all', help='include all possible features') # include the features to be used for training
+	parser.add_argument('-interpret', type =str, default='no_loss', help='no loss propagation') # include the features to be used for training
 
 	parser.add_argument('-seed', type =int, default=100, help= 'set random seed')
+	parser.add_argument('-ldm', type =int, default=1, help= 'last donor bucket')
 
 	args = parser.parse_args()
 	print(args, '\n')

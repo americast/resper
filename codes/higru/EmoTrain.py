@@ -16,6 +16,7 @@ import pdb
 import pudb
 from sklearn.utils.class_weight import compute_sample_weight
 from tqdm import tqdm
+import json
 
 def return_addn_features(data_loader, args):
 	if 'resisting' in args.dataset:
@@ -72,8 +73,19 @@ def emotrain(model, data_loader, tr_emodict, emodict, args, focus_emo):
 
 	speakers       =   train_loader['speaker']
 	addn_features  =   return_addn_features(train_loader, args)
-	pu.db
-	donors         =   train_loader['donor']
+	if 'negotiation' in args.dataset:
+		f = open("../../data/higru_bert_data/train"+args.dataset[-1]+"neg.json", "r")
+	else:
+		f = open("../../data/higru_bert_data/train"+args.dataset[-1]+".json", "r")
+	
+	json_dict = json.load(f)
+	f.close()
+	donors = []
+	for each in json_dict:
+		donor_here = []
+		for e in each:
+			donor_here.append(e["ratio_bucket"])
+		donors.append(donor_here)
 
 	# Optimizer
 	lr = args.lr
@@ -143,8 +155,8 @@ def emotrain(model, data_loader, tr_emodict, emodict, args, focus_emo):
 			donor_label= torch.LongTensor(donors[bz]).unsqueeze(dim=1)
 			donor_float_label= torch.FloatTensor(donors[bz]).unsqueeze(dim=1)
 
-			donor_mask= torch.LongTensor([0 for i in range(len(speakers[bz]))])	
-			donor_mask[len(donor_mask)-args.ldm:]=1
+			donor_mask= torch.LongTensor([0 if i<len(speakers[bz])-1 else 1 for i in range(len(speakers[bz]))])	
+			# donor_mask[len(donor_mask)-args.ldm:]=1
 
 			if args.gpu != None:
 				os.environ['CUDA_VISIBLE_DEVICES'] = args.gpu
@@ -186,13 +198,11 @@ def emotrain(model, data_loader, tr_emodict, emodict, args, focus_emo):
 
 			# loss.backward()
 
-			loss2 = None
 
 			if log_donor_prob == None:
 				if args.sec_loss =='mse':
 					mse   = torch.nn.MSELoss(reduction='sum')
 					loss2 = mse(pred_outs[-1],donor_float_label[-1])
-
 				else:
 
 					logits = torch.log(pred_outs/(1+eps-pred_outs))
@@ -272,17 +282,17 @@ def emotrain(model, data_loader, tr_emodict, emodict, args, focus_emo):
 				print("Steps: {} Loss: {} LR: {}".format(glob_steps, report_loss/args.report_loss, model_opt.param_groups[0]['lr']))
 				report_loss = 0
 		
-		pAccs, acc, mf1, don_acc, don_mf1, _  = emoeval(model=model, data_loader=train_loader, tr_emodict=tr_emodict, emodict=emodict, args=args, focus_emo=focus_emo)
 
+		pAccs, acc, mf1, don_acc, don_mf1, _  = emoeval(model=model, data_loader=train_loader, tr_emodict=tr_emodict, emodict=emodict, args=args, focus_emo=focus_emo, data_type="train")
 		print("Train acc = {}".format(acc))
 		print("Train F1 = {}".format(mf1))
 		print("Train donor_acc = {}".format(don_acc))
 		print("Train donor_F1 = {}".format(don_mf1))
 		print()
 		# validate
-		pAccs, acc, mf1 = emoeval(model=model, data_loader=dev_loader, tr_emodict=tr_emodict, emodict=emodict, args=args, focus_emo=focus_emo)
 
 		# print("Validate: ACCs-WA-UWA {}".format(pAccs))
+		pAccs, acc, mf1, don_acc, don_mf1, _  = emoeval(model=model, data_loader=dev_loader, tr_emodict=tr_emodict, emodict=emodict, args=args, focus_emo=focus_emo)
 		print("Validation acc = {}".format(acc))
 		print("Validation F1 = {}".format(mf1))
 		print("Validation donor_acc = {}".format(don_acc))
@@ -580,7 +590,7 @@ def loss_weight(tr_ladict, ladict, focus_dict, rate=1.0):
 	return weight
 
 
-def emoeval(model, data_loader, tr_emodict, emodict, args, focus_emo, name="model"):
+def emoeval(model, data_loader, tr_emodict, emodict, args, focus_emo, name="model", data_type="test"):
 	""" data_loader only input 'dev' """
 	model.eval()
 
@@ -605,12 +615,25 @@ def emoeval(model, data_loader, tr_emodict, emodict, args, focus_emo, name="mode
 	# df_dict['donation_prob']   =  []
 
 	addn_features = return_addn_features(data_loader, args)
+	if 'negotiation' in args.dataset:
+		f = open("../../data/higru_bert_data/"+data_type+args.dataset[-1]+"neg.json", "r")
+	else:
+		f = open("../../data/higru_bert_data/"+data_type+args.dataset[-1]+".json", "r")
 	
+	json_dict = json.load(f)
+	f.close()
+	donors = []
+	for each in json_dict:
+		donor_here = []
+		for e in each:
+			donor_here.append(e["ratio_bucket"])
+		donors.append(donor_here)
+
 
 	alpha= 1.0
 	# donors= data_loader['donor']
 
-	# donor_probs=[]
+	donor_probs=[]
 
 	val_loss = 0
 	y_true=[]
@@ -621,11 +644,11 @@ def emoeval(model, data_loader, tr_emodict, emodict, args, focus_emo, name="mode
 	# old_y_true = []
 	# old_y_pred = []
 
-	# donor_true=[]
-	# donor_pred=[]
+	donor_true=[]
+	donor_pred=[]
 
-	# donor_labels = []
-	# donor_logits = []
+	donor_labels = []
+	donor_logits = []
 
 	# EE_true = []
 	# EE_pred = []
@@ -636,7 +659,6 @@ def emoeval(model, data_loader, tr_emodict, emodict, args, focus_emo, name="mode
 	# true_face_arr = []
 
 	# curr_conv_id = int(args.dataset[-1])*60
-
 	for bz in tqdm(range(len(labels))):
 		if texts!=None:
 			turns = texts[bz]
@@ -648,7 +670,7 @@ def emoeval(model, data_loader, tr_emodict, emodict, args, focus_emo, name="mode
 		# bert_emb = np.zeros((len(bert_embs[bz]),max([len(b) for b in bert_embs[bz]])+2))
 		# bert_emb = torch.FloatTensor(bert_embs[bz])
 
-		# donor_label= torch.LongTensor(donors[bz]).unsqueeze(dim=1)
+		donor_label= torch.LongTensor(donors[bz]).unsqueeze(dim=1)
 		
 		if 'negotiation' in args.dataset:
 			mask  = torch.LongTensor([1 for i in speakers[bz]])
@@ -670,8 +692,8 @@ def emoeval(model, data_loader, tr_emodict, emodict, args, focus_emo, name="mode
 		# ER_weights = torch.FloatTensor([0 if i in ['0','7'] else 1 for i,j in emodict.word2index.items()])
 
 
-		# donor_mask= torch.LongTensor([0 for i in range(len(speakers[bz]))])	
-		# donor_mask[len(donor_mask)-args.ldm:]=1
+		donor_mask= torch.LongTensor([0 for i in range(len(speakers[bz]))])	
+		donor_mask[len(donor_mask)-args.ldm:]=1
 
 		feat = Variable(feat)
 		label = Variable(label)
@@ -685,8 +707,8 @@ def emoeval(model, data_loader, tr_emodict, emodict, args, focus_emo, name="mode
 			label = label.cuda()
 			# bert_emb= bert_emb.cuda()
 			mask= mask.cuda()
-			# donor_label= donor_label.cuda()
-			# donor_mask= donor_mask.cuda()
+			donor_label= donor_label.cuda()
+			donor_mask= donor_mask.cuda()
 			# EE_weights= EE_weights.cuda()
 			# ER_weights= ER_weights.cuda()
 			# weights = weights.cuda()
@@ -787,59 +809,35 @@ def emoeval(model, data_loader, tr_emodict, emodict, args, focus_emo, name="mode
 
 		# donor prediction and accuracy computed here. 
 
-		# donor_trueidx= donor_label.view(donor_label.size(0))
-		# donor_trueidx= np.array(donor_trueidx.cpu())
-		# donor_mask= np.array(donor_mask.cpu())
+		donor_trueidx= donor_label.view(donor_label.size(0))
+		donor_trueidx= np.array(donor_trueidx.cpu())
+		donor_mask= np.array(donor_mask.cpu())
 
-		# donor_predidx = None
-		# dons = None
+		donor_predidx = None
+		dons = None
 
-		# if log_donor_prob !=None:
+		if log_donor_prob !=None:
 
-		# 	dons=np.array(F.softmax(log_donor_prob, dim=1).cpu().detach())
-		# 	donor_probs.append(dons)
-		# 	donor_predidx= torch.argmax(log_donor_prob, dim=1)
-		# 	donor_predidx= np.array(donor_predidx.cpu())
+			dons=np.array(F.softmax(log_donor_prob, dim=1).cpu().detach())
+			donor_probs.append(dons)
+			donor_predidx= torch.argmax(log_donor_prob, dim=1)
+			donor_predidx= np.array(donor_predidx.cpu())
 			
 			
-		# else:
-		# 	dons = np.array(pred_outs.cpu().detach())
-		# 	donor_probs.append(dons)
-		# 	# donor_predidx =[1 if elem[0] >args.thresh_reg else 0 for elem in dons]
-		# 	donor_predidx =[1 if elem[0] >0.45 else 0 for elem in dons]
+		else:
+			dons = np.array(pred_outs.cpu().detach())
+			donor_probs.append(dons)
+			# donor_predidx =[1 if elem[0] >args.thresh_reg else 0 for elem in dons]
+			donor_predidx =[1 if elem >0.45 else 0 for elem in dons]
 
 
 
 		
-		# donor_pred.extend([i for i,j in zip(donor_predidx, donor_mask) if j==1])
-		# donor_true.extend([i for i,j in zip(donor_trueidx, donor_mask) if j==1])
+		donor_pred.extend([i for i,j in zip(donor_predidx, donor_mask) if j==1])
+		donor_true.extend([i for i,j in zip(donor_trueidx, donor_mask) if j==1])
 
-		# donor_logits.extend([i for i,j in zip([elem[0] for elem in dons], donor_mask) if j==1])
+		donor_logits.extend([i for i,j in zip([elem for elem in dons], donor_mask) if j==1])
 
-		# face_labels =  {'spos-': 7, 'hpos+': 1, 'other': 0, 'spos+': 3, 'hneg+': 5, 'hpos-': 4, 'hneg-': 2, 'sneg+': 6}
-		# inv_face_labels = {}
-		# for face_act in face_labels:
-		# 	inv_face_labels[face_labels[face_act]] = face_act
-
-
-	# 	if texts!=None:
-	# 		for turn, emo, emo_true, don, act_don, speaker in zip(turns, face_pred, face_true, dons, donor_trueidx, speakers[bz]):
-	# 			df_dict['conversation_id'].append(curr_conv_id)
-	# 			df_dict['speaker'].append(speaker)
-	# 			df_dict['utterance'].append(turn)
-	# 			df_dict['donation_prob'].append(don[-1])
-	# 			df_dict['predicted_face'].append(emo)
-	# 			df_dict['true_face'].append(emo_true)
-	# 			df_dict['actual_donation'].append(act_don)
-				
-
-	# 	curr_conv_id +=1
-
-	# df = pd.DataFrame(df_dict)
-	# file_str = Utils.return_file_path(args)
-
-	# df.to_csv('/projects/persuasionforgood-master/MIT-projects/results/'+file_str+ '.csv')
-	# # df.to_csv('result_csv/'+str(file_str)+'.csv')
 	data = {
 		"Turn": turn_all,
 		"Text": text_all,
@@ -854,15 +852,15 @@ def emoeval(model, data_loader, tr_emodict, emodict, args, focus_emo, name="mode
 	acc=accuracy_score(y_true,y_pred)
 	mf1= f1_score(y_true,y_pred,average='macro')
 
-	# don_acc= accuracy_score(donor_true, donor_pred)
-	# don_mf1= f1_score(donor_true, donor_pred, average='macro')
+	don_acc= accuracy_score(donor_true, donor_pred)
+	don_mf1= f1_score(donor_true, donor_pred, average='macro')
 
-	# t, max_f1 = tune_thresholds(np.array(donor_true).reshape(-1,1), np.array(donor_logits).reshape(-1,1))
+	t, max_f1 = tune_thresholds(np.array(donor_true).reshape(-1,1), np.array(donor_logits).reshape(-1,1))
 	
-	# new_donor_pred = [1 if elem > t else 0 for elem in donor_logits]
+	new_donor_pred = [1 if elem > t else 0 for elem in donor_logits]
 
-	# new_don_acc= accuracy_score(donor_true, new_donor_pred)
-	# new_don_mf1= f1_score(donor_true, new_donor_pred, average='macro')
+	new_don_acc= accuracy_score(donor_true, new_donor_pred)
+	new_don_mf1= f1_score(donor_true, new_donor_pred, average='macro')
 
 	# # print(donor_logits)
 	# # print(donor_true)
@@ -877,11 +875,11 @@ def emoeval(model, data_loader, tr_emodict, emodict, args, focus_emo, name="mode
 	# print(classification_report(EE_true, EE_pred))
 
 	print(acc, mf1)
-	# print(don_acc, don_mf1)
-	# print(new_don_mf1, new_don_mf1)
-	# print(t)	
+	print(don_acc, don_mf1)
+	print(new_don_mf1, new_don_mf1)
+	print(t)	
 
-	return Total, acc, mf1#, don_acc, don_mf1, donor_probs  
+	return Total, acc, mf1, don_acc, don_mf1, donor_probs  
 
 
 

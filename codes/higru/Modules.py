@@ -5152,11 +5152,14 @@ class BERT_HiGRU_mask_outcome(nn.Module):
 			# pred_outs   = F.log_softmax(output2, dim=1)
 			
 			outs = F.softmax(output2, dim =1)
-			don_prob = torch.zeros((len(outs),1)).cuda(sents.device)
+			don_prob = torch.zeros((len(outs))).cuda(sents.device)
 			don_prob[0] = outs[0][1]
 
 			for i in range(1, len(outs)):
-				don_prob[i] = 0.5*don_prob[i-1]+ 0.5*outs[i][1]
+				don_prob_here = don_prob.clone()
+				don_prob_here[i] = 0.5*don_prob[i-1]+ 0.5*outs[i][1]
+				don_prob = don_prob_here
+			# pu.db
 
 		if self.don_model==3:
 			output2     = self.fc_score(sent_output)
