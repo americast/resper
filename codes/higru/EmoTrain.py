@@ -57,7 +57,7 @@ def emotrain(model, data_loader, tr_emodict, emodict, args, focus_emo):
 	# start time
 	time_st = time.time()
 	decay_rate = args.decay
-	alpha= 1.0
+	alpha= args.alpha
 
 	# Load in the training set and validation set
 	train_loader   =   data_loader['train']
@@ -300,7 +300,7 @@ def emotrain(model, data_loader, tr_emodict, emodict, args, focus_emo):
 		print()
 		
 
-		f.write(str(epoch)+'\t'+str(acc)+'\t'+str(mf1)+'\n')
+		f.write(str(epoch)+'\t'+str(acc)+'\t'+str(mf1)+'\t'+str(don_acc)+"\t"+str(don_mf1)+'\n')
 		f.flush()
 		print("Wrote details to file")
 		# last_don_best= don_mf1

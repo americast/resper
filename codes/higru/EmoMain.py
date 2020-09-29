@@ -32,6 +32,7 @@ def main():
 
 	# Learning
 	parser.add_argument('-lr', type=float, default=2.5e-4)		# Learning rate: 2.5e-4 for Friends and EmotionPush, 1e-4 for IEMOCAP
+	parser.add_argument('-alpha', type=float, default=0.75)		# Learning rate: 2.5e-4 for Friends and EmotionPush, 1e-4 for IEMOCAP
 	parser.add_argument('-decay', type=float, default=math.pow(0.5, 1/40))	# half lr every 20 epochs
 	parser.add_argument('-epochs', type=int, default=200)		# Defualt epochs 200
 	parser.add_argument('-patience', type=int, default=10,		# Patience of early stopping 10 epochs
@@ -612,7 +613,7 @@ long_bert = args.bert
 	else:
 		model = torch.load(args.save_dir+'/'+file_str+'_model.pt', map_location='cpu')
 		# model = torch.load_state_dict(args.save_dir+'/'+file_str+'.pt', map_location='cpu')
-		pAccs, acc, mf1, = emoeval(model=model,
+		pAccs, acc, mf1, don_acc, don_mf1, _  = emoeval(model=model,
 						data_loader=test_loader,
 						tr_emodict=tr_emodict,
 						emodict=emodict,

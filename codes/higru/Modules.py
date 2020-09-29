@@ -5181,8 +5181,12 @@ class BERT_HiGRU_mask_outcome(nn.Module):
 			don_prob    = torch.zeros((len(outs),1)).cuda(sents.device)
 			don_prob[0] = torch.sigmoid(outs[0])
 
-			for i in range(1,len(outs)):
-				don_prob[i] = torch.sigmoid(don_prob[i-1]+outs[i])
+			for i in range(1, len(outs)):
+				don_prob_here = don_prob.clone()
+				don_prob_here[i] = torch.sigmoid(don_prob[i-1]+ outs[i])
+				don_prob = don_prob_here
+			# for i in range(1,len(outs)):
+			# 	don_prob[i] = torch.sigmoid(don_prob[i-1]+outs[i])
 
 
 		return log_pred_scores, pred_outs, don_prob
