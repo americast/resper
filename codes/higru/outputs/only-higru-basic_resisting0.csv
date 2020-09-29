@@ -1,0 +1,1151 @@
+,Turn,Text,True,Pred
+0,1,Hi there how are you?,0,0
+1,2,"I am doing fine, thanks for asking.",0,0
+2,3,You sure can,0,0
+3,4,I don't have any children but there are many children in my family.,0,0
+4,5,"I do have a big family, I enjoy it at times, other times I don't",0,0
+5,7,Yes I do.,0,0
+6,9,No I haven't.,0,0
+7,9,Could you QUICKLY tell me about it,4,0
+8,10,Okay that sounds nice and an important service,0,0
+9,13,I would like to help in the future when I am more financially stable.,6,0
+10,14,I am sure but I just am not able at this time,6,0
+11,0,"Hello, yes I have but I am not sure what the charity works towards",4,0
+12,0,Ah ok very nice.,0,0
+13,0,It sounds like a good charity.,0,0
+14,0,Are you thinking of donating to it?,2,2
+15,0,"Yes, I definitely understand you.",0,0
+16,0,It is very difficult to see on the news what is happening in Syria and the violence and terrorism that is going on in the country,2,4
+17,0,Yes that is very true.,0,0
+18,0,I usually donate $1.00 or $2.00 at restaurants or stores whenever they ask me if I would like to donate.,3,0
+19,0,I think it is the least I could do.,0,0
+20,0,Yes I understand.,0,0
+21,0,I have been to third world countries in South America and seeing the living conditions of some people is very tough.,0,0
+22,0,The poverty there is a lot higher than what we are used to seeing and it can be shocking.,0,0
+23,0,Yes I know.,0,0
+24,0,Any amount of money can help.,0,0
+25,0,"I think that we take many things for granted such as running water, and always having food on the table.",0,0
+26,0,"Yes, I would be willing to donate a small portion as well.",0,0
+27,0,I think it would really help them out,0,0
+28,0,"Ok, that's great.",0,0
+29,0,I happy to help them.,0,0
+30,0,Every month I always try to donate a little to charity,3,0
+31,0,I would like to donate $.50,0,0
+32,0,Yes anything I can do to help.,0,0
+33,0,I hope that it makes a difference!,0,0
+34,0,I don't know I haven't found anyone good ones,5,0
+35,0,"No, I have never hear of it",0,0
+36,0,Do they help children right here in America,4,5
+37,0,That is awesome.,0,0
+38,0,I am more willing to help a charity that will help right here in America,3,0
+39,0,"I would like to, but I really can afford to donate anything right now.",6,1
+40,0,I don't understand what you mean,0,0
+41,0,"Yes, it sounds like a good charity.",0,0
+42,0,"Yes, I have.",0,0
+43,0,Some don't give the money out like they are suppose to.,2,0
+44,0,"No, I have not hear that",0,0
+45,0,How does me saying I will donate fake money make a good impression for future hits.,0,3
+46,1,Hello.,0,0
+47,1,I hope you are well.,0,0
+48,2,I think it is very important to help children that are less fortunate.,0,0
+49,2,"Tell me more about ""Save the children.""",4,4
+50,4,What service does this charity provide?,4,4
+51,5,I like the sound of that.,0,0
+52,5,Does it work by sponsoring a specific child who you get to know or does everything run through the organization?,4,4
+53,6,That makes sense and I do like the money to be spread to everyone.,0,0
+54,6,Is this primarily in African and South America?,4,4
+55,8,How do we know that our donation is reaching those in need?,5,4
+56,11,I hope that is the case as I hate to read about children in danger.,0,0
+57,11,Is this donation a one-time thing?,4,0
+58,13,I think I could donate $5.00.,0,0
+59,15,You are welcome,0,0
+60,16,I hope you have a great day as well!,0,0
+61,1,I'm doing well thank you,0,0
+62,2,That is absolutely terrible.,0,0
+63,2,Are there any good charities that are helping on this issue?,4,4
+64,3,How can someone help?,0,0
+65,3,I would be willing to donate my time and perhaps some money.,0,3
+66,4,How exactly does the money help the cause?,4,4
+67,4,What's it spent on?,4,4
+68,6,I'd be willing to donate a dollar or two,0,0
+69,7,Perfect.,0,0
+70,7,How do I donate then?,4,2
+71,8,You need to type faster.,0,0
+72,8,Our HITs are going to expire on us.,0,0
+73,8,"I'd rather send the money on my accord, rather than have it deducted.",0,6
+74,8,Where can I go to send it?,4,0
+75,9,Ok i'll check it out.,0,6
+76,9,thank you.,0,0
+77,10,I'll donate right away.,0,0
+78,10,thank you.,0,0
+79,10,Are you going to donate too?,2,0
+80,11,Awesome.,0,0
+81,11,Have a wonderful day.,0,0
+82,11,I hope those kids get the money they need.,0,0
+83,0,"Hey, I am doing well",0,0
+84,0,That is terrible.,0,0
+85,0,Are there any charities that work in that area?,4,4
+86,0,It hurts my heart when I see those children's charity commercials.,0,0
+87,0,30 dollars a month can change a child's life,0,0
+88,0,I know!,0,0
+89,0,What a worthwhile cause!,0,0
+90,0,"Yeah, I have used Gospel for Asia in the past",3,0
+91,0,It feels good to make a difference if only for one child,0,0
+92,0,That is freat!!,0,0
+93,0,Good for you!,0,0
+94,0,I may donate something!!,0,0
+95,0,I am not sure,1,1
+96,2,"Sure, as long as you can help me out as well... you see, I have a child that is overseas, in a warzone.",6,0
+97,2,they are hungry and injured and also short,6,0
+98,4,"yeah, i mean, i guess",0,0
+99,5,what is save the children,4,4
+100,7,do they help lots of kids,4,4
+101,8,do they help kids in africa too,4,4
+102,9,do they provide medical help too though?,4,4
+103,10,"I see, and it's called Save the Children",0,0
+104,12,Do they help adults?,4,0
+105,13,"I see, and do they provide medical help as well?",4,4
+106,16,"If you can promise me that none of the money will go to help ANY Muslim child, then I will donate two dollars from my payment",5,0
+107,17,"then unfortunately, i cannot give any money",7,6
+108,3,Do nothing about what?,4,4
+109,5,That's awful.,0,0
+110,5,Are you talking about around the world or in the states?,4,4
+111,8,I totally agree.,0,0
+112,8,There are people helping but its a drop in the bucket.,0,0
+113,8,The kids dying is really disturbing.,0,0
+114,8,They didn't choose that life.,0,0
+115,12,Absolutely!,0,0
+116,12,I think every little bit helps but as a whole it's not enough.,0,0
+117,12,Have you ever donated?,2,0
+118,18,That is great!,0,0
+119,18,you sound very passionate about this subject.,0,0
+120,18,I should do more to help.,0,0
+121,22,That is an incredible figure!!!,0,0
+122,22,62% is amazing.,0,0
+123,22,What is the charity?,4,4
+124,22,I may consider a donation.,0,0
+125,26,That is convenient!!!,0,0
+126,26,I will definitely do that.,0,0
+127,26,At least a portion of it.,0,0
+128,31,I need to think about it.,1,1
+129,37,I hear ya!,0,0
+130,37,I will donate I'm just not sure how much.,1,0
+131,41,Thank you!,0,0
+132,41,you have been great.,0,0
+133,0,I DO,0,0
+134,0,"To church, I return tithes and I also do the offerings",3,0
+135,0,"no, can you tell me more about it?",4,4
+136,0,nice!,0,0
+137,0,I have a child so i'm all about helping kids,0,4
+138,0,I would like to know more before i donate.,4,7
+139,0,How do i know if it's a legit organization,5,4
+140,0,interesting.,0,0
+141,0,So if i donate will 100% of my donation go to a child?,5,0
+142,0,i just don't know why i've never heard about it,5,0
+143,0,"it is sad, i agree with you",0,0
+144,0,that breaks my heart.,0,0
+145,0,I would do anything to protect my son,0,0
+146,0,"okay, I might donate",0,1
+147,2,"Hi, I'm in Hawaii!",0,0
+148,2,What kind of children's charities do you know about?,4,0
+149,4,It sounds familiar.,0,0
+150,4,What do they do?,4,4
+151,8,"Sure, what is it?",4,4
+152,9,They look really good.,0,0
+153,9,I think I've seen their commercials.,5,0
+154,13,I see.,0,0
+155,13,It seems like they're involved in a lot of areas.,0,0
+156,16,I would be fine with that.,0,0
+157,16,I don't mind donating because I think the money is more important to them than it is to me.,5,0
+158,20,How about .20?,0,0
+159,24,That's nice.,0,0
+160,24,I would like that.,0,0
+161,27,"Ok, you too.",0,0
+162,27,Glad this worked out!,0,0
+163,28,"I think we have to complete 10 turns, so here's to another one!",0,0
+164,28,Let's save the children together!,0,0
+165,1,"I spend about 5 dollars a day, you?",0,0
+166,3,I think it would in many places,0,0
+167,5,No i am not can you explain?,4,4
+168,6,Wow thats great.,0,0
+169,6,How can I help?,0,0
+170,7,Thank you.,0,0
+171,7,How do i donate?,0,0
+172,8,Ok i will donate some,0,0
+173,11,Tha k you so much for the infkrmation,0,0
+174,12,I will donate 10 cents,0,0
+175,13,That is all i can afford,0,0
+176,16,Tha k you for my awareness,0,0
+177,1,What kind of children does it help?,4,4
+178,2,What is the name of the organization?,0,4
+179,3,How do they help children?,4,4
+180,3,Food?,4,4
+181,3,Clothing?,4,4
+182,3,Shelter?,4,4
+183,3,Education?,4,4
+184,5,Is this charity local?,4,4
+185,5,global?,4,4
+186,5,Just in my country (United States)?,4,4
+187,6,"I thinkit's important to support initiatives to help children get a good education, and have the things they need to go to school and learn.",0,0
+188,6,How much should we donate?,0,2
+189,8,"Sponsorship of a child might be interesting....I'd like to know what my donation is being used for, and that it's actually helping someone.",0,4
+190,11,That is appealing.,0,0
+191,11,Does the charity send updates on how the child is doing if I sponsor?,4,0
+192,12,How does the sponsorship work?,4,4
+193,12,Do I make a monthly donation?,4,4
+194,12,I can't afford much.,6,0
+195,12,What is the minimum dollar amount?,0,4
+196,13,What do you think?,0,2
+197,14,OK. Glad that we came to an agreement.,0,0
+198,14,How do we end this task?,0,0
+199,1,"No, to be honest I am doing this task to save up extra money for myself.",0,6
+200,4,"I appreciate your position, but what exactly is Save the Children and how do I know that money will truly be used to help kids?",4,4
+201,6,"It sounds like a good idea, but I often get peppered with requests to donate money to various charities -- when I donate I do it to causes that I know about.",3,3
+202,6,If I donated to every cause I would be giving away a lot of money and I already lose 20% to taxes.,6,0
+203,8,What exactly would that 30 cents be used for and how would it help?,4,4
+204,8,What part of the world will it go to?,4,4
+205,10,I have to respectfully question the necessity -- don't my taxes already go towards billions of dollars of foreign aid?,2,0
+206,10,And why do so many of these countries continually need help?,2,4
+207,12,I have seen some of the images and video of the civil war there.,0,0
+208,13,True -- but how much money is currently being provided by US and NATO to help?,2,4
+209,16,I have to question that they have provided only tents.,2,5
+210,16,Many countries have absorbed many refugees and I am fairly certain that way more aid than tents has been provided.,2,0
+211,18,It may -- but at this point I really still have no idea what Save the Children is and I would want to research it anyway before I would agree to give money to it.,1,1
+212,19,"Additionally, I am just very skeptical of any organization that asks for money.",5,0
+213,19,"I never know who is in charge, who is taking what, and where the money truly goes.",5,0
+214,1,"Hi, how are you?",0,0
+215,2,Thanks.,0,0
+216,2,"We're here to talk about a children's charity, is that right?",0,0
+217,6,What is the charity?,0,4
+218,7,I've heard of them.,0,0
+219,7,It's a good charity.,0,0
+220,9,"The violence in Syria is one of the saddest things happening in the world today, as far as I know.",0,0
+221,9,I heard a really heartbreaking interview with a Syrian child who lost his dad on NPR the other day.,0,0
+222,10,I'm really sorry.,0,0
+223,10,Does Save the Children help find a place for refugees?,4,4
+224,11,Thanks.,0,0
+225,11,"I don't have a lot of money, but I'll ask my family and friends to donate to them for my birthday.",0,6
+226,11,For today I would like to donate $.30,0,0
+227,13,"Thanks, you too.",0,0
+228,13,I hope you're able to raise a lot of donations.,0,0
+229,14,Is there anything else you can think of that we could do?,0,0
+230,15,I will.,0,0
+231,15,Good luck to you,0,0
+232,2,"Good, thanks!",0,0
+233,2,How are you?,0,0
+234,4,In the past few years I rarely have.,0,0
+235,5,"That seems so hard to believe, but I guess lots of pennies still add up!",0,0
+236,6,"Wow, that definitely puts it in perspective!",0,0
+237,7,I agree with you!,0,0
+238,9,I have!,0,0
+239,9,"I used to volunteer often, but I have so little time it feels like now!",0,0
+240,11,You're right!,0,0
+241,11,It doesn't take much sacrifice to think of small ways to help!,0,0
+242,12,Haha that's true!,0,0
+243,13,I think so!,0,0
+244,14,I'm not sure!,0,0
+245,14,What is the range of options?,0,0
+246,3,good morning too and am also same as your location,0,0
+247,7,ok what can i help with that,0,0
+248,9,i did only charity walks and rare to take the donations,0,4
+249,11,i also usually focus that,0,0
+250,13,i mostly deal with friend and other persons,0,0
+251,16,support children in more development country?,4,0
+252,20,awareness is less than the more countries so they need some help,0,0
+253,22,yes of course,0,0
+254,26,no $5 to spend us,0,0
+255,27,yes of course,0,0
+256,1,"Hello, do you have any charities in mind that you support?",0,0
+257,2,I've never heard of that one.,0,0
+258,2,What is their goal?,4,4
+259,3,Oh that is interesting.,0,0
+260,3,Have you ever made a donation to them?,0,0
+261,4,Nice!,0,0
+262,4,How much do they recommend you donate?,0,0
+263,6,I could definitely justify giving $20 to them.,0,0
+264,8,"Sounds good, do I just go to the website to donate?",0,0
+265,11,I will just go ahead and do the $20.,0,0
+266,13,Thank you!,0,0
+267,13,I am glad I found a charity I can support.,0,0
+268,14,No problem.,0,0
+269,14,I always like to help when I can.,0,0
+270,16,Same to you!,0,0
+271,16,The work you do is important.,0,0
+272,0,"Yes, 2.",0,0
+273,0,You?,0,0
+274,0,I am.,0,0
+275,0,"I tend to read news articles from aboard. BBC, ect.",0,0
+276,0,I read that their are quite a few places that could use help.,0,0
+277,0,"I have heard of them, but have not looked into what they do.",0,0
+278,0,"That's very interesting, sounds like they do good work.",0,0
+279,0,Do you know anyone that has worked for them?,4,4
+280,0,Sounds like they do a lot of good for a lot of people around the world.,0,0
+281,0,Are you involved with them at all?,0,0
+282,0,I have.,0,0
+283,0,"I donate to my local charities, plus the United Way.",0,3
+284,0,I might.,1,0
+285,0,I wonder sometimes how much of the actual money that gets donated goes to helping people and not into the pockets of those running the charity.,5,4
+286,0,Well that seems better than some I have read about.,0,0
+287,0,Have you ever donated to them?,0,0
+288,0,I think I would donated to donate .50,0,1
+289,0,Hey there how's it going?,0,0
+290,0,Today is beautiful!!,0,0
+291,0,I think it's time to take a walk a little later!,0,0
+292,0,It depends on the charity!,0,0
+293,0,There are some good ones and some that have turned out to be scams.,0,0
+294,0,I have not!,0,0
+295,0,Do you work for them or have you donated with them before?,0,0
+296,0,What kind of stuff do they do to help the children?,4,4
+297,0,Oh that's great!!,0,0
+298,0,I think children deserve all the help they can get.,0,0
+299,0,Is this an American charity?,4,4
+300,0,I would possibly be interested in that.,0,1
+301,0,How can I be sure that it will go where it's supposed to?,4,4
+302,0,What are the typical donations to the charity like?,4,4
+303,0,Unfortunately I am having some money troubles right now so it's a little hard for me to promise any significant amount of money at the moment.,6,0
+304,0,I would be interested in donating five cents.,0,0
+305,0,I could definitely do that.,0,0
+306,0,Sorry I can't donate more :(,0,0
+307,1,wow that is neat,0,0
+308,2,that sounds expensive,6,0
+309,3,how much do you give,0,0
+310,4,ok how ill give that much,0,0
+311,5,ok great im in,0,0
+312,6,about thousand dollars at least,0,0
+313,7,ok ill give that,0,0
+314,8,oh at least a thousand,2,0
+315,9,"yes, in fact ill most likely give ten thousand",2,0
+316,10,oh thats good,0,0
+317,1,I am good.,0,0
+318,1,How are you?,0,0
+319,2,I understand that.,0,0
+320,2,So tell me about this charity.,4,0
+321,4,I'm not sure that I have.,0,0
+322,7,What kind of work do they do?,4,4
+323,8,"Ok, that sounds good.",0,0
+324,8,How do I know it is a legitimate charity?,5,4
+325,10,That's good to know.,0,0
+326,10,How long have they been around?,4,4
+327,11,That's pretty impressive.,0,0
+328,12,I just can't see doing that.,7,0
+329,14,I understand that.,0,0
+330,14,"But, I choose my own charities independently.",3,3
+331,16,"Ok, you too!",0,0
+332,0,I think I would be willing to donate a portion.,0,0
+333,0,"Yes, that was going to be my next question.",0,0
+334,0,What types of children's rights?,4,4
+335,0,What type of people or who manages this fund?,4,4
+336,0,Does Save the Children help children in the United States?,4,4
+337,0,That is awesome.,0,0
+338,0,I work hard to help children as well.,0,0
+339,0,"I am curious why you chose the words ""rural America""?",0,4
+340,0,"mmmm that is interesting, I did not know that statistic.",0,0
+341,0,"I work with children more in an ""urban"" setting that are incredibly in bad circumstances.",3,0
+342,0,I am interested.,0,0
+343,0,I am curious if I can state if money goes to children in this country though?,0,4
+344,0,That is awesome then I will donate $1.,0,0
+345,0,"I feel very strongly about ""our own children"" !!",0,0
+346,1,Hi.,0,0
+347,1,"I really do not know much about children's charity, do you?",0,0
+348,5,I think so.,0,0
+349,5,Does it have commercials on tv?,4,4
+350,7,"Does this charity help children in the United States, or do they deal mostly with children in African nations?",4,4
+351,10,I will copy and save the website address.,0,0
+352,10,What do volunteers do for this charity?,4,4
+353,10,I ask that because volunteering would be easier for me than sending money.,3,0
+354,13,That is awesome that your friend does that!,0,0
+355,13,"I'm not a nurse though, and couldn't possibly travel to Africa or anywhere else.",0,0
+356,17,"No, I honestly don't have any money.",6,6
+357,17,"If I did have extra money, I would probably donate to St Jude's.",3,6
+358,17,I have given a few extra cents sometimes at the checkout in grocery stores.,3,3
+359,22,"No, not really.",7,7
+360,22,I can count on one hand the number of times I've had starbucks coffee.,6,0
+361,22,"Very rarely do I spend money on unnecessary things, money is that tight.",6,3
+362,22,"I do feel bad there are starving kids in this world, but until my situation changes, there is nothing I can do for them or anyone else.",6,3
+363,24,I've done that before on other tasks.,0,0
+364,24,"Wouldn't it be easier for the research team to have their survey, and ask for donations at the end of the survey?",0,0
+365,25,"So if my reward amount on this hit is .30 cents, just give ""Save the Children"" this .30 cents, and we will call this task complete.",0,0
+366,27,"Thank you, you too.",0,0
+367,0,Hi...,0,0
+368,0,Fine...what about you..?,0,0
+369,0,Why....What's happen and which think do you get upset...?,0,0
+370,0,Yea...I am also feel bad that incident...,0,0
+371,0,Ok ....what kind of charity to provide a donation...?,4,4
+372,0,Yea...I was donate the charity of save the children.....,0,0
+373,0,If did they amount was 0..,0,0
+374,0,I was donate the amount of 10 cents......,0,0
+375,0,Yea...It was feel good...what's about you...?,0,0
+376,0,Yea..It's nice too hear....,0,0
+377,0,Have a nice day!,0,0
+378,1,I think I would like to donate 5,0,0
+379,2,"Ok, I saw the website and I am willing to donate $10",0,0
+380,5,I did not know that,0,0
+381,7,"I was not aware of that fact, no.",0,0
+382,19,"well, I've already promised 10.",0,0
+383,19,My families poor too and I don't get a lot of extra stuff like drinks and snacks.,6,3
+384,19,It's not easy for me to give anything and no charity has ever helped me.,6,3
+385,19,I wonder how much their CEO makes for saving the children.,6,5
+386,19,I'm guessing a lot more than me.,6,7
+387,24,It is in fact 10 or 5% of my weekly income.,0,0
+388,24,can I confirm that you would also like to donate 5% of yours?,0,0
+389,26,I understand that we will both be donating.,0,0
+390,26,I hope it is helpful to the children,0,0
+391,28,"ok, got it.",0,0
+392,28,cheers,0,0
+393,29,I think charities would recieve a lot more if the country would go after the 1% to help,0,0
+394,31,no problem.,0,0
+395,31,thanks,0,0
+396,1,I am well.,0,0
+397,1,How are you?,0,0
+398,3,Yes I have heard about it.,0,0
+399,4,I am actually not sure.,0,0
+400,4,I donate to charities often and can lose track of what I donate to.,0,3
+401,6,That sounds good.,0,0
+402,6,Tell me more.,0,4
+403,7,"Okay, what are my options?",0,0
+404,8,Do I have a choice of how much to donate?,0,0
+405,9,I would like to donate half of my payment.,0,0
+406,10,Thanks.,0,0
+407,10,Is there anything else I need to do?,0,0
+408,12,Okay.,0,0
+409,12,"Well, it's been nice talking to you.",0,0
+410,14,Have a good one!,0,0
+411,1,No I havent.,0,0
+412,1,What is it about?,4,4
+413,2,No thank you.,7,7
+414,4,I am already making a difference in many children lives.,3,3
+415,5,I have donated 15 years of my life to charity,3,0
+416,6,No thank you,7,7
+417,7,No thank you,7,7
+418,9,Where are those childrens parent?,0,4
+419,10,My small change won't do a thing for those kids.,2,3
+420,10,What they need is to be extracted from those countries so that they can have a better life not 0.25,0,0
+421,14,"If it makes you happy, go ahead and take .50",0,0
+422,15,No problem have a good night,0,0
+423,1,hello how are oyu,0,0
+424,2,ok great i have one for you also.,0,0
+425,2,"i'm sure you love children, right?",0,0
+426,3,of course or i wouldnt be online!,0,0
+427,3,so have you ever considered donating to a charity for kids,0,0
+428,5,"Oh yes, I have heard that they do very important work!",0,0
+429,7,"Me too, if only we could help!",0,0
+430,8,That is very sad.,0,0
+431,8,I would like to donate money to a charity to help this cause,0,0
+432,10,I think we should donate at least 17 dollars but less than 19 dollars,0,0
+433,12,I could maybe do less as well?,0,0
+434,12,How about 15?,0,0
+435,15,That sounds good.,0,0
+436,15,I agree to 20,0,0
+437,18,hopefully many more people help out so that they can get food and medicine,0,0
+438,0,Im very good how are you doing today?,0,0
+439,0,No i would be interested in learning,0,0
+440,0,Thats very beneficial.,0,0
+441,0,Especially for third world country that have limited resources,0,0
+442,0,If we can donate alot to these organizations alot can be accomplished in the world.,0,0
+443,0,definitely.,0,0
+444,0,The more the merrier however anything as little as 10 cents can make a huge impact,0,0
+445,0,If we can get a group of Investors this organization can reach a larger spectrum,0,0
+446,0,Yeah that means they need to develop a good marketing strategy to attract more attention,0,0
+447,0,"Yea they should hire a specialist that can go into social media like Facebook, Instagram, and other sites to build a presence",0,0
+448,0,Sure I like their mission and believe it can help a long way to help others,0,0
+449,0,I would love to donate $.50 cents,0,0
+450,1,Could you tell me more about the charity?,4,4
+451,3,Where did you get that information and who specifically is the money going to?,4,4
+452,5,People aren't likely to donate to charities that they know nothing about.,3,4
+453,7,"I\'m not going to donate to some generic ""Save the Children"" charity with no information.",7,0
+454,7,"So, do we need to chat back and forth a few for times for this to be over?",0,0
+455,8,What's their website address?,4,4
+456,9,Good to know.,0,0
+457,9,I'm not going to donate.,7,7
+458,10,Are you going to donate?,2,2
+459,10,What is in it for you if I donate?,0,4
+460,12,"I'd rather donate my time or if I do donate money, it will be to a charity that's important to me of my choosing.",3,6
+461,14,I won't be donating as part of this survey.,7,0
+462,15,I appreciate you trying to get me to though.,0,1
+463,15,I've never been on an MTurk Hit like this.,0,0
+464,2,"Hi, Yes I am",0,0
+465,5,"Yes, I agree.",0,0
+466,5,Helping children and pets is one of the donations I enjoy making and helping at the same time.,0,0
+467,6,I was thinking to donate around 10 cents for save the children.,0,0
+468,6,I hope that is adequate and helps them for food and shelter.,0,0
+469,8,ok how about 20 cents.,0,0
+470,8,I do want to help in anyway that I can.,0,0
+471,13,yeah I heard a little bit about on how children are suffering.,0,0
+472,13,I want to give a donation to help them.,0,0
+473,13,I am glad I can help in anyway that I can.,0,0
+474,16,"Yes, I believe it is good to be ethical.",0,0
+475,16,And to help children and animals as much as we can.,0,0
+476,16,Most of all save the children is a trustworthy organization which I trust to put my donations in with.,0,0
+477,17,Yes that is correct,0,0
+478,18,I feel that 20 cents is adequate for the donation.,0,0
+479,18,I want to help in any way that I can.,0,0
+480,18,Also I want to verify that this organization is most trusting.,0,0
+481,21,thank you.,0,0
+482,21,I wanted to help and want to help with a donation,0,0
+483,22,what hobbies do you like?,0,0
+484,22,and where are you from?,0,0
+485,1,Hello there!,0,0
+486,2,"Yes, what would this charity be doing to save the children?",4,0
+487,3,What have they done in the past?,4,4
+488,4,What countries have they been able to help?,4,4
+489,6,"I am aware of the violence in Syria but what has ""Save the Children"" done to aid in health, education and safety?",4,4
+490,8,Before I can donate I will need to know how this organization has help.,1,4
+491,9,"How has ""Save the Children"" helped to aid in health, education and safety of the Syrian children?",4,4
+492,11,Send over rights?,0,0
+493,11,I do not understand.,0,0
+494,11,"I also agreed to donate but before that I need more information, why do you keep asking me to donate?",0,2
+495,13,"Exactly, in today\'s world one must be weary of scammers.",5,0
+496,13,"Those who are really trying to do ""good"" for others will be more than happy to show proof of where donations are going or at least letting one know how those donations will be put to use.",5,5
+497,13,Telling me where it goes really does nothing for me.,5,5
+498,14,"Why the aggressive tone of me ""donating or not""?",0,2
+499,1,They definitely do.,0,0
+500,1,Do you participate in any local children's charities?,0,4
+501,4,Right.,0,0
+502,4,I used to tutor kids in my spare time in college.,0,0
+503,4,I also tutored kids at a battered woman's shelter.,0,0
+504,4,I have a bunch of baby clothes inwant to donate as well.,0,0
+505,4,Helping children abroad is on my bucket list.,0,0
+506,7,I saw a disheartening bstory on the news about some children that were injured due to that very violence.,0,0
+507,7,What do you think is the best solution or way to help for the average person like you or Me to render aid?,0,4
+508,9,So you think monetary donations are the best course of action?,0,4
+509,9,"When iIsaid helping children around the world was on my bucket list (and iIshould not have ised that term, nor did I mean it lightly, I meant physically donating time and skills.",0,0
+510,11,St Jude's is another great organisation.,0,0
+511,14,I'm aware of how to donate and how easy it is.,0,0
+512,14,You seem partial to save the children.,0,0
+513,14,Do you have any personal connection with that charity?,0,0
+514,18,I used to manage a store and we often picked childrens charities to give to.,0,3
+515,18,It always bothered me when folks would say '' need y'all to donate to me' and then decline to donate.,0,0
+516,18,"I think people fail to realize that without healthy, cared for, nurtured children, our future as a humanity becomes jeapodized.",0,0
+517,21,I would be willing to donate the money from this task for sure.,0,0
+518,22,I woiwo be willing to donate $2,0,0
+519,25,Awesome.,0,0
+520,25,Glad to know it will go to a child in need.,0,0
+521,2,I am fine how are you?,0,0
+522,4,well I have to go to work in a little while here how about you?,0,0
+523,8,"Iwork in an office setting as well, I guess we are to talk about childrens charity's.",0,0
+524,8,Do you donate to any on a regular base?,2,0
+525,11,"I usually like to donate to more local charities, this way it seems safer to actually go where it is needed and it is for poor homeless kids around my own area",3,5
+526,15,I could maybe help can you tell me more about it where is it based out of and how much will actually be used for the cause?,4,4
+527,18,do you work for them directly how did you get involved in this?,2,0
+528,22,"I understand that, and you guys raise money here on this site?",0,0
+529,22,is that even worth it?,0,4
+530,27,yes you can you can have my $0.30,0,0
+531,31,and the money goes complety to the charity or does a part stay for handeling and administration,4,0
+532,34,yes that would be great I would like to see that,0,0
+533,1,What is the best organizations and charities for children?,0,4
+534,4,I think I have heard of it.,0,0
+535,4,Children really need people to help them.,0,0
+536,4,"Oh, in answer to your first question I have not done a task like this before.",0,0
+537,7,I would if I could.,0,0
+538,7,I would like to go to some of the countries and help in person too.,0,5
+539,9,I wouldb but I don't have any money right now.,6,6
+540,11,I could donate 10 cents.,0,0
+541,11,I wish I could more but I am trying to pay my bills with what I make here.,6,1
+542,12,I could give 5 more cents but that is all for now.,0,0
+543,13,"Yes, and I am sure they will appreciate and need it.",0,0
+544,15,I just went there.,0,0
+545,15,They have a lot of information there.,0,0
+546,18,Yes.,0,0
+547,18,Some of them are in school too.,0,0
+548,18,They could use some of that money for school supplies.,0,0
+549,19,You are welcome.,0,0
+550,19,I might go back to the website to learn more.,1,0
+551,2,"Hello, I am fine, how about you?",0,0
+552,4,"Yes, I try to help time to time",0,0
+553,5,"No, anything that catches my eyes, or I find them on gofundme, what about you?",0,4
+554,7,"Yes, I've heard of it.",0,0
+555,7,Can you please explain more about it?,4,4
+556,10,I am interested in it.,0,0
+557,10,I already checked their website.,0,0
+558,10,Health and education both are important factors,0,0
+559,15,Actually I like these kind of HITs.,0,0
+560,15,I did few HITs before that asked me to donate my bonus or half of the reward.,0,0
+561,15,I happily did.,0,0
+562,15,I am sure there are people who need it more than me,0,0
+563,17,"Yes, few dollars can save a child or can help a family to survive for a month.",0,0
+564,17,How long have you worked there?,0,0
+565,18,That is so nice of you.,0,0
+566,18,It is a big thing to do.,0,0
+567,18,Thinking about starving children makes me so sad.,0,0
+568,18,I wish I could do more,0,0
+569,20,"Yes you are right, I help as much as I can.",0,0
+570,20,at least I try.,0,0
+571,20,save the children sounds like an amazing organization.,0,0
+572,20,They work in 120 countries already,0,0
+573,21,Yes It looks like a trustworthy organization with no doubt.,0,0
+574,21,I already read few of their reports on their website.,0,0
+575,21,I wish they can help even more countries,0,0
+576,25,"Thank you, I will do it for sure, have a nice day",0,0
+577,1,Hey how are you today?,0,0
+578,3,"Good, What do you think is the greatest social issue we are facing right now?",0,0
+579,6,Yes I have- I feel its violence too,0,0
+580,8,I believe it is- I've seen commericals for it on TV before....,0,0
+581,8,have you?,0,0
+582,10,Yes- I've donated to a similar charity before but it was based on supporting kids education,0,4
+583,11,It would feed a child for almost 3 days.,0,0
+584,14,I'm going to donate half .10 - So i Can feed a child for a day,0,0
+585,15,Its paying me .30,0,0
+586,16,I'm not doing half I'm doing a third.,0,6
+587,18,"Yes I am,",0,0
+588,0,"I'm not sure, what do they do for children?",4,4
+589,0,sounds like a good charity.,0,0
+590,0,I would consider it.,0,0
+591,0,"What about Big Brother, Big Sister, they are very much in need of donations",2,4
+592,0,What about helping children who are living in poverty in America.,2,0
+593,0,There are thousands that need help,2,5
+594,0,"Good point, I think I may consider it",1,0
+595,0,how much of the donation would actually go to the kids>,4,4
+596,0,I'm thinking about whether this is better than other charities I give to,1,5
+597,0,"Perhaps people could go and help in person, rather than donating money?",2,5
+598,0,How much is a good donation?,0,0
+599,0,"Okay, I will make a donation for $10.",0,7
+600,0,You convinced me that it's a worthwhile charity.,0,0
+601,1,"Hi, I'm great, how are you?",0,0
+602,2,"Yes, I have.",0,0
+603,2,"I am not extremely familiar with them, but I have seen several ads for them.",0,0
+604,4,"Yes, I would be happy to donate to that charity.",0,0
+605,4,Do you have an amount in mind?,0,2
+606,6,"I do, too.",0,0
+607,6,I tend to find it easy to be sympathetic towards several different types of charities.,0,0
+608,6,From what I have seen about Save the Children I've always been impressed with the work they do.,0,0
+609,7,I agree.,0,0
+610,7,I feel much better donating to places where I feel confident that the moneyis going to where they say it will.,0,0
+611,7,I think Save the Children is the biggest charity of it's kind.,0,0
+612,9,I'm like you.,0,0
+613,9,I always try to donate anonymously.,0,0
+614,9,I don't feel the need to be recognized for any good I can do.,0,0
+615,11,That's funny that you mention that.,0,0
+616,11,I always wonder how many people donate any bonuses that are offered to them.,0,0
+617,11,I always donate most if not all of any money I am offered.,0,6
+618,11,I figure that I wasn't expecting it to begin with so better to do some good however much.,0,0
+619,13,"Yes, some of these Universities really impress me with how much they are willing to donate.",0,0
+620,13,I know some of them getreally large amounts for studies and I appreciate when they use the money to do some good while gaining research.,0,0
+621,16,"Yes, and then most are willing to provide proof that they actually donated money, so that is good.",0,0
+622,18,"Thank you so much, same to you!",0,0
+623,2,Fine.,0,0
+624,2,What do you know about the charity?,4,0
+625,2,What have you heard people say or have seen online about the charity?,4,4
+626,3,Have you gone to a charity rating site to check on it?,0,4
+627,3,I have not.,0,0
+628,3,I want to be assured that overhead costs are minimized.,5,0
+629,7,I'd prefer a secure food donation that directly transports to the areas the children live in instead of handing over to government officials.,3,0
+630,7,I feel that using money to but food directly in their cities is best.,3,0
+631,11,I am willing to agree to 5 percent of my income for 6 months about 800 dollars.,0,0
+632,15,I will donate 10 cents.,0,0
+633,17,I feel good about this.,0,0
+634,17,How much do you agree to?,0,0
+635,19,"o.k. 20 cents for now agreed and regular for 6 months, o.k.?",0,0
+636,20,"(1, o.k. let's say 1600 dollares total, o.k.?",0,0
+637,22,o.k. agreed 1800 dollares done,0,0
+638,24,o.k. task done,0,0
+639,1,I am doing good and you?,0,0
+640,2,"Yes I donate to a few causes like breast cancer for women, autism awareness and March of dimes for children.",3,0
+641,4,Yes I have but don't know a whole lot about them since there are so many children related charities.,0,0
+642,6,OK I will educate myself on them when we are done with our conversation.,1,0
+643,8,OK thanks.,0,0
+644,8,I reviewed the site quickly.,0,0
+645,8,Sure is sad to see so many children in distress around the world.,0,0
+646,10,"Me too, since I am a parent of 2 children myself.",0,0
+647,10,As a parent you want to do all you can for them.,0,0
+648,13,"Yes I don't mind if there is a feature I can turn on where every hit I do, a few cents go to the charity of my choice.",0,0
+649,17,"Yes everything counts, that's how it starts.",0,0
+650,17,All we could do is our part since problem is so big.,0,0
+651,19,"I agree, Save the children foundation work with the children through out their lives to make sure they grow up in a safe environment and get a chance to succeed based on their website.",0,0
+652,24,Thanks for your time too.,0,0
+653,24,It was really nice chatting with you.,0,0
+654,24,Take care.,0,0
+655,0,I agree!,0,0
+656,0,Oh that's great.,0,0
+657,0,What is the name of the organization?,0,4
+658,0,Well the have a great cause.,0,0
+659,0,No child deserves to feel unsafe and go hungry.,0,0
+660,0,It's heartbreaking!,0,0
+661,0,I am not sure if I have seen that picture.,0,0
+662,0,I would have to see it to know.,2,0
+663,0,There are ways to make a difference for sure.,0,0
+664,0,Yes that is a common way.,0,0
+665,0,Have you presonally donated to them?,5,0
+666,0,Would you whole heartedly donate?,5,0
+667,0,How do you know that they are effective?,5,4
+668,0,How do you know the money actually gets to where it needs to go?,5,4
+669,0,Okay.,0,0
+670,0,That's good of you to donate.,0,0
+671,0,Sure I will donate 20 cents.,0,0
+672,1,I'm doing very well thank you!,0,0
+673,1,How is your day going so far?,0,0
+674,4,"It sounds familiar to me, could you tell me more about it?",4,4
+675,6,The charity sounds like it is doing some good work in an area that badly needs it.,0,0
+676,6,Children should be our top priority all across the world.,0,0
+677,6,How can someone get involved and help out with this charity?,4,4
+678,10,I do believe I would like to donate some money to the Save the Children charity.,0,5
+679,10,Could I pledge $1/day to start with?,0,0
+680,11,I like to donate money and time to charities that help children so I also want to thank you for educating me on this charity!,0,2
+681,16,They are our future exactly.,0,0
+682,16,Any time I can help improve a situation for a child in need I hope to be able to do so.,0,0
+683,16,How long have you been supporting this charity?,0,0
+684,21,I would like to start making a difference today.,0,7
+685,21,I would want to still donate $1 to the Save the Children charity.,0,0
+686,25,I hate hearing about children being subjected to violence.,0,0
+687,25,It hurts my heart.,0,0
+688,25,I do hope I can help and that my small donation does some good for a child.,0,0
+689,26,Well that sounds just great to me!,0,0
+690,27,You are welcome and thank you for bringing my attention to such a well deserved charity!,0,0
+691,27,I will spread the word!,0,0
+692,2,I'm good how about you?,0,0
+693,4,"Hot, and well, I think the sun is coming around",0,0
+694,6,"Mostly working on surveys, so how do you feel about children's charities?",0,0
+695,8,"Yeah, I think mostly everyone has, I think charities are mostly good but I don't know that they always accomplis all they could well, with expenses and all",5,5
+696,13,"sure, I'll donate $0.05.....",0,0
+697,16,"yeah, horrible huh?",0,0
+698,20,"no, can't say I've been",0,0
+699,23,"I don't personally I have a niece, and lots of cousins",0,0
+700,26,Mostly working on surveys,0,0
+701,28,"yes, I can do that.....",0,0
+702,2,"Yes, I am interested in donating.",0,0
+703,2,What specific causes the charity donate to?,4,4
+704,4,Are there different tiers for donations available?,4,4
+705,6,Can I donate $30 a month?,0,0
+706,8,"Yes, I am okay with that.",0,0
+707,8,How do I sign up?,0,0
+708,11,I would like to donate $10 right now.,0,0
+709,12,I'm glad and happy to help!,0,0
+710,13,"Sounds good, please feel free to share!",0,0
+711,14,"That's awesome, what other countries does it support besides Syria?",4,4
+712,16,I am good with donating $10 right now.,0,0
+713,17,Is there any follow up information you will be able to share once the donation is complete?,0,4
+714,17,Like a newsletter?,0,0
+715,1,"Good morning, how are you doing?",0,0
+716,3,"Sure, I'd love to hear what charity you participate in",0,0
+717,4,Sounds wonderful!,0,0
+718,4,Do you only work in the US?,4,0
+719,6,"What a great charity, is there anything I can do to help?",0,0
+720,7,How much are you looking for?,0,0
+721,8,"And specifically, where does that money go towards?",4,4
+722,9,I'd be interested in donating to your cause,0,0
+723,10,Happy to be able to help such a worthy cause!,0,0
+724,11,One last question - are all members who help volunteer based?,4,4
+725,12,Great! Thanks so much and I'm just so happy to be able to donate,0,0
+726,2,I'm doing well.,0,0
+727,2,How about you?,0,0
+728,4,"It's cloudy a lot, but otherwise fine.",0,0
+729,4,I was just looking through the morning mail.,0,0
+730,4,A request by a children's charity for a donation.,0,0
+731,7,I think it was from Save The Children.,0,0
+732,7,So you think they do some actual good?,0,4
+733,9,That's encouraging.,0,0
+734,9,Do you usually donate?,0,2
+735,9,"They're asking for $50, I was thinking more like $20.",0,0
+736,12,That's a thought.,0,0
+737,12,I guess I could do that.,0,0
+738,12,Maybe 1/2 of the payment.,0,0
+739,15,Okay.,0,0
+740,15,Let's do that then.,0,0
+741,17,"That's the goal, for sure.",0,0
+742,19,Glad to help.,0,0
+743,19,"I have a needy child of my own, and know how desperate that can make you feel.",6,0
+744,21,I may do that.,1,0
+745,21,Enjoy your day also.,0,0
+746,22,You are welcome.,0,0
+747,2,I have a very rudimentary understanding.,0,0
+748,2,I think it has to do with helping sick children.,0,0
+749,4,That is a great cause.,0,0
+750,4,"However, I am of the opinion that we should provide relief to causes in our country first.",2,0
+751,4,Especially animal organizations.,2,0
+752,7,that is true.,0,0
+753,7,I guess I am naive and like to live in ignorance where it is bliss.,0,4
+754,7,How do you feel about animal charities?,2,5
+755,11,That is true that it requires very little money to help children in developing nations.,0,0
+756,11,So you charity of choice is Save the Children?,0,4
+757,11,Or do you donate to other ones also?,2,0
+758,13,Do you donate money only?,2,0
+759,13,Or do you also volunteer your time?,2,0
+760,16,I would be willing to donate 10 cents.,0,0
+761,16,I make large donations every year so my budget is limited.,3,6
+762,16,But I do agree with the points you made in support.,0,1
+763,16,Would you consider volunteering time in addition to money?,0,0
+764,20,My charity of choice is the italian gryhound florida rescue group.,0,0
+765,20,They save miniture IG dogs.,0,0
+766,20,I adopted one years ago and she is the best.,0,0
+767,20,But children's charities are great too.,0,0
+768,20,Are you familiar with the one where they make dreams come true?,0,0
+769,23,Celebrities often get involved and donate time.,0,0
+770,23,It's really cool.,0,0
+771,23,I think Disney World participates too.,0,0
+772,25,For sure.,0,0
+773,25,It gets the word out and makes people want to follow suit.,0,0
+774,25,Plus it is good for celebs because it gets people to have soft spots for them.,0,0
+775,27,Helping others is necessary and makes you feel good too.,0,0
+776,2,Hello how are,0,0
+777,4,Yes pleas do,0,0
+778,5,Sounds like a good charity.,0,0
+779,5,What countries do they provide service to?,4,4
+780,7,What kind of health benefits to they provide to the children?,4,4
+781,9,What is the standard monthly donation someone usually gives.,0,4
+782,11,What percentage of my donation actually makes it to the children?,4,4
+783,13,Could you provide a breakdown of where that 14% goes?,4,4
+784,14,Is save the children backed by any religious organizations?,4,4
+785,16,Could you pleas give examples of the large companies?,4,4
+786,17,What percentage of your total donations come from these large corporations.,4,0
+787,19,Yes I would,0,0
+788,0,hello,0,0
+789,0,how much of the money is put to work?,4,4
+790,0,how much % of the money that goes to the charity is overhead that will be absorbed and not given to children?,4,4
+791,0,how does the operation afford staff?,4,4
+792,0,in which regions are the donations applied?,4,4
+793,0,what is a recent successful program?,4,4
+794,0,how long has STC been around?,4,4
+795,0,does it do any work in the USA?,4,4
+796,0,in all 50 states?,4,4
+797,0,can i direct my money?,0,0
+798,2,"Hello, I'm fine.",0,0
+799,2,How are you?,0,0
+800,7,Hi Tommy I'm Cassidy.,0,0
+801,7,I've been using mTurk on and off for about half a year but the past month I've really commmited to doing tasks everyday.,0,0
+802,7,It's great to earn extra money here and there.,0,0
+803,7,I'm glad you're enjoying it.,0,0
+804,14,I do enjoy donating to charities.,0,0
+805,14,I don't usually have a ton of extra money so it's not an every month kind of thing for me but I try to give at least once a year.,6,0
+806,14,"And when I can't give monetarily donate food, my time, and go to blood drives on my university",3,0
+807,21,"No, I haven't heard of Save the Children.",0,0
+808,21,And its awesome that you help out those kids in need,0,0
+809,26,"Yeah, 50 cents isn't too bad.",0,0
+810,26,Maybe I'll consider donating to them,1,0
+811,28,"No, I didn't know but thank you for telling me!",0,0
+812,28,I think I might donate mine too!,1,0
+813,34,"Yes I do, you've really inspired me Tommy",0,0
+814,40,I'l do 20 cents,0,0
+815,43,I do too,0,0
+816,46,It was nice chatting with you too,0,0
+817,1,"Yes, I would be willing to donate a fraction of my earnings to Save the Children.",0,0
+818,2,I would be okay with donating $0.10 from the task payment towards the charity.,0,1
+819,4,Okay.,0,0
+820,4,What does the charity do/what are my funds going to be used for?,4,0
+821,5,Interesting.,0,0
+822,8,"That's very impressive, I am glad that I am donating this charity now that I know more about them.",0,0
+823,11,"Thank you for your time, and for the opportunity.",0,0
+824,13,You're welcome!,0,0
+825,13,Thank you also.,0,0
+826,15,"Besides working in the morning, I plan to go out to a concert with a few friends on Saturday, so that should be fun.",0,0
+827,18,That's fine.,0,0
+828,18,I hope you still have a good week!,0,0
+829,18,"I didn't really do that much last week, but it was still relaxing.",0,0
+830,20,I hope you enjoy!,0,0
+831,20,Thanks again for chatting with me.,0,0
+832,0,I have heard about it.,0,0
+833,0,What do you know about it?,4,0
+834,0,Do you have any experince dealing with them at all?,0,0
+835,0,I have heard that they work hard to give kids a better life.,0,0
+836,0,"Yes, I think I would be will to donate to the cause.",0,0
+837,0,Oh that is really a great idea.,0,0
+838,0,I think I would be able to donate some of my earnings.,0,0
+839,0,Would $1 help at all?,0,0
+840,0,I would be glad to.,0,0
+841,0,How much are you giving?,2,0
+842,0,Well that is really great.,0,0
+843,0,It sounds like a great charity.,0,0
+844,0,"I think they might even help in Hawaii with the recent floods, don't you think?",0,0
+845,0,I bet the kids there are in need.,0,0
+846,0,"Yes, I'm not sure either, but it just kills me to know there are ids suffering.",0,0
+847,0,How do you feel?,0,0
+848,0,"Yes, sometimes I feel a little guilty that I have it so easy.",0,0
+849,0,I can not imagine food or clothing being a luxury.,0,0
+850,0,Can you?,0,0
+851,0,"Yes, it really does cause feelings of guilt!",0,0
+852,0,I completely agree!,0,0
+853,0,"It's not that we don't all have our own struggles, but it's just on a completely different level.",0,0
+854,1,HI there!,0,0
+855,1,Are you having a good day?,0,0
+856,4,"OK, i have donated to them before!!",0,0
+857,8,That sounds fantastic!,0,0
+858,8,How do I make the donation?,4,0
+859,11,I would like to donate 20 cents,0,0
+860,15,"I actually really need the money that I am making from this hit, so I would only like to donate 20 cents",6,0
+861,17,"THat sounds good, deal",0,0
+862,20,THis has been a great hit.,0,0
+863,22,"ok, i also read we have to communicate atleast 10 times for the chat to end",0,0
+864,23,I think we have a few turns to go,0,0
+865,27,Have a great day!,0,0
+866,0,It's an excellent charity that helps get children the necessary things that they need to survive,0,0
+867,0,"sometimes i donate to charity, but when someone comes right out and asks it feels a little pushy ya know?",3,4
+868,0,I feel that the organization is wonderful.,0,0
+869,0,It's called Save the Children.,0,0
+870,0,Have you heard of it?,0,0
+871,0,"I have, what a great cause.",0,0
+872,0,I have a grown daughter and two precious grandchildren.,0,0
+873,0,And you?,0,0
+874,0,WE just have a cat named Sissy.,0,0
+875,0,She's our child.,0,0
+876,0,LOL,0,0
+877,0,"I am doing pretty well, thank you.",0,0
+878,0,Do you donate often?,0,0
+879,0,I do not.,0,0
+880,0,"Good, so you're in agreement to donate your $2 to Save the Children?",0,0
+881,0,"Yes, I am in agreement to donate $2 to Save the Children.",0,0
+882,0,Do you donate a lot?,0,0
+883,0,I have not donated in the past but there are organizations I have considered donating to.,0,0
+884,0,they promote children's rights and provide relief and support in developing countries,0,0
+885,0,That sounds awesome!,0,0
+886,0,Do you donate to them?,2,4
+887,0,"Well today, we are asking MTurk workers to donate a portion or all of their earnings connected with this HIT to Save the CHildren.",0,0
+888,0,It is an easy way to support a very good cause.,0,0
+889,0,Okay.,0,0
+890,0,Sounds like a good way to raise some money.,0,0
+891,0,Is that organization currently helping the children in need?,0,4
+892,0,yes.,0,0
+893,0,they are helping sick children.,0,0
+894,0,"I'm fine, How are you?",0,0
+895,0,fine.,0,0
+896,0,what about you?,0,0
+897,0,that is good because when it comes to save the children they are very trrusting and the funds go to the children and help make their lives better.,0,0
+898,0,i believe in helping the children of this our generation because they are our future Leaders so any amount of money spent on them is worth it...,0,0
+899,0,Wonderful.,0,0
+900,0,I'm great now.,0,0
+901,0,Because you saved all those children.,0,0
+902,0,"awesome, do you have any specific charity on your mind?",0,0
+903,0,I'm doing pretty good.,0,0
+904,0,what will you talk to me about today?,0,0
+905,0,whats the issue?,0,0
+906,0,"I'm very well, thank you.",0,0
+907,0,Are you ready for fall?,0,0
+908,0,I am so ready!,0,0
+909,0,Me and the heat are not friends and this electric bill is killing my pockets!,0,0
+910,0,What about you?,0,0
+911,0,"I am doing well, thank you.",0,0
+912,0,Do you donate at all?,0,0
+913,0,I've thought about it but never have.,0,0
+914,0,Do you?,0,0
+915,0,"Good, you have any holiday plans?",0,0
+916,0,"Today, not particularly.",0,0
+917,0,Unless you mean something further off.,0,0
+918,0,TELL THE CHARITY NAME AND I DONATE ALSO,0,0
+919,0,well a good charity name could be For The Kids and donation could be in clothes and money don't you think so?,0,0
+920,0,im good thanks.,0,0
+921,0,do you like kids,0,0
+922,0,"they are ok, i do not have any",0,0
+923,0,"The donation would be to Save the Children, which is an internation organization that provides relief and helps children in developing countries, and you could donate as much as you would like to.",0,0
+924,0,do you know alot about save the children and how much of the money they raise would actually go to the children,4,4
+925,0,Doing great thanks.,0,0
+926,0,Have you heard of a charity called Save the Children?,0,0
+927,0,"No, I have not.",0,0
+928,0,What do they do?,4,4
+929,0,Where are you from?,0,0
+930,0,i am from oakhom?,0,0
+931,0,u?,0,0
+932,0,"i'm fine, then how are you?",0,0
+933,0,HI WHAT R U DOING,0,0
+934,0,I'm a little skeptical.,0,0
+935,0,Can you prove it by saying something a typical response script wouldn't say?,0,0
+936,0,I'm literally a human and I just want to talk about a charity so I can get paid.,0,0
+937,0,I agree!,0,0
+938,0,"I think it's really important, though, to know that the charity you're giving to is going to use the funds well and isn't corrupt.",0,0
+939,0,Agreed.,0,0
+940,0,We try to actually know people involved before we give regularly.,4,0
+941,0,Same here.,0,0
+942,0,Waiting for coffee to kick in!,0,0
+943,0,I was surprised to wake up to such cold 56 degree weather.,0,0
+944,0,How is it by you?,0,0
+945,0,Same here!,0,0
+946,0,Looks good for today maybe some rain this weekend,0,0
+947,0,"Pretty good, thanks.",0,0
+948,0,do you ever donate to charities?,0,0
+949,0,I do sometimes.,0,0
+950,0,I have a few favorites.,0,0
+951,0,"I am doing fine, I just ask in case you would like to donate to a nonprofit organization called Save The Children",0,0
+952,0,What exactly does the organization do?,4,4
+953,0,Yeah.,0,0
+954,0,"Pretty much what they do is use donations from charitable, and caring citizens to help children around the world get on a better path to the future.",0,0
+955,0,Oh.,0,0
+956,0,Well I think that the donations that go there are supporting a good cause.,0,0
+957,0,Especially for hungry children without food and water,0,0
+958,0,You have the opportunity to donate the money you earned to a noble cause called Save the Children.,0,0
+959,0,Any small amount of money can make a significant impact when thousands of people decide to donate.,0,0
+960,0,What does this charity do specifically?,4,4
+961,0,"I am doing really, really well today.",0,0
+962,0,"It's so encouraging to be a part of something bigger than myself, ya know?",0,0
+963,0,To what larger thing are you referring?,0,0
+964,0,Am doing well.,0,0
+965,0,I was wondering if you actively donate to any charities?,0,0
+966,0,Not right at the moment.,0,7
+967,0,I haven't find any good one to donate too.,0,3
+968,0,Are you interested in donating?,0,0
+969,0,Yes I am.,0,0
+970,0,Iam Fine.,0,0
+971,0,What about you?,0,0
+972,0,I am fine.,0,0
+973,0,You know about children's charity,0,0
+974,0,Same here.,0,0
+975,0,Waiting for coffee to kick in!,0,0
+976,0,I was surprised to wake up to such cold 56 degree weather.,0,0
+977,0,How is it by you?,0,0
+978,0,Same here!,0,0
+979,0,Looks good for today maybe some rain this weekend,0,0
+980,0,im doing good how are you,0,0
+981,0,I am doing really good.,0,0
+982,0,How is the weather over by you today?,0,0
+983,0,"yes, do you think the money goes to the children?",0,4
+984,0,I think it depends on the charity.,0,0
+985,0,I think there is sometimes charities that are not as transparent about where the donations go.,0,4
+986,0,I'm great!,0,0
+987,0,How are you?,0,0
+988,0,Doing fairly well.,0,0
+989,0,I just ate dinner and feel relaxed.,0,0
+990,0,"Very good, thank you.",0,0
+991,0,The research team will collect all donations and send it to Save the Children,0,0
+992,0,Okay.,0,0
+993,0,What children are we saving?,0,0
+994,0,from poverty and from disaster mostly.,0,0
+995,0,"If you choose to donate money, it goes to providing food to impoverished children",0,0
+996,0,I can think of a lot more worthwhile charities.,5,5
+997,0,"I know of a charity that is serving children's rights to  health, education and safety.",0,0
+998,0,Would you like to know more?,0,0
+999,0,"yes,that would be great!",0,0
+1000,0,to know more for my family!,0,0
+1001,0,It is an amazing organization that provides a lot of help to many children in the world.,0,0
+1002,0,What issues they are working on?,4,4
+1003,0,I am doing alright thanks.,0,0
+1004,0,"Then, Do you know about children's charity?",0,0
+1005,0,How are you?,0,0
+1006,0,Iam fine.,0,0
+1007,0,How are you?,0,0
+1008,1,What kinds of things does the charity do?,4,4
+1009,2,I would like to donate.,0,0
+1010,5,What percentage of a donation goes directly to helping the kids?,4,4
+1011,6,"It is only a one time donation, correct?",0,0
+1012,8,I guess I will donate 1.00.,0,0
+1013,10,I do not know of anyone the charity has helped.,0,5
+1014,10,Does it help children all over the world or is it based in one certain country?,4,4
+1015,12,I have donated to some different go fund me campaings.,3,6
+1016,12,I have also donated to different charities that collect outside of stores.,3,3
+1017,12,I am not sure if i have donated to any charities like this one.,0,3
+1018,17,I am glad my donation will help but I wish I could help more.,0,6
+1019,17,Do you donate to this charity?,0,2
+1020,19,Thats great.,0,0
+1021,19,We all need to do our part to help those that are struggling.,0,0
+1022,20,Thank you for all of the info today.,0,0
+1023,1,"Ok, tell me about it.",0,0
+1024,2,Do you work for Save the Children?,0,4
+1025,3,What countries does Save the Children provide services in?,4,4
+1026,5,Well I think it is a noble task you are doing.,0,0
+1027,8,I would like to split it - $1 for Save the Children and $1 for me.,0,0
+1028,11,I am not the most charitable person but it is something...,0,0
+1029,15,So I guess that's it for this task.,0,0
+1030,15,Good luck with the others you are talking to.,0,0
+1031,17,Well the money was right there... And I do think it is a worthy cause.,0,0
+1032,17,So it was a pretty easy decision.,0,0
+1033,20,Ok. Have a good afternoon.,0,0
+1034,22,"I don't see an option to submit, so I assume that is done on your end.",0,0
+1035,0,"Ok, tell me more about it please?",4,0
+1036,0,That is so sad to here.,0,0
+1037,0,I may be willing to donate some of my payment.,1,0
+1038,0,Do you know how much of every dollar they get?,4,4
+1039,0,Great.,0,0
+1040,0,I hate when charities get only pennies on the dollar,3,0
+1041,0,"Ok, I will give 25 cents today.",0,0
+1042,0,"ok, i will do 50 cents, but no more",0,0
+1043,0,"ok, ok, I will give $1.",0,0
+1044,0,I will do a $1.,0,0
+1045,0,"I give to many other organizations such as MS, healthy kids, etc",3,0
+1046,0,I know but $1 is what I will do,0,0
+1047,1,"I think they are the future of the world and in general, I like them.",0,0
+1048,3,"I think we have bigger problems to solve than helping children in poor third-world countries, and if I decide to donate money it would be to a different organization",3,5
+1049,6,"because I prefer to donate money to organizations attacking bigger problems, it's just a matter of priorities",3,0
+1050,9,There are a lot of problems more important than feeding kids.,2,0
+1051,9,"Cancer research for example, water or basic health in poor countries.",2,0
+1052,9,Basic human decency is not just food.,2,0
+1053,11,If you think that way then you have never seen sickness and people suffering from easily treated health problems.,2,0
+1054,11,I've seen cancer way too close to me to make me believe that's way more important to solve than feeding kids in another country.,3,0
+1055,14,I would donate and I donated every year way more than that but to organizations attacking problems that I think should be solved first,3,6
+1056,16,"I think you got the wrong person, I don't spend money on luxuries because I have not enough money to be able to do that.",6,0
+1057,16,"I cook my own food and I don't drink coffee or soda, and I still donate money to help causes I believe should be solved.",3,3
+1058,16,I do believe that money could be used better than sending it to Syria,3,5
+1059,18,You are the one short-sighted.,2,0
+1060,18,"I didn't say anything about repairing infrastructure, and yes, solving cancer would be way better used money than sending it to Syria.",3,0
+1061,21,"No, you are wrong, water is not infrastructure, you should read a little bit before you say something liked that",2,0
+1062,22,"First, 'lol' shouldn't be in a serious conversation, and second, It's not just that you are wrong, I actually support an organization providing clean water access to people, and helping with that problem it's not just a matter of infrastructure",3,0
+1063,1,hi!,0,0
+1064,2,i do!,0,0
+1065,2,i really try to,6,0
+1066,3,i agree.,0,0
+1067,3,I work in social work so i try to support through job too.,3,0
+1068,3,do you like to help?,0,0
+1069,4,how do you like to help?,0,0
+1070,5,oh that's great!,0,0
+1071,5,how often?,0,0
+1072,6,great!,0,0
+1073,6,do you know what the deal is with this hit,0,0
+1074,8,yes i do.,0,0
+1075,8,what about it,0,0
+1076,9,"yes, so how does that relate to this hit",0,0
+1077,13,"I prefer to donate my time rather than money, I would not like to donate today, but I do work with children regularly, and I think for me that's more helpful than giving small amounts of money!",3,3
+1078,15,"OK, good to know.",0,0
+1079,15,"Ya for now I dont want to donate, thanks though!",7,0
+1080,0,I'm doing very well.,0,0
+1081,0,Thanks.,0,0
+1082,0,How is everything with you?,0,0
+1083,0,Yes I did.,0,0
+1084,0,I did spent it on the beach while doing some barbecue with my friends.,0,0
+1085,0,It was lot of fun the past couple of days.,0,0
+1086,0,How was your weekend?,0,0
+1087,0,Yes I am.,0,0
+1088,0,"It is a very great organization and I believe it was founded by two former presidents, Bill Clinton and George W. Bush.",0,0
+1089,0,The organization is charity for the children who have been displaced by either hurricanes or other natural disasters and the charity steps in to help those children and families in need.,0,0
+1090,0,That is very true because the way that I see it we are all one big family and should be there for one another in a time of crisis and distress.,0,0
+1091,0,Yes.,0,0
+1092,0,"We can accomplish big things if we care for one another and it shouldn't matter what party we are in whether its Democrat, Republican or Green it shouldn't matter.",0,0
+1093,0,We are all Americans and we are one family.,0,0
+1094,0,That is both terrible and sad to hear.,0,0
+1095,0,Syria has a dictatorship and and someone who is obsessed with power.,0,4
+1096,0,This is a bad combination because a lot of people and especially the most vulnerable like children are getting caught in the crossfire.,0,0
+1097,0,Its very sad.,0,0
+1098,0,That is correct.,0,0
+1099,0,If people in the US contribute $1 for Save the Children the world will be indeed a better place.,0,0
+1100,0,I will do also give a donation.,0,7
+1101,0,Children must never live in fear and in horrible conditions that they can't escape from.,0,0
+1102,0,Yes I willing to commit half of my payment from this Hit.,0,0
+1103,0,I think it would help many children.,0,0
+1104,0,Fantastic.That will be great.,0,0
+1105,0,I think many lives will be saved if we all contribute to this organization.,0,0
+1106,0,It was very nice talking to you as well.,0,0
+1107,0,I hope you have a great week ahead and a great the rest of the year as well.,0,0
+1108,0,I wish you always the very best!!,0,0
+1109,1,i would like to know more about it,4,4
+1110,2,and do they have a website ?,4,4
+1111,3,thanks i will definitely check it out,1,0
+1112,4,and where does the money go if i do donate ?,4,4
+1113,4,Straight to the organization ?,4,4
+1114,5,because some organizations do not divide the money properly,5,4
+1115,7,I will certainly consider it,0,1
+1116,8,"that is just wonderful, i love hearing stories like this",0,0
+1117,9,Oh man i was not aware of this,0,4
+1118,10,i hardly eat snacks but you have a point,2,0
+1119,11,i sure will,0,0
+1120,2,"I am fantastic, thank you for asking, how about yourself?",0,0
+1121,3,"I prefer warmer temperatures, I absolutely despise the cold haha.",0,0
+1122,5,That's a loaded question if I've ever heard one...,0,0
+1123,5,I thought this was going to be some active participant study on interaction between conflicting personalities or something like that.,0,0
+1124,5,I'll play along though.,0,0
+1125,5,"I feel sad, helpless and a bit perturbed if I'm honest.",0,0
+1126,7,"Yes I have, though I'm wary of doing so currently, too many organizations abuse that funding.",5,5
+1127,10,I currently work with some people who travel the Southwestern US and set up CSA farms and connect them via outreach centers to people who need food or labor.,3,0
+1128,10,"I find action helps more than money, sends a deeper message and imparts a strong work ethic to those you help.",3,0
+1129,12,Couldn't agree more.,0,0
+1130,14,Yes I have.,0,0
+1131,15,"Like I said, I'm more of the opinion action is the better choice.",3,0
+1132,15,"I always ask myself, why are these kids starving?",2,5
+1133,15,Why are those directly responsible for the children unable to care for them?,2,4
+1134,15,To me it comes down to failure as a species.,2,0
+1135,15,We allow this travesty to continue and think throwing money at it will help.,2,0
+1136,15,It wont.,2,0
+1137,20,I don't believe I will donate anything.,7,1
+1138,20,$0.00,7,0
+1139,21,"I wish you would come along with us next weekend to Oklahoma and help build the Community Center we are working on, any amount helps.",3,0
+1140,1,hi how are you,0,0
+1141,3,don't know you know about that,0,0
+1142,4,ok tell about that,0,0
+1143,5,you donate that charity?,0,0
+1144,6,how much you donate,0,0
+1145,7,ok super great,0,0
+1146,8,yes i will plan to donate,0,0
+1147,9,plan to donate 20$,0,0
+1148,11,will donate tomorrow,1,0
+1149,12,ok nice to chat with you,0,0
