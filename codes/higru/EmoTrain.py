@@ -18,6 +18,17 @@ from sklearn.utils.class_weight import compute_sample_weight
 from tqdm import tqdm
 import json
 
+map_labels = {
+	0: "Not-a-strategy",
+	1: "Source Derogation-Contesting",
+	2: "Counter Argumentation-Contesting",
+	3: "Self Assertion-Empowerment",
+	4: "Hesitance-Hesitance",
+	5: "Information Inquiry-Contesting",
+	6: "Personal Choice-Empowerment",
+	7: "Self Pity-Empowement"
+}
+
 def return_addn_features(data_loader, args):
 	if 'resisting' in args.dataset:
 		# feat_names = ['vad_features', 'affect_features', 'emo_features', 'liwc_features', 'sentiment_features', 'face_features', 'norm_er_strategies', 'norm_er_DAs', 'ee_DAs']
@@ -629,6 +640,12 @@ def emoeval(model, data_loader, tr_emodict, emodict, args, focus_emo, name="mode
 			donor_here.append(e["ratio_bucket"])
 		donors.append(donor_here)
 
+	speakers = []
+	for each in json_dict:
+		speaker_here = []
+		for e in each:
+			speaker_here.append(e["speaker"])
+		speakers.append(speaker_here)
 
 	alpha= 1.0
 	# donors= data_loader['donor']
@@ -642,6 +659,7 @@ def emoeval(model, data_loader, tr_emodict, emodict, args, focus_emo, name="mode
 	turn_all = []
 	don_true_all = []
 	don_prob_all = []
+	speaker_all = []
 
 	# old_y_true = []
 	# old_y_pred = []
@@ -667,6 +685,7 @@ def emoeval(model, data_loader, tr_emodict, emodict, args, focus_emo, name="mode
 
 		feat, lens = Utils.ToTensor(feats[bz], is_len=True)
 		label = Utils.ToTensor(labels[bz])
+		speaker = speakers[bz]
 
 
 		# bert_emb = np.zeros((len(bert_embs[bz]),max([len(b) for b in bert_embs[bz]])+2))
@@ -799,11 +818,17 @@ def emoeval(model, data_loader, tr_emodict, emodict, args, focus_emo, name="mode
 		y_true.extend([i for i,j in zip(emo_true, mask) if j==1])
 		text_all.extend([i for i,j in zip(texts[bz], mask) if j==1])
 		turn_here = []
-		turn_num = 0 
-		for i in mask: 
-			turn_here.append(turn_num) 
-			if mask[i] == 0 and mask[i - 1] == 1: 
-				turn_num += 1 
+		turn_num = 0
+		if "negotiation" in args.dataset:
+			for _, i in enumerate(mask):
+				turn_here.append(turn_num)
+				if _ % 2 != 0:
+					turn_num += 1
+		else:
+			for i in mask: 
+				turn_here.append(turn_num) 
+				if mask[i] == 0 and mask[i - 1] == 1: 
+					turn_num += 1 
 
 		turn_all.extend([i for i,j in zip(turn_here, mask) if j==1])
 
@@ -849,12 +874,15 @@ def emoeval(model, data_loader, tr_emodict, emodict, args, focus_emo, name="mode
 
 		don_true_all.extend(don_true_list_here)
 		don_prob_all.extend([x[0] for x in dons])
+		speaker_all.extend(speaker)
+
 
 	data = {
 		"Turn": 	turn_all,
+		"Speaker":  speaker_all,
 		"Text": 	text_all,
-		"True": 	y_true,
-		"Pred": 	y_pred,
+		"True": 	[map_labels[x] for x in y_true],
+		"Pred": 	[map_labels[x] for x in y_pred],
 		"Don_true": don_true_all,
 		"Don_pred": don_prob_all
 	}
