@@ -640,6 +640,8 @@ def emoeval(model, data_loader, tr_emodict, emodict, args, focus_emo, name="mode
 	y_pred=[]
 	text_all = []
 	turn_all = []
+	don_true_all = []
+	don_prob_all = []
 
 	# old_y_true = []
 	# old_y_pred = []
@@ -835,15 +837,28 @@ def emoeval(model, data_loader, tr_emodict, emodict, args, focus_emo, name="mode
 		
 		donor_pred.extend([i for i,j in zip(donor_predidx, donor_mask) if j==1])
 		donor_true.extend([i for i,j in zip(donor_trueidx, donor_mask) if j==1])
-
 		donor_logits.extend([i for i,j in zip([elem for elem in dons], donor_mask) if j==1])
+		
+		num_turns = len([i for i,j in zip(emo_predidx, mask) if j==1])
+		
+		don_true_here = [i for i,j in zip(donor_trueidx, donor_mask) if j==1][0]
+		don_true_list_here = [don_true_here for x in range(num_turns)]
+		
+		don_prob_here = [i for i,j in zip(dons, donor_mask) if j==1][0]
+		don_prob_list_here = [don_prob_here[0] for x in range(num_turns)]
+
+		don_true_all.extend(don_true_list_here)
+		don_prob_all.extend(don_prob_list_here)
 
 	data = {
-		"Turn": turn_all,
-		"Text": text_all,
-		"True": y_true,
-		"Pred": y_pred
+		"Turn": 	turn_all,
+		"Text": 	text_all,
+		"True": 	y_true,
+		"Pred": 	y_pred,
+		"Don_true": don_true_all,
+		"Don_pred": don_prob_all
 	}
+
 	df = pd.DataFrame(data)
 	df.to_csv("outputs/"+args.type+"_"+args.dataset+".csv")
 	model.train()

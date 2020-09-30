@@ -32,6 +32,7 @@ def main():
 
 	# Learning
 	parser.add_argument('-lr', type=float, default=2.5e-4)		# Learning rate: 2.5e-4 for Friends and EmotionPush, 1e-4 for IEMOCAP
+	parser.add_argument('-alpha', type=float, default=0.75)		# Learning rate: 2.5e-4 for Friends and EmotionPush, 1e-4 for IEMOCAP
 	parser.add_argument('-decay', type=float, default=math.pow(0.5, 1/40))	# half lr every 20 epochs
 	parser.add_argument('-epochs', type=int, default=200)		# Defualt epochs 200
 	parser.add_argument('-patience', type=int, default=10,		# Patience of early stopping 10 epochs
@@ -73,7 +74,8 @@ def main():
 						help='how many steps to report loss')
 	parser.add_argument('-bert', type=int, default=0,	# Report loss interval, default the number of dialogues
 						help='include bert or not')
-
+	parser.add_argument('-sec_loss', type=str, default=None,	# Stored embedding path
+						help='loss for the outcome prediction')
 	# parser.add_argument('-mask', type=str, default='all',	# Choice of mask for ER, EE, or all
 	# 					help='include mask type')
 
@@ -86,15 +88,17 @@ def main():
 	# 					help ='name of the file to be saved')
 
 	# parser.add_argument('-ldm', type=int, default=1, help = 'how many last utterances used for the donor loss contribution') # last donor mask
-	# parser.add_argument('-don_model', type=int, default=1, help = 'how to compute the donation probability') # last donor mask
+	parser.add_argument('-don_model', type=int, default=0, help = 'how to compute the donation probability') # last donor mask
 
 	# parser.add_argument('-thresh_reg', type=float, default=0.0, help = 'how to choose threshold for the models 2 and 3') # last donor mask
 
 	parser.add_argument('-bert_train', type=int, default=0, help = 'choose 0 or 1') # last donor mask
 
 	parser.add_argument('-addn_features', type =str, default='all', help='include all possible features') # include the features to be used for training
+	parser.add_argument('-interpret', type =str, default='no_loss', help='no loss propagation') # include the features to be used for training
 
 	parser.add_argument('-seed', type =int, default=100, help= 'set random seed')
+	parser.add_argument('-ldm', type =int, default=1, help= 'last donor bucket')
 
 	args = parser.parse_args()
 	print(args, '\n')
@@ -145,7 +149,41 @@ def main():
 	embedding.weight.requires_grad = trainable
 	# pu.db
 	# Choose the model
-	if args.type.startswith('bert-cnn'):
+	if args.type.startswith('bert-higru-masked-outcome'):
+		print("Training the duo model")
+		model = BERT_HiGRU_mask_outcome(d_word_vec=args.d_word_vec,
+					  d_h1=args.d_h1,
+					  d_h2=args.d_h2,
+					  d_fc=args.d_fc,
+					  emodict=emodict,
+					  worddict=worddict,
+					  embedding=embedding,
+					  type=args.type[5:],
+					  # bert_flag= args.bert,
+					  don_model= args.don_model,
+					  trainable= trainable,
+					  feature_dim = feature_dim,
+					  long_bert = args.bert
+					  )
+					  #speaker_flag= args.sf)
+	elif args.type.startswith('bert-higru-basic') or args.type.startswith('only-higru-basic'):
+		print("Training the bert basic model")
+		model = BERT_HiGRU_basic(d_word_vec=args.d_word_vec,
+					  d_h1=args.d_h1,
+					  d_h2=args.d_h2,
+					  d_fc=args.d_fc,
+					  emodict=emodict,
+					  worddict=worddict,
+					  embedding=embedding,
+					  type=args.type[5:],
+					  # bert_flag= args.bert,
+					  # don_model= args.don_model,
+					  trainable= trainable,
+					  feature_dim = feature_dim,
+					  long_bert = args.bert
+					  )
+					  #speaker_flag= args.sf)
+	elif args.type.startswith('bert-cnn') or args.type.startswith('only-cnn'):
 		print("Training the bert cnn model")
 		model = BERT_CNN(d_word_vec=args.d_word_vec,
 					  d_h1=args.d_h1,
@@ -565,7 +603,7 @@ long_bert = args.bert
 	if args.type.startswith('combo'):
 		model_bin   = torch.load(args.save_dir+'/'+file_str+'_model_bin.pt', map_location='cpu')
 		model_multi = torch.load(args.save_dir+'/'+file_str+'_model_multi.pt', map_location='cpu')
-		pAccs, acc, mf1, = emoeval_combo(model_bin=model_bin,
+		pAccs, acc, mf1, don_acc, don_mf1, _  = emoeval_combo(model_bin=model_bin,
 						model_multi=model_multi,
 						data_loader=test_loader,
 						tr_emodict=tr_emodict,
@@ -575,7 +613,7 @@ long_bert = args.bert
 	else:
 		model = torch.load(args.save_dir+'/'+file_str+'_model.pt', map_location='cpu')
 		# model = torch.load_state_dict(args.save_dir+'/'+file_str+'.pt', map_location='cpu')
-		pAccs, acc, mf1, = emoeval(model=model,
+		pAccs, acc, mf1, don_acc, don_mf1, _  = emoeval(model=model,
 						data_loader=test_loader,
 						tr_emodict=tr_emodict,
 						emodict=emodict,
