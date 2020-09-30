@@ -848,7 +848,7 @@ def emoeval(model, data_loader, tr_emodict, emodict, args, focus_emo, name="mode
 		don_prob_list_here = [don_prob_here[0] for x in range(num_turns)]
 
 		don_true_all.extend(don_true_list_here)
-		don_prob_all.extend(don_prob_list_here)
+		don_prob_all.extend([x[0] for x in dons])
 
 	data = {
 		"Turn": 	turn_all,
