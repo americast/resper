@@ -2,6 +2,7 @@ import os
 import numpy as np
 import sys
 import csv
+import pudb
 
 dir_name = '../../data/higru_bert_data/results/'
 
@@ -23,30 +24,47 @@ for file in sorted(files):
 	if file not in file_dict:
 		file_dict[file]={}
 		file_dict[file]['acc']=[]
+		file_dict[file]['don_acc']=[]
 		file_dict[file]['f1']=[]
+		file_dict[file]['don_f1']=[]
 
 	accs=[]
+	don_accs=[]
 	f1s=[]
-
+	don_f1s=[]
+	don = False
+	# if "don" in file:
+	# 	pu.db
 	for line in fp:
 		line = line.strip().split('\t')
 		try:
 			accs.append(float(line[1]))
 			f1s.append(float(line[2]))
+			don_accs.append(float(line[3]))
+			don_f1s.append(float(line[4]))
+			don = True
 		except Exception as e:
-			continue
+			try:
+				accs.append(float(line[1]))
+				f1s.append(float(line[2]))
+			except:
+				continue
 
 	if not accs or not f1s:
 		continue
 
 	# file_dict[file]['acc'].append(max(accs))
-	max_f_pos = 0
 	max_f_pos= f1s.index(max(f1s))
+	if don: max_don_f_pos= don_f1s.index(max(don_f1s))
 
 	file_dict[file]['f1'].append(f1s[max_f_pos])
 	file_dict[file]['acc'].append(accs[max_f_pos])
-	# file_dict[file]['don_f1'].append(don_f1s[max_f_pos])
-	# file_dict[file]['don_acc'].append(don_accs[max_f_pos])
+	if don:
+		file_dict[file]['don_f1'].append(don_f1s[max_f_pos])
+		file_dict[file]['don_acc'].append(don_accs[max_f_pos])
+	else:
+		file_dict[file]['don_f1'].append(-1)
+		file_dict[file]['don_acc'].append(-1)
 
 
 def get_model_type(file):
@@ -96,13 +114,15 @@ for file in sorted(file_dict):
 	acc = round(np.mean(file_dict[file]['acc']),2)
 	f1  = round(np.mean(file_dict[file]['f1']),2)
 	sd  = round(np.std(file_dict[file]['f1']),2)
+	don_acc = round(np.mean(file_dict[file]['don_acc']),2)
+	don_f1 = round(np.mean(file_dict[file]['don_f1']),2)
 
 	record = {"file": file, "acc": round(np.mean(file_dict[file]['acc']),3), "f1": round(np.mean(file_dict[file]['f1']),3)}
 	output_list.append(record)
 
 
 	output_file_name = "file_acc_f1_neg.csv" if dataset == "neg" else "file_acc_f1_res.csv"
-	print('{}\t{}\t{}\t{}'.format(file, round(np.mean(file_dict[file]['acc']),3), round(np.mean(file_dict[file]['f1']),3), round(np.std(file_dict[file]['f1']),3)))#,round(np.mean(file_dict[file]['don_acc']),3), round(np.mean(file_dict[file]['don_f1']),3)))
+	print('{}\t{}\t{}\t{}'.format(file, round(np.mean(file_dict[file]['acc']),3), round(np.mean(file_dict[file]['f1']),3), round(np.std(file_dict[file]['f1']),3)),round(np.mean(file_dict[file]['don_acc']),3), round(np.mean(file_dict[file]['don_f1']),3))
 
 with open(output_file_name, 'w', encoding='utf8', newline='') as output_file:
     csv_w = csv.DictWriter(output_file, fieldnames=output_list[0].keys(),)
