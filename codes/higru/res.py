@@ -18,6 +18,8 @@ for file in sorted(files):
 
 	if dataset == 'neg':
 		file = file.replace('negotiation0','').replace('negotiation1','').replace('negotiation2','').replace('negotiation3','').replace('negotiation4','')
+	elif dataset == 'res_old':
+		file = file.replace('resisting_old0','').replace('resisting_old1','').replace('resisting_old2','').replace('resisting_old3','').replace('resisting_old4','')
 	else:	
 		file = file.replace('resisting0','').replace('resisting1','').replace('resisting2','').replace('resisting3','').replace('resisting4','')
 		

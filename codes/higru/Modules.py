@@ -96,8 +96,10 @@ class GRUencoder(nn.Module):
 		s_lens =s_lens.copy()
 		idx_unsort = np.argsort(idx_sort)
 
-
-		idx_sort = torch.from_numpy(idx_sort).cuda(device)
+		try:
+			idx_sort = torch.from_numpy(idx_sort).cuda(device)
+		except:
+			idx_sort = torch.from_numpy(idx_sort.numpy()).cuda(device)
 		s_embs = sent_embs.index_select(1, Variable(idx_sort))
 
 		# padding
@@ -106,7 +108,10 @@ class GRUencoder(nn.Module):
 		sent_output = pad_packed_sequence(sent_output, total_length=sent.size(1))[0]
 
 		# unsort by length
-		idx_unsort = torch.from_numpy(idx_unsort).cuda(device)
+		try:
+			idx_unsort = torch.from_numpy(idx_unsort).cuda(device)
+		except:
+			idx_unsort = torch.from_numpy(idx_unsort.numpy()).cuda(device)
 		sent_output = sent_output.index_select(1, Variable(idx_unsort))
 
 		# batch x seq_len x 2*d_out
@@ -5121,8 +5126,11 @@ class BERT_HiGRU_mask_outcome(nn.Module):
 			vec_here = torch.cat([vec_here.unsqueeze(0), context], dim = -1)
 			here = self.classifier(vec_here)
 			output[i, :] = here
-			if mask[i] == 1:
-				context = F.softmax(here, dim = -1)
+			try:
+				if mask[i] == 1:
+					context = F.softmax(here, dim = -1)
+			except:
+				pu.db
 
 		# output  = self.classifier(output1)
 		log_pred_scores = F.log_softmax(output, dim=1)

@@ -87,7 +87,7 @@ def emotrain(model, data_loader, tr_emodict, emodict, args, focus_emo):
 	if 'negotiation' in args.dataset:
 		f = open("../../data/higru_bert_data/train"+args.dataset[-1]+"neg.json", "r")
 	else:
-		f = open("../../data/higru_bert_data/train"+args.dataset[-1]+".json", "r")
+		f = open("../../data/higru_bert_data/oldtrain"+args.dataset[-1]+".json", "r")
 	
 	json_dict = json.load(f)
 	f.close()
@@ -95,7 +95,10 @@ def emotrain(model, data_loader, tr_emodict, emodict, args, focus_emo):
 	for each in json_dict:
 		donor_here = []
 		for e in each:
-			donor_here.append(e["ratio_bucket"])
+			if "negotiation" in args.dataset:
+				donor_here.append(e["ratio_bucket"])
+			else:
+				donor_here.append(e["donor"])
 		donors.append(donor_here)
 
 	# Optimizer
@@ -172,6 +175,12 @@ def emotrain(model, data_loader, tr_emodict, emodict, args, focus_emo):
 			if args.gpu != None:
 				os.environ['CUDA_VISIBLE_DEVICES'] = args.gpu
 				# device = torch.device("cuda: 0")
+				feat = torch.cat([x.unsqueeze(0) for x,y in zip(feat, mask) if y == 1], dim = 0) 
+				lens = torch.tensor([float(x) for x,y in zip(lens, mask) if y == 1])
+				if addn_feature != None:
+					addn_feature = torch.cat([x.unsqueeze(0) for x,y in zip(addn_feature, mask) if y == 1], dim = 0)
+				mask = torch.tensor([float(x) for x in mask if x == 1])
+				label = torch.cat([x.unsqueeze(0) for x,y in zip(label, mask) if y == 1], dim = 0)
 				model = model.cuda()
 				feat = feat.cuda()
 				label = label.cuda()
@@ -191,6 +200,7 @@ def emotrain(model, data_loader, tr_emodict, emodict, args, focus_emo):
 				addn_feature = Variable(addn_feature)
 				addn_feature = addn_feature.cuda()
 			
+			# pu.db
 			
 
 			if 'mask' in args.type:
@@ -208,7 +218,6 @@ def emotrain(model, data_loader, tr_emodict, emodict, args, focus_emo):
 				import pdb; pdb.set_trace()
 
 			# loss.backward()
-
 
 			if log_donor_prob == None:
 				if args.sec_loss =='mse':
@@ -294,12 +303,12 @@ def emotrain(model, data_loader, tr_emodict, emodict, args, focus_emo):
 				report_loss = 0
 		
 
-		pAccs, acc, mf1, don_acc, don_mf1, _  = emoeval(model=model, data_loader=train_loader, tr_emodict=tr_emodict, emodict=emodict, args=args, focus_emo=focus_emo, data_type="train")
-		print("Train acc = {}".format(acc))
-		print("Train F1 = {}".format(mf1))
-		print("Train donor_acc = {}".format(don_acc))
-		print("Train donor_F1 = {}".format(don_mf1))
-		print()
+		# pAccs, acc, mf1, don_acc, don_mf1, _  = emoeval(model=model, data_loader=train_loader, tr_emodict=tr_emodict, emodict=emodict, args=args, focus_emo=focus_emo, data_type="train")
+		# print("Train acc = {}".format(acc))
+		# print("Train F1 = {}".format(mf1))
+		# print("Train donor_acc = {}".format(don_acc))
+		# print("Train donor_F1 = {}".format(don_mf1))
+		# print()
 		# validate
 
 		# print("Validate: ACCs-WA-UWA {}".format(pAccs))
@@ -629,7 +638,7 @@ def emoeval(model, data_loader, tr_emodict, emodict, args, focus_emo, name="mode
 	if 'negotiation' in args.dataset:
 		f = open("../../data/higru_bert_data/"+data_type+args.dataset[-1]+"neg.json", "r")
 	else:
-		f = open("../../data/higru_bert_data/"+data_type+args.dataset[-1]+".json", "r")
+		f = open("../../data/higru_bert_data/old"+data_type+args.dataset[-1]+".json", "r")
 	
 	json_dict = json.load(f)
 	f.close()
@@ -637,7 +646,10 @@ def emoeval(model, data_loader, tr_emodict, emodict, args, focus_emo, name="mode
 	for each in json_dict:
 		donor_here = []
 		for e in each:
-			donor_here.append(e["ratio_bucket"])
+			if 'negotiation' in args.dataset:
+				donor_here.append(e["ratio_bucket"])
+			else:
+				donor_here.append(e["donor"])
 		donors.append(donor_here)
 
 	speakers = []
@@ -723,6 +735,15 @@ def emoeval(model, data_loader, tr_emodict, emodict, args, focus_emo, name="mode
 		if args.gpu != None:
 			os.environ['CUDA_VISIBLE_DEVICES'] = args.gpu
 			# device = torch.device("cuda: 0")
+			feat = torch.cat([x.unsqueeze(0) for x,y in zip(feat, mask) if y == 1], dim = 0) 
+			lens = torch.tensor([float(x) for x,y in zip(lens, mask) if y == 1])
+			if addn_feature != None:
+				addn_feature = torch.cat([x.unsqueeze(0) for x,y in zip(addn_feature, mask) if y == 1], dim = 0)
+			org_mask = mask.clone()
+			mask = torch.tensor([float(x) for x in mask if x == 1])
+			donor_mask = torch.tensor([float(x) for x in mask if x == 1])
+			label = torch.cat([x.unsqueeze(0) for x,y in zip(label, mask) if y == 1], dim = 0)
+
 			model = model.cuda()
 			feat = feat.cuda()
 			label = label.cuda()
@@ -819,16 +840,29 @@ def emoeval(model, data_loader, tr_emodict, emodict, args, focus_emo, name="mode
 		text_all.extend([i for i,j in zip(texts[bz], mask) if j==1])
 		turn_here = []
 		turn_num = 0
+
+
 		if "negotiation" in args.dataset:
 			for _, i in enumerate(mask):
 				turn_here.append(turn_num)
 				if _ % 2 != 0:
 					turn_num += 1
 		else:
-			for i in mask: 
-				turn_here.append(turn_num) 
-				if mask[i] == 0 and mask[i - 1] == 1: 
-					turn_num += 1 
+			turn_n = 0
+			for i, _ in enumerate(org_mask):
+				if org_mask[i] == 1:
+					turn_here.append(turn_n)
+				if i == 0: continue
+				if org_mask[i] == 0 and org_mask[i - 1] == 1:
+					turn_n += 1
+			
+			# for i in mask: 
+			# 	turn_here.append(turn_num) 
+			# 	try:
+			# 		if mask[i] == 0 and mask[i - 1] == 1: 
+			# 			turn_num += 1 
+			# 	except:
+			# 		pu.db
 
 		turn_all.extend([i for i,j in zip(turn_here, mask) if j==1])
 
@@ -869,14 +903,15 @@ def emoeval(model, data_loader, tr_emodict, emodict, args, focus_emo, name="mode
 		don_true_here = [i for i,j in zip(donor_trueidx, donor_mask) if j==1][0]
 		don_true_list_here = [don_true_here for x in range(num_turns)]
 		
-		don_prob_here = [i for i,j in zip(dons, donor_mask) if j==1][0]
-		don_prob_list_here = [don_prob_here[0] for x in range(num_turns)]
+		# don_prob_here = [i for i,j in zip(dons, donor_mask) if j==1][0]
+		# don_prob_list_here = [don_prob_here[0] for x in range(num_turns)]
 
 		don_true_all.extend(don_true_list_here)
-		don_prob_all.extend([x[0] for x in dons])
-		speaker_all.extend(speaker)
+		don_prob_all_here = [x[0] for x in dons]
+		don_prob_all.extend([i for i,j in zip(don_prob_all_here, mask) if j==1])
+		speaker_all.extend([i for i,j in zip(speaker, mask) if j==1])
 
-
+	# pu.db
 	data = {
 		"Turn": 	turn_all,
 		"Speaker":  speaker_all,
