@@ -1,0 +1,951 @@
+,Turn,Speaker,Text,True,Pred,Don_true,Don_pred
+0,0,0,Would you like to donate to a Charity called Save the Children?,Not-a-strategy,Not-a-strategy,1,0.30505770444869995
+1,1,1,"Hi, it all depends on who you really are, if it's for a person very close to me if I'm willing",Personal Choice-Empowerment,Not-a-strategy,1,0.3693927526473999
+2,1,0,"It would go to supporting children in developing countries, especially in war zones.",Not-a-strategy,Not-a-strategy,1,0.38301798701286316
+3,2,0,"For instance, millions of Syrian children have grown up facing the daily threat of violence.",Not-a-strategy,Not-a-strategy,1,0.38668155670166016
+4,3,0,"In the first two months of 2018 alone, 1,000 children were reportedly killed or injured in intensifying violence.",Not-a-strategy,Not-a-strategy,1,0.38687995076179504
+5,4,1,"if I would agree with that, and if my organ donated what problems would my body have?",Self Assertion-Empowerment,Not-a-strategy,1,0.38698843121528625
+6,5,1,the operation has risks,Self Assertion-Empowerment,Not-a-strategy,1,0.38746127486228943
+7,6,0,"I am not asking for an organ donation, but more of a financial one.",Not-a-strategy,Not-a-strategy,1,0.3878750503063202
+8,7,0,"You can give any amount, even as little as $0.01 can help.",Not-a-strategy,Not-a-strategy,1,0.3881351351737976
+9,8,1,"oh ok I'm sorry I have read wrong, if I would be willing to donate with pleasure is a good cause",Not-a-strategy,Not-a-strategy,1,0.38802701234817505
+10,9,0,How much would you like to donate?,Not-a-strategy,Not-a-strategy,1,0.3876856565475464
+11,0,0,Hello.,Not-a-strategy,Not-a-strategy,1,0.3035131096839905
+12,1,1,Hello!,Not-a-strategy,Not-a-strategy,1,0.36636781692504883
+13,2,0,"I am supposed to ask you if you care about people being killed in Syria and things like that, I don't want to cause you any emotional discomfort by talking about suffering people.",Not-a-strategy,Not-a-strategy,1,0.380508154630661
+14,2,0,Is that okay?,Not-a-strategy,Not-a-strategy,1,0.38432443141937256
+15,2,0,To talk about suffering people and children for a minute?,Not-a-strategy,Not-a-strategy,1,0.3861987292766571
+16,3,1,I will have no discomfort discussing suffering people.,Not-a-strategy,Not-a-strategy,1,0.38649243116378784
+17,3,0,"I think the refugee crisis is crazy, I am not sure what I would do if I was raising my kids in Syria.",Not-a-strategy,Not-a-strategy,1,0.3867882490158081
+18,3,0,If anyone could have fun in those spots it's kids though.,Not-a-strategy,Not-a-strategy,1,0.3869689404964447
+19,3,1,I feel really torn about the crisis.,Not-a-strategy,Not-a-strategy,1,0.38673165440559387
+20,4,1,I don't think the weight of that burden should fall on the rest of the worlds shoulders.,Self Assertion-Empowerment,Not-a-strategy,1,0.3868742287158966
+21,4,1,At the same time as a parent I would want the best possible future for my children and I know fiercly that I would do everything in my power to make sure they were in a safe place.,Counter Argumentation-Contesting,Not-a-strategy,1,0.3868374824523926
+22,4,0,I actually didn't think of it like that.,Not-a-strategy,Not-a-strategy,1,0.3867644667625427
+23,4,0,"I am a parent too, it feels so foreign what they are going through.",Not-a-strategy,Not-a-strategy,1,0.386716365814209
+24,5,0,"This whole chat thing is supposed to get me to get you to donate to Save the Children, but now I think they got me to do it instead!",Not-a-strategy,Not-a-strategy,1,0.38684526085853577
+25,5,0,I don't know if that's really okay to do though.,Not-a-strategy,Not-a-strategy,1,0.3867468237876892
+26,6,1,I always wonder how much of donations actually go where ear marked.,Hesitance-Hesitance,Not-a-strategy,1,0.38680872321128845
+27,6,1,"I see on the local level how much of donations stay local and what gets spent on things I would call ""stupid"".",Hesitance-Hesitance,Not-a-strategy,1,0.3868255615234375
+28,7,1,I am always worried if I donate it will just go to some higer up that is living the high life.,Hesitance-Hesitance,Not-a-strategy,1,0.3868642747402191
+29,7,1,Sorry Im getting off topic.,Not-a-strategy,Not-a-strategy,1,0.3867819011211395
+30,8,0,"No, that's relevant.",Not-a-strategy,Not-a-strategy,1,0.3868044912815094
+31,9,0,Really relevant.,Not-a-strategy,Not-a-strategy,1,0.38671261072158813
+32,9,0,It's really easy to get cynical about life and if people really benefit from any of this.,Not-a-strategy,Not-a-strategy,1,0.3866153359413147
+33,0,0,Hello,Not-a-strategy,Not-a-strategy,0,0.30345776677131653
+34,1,1,Hi there how are you?,Not-a-strategy,Not-a-strategy,0,0.3673039376735687
+35,2,0,Great and you,Not-a-strategy,Not-a-strategy,0,0.381610244512558
+36,3,1,"I am doing fine, thanks for asking.",Not-a-strategy,Not-a-strategy,0,0.3855281472206116
+37,4,0,Can I ask you a question?,Not-a-strategy,Not-a-strategy,0,0.38689786195755005
+38,5,1,You sure can,Not-a-strategy,Not-a-strategy,0,0.3868204355239868
+39,6,0,Do you have any kids?,Not-a-strategy,Not-a-strategy,0,0.3864973485469818
+40,6,1,I don't have any children but there are many children in my family.,Not-a-strategy,Not-a-strategy,0,0.3863232433795929
+41,7,0,"Im sure you love them as your own, I have a big family do you?",Not-a-strategy,Not-a-strategy,0,0.3862864375114441
+42,8,1,"I do have a big family, I enjoy it at times, other times I don't",Not-a-strategy,Not-a-strategy,0,0.3864414393901825
+43,9,0,I truly understand.,Not-a-strategy,Not-a-strategy,0,0.38659003376960754
+44,0,0,Hello chat partner!,Not-a-strategy,Not-a-strategy,0,0.30313822627067566
+45,0,1,hi there!,Not-a-strategy,Not-a-strategy,0,0.36619648337364197
+46,1,1,how are you?,Not-a-strategy,Not-a-strategy,0,0.3803994059562683
+47,2,0,Doing alright..,Not-a-strategy,Not-a-strategy,0,0.3834459185600281
+48,2,0,I have a fridge full of food and a roof over my head so I can't complain..,Not-a-strategy,Not-a-strategy,0,0.3840349018573761
+49,3,1,same here!,Not-a-strategy,Not-a-strategy,0,0.384208619594574
+50,4,0,Not everyone has it so it's good that you appreciate it,Not-a-strategy,Not-a-strategy,0,0.38429000973701477
+51,4,0,yeah..,Not-a-strategy,Not-a-strategy,0,0.38436010479927063
+52,5,0,I do..,Not-a-strategy,Not-a-strategy,0,0.3844773471355438
+53,6,0,my parents were always in a good situation to be able to raise me well.,Not-a-strategy,Not-a-strategy,0,0.38490787148475647
+54,7,0,but there are a lot of kids in the world who arent so fortunate',Not-a-strategy,Not-a-strategy,0,0.3850118815898895
+55,8,1,i know.,Not-a-strategy,Not-a-strategy,0,0.38502177596092224
+56,9,1,it's so heartbreaking,Not-a-strategy,Not-a-strategy,0,0.3849751353263855
+57,9,0,"im working for this organization right now Save the Children, do you know of it?",Not-a-strategy,Not-a-strategy,0,0.3849422335624695
+58,0,0,"Hello, Have you heard of the save a children charity?",Not-a-strategy,Not-a-strategy,0,0.3031557500362396
+59,0,1,Why yes I have.,Not-a-strategy,Not-a-strategy,0,0.3665516674518585
+60,1,1,Do you represent them?,Source Derogation-Contesting,Not-a-strategy,0,0.38206928968429565
+61,2,0,Yes I do.,Not-a-strategy,Not-a-strategy,0,0.3852243721485138
+62,2,0,I go aroudn telling people about the charity to see if they would like to help out.,Not-a-strategy,Not-a-strategy,0,0.3856024146080017
+63,3,1,"I've been thinking of donating to charity, but I could never find the right one.",Counter Argumentation-Contesting,Not-a-strategy,0,0.3862520456314087
+64,3,0,This one is great.,Not-a-strategy,Not-a-strategy,0,0.3865954577922821
+65,4,0,We help out poor children.,Not-a-strategy,Not-a-strategy,0,0.38670119643211365
+66,4,0,We assist in all sorts of ways.,Not-a-strategy,Not-a-strategy,0,0.3865971565246582
+67,5,0,"Education, health care, vaccinations etc.",Not-a-strategy,Not-a-strategy,0,0.38693633675575256
+68,6,0,We cover all aspects of it.,Not-a-strategy,Not-a-strategy,0,0.38727542757987976
+69,7,0,Did you know you can donate the money you were getting from this HIT to save the children?,Not-a-strategy,Not-a-strategy,0,0.3872067332267761
+70,7,1,Oh really?,Not-a-strategy,Not-a-strategy,0,0.387483686208725
+71,8,1,I honestly had no idea.,Personal Choice-Empowerment,Not-a-strategy,0,0.38732725381851196
+72,8,0,Yes it is!,Not-a-strategy,Not-a-strategy,0,0.3872133791446686
+73,9,0,Would you like to spend $1.70 to help some poor children today.,Not-a-strategy,Not-a-strategy,0,0.3872462511062622
+74,0,0,Hi how are you today?,Not-a-strategy,Not-a-strategy,0,0.3031320571899414
+75,0,1,I'm good!,Not-a-strategy,Not-a-strategy,0,0.366586834192276
+76,0,1,How are you doing?,Not-a-strategy,Not-a-strategy,0,0.3817460238933563
+77,1,1,What's your feelings about giving to children's charities?,Not-a-strategy,Not-a-strategy,0,0.3849759101867676
+78,1,0,It depends on the charity.,Not-a-strategy,Not-a-strategy,0,0.38582369685173035
+79,1,0,Some of them are scams I think.,Not-a-strategy,Not-a-strategy,0,0.386008083820343
+80,2,0,Do u donate?,Not-a-strategy,Not-a-strategy,0,0.38626962900161743
+81,3,1,I agree that you have to be careful.,Not-a-strategy,Not-a-strategy,0,0.38643553853034973
+82,3,1,I do donate to Ronald McDonald House and St Jude.,Counter Argumentation-Contesting,Not-a-strategy,0,0.38665127754211426
+83,4,1,How much do you donate?,Self Assertion-Empowerment,Not-a-strategy,0,0.38694655895233154
+84,5,0,"I have donated to Ronald McDonald before, but not on a regular basis.",Not-a-strategy,Not-a-strategy,0,0.38683733344078064
+85,5,0,Have you heard of Save The Children?,Not-a-strategy,Not-a-strategy,0,0.38666167855262756
+86,6,1,I have heard of Save the Children but I'd rather keep my donations US-based,Counter Argumentation-Contesting,Not-a-strategy,0,0.38673362135887146
+87,7,0,"I agree on that most of the time, but this organization does wonderful things for these children.",Not-a-strategy,Not-a-strategy,0,0.38664013147354126
+88,8,1,I am not sure about where all the donation money ends up.,Source Derogation-Contesting,Not-a-strategy,0,0.38665294647216797
+89,8,1,I'd rather give to Ronald McDonalds especially since I know people who have personally benefited.,Hesitance-Hesitance,Not-a-strategy,0,0.3865644633769989
+90,9,0,"I can understand that, but in my experience with this organization they truly use the donations for the kids and have prevented many from starving to death.",Not-a-strategy,Not-a-strategy,0,0.3864539861679077
+91,9,1,there are so many starving and abused kids here in the US that I'd feel more comfortable helping them first.,Counter Argumentation-Contesting,Not-a-strategy,0,0.3865222930908203
+92,9,0,"You are right, but you can donate a portion of your payment to this organization and continue to donate to your charities.",Not-a-strategy,Not-a-strategy,0,0.3864440619945526
+93,9,1,that's true.,Not-a-strategy,Not-a-strategy,0,0.38639041781425476
+94,0,0,Hey,Not-a-strategy,Not-a-strategy,1,0.3041808307170868
+95,1,1,Hiya,Not-a-strategy,Not-a-strategy,1,0.367311030626297
+96,2,0,are you familiar with Save the Children?,Not-a-strategy,Not-a-strategy,1,0.3818240761756897
+97,2,1,I'm not - Could you tell me more about it?,Source Derogation-Contesting,Not-a-strategy,1,0.3854750096797943
+98,3,0,Well Save the children is an organization that ensures children rights to health education and safety.,Not-a-strategy,Not-a-strategy,1,0.3861851096153259
+99,4,0,Children who suffer from hunger would greatly appreciate a donation,Not-a-strategy,Not-a-strategy,1,0.386552631855011
+100,5,1,Great - So how does the donation process work?,Source Derogation-Contesting,Not-a-strategy,1,0.3865154981613159
+101,6,1,How do I make sure my money is being used for that purpose?,Hesitance-Hesitance,Not-a-strategy,1,0.3865504562854767
+102,7,0,The research team will collect tall donations and send it to save the children,Not-a-strategy,Not-a-strategy,1,0.38678136467933655
+103,8,1,Ok - so can I donate $20?,Not-a-strategy,Not-a-strategy,1,0.38664570450782776
+104,8,0,"Yes, your donation will be directly deducted from you task payment you can choose any amount from 0 to all of your paymen",Not-a-strategy,Not-a-strategy,1,0.38649848103523254
+105,9,1,oh - well since it'll be deducted from my task payment - Let's do half - $1,Information Inquiry-Contesting,Not-a-strategy,1,0.38643041253089905
+106,10,0,Half of 1 dollar?,Not-a-strategy,Not-a-strategy,1,0.38629209995269775
+107,10,1,Half the payment - One whole dollar,Not-a-strategy,Not-a-strategy,1,0.386142373085022
+108,0,0,Good afternoon.,Not-a-strategy,Not-a-strategy,0,0.30349066853523254
+109,1,1,Hey there how is it going?,Not-a-strategy,Not-a-strategy,0,0.3680683970451355
+110,2,0,It's going alright.,Not-a-strategy,Not-a-strategy,0,0.3820692300796509
+111,2,0,I've just been reading about a charity called Save the Children.,Not-a-strategy,Not-a-strategy,0,0.384746789932251
+112,2,0,Have you heard of it?,Not-a-strategy,Not-a-strategy,0,0.3854197859764099
+113,3,1,I've heard a little bit about it but don't know too much.,Not-a-strategy,Not-a-strategy,0,0.3859730362892151
+114,4,0,"From what I've read, it's a nonprofit that helps children in difficult situations around the world.",Not-a-strategy,Not-a-strategy,0,0.3862941563129425
+115,4,0,I was reading about their aid work in Syria and how they've helped young girls in developing countries receive schooling.,Not-a-strategy,Not-a-strategy,0,0.3863837718963623
+116,5,1,Oh wow!,Not-a-strategy,Not-a-strategy,0,0.38637775182724
+117,5,1,That's incredible.,Not-a-strategy,Not-a-strategy,0,0.3864526152610779
+118,6,1,I wasn't aware that they did all of that.,Not-a-strategy,Not-a-strategy,0,0.3865906596183777
+119,6,0,"This morning, I was also reading about an ebola outbreak in the Congo (I think).",Not-a-strategy,Not-a-strategy,0,0.3866366446018219
+120,7,0,I imagine they'll help there if they aren't stretched too thin.,Not-a-strategy,Not-a-strategy,0,0.38672250509262085
+121,8,1,So save the children is a worldwide organization it sounds like!,Source Derogation-Contesting,Not-a-strategy,0,0.38675880432128906
+122,9,0,It is!,Not-a-strategy,Not-a-strategy,0,0.38677898049354553
+123,9,0,Do you ever donate to organizations like this?,Not-a-strategy,Not-a-strategy,0,0.38668277859687805
+124,9,0,"My brother, sister, and I replaced birthday gifts with charity donations a few years ago.",Not-a-strategy,Not-a-strategy,0,0.3865770101547241
+125,9,0,It saved on clutter and felt great to give to charities.,Not-a-strategy,Not-a-strategy,0,0.38659146428108215
+126,0,0,"HI, have you ever heard of Save The Children?",Not-a-strategy,Not-a-strategy,0,0.30364087224006653
+127,1,1,"I haven't, is that a charity?",Hesitance-Hesitance,Not-a-strategy,0,0.36767280101776123
+128,2,0,It is and a very reputable one.,Not-a-strategy,Not-a-strategy,0,0.3822627067565918
+129,3,0,Have you ever donated to one before?,Not-a-strategy,Not-a-strategy,0,0.386173814535141
+130,4,1,I've donated to a few in the past,Counter Argumentation-Contesting,Not-a-strategy,0,0.3871628940105438
+131,5,0,"Maybe I can get to do it again, Save the Children is international and non-governmental. Would you be interested in donating?",Not-a-strategy,Not-a-strategy,0,0.3875114619731903
+132,6,1,"Possibly, do they have a website?",Counter Argumentation-Contesting,Not-a-strategy,0,0.3876442611217499
+133,7,0,"They do, it's URL by donating you are helping children and their families.",Not-a-strategy,Not-a-strategy,0,0.38767144083976746
+134,8,0,How much can I count on you for?,Not-a-strategy,Not-a-strategy,0,0.3875260353088379
+135,9,1,"I really can't do much, but I'd be glad to put down a dollar",Not-a-strategy,Not-a-strategy,0,0.38728058338165283
+136,0,0,"Hi, How are you today?",Not-a-strategy,Not-a-strategy,0,0.3036442697048187
+137,0,1,Hi!,Not-a-strategy,Not-a-strategy,0,0.36687466502189636
+138,1,1,"I'm great, how are you?",Not-a-strategy,Not-a-strategy,0,0.381328284740448
+139,2,0,I'm terrific!,Not-a-strategy,Not-a-strategy,0,0.3844113051891327
+140,2,0,I wanted to talk to you today about a charity I am really involved in,Not-a-strategy,Not-a-strategy,0,0.3849596381187439
+141,3,1,"Okay, please tell me about the charity.",Source Derogation-Contesting,Not-a-strategy,0,0.38494187593460083
+142,3,0,"This charity is called Save the Children and is an international non-governmental organization that promotes children's rights, provides relief and helps support children in developing countries.",Not-a-strategy,Not-a-strategy,0,0.38497498631477356
+143,4,0,Do you ever donate to charity organizations?,Not-a-strategy,Not-a-strategy,0,0.3850117325782776
+144,5,1,I almost never donate.,Counter Argumentation-Contesting,Not-a-strategy,0,0.3850330710411072
+145,5,1,Do you?,Self Assertion-Empowerment,Not-a-strategy,0,0.3852889835834503
+146,6,0,I definitely do if I believe in the mission of the organization.,Not-a-strategy,Not-a-strategy,0,0.38533034920692444
+147,6,0,This particular organization is helping the future of our world by ensuring that children's rights are protected all over,Not-a-strategy,Not-a-strategy,0,0.38538485765457153
+148,7,1,That sounds really great.,Not-a-strategy,Not-a-strategy,0,0.38547542691230774
+149,8,1,I would be willing to donate to this organization.,Not-a-strategy,Not-a-strategy,0,0.38547250628471375
+150,8,0,That's amazing!,Not-a-strategy,Not-a-strategy,0,0.3855750560760498
+151,9,0,How much would you like to donate to the charity now?,Not-a-strategy,Not-a-strategy,0,0.385562926530838
+152,9,0,Your donation would be directly deducted from your task payment.,Not-a-strategy,Not-a-strategy,0,0.385514497756958
+153,9,0,You can choose any amount!,Not-a-strategy,Not-a-strategy,0,0.38548001646995544
+154,0,0,"Hey, how are you?",Not-a-strategy,Not-a-strategy,1,0.30316147208213806
+155,0,1,Good day...,Not-a-strategy,Not-a-strategy,1,0.3670814633369446
+156,1,1,"it's a Monday, but a good start to the week!",Not-a-strategy,Not-a-strategy,1,0.3823390603065491
+157,1,0,Absolutely.,Not-a-strategy,Not-a-strategy,1,0.3855040669441223
+158,2,0,Glad your week is starting off well.,Not-a-strategy,Not-a-strategy,1,0.38636210560798645
+159,2,1,I'm just waiting until it's time to go volunteer at a local children's hospital...,Counter Argumentation-Contesting,Not-a-strategy,1,0.38678494095802307
+160,3,1,I cuddle babies in the NICU.,Counter Argumentation-Contesting,Not-a-strategy,1,0.3867110013961792
+161,3,0,That's adorable.,Not-a-strategy,Not-a-strategy,1,0.3866710960865021
+162,4,0,How did you get involved in an opportunity like that?,Not-a-strategy,Not-a-strategy,1,0.3867988884449005
+163,5,0,I imagine hospitals are very strict about who gets to be with the little ones.,Not-a-strategy,Not-a-strategy,1,0.38666659593582153
+164,6,1,"A friend has been doing it for awhile, and I've always been interested.",Not-a-strategy,Not-a-strategy,1,0.386532187461853
+165,6,1,"There is quite a bit of training and background checks, but it's worth it!",Not-a-strategy,Not-a-strategy,1,0.38647982478141785
+166,7,0,I'd like to chat with you about a children's charity today.,Not-a-strategy,Not-a-strategy,1,0.3863885998725891
+167,8,0,Do you have a moment?,Not-a-strategy,Not-a-strategy,1,0.3862660527229309
+168,8,1,Sure!,Not-a-strategy,Not-a-strategy,1,0.3861662745475769
+169,9,1,"As you can tell, it's something I'm very concerned about!",Not-a-strategy,Not-a-strategy,1,0.3860931098461151
+170,0,0,I am so livid I just can't stand it right now.,Not-a-strategy,Not-a-strategy,0,0.30320608615875244
+171,1,0,Parts of this world are so dark...,Not-a-strategy,Not-a-strategy,0,0.3658819794654846
+172,1,0,how can we sit here and do nothing?,Not-a-strategy,Not-a-strategy,0,0.38097891211509705
+173,2,1,Do nothing about what?,Source Derogation-Contesting,Not-a-strategy,0,0.38398489356040955
+174,2,0,These poor suffering children!,Not-a-strategy,Not-a-strategy,0,0.3847833573818207
+175,2,0,Did you know that 5.6 million children die each year due to treatable AND preventable diseases?,Not-a-strategy,Not-a-strategy,0,0.3848761320114136
+176,2,1,That's awful.,Not-a-strategy,Not-a-strategy,0,0.3848131597042084
+177,3,1,Are you talking about around the world or in the states?,Source Derogation-Contesting,Not-a-strategy,0,0.3847869634628296
+178,3,0,Around the world!,Not-a-strategy,Not-a-strategy,0,0.3848937749862671
+179,3,0,There is so much that could be done..,Not-a-strategy,Not-a-strategy,0,0.3849041759967804
+180,4,0,"between preventing the spread of aids, reducing the infant mortality rate with proper education and vaccinations, and ensuring access and aid to proper nutrition so many children could be saved.",Not-a-strategy,Not-a-strategy,0,0.384873628616333
+181,4,1,I totally agree.,Not-a-strategy,Not-a-strategy,0,0.38481709361076355
+182,4,1,There are people helping but its a drop in the bucket.,Not-a-strategy,Not-a-strategy,0,0.3847607970237732
+183,5,1,The kids dying is really disturbing.,Not-a-strategy,Not-a-strategy,0,0.3847545385360718
+184,5,1,They didn't choose that life.,Not-a-strategy,Not-a-strategy,0,0.3847445249557495
+185,5,0,You are absolutely right.,Not-a-strategy,Not-a-strategy,0,0.3847428262233734
+186,5,0,It is disturbing!,Not-a-strategy,Not-a-strategy,0,0.3847000002861023
+187,6,0,"And yes, it could seem like the aid is a drop in a bucket.",Not-a-strategy,Not-a-strategy,0,0.38468560576438904
+188,6,0,"However, if we can move the scale one iota and can consider that what that represents is one child having a week of meals or a healthy 3 months than wouldn't you agree that that would be worth any aid that we could provide?",Not-a-strategy,Not-a-strategy,0,0.38464856147766113
+189,6,1,Absolutely!,Not-a-strategy,Not-a-strategy,0,0.38462933897972107
+190,7,1,I think every little bit helps but as a whole it's not enough.,Not-a-strategy,Not-a-strategy,0,0.3846113681793213
+191,8,1,Have you ever donated?,Self Assertion-Empowerment,Not-a-strategy,0,0.38459423184394836
+192,8,0,I have!,Not-a-strategy,Not-a-strategy,0,0.38460206985473633
+193,9,0,And it feels incredible knowing that I have been a part of something greater than myself.,Not-a-strategy,Not-a-strategy,0,0.384594589471817
+194,9,0,It really helps you shift your perspective about your own personal significance on this planet.,Not-a-strategy,Not-a-strategy,0,0.384568989276886
+195,0,0,"Hello, how ware you today?",Not-a-strategy,Not-a-strategy,0,0.3032374978065491
+196,1,1,"Hello, I'm alright.",Not-a-strategy,Not-a-strategy,0,0.366984486579895
+197,1,0,Do you consider yourself someone that wants to make a change in the world?,Not-a-strategy,Not-a-strategy,0,0.38143059611320496
+198,1,1,Yes somewhat.,Not-a-strategy,Not-a-strategy,0,0.3852289915084839
+199,2,1,With e environment and food system.,Self Assertion-Empowerment,Not-a-strategy,0,0.385800302028656
+200,2,1,What do you think of children's charities?,Not-a-strategy,Not-a-strategy,0,0.385836124420166
+201,3,0,I think some are good but i've been donating to Save the Children (foundation).,Not-a-strategy,Not-a-strategy,0,0.3856891691684723
+202,3,0,Have you ever heard of them?,Not-a-strategy,Not-a-strategy,0,0.38610875606536865
+203,4,1,I think I have.,Not-a-strategy,Not-a-strategy,0,0.38607755303382874
+204,4,1,I've heard of Red Cross,Counter Argumentation-Contesting,Not-a-strategy,0,0.3861248195171356
+205,5,0,It is similar in which all funds donated are used to help kids in need.,Not-a-strategy,Not-a-strategy,0,0.38625743985176086
+206,6,1,That's nice.,Not-a-strategy,Not-a-strategy,0,0.38630831241607666
+207,6,1,How much would you donate if given the chance to help a childrens charity?,Self Assertion-Empowerment,Not-a-strategy,0,0.386281281709671
+208,7,0,i'm not sure i already donate my time.,Not-a-strategy,Not-a-strategy,0,0.38624027371406555
+209,7,1,Oh ok.,Not-a-strategy,Not-a-strategy,0,0.3861614465713501
+210,8,1,Do you have any other questions?,Not-a-strategy,Not-a-strategy,0,0.3860790431499481
+211,9,0,"yes, have you heard about the crisis in syria?",Not-a-strategy,Not-a-strategy,0,0.3859742283821106
+212,0,0,hi there!,Not-a-strategy,Not-a-strategy,1,0.3045330345630646
+213,0,1,Hello.,Not-a-strategy,Not-a-strategy,1,0.36682718992233276
+214,1,1,How you doin,Not-a-strategy,Not-a-strategy,1,0.38090527057647705
+215,2,0,pretty good.,Not-a-strategy,Not-a-strategy,1,0.3845171332359314
+216,3,0,"It looks like this chat is supposed to be to learn more about ""Save the Children"".",Not-a-strategy,Not-a-strategy,1,0.38582006096839905
+217,4,0,Have you ever heard of it?,Not-a-strategy,Not-a-strategy,1,0.3860791027545929
+218,4,1,Yes I am aware of that charity,Not-a-strategy,Not-a-strategy,1,0.3860313594341278
+219,5,0,It seems vaguely familiar but I never paid attention specifically.,Not-a-strategy,Not-a-strategy,1,0.3861216902732849
+220,6,0,Have you ever donated to them?,Not-a-strategy,Not-a-strategy,1,0.38637658953666687
+221,7,1,I have not but I have to some others recently,Counter Argumentation-Contesting,Not-a-strategy,1,0.38632673025131226
+222,7,0,Do you feel that Save the Children is a good charity to give to?,Not-a-strategy,Not-a-strategy,1,0.3864195942878723
+223,7,0,"From what I'm reading, it sounds like a great cause",Not-a-strategy,Not-a-strategy,1,0.3863815665245056
+224,8,1,I know a little can you maybe provide some info for me?,Source Derogation-Contesting,Not-a-strategy,1,0.3866007328033447
+225,9,0,"It seems to be international, and supports children in developing countries.",Not-a-strategy,Not-a-strategy,1,0.38655170798301697
+226,10,0,It's apparently very influential in war zones like Syria,Not-a-strategy,Not-a-strategy,1,0.3865216374397278
+227,0,0,"Hello, how are you today?",Not-a-strategy,Not-a-strategy,0,0.3029884696006775
+228,0,1,I'm good.,Not-a-strategy,Not-a-strategy,0,0.3669913411140442
+229,1,1,What Children's charity would you like to donate money to?,Not-a-strategy,Not-a-strategy,0,0.38165196776390076
+230,2,0,"I like to donate, but i have a soft heart for children too.",Not-a-strategy,Not-a-strategy,0,0.38480454683303833
+231,2,0,"I recently read about ""Save the Children"" and red more about it.",Not-a-strategy,Not-a-strategy,0,0.3854536712169647
+232,2,1,Save the Children sounds like a good charity to me as well.,Not-a-strategy,Not-a-strategy,0,0.38546931743621826
+233,3,0,Yes I like how they are clear about their financial reports and They are a big organization,Not-a-strategy,Not-a-strategy,0,0.38524729013442993
+234,3,1,Clear financial reports are a very good thing.,Not-a-strategy,Not-a-strategy,0,0.38516709208488464
+235,4,1,They work with children all around the world.,Not-a-strategy,Not-a-strategy,0,0.3850969970226288
+236,4,1,Correct?,Source Derogation-Contesting,Not-a-strategy,0,0.3850634694099426
+237,5,0,"Yes they work in 120 different countries, on different issues.",Not-a-strategy,Not-a-strategy,0,0.3850677013397217
+238,5,1,"Wow, that's amazing.",Not-a-strategy,Not-a-strategy,0,0.38508185744285583
+239,6,1,Definitely a charity that I could stand behind and support.,Not-a-strategy,Not-a-strategy,0,0.38526198267936707
+240,7,0,"Same here, they have many option to help, We can donate or We can participate in their events",Not-a-strategy,Not-a-strategy,0,0.3853999674320221
+241,7,1,I don't know much about their events.,Not-a-strategy,Not-a-strategy,0,0.38544410467147827
+242,8,1,But I have money that I can donate.,Not-a-strategy,Not-a-strategy,0,0.38547852635383606
+243,8,0,"I usually like to help financially too, since I do not have many off days to join event.",Not-a-strategy,Not-a-strategy,0,0.3854823112487793
+244,9,0,Some of their members even travel to different countries to help in person.,Not-a-strategy,Not-a-strategy,0,0.3854392468929291
+245,9,0,I believe that is a big thing to do,Not-a-strategy,Not-a-strategy,0,0.3854394555091858
+246,0,0,Hello,Not-a-strategy,Not-a-strategy,1,0.3040367066860199
+247,1,0,How are you ?,Not-a-strategy,Not-a-strategy,1,0.36895984411239624
+248,2,1,"I'm good,how are you?",Not-a-strategy,Not-a-strategy,1,0.3839153051376343
+249,3,0,I am great.,Not-a-strategy,Not-a-strategy,1,0.38691478967666626
+250,3,0,Thanks How much do you typically give to charity in a year?,Not-a-strategy,Not-a-strategy,1,0.3874623477458954
+251,4,1,I give £3 a week so around £36 a year.,Not-a-strategy,Not-a-strategy,1,0.38722220063209534
+252,5,0,Oh that's pretty great.,Not-a-strategy,Not-a-strategy,1,0.38687190413475037
+253,6,0,What kind do you typically give to?,Not-a-strategy,Not-a-strategy,1,0.38664042949676514
+254,6,1,I pay money to the Royal National Institute for the Blind.,Not-a-strategy,Not-a-strategy,1,0.3863767981529236
+255,7,0,Oh awesome.,Not-a-strategy,Not-a-strategy,1,0.38616064190864563
+256,8,0,Have you heard of Save the children?,Not-a-strategy,Not-a-strategy,1,0.38606375455856323
+257,9,1,Yes.,Not-a-strategy,Not-a-strategy,1,0.38600945472717285
+258,9,1,I have seen their adverts and campaigns.,Not-a-strategy,Not-a-strategy,1,0.3859882652759552
+259,0,0,Hello!,Not-a-strategy,Not-a-strategy,0,0.30474239587783813
+260,1,1,hi,Not-a-strategy,Not-a-strategy,0,0.3670649230480194
+261,2,0,"Have you heard of the charity, Save the Children?",Not-a-strategy,Not-a-strategy,0,0.3820060193538666
+262,3,1,no I have not...what is it about?,Not-a-strategy,Not-a-strategy,0,0.3859236240386963
+263,4,0,"Save the Children is an international non-governmental organization that promotes children's rights, provides relief and helps support children in developing countries.",Not-a-strategy,Not-a-strategy,0,0.38751983642578125
+264,5,0,You can refer to Save the Children's website to gather more information if you like to.,Not-a-strategy,Not-a-strategy,0,0.38786420226097107
+265,6,0,URL,Not-a-strategy,Not-a-strategy,0,0.38771843910217285
+266,6,1,ooo ok...thats good that there is a organization put together to help children in other countries,Not-a-strategy,Not-a-strategy,0,0.3871992528438568
+267,7,0,"Yes, it is good.",Not-a-strategy,Not-a-strategy,0,0.3870452046394348
+268,8,0,But they are really under funded.,Not-a-strategy,Not-a-strategy,0,0.3867180645465851
+269,9,0,Would you be willing to donate to the charity now?,Not-a-strategy,Not-a-strategy,0,0.3866233229637146
+270,0,0,It would be really great if we gave some money to save the children,Not-a-strategy,Not-a-strategy,1,0.30414026975631714
+271,1,1,Can you tell me more about what they do?,Source Derogation-Contesting,Not-a-strategy,1,0.36761513352394104
+272,1,0,"Save the Children is an international non-governmental organization that promotes children's rights, provides relief and helps support children in developing countries.",Not-a-strategy,Not-a-strategy,1,0.3825409710407257
+273,2,1,Sounds like they accomplish great things.,Not-a-strategy,Not-a-strategy,1,0.38606294989585876
+274,2,1,Are you thinking of a one time donation?,Not-a-strategy,Not-a-strategy,1,0.3866366446018219
+275,3,0,yes it would be a one time donation that will be taken from the payment from the task.,Not-a-strategy,Not-a-strategy,1,0.3869059681892395
+276,3,0,You can decide to give part of the payment to save the children and keep part for yourself.,Not-a-strategy,Not-a-strategy,1,0.386954128742218
+277,4,1,"I see, so I am thinking of donating half.",Not-a-strategy,Not-a-strategy,1,0.3867148756980896
+278,4,1,What are your thoughts?,Not-a-strategy,Not-a-strategy,1,0.38654592633247375
+279,4,0,I think half is a good idea I will do the same thing,Not-a-strategy,Not-a-strategy,1,0.38654765486717224
+280,5,1,I think it is important to do all we can to help children.,Not-a-strategy,Not-a-strategy,1,0.38639354705810547
+281,5,1,Are we being selfish by keeping half?,Not-a-strategy,Not-a-strategy,1,0.38639315962791443
+282,6,0,maybe there are children who may die without this money,Not-a-strategy,Not-a-strategy,1,0.3863341510295868
+283,6,1,That's true.,Not-a-strategy,Not-a-strategy,1,0.3862285614013672
+284,6,1,I still haven't decided for sure though.,Personal Choice-Empowerment,Not-a-strategy,1,0.3861614465713501
+285,6,1,Sometimes I question the actual impact of money donated to charities.,Not-a-strategy,Not-a-strategy,1,0.38611268997192383
+286,7,0,? At least you know some of this money will go to save lives,Not-a-strategy,Not-a-strategy,1,0.38616669178009033
+287,8,1,I guess so.,Not-a-strategy,Not-a-strategy,1,0.3861222565174103
+288,8,1,Have you donated to Save the Children before?,Not-a-strategy,Not-a-strategy,1,0.38606372475624084
+289,9,0,no and i regret that i've been so selfish,Not-a-strategy,Not-a-strategy,1,0.38601478934288025
+290,9,1,"Well, don't feel bad.",Not-a-strategy,Not-a-strategy,1,0.3859434127807617
+291,9,1,We will donate today.,Not-a-strategy,Not-a-strategy,1,0.38592061400413513
+292,0,0,Hi!,Not-a-strategy,Not-a-strategy,0,0.30319899320602417
+293,0,0,How are you doing today?,Not-a-strategy,Not-a-strategy,0,0.3665449321269989
+294,1,1,"Good, thanks!",Not-a-strategy,Not-a-strategy,0,0.3811832666397095
+295,2,1,How are you?,Not-a-strategy,Not-a-strategy,0,0.3854246139526367
+296,3,0,I am doing well thank you.,Not-a-strategy,Not-a-strategy,0,0.38629594445228577
+297,4,0,Do you ever donate to charity?,Not-a-strategy,Not-a-strategy,0,0.3861839175224304
+298,5,1,In the past few years I rarely have.,Not-a-strategy,Not-a-strategy,0,0.38593846559524536
+299,5,0,"I know, it can be hard to donate. especially in today's society, but a tiny amount, even less than a dollar, can go a long way",Not-a-strategy,Not-a-strategy,0,0.38612616062164307
+300,6,1,"That seems so hard to believe, but I guess lots of pennies still add up!",Not-a-strategy,Not-a-strategy,0,0.3860243260860443
+301,6,0,"Exactly, I feel the same way sometimes, but think if everyone in the US gave a nickel, that's over 16 million dollars",Not-a-strategy,Not-a-strategy,0,0.38615894317626953
+302,7,1,"Wow, that definitely puts it in perspective!",Not-a-strategy,Not-a-strategy,0,0.38610994815826416
+303,8,0,"There are so many charities too, but I believe that children are the future, and we need to do what we can to help them have fulfilling lives",Not-a-strategy,Not-a-strategy,0,0.38595885038375854
+304,9,1,I agree with you!,Not-a-strategy,Not-a-strategy,0,0.38581982254981995
+305,9,0,Have you ever volunteered?,Not-a-strategy,Not-a-strategy,0,0.3857783377170563
+306,0,0,Hello,Not-a-strategy,Not-a-strategy,1,0.30364322662353516
+307,1,1,Hi how are you doing today?,Not-a-strategy,Not-a-strategy,1,0.3678239583969116
+308,1,0,I am doing great!,Not-a-strategy,Not-a-strategy,1,0.3822750747203827
+309,2,0,Would you like to hear about ways you can help Save the Children today!,Not-a-strategy,Not-a-strategy,1,0.38548511266708374
+310,2,1,Sure.,Not-a-strategy,Not-a-strategy,1,0.3865012228488922
+311,3,1,Tell me as much as you can about the organization.,Source Derogation-Contesting,Not-a-strategy,1,0.3870021104812622
+312,4,0,"Save the Children is an international non-governmental organization that promotes children's rights, provides relief and helps support children in developing countries.",Not-a-strategy,Not-a-strategy,1,0.38686424493789673
+313,4,1,It sounds like they have a worthy cause.,Not-a-strategy,Not-a-strategy,1,0.3866572678089142
+314,5,1,Do they help our children in the US as well?,Source Derogation-Contesting,Not-a-strategy,1,0.3868889808654785
+315,6,0,This is a charity for children that are victims of war and hard times.,Not-a-strategy,Not-a-strategy,1,0.3868069350719452
+316,6,0,"For children in developing countries, especially in war zones.",Not-a-strategy,Not-a-strategy,1,0.38673239946365356
+317,7,0,"For instance, millions of Syrian children have grown up facing the daily threat of violence.",Not-a-strategy,Not-a-strategy,1,0.3866279423236847
+318,7,0,"In the first two months of 2018 alone, 1,000 children were reportedly killed or injured in intensifying violence.",Not-a-strategy,Not-a-strategy,1,0.3865666091442108
+319,8,1,"Wow, it is great that these children have a charity to help them.",Not-a-strategy,Not-a-strategy,1,0.3865041136741638
+320,9,0,Very much so!,Not-a-strategy,Not-a-strategy,1,0.3865669369697571
+321,0,0,Greetings!,Not-a-strategy,Not-a-strategy,1,0.30322176218032837
+322,0,1,Good morning!,Not-a-strategy,Not-a-strategy,1,0.36708882451057434
+323,1,1,Have you ever donated to a children's charity?,Not-a-strategy,Not-a-strategy,1,0.381212055683136
+324,1,0,Oh goodness yes.,Not-a-strategy,Not-a-strategy,1,0.3846796751022339
+325,2,0,I always feel really good about it afterwards.,Not-a-strategy,Not-a-strategy,1,0.38548633456230164
+326,2,0,Have you?,Not-a-strategy,Not-a-strategy,1,0.38562753796577454
+327,3,1,I have as well.,Not-a-strategy,Not-a-strategy,1,0.38545846939086914
+328,3,1,Children are the most vulnerable people in our society.,Not-a-strategy,Not-a-strategy,1,0.3856924772262573
+329,3,0,"It's a good thing, indeed.",Not-a-strategy,Not-a-strategy,1,0.38570311665534973
+330,4,0,A great organization is URL,Not-a-strategy,Not-a-strategy,1,0.38561567664146423
+331,4,1,I haven't heard of this one?,Not-a-strategy,Not-a-strategy,1,0.38573989272117615
+332,5,1,How does it help children?,Source Derogation-Contesting,Not-a-strategy,1,0.3857778310775757
+333,5,0,"For instance, millions of Syrian children have grown up facing the daily threat of violence.",Not-a-strategy,Not-a-strategy,1,0.38581573963165283
+334,6,0,"In the first two months of 2018 alone, 1,000 children were reportedly killed or injured in intensifying violence",Not-a-strategy,Not-a-strategy,1,0.3859144151210785
+335,6,1,That's awful.,Not-a-strategy,Not-a-strategy,1,0.38589879870414734
+336,7,1,I live in the US and wish we were doing more as a country to help these kids.,Not-a-strategy,Not-a-strategy,1,0.38600513339042664
+337,7,1,But private donations certainly help.,Not-a-strategy,Not-a-strategy,1,0.3859895169734955
+338,7,0,"You should consider that link, explore it, and make a small donation.",Not-a-strategy,Not-a-strategy,1,0.38594454526901245
+339,8,0,Small donations will indeed help a lot of children and their families.,Not-a-strategy,Not-a-strategy,1,0.38586071133613586
+340,8,1,I'll certainly review it.,Personal Choice-Empowerment,Not-a-strategy,1,0.3858402967453003
+341,8,1,"Usually I donate more to charities in my community, but international donations are important too.",Counter Argumentation-Contesting,Not-a-strategy,1,0.38593098521232605
+342,9,0,"Yes, they all are.",Not-a-strategy,Not-a-strategy,1,0.385890930891037
+343,9,0,All of the children must be taken care of.,Not-a-strategy,Not-a-strategy,1,0.3858789801597595
+344,9,0,I can tell you that your donation right now will make a tangible impact for the world,Not-a-strategy,Not-a-strategy,1,0.3858354389667511
+345,0,0,"Hey, do you care about hungry children?",Not-a-strategy,Not-a-strategy,1,0.30599918961524963
+346,1,1,Sure,Not-a-strategy,Not-a-strategy,1,0.36879485845565796
+347,2,0,"Maybe you have heard of Save the Children, an organisation promoting children's rights?",Not-a-strategy,Not-a-strategy,1,0.3822943866252899
+348,2,1,"No, I don't think I have ever heard of that organization.",Not-a-strategy,Not-a-strategy,1,0.38557690382003784
+349,3,0,They do things like supporting children in warzones all over the world.,Not-a-strategy,Not-a-strategy,1,0.38606202602386475
+350,3,0,Millions of children in Syria alone face the daily threat of violence.,Not-a-strategy,Not-a-strategy,1,0.38605308532714844
+351,3,0,Have you ever considered helping out such a vulnerable group?,Not-a-strategy,Not-a-strategy,1,0.3861745595932007
+352,4,1,Oh okay.,Not-a-strategy,Not-a-strategy,1,0.38604310154914856
+353,4,1,"No, I hadn't ever thought about helping them before.",Not-a-strategy,Not-a-strategy,1,0.3860877454280853
+354,5,0,is it noble or is it the minimum we can do as first world citizens?,Not-a-strategy,Not-a-strategy,1,0.3861660659313202
+355,6,1,Point taken.,Not-a-strategy,Not-a-strategy,1,0.3860830068588257
+356,6,1,It is the least we can do.,Not-a-strategy,Not-a-strategy,1,0.386085569858551
+357,6,1,The money would at least go to a good cause.,Not-a-strategy,Not-a-strategy,1,0.38614699244499207
+358,7,0,It is the least we can do.,Not-a-strategy,Not-a-strategy,1,0.3862497806549072
+359,8,0,The money would at least go to a good cause.,Not-a-strategy,Not-a-strategy,1,0.38641422986984253
+360,9,1,"Yes, I have.",Not-a-strategy,Not-a-strategy,1,0.38642165064811707
+361,0,0,Hello.,Not-a-strategy,Not-a-strategy,1,0.3041750192642212
+362,0,0,Do you have children?,Not-a-strategy,Not-a-strategy,1,0.3669191896915436
+363,1,1,"Yes, 2.",Not-a-strategy,Not-a-strategy,1,0.38062921166419983
+364,1,1,You?,Not-a-strategy,Not-a-strategy,1,0.38436993956565857
+365,1,0,"No, but I do enjoy their company.",Not-a-strategy,Not-a-strategy,1,0.38569098711013794
+366,2,0,Are you aware of the large amount of children in developing countries that could use assitance?,Not-a-strategy,Not-a-strategy,1,0.38629287481307983
+367,3,1,I am.,Not-a-strategy,Not-a-strategy,1,0.3864951431751251
+368,4,1,"I tend to read news articles from aboard. BBC, ect.",Not-a-strategy,Not-a-strategy,1,0.38661083579063416
+369,5,1,I read that their are quite a few places that could use help.,Not-a-strategy,Not-a-strategy,1,0.3868075907230377
+370,5,0,Yes there are.,Not-a-strategy,Not-a-strategy,1,0.3868393301963806
+371,6,0,Have you ever heard of the organization Save the Children and are you aware of what they do?,Not-a-strategy,Not-a-strategy,1,0.3866986334323883
+372,6,1,"I have heard of them, but have not looked into what they do.",Not-a-strategy,Not-a-strategy,1,0.3866213262081146
+373,7,0,Well they have a presence in every continent except Antarctica.,Not-a-strategy,Not-a-strategy,1,0.38646623492240906
+374,7,0,"Domestically, they provide early education, literacy, and health and disaster preparedness programs.",Not-a-strategy,Not-a-strategy,1,0.38667455315589905
+375,8,1,"That's very interesting, sounds like they do good work.",Not-a-strategy,Not-a-strategy,1,0.38669127225875854
+376,8,0,They are very renowned.,Not-a-strategy,Not-a-strategy,1,0.38665130734443665
+377,9,0,"Internationally, they are pioneers in health education and protection programs.",Not-a-strategy,Not-a-strategy,1,0.38659411668777466
+378,0,0,Do you ever donate to charity?,Not-a-strategy,Not-a-strategy,0,0.30425238609313965
+379,1,1,"Yes, I support a few causes that I personally believe in very much.",Not-a-strategy,Not-a-strategy,0,0.36812782287597656
+380,1,0,Have you ever heard of Save the Children?,Not-a-strategy,Not-a-strategy,0,0.38238897919654846
+381,2,1,"Yes, but I don't know a lot about them.",Not-a-strategy,Not-a-strategy,0,0.3850501775741577
+382,2,1,What is their mission?,Source Derogation-Contesting,Not-a-strategy,0,0.3857495188713074
+383,3,0,"Their mission is to promote children's rights, and provide relief and support to children in developing countries.",Not-a-strategy,Not-a-strategy,0,0.38568851351737976
+384,3,1,That sounds interesting.,Not-a-strategy,Not-a-strategy,0,0.3856920599937439
+385,4,1,What countries do they work in?,Source Derogation-Contesting,Not-a-strategy,0,0.3856886625289917
+386,4,0,They work in many countries across the world.,Not-a-strategy,Not-a-strategy,0,0.386209636926651
+387,5,0,"For example, millions of children in Syria grow up facing the daily threat of violence.",Not-a-strategy,Not-a-strategy,0,0.3861420154571533
+388,5,0,A donation could help these children greatly.,Not-a-strategy,Not-a-strategy,0,0.386186808347702
+389,6,1,It sounds like it.,Not-a-strategy,Not-a-strategy,0,0.38623085618019104
+390,7,1,Do you donate to this charity?,Not-a-strategy,Not-a-strategy,0,0.3861232399940491
+391,7,0,I do.,Not-a-strategy,Not-a-strategy,0,0.3860093355178833
+392,8,0,It is a great charity that does a lot of great work around the world.,Not-a-strategy,Not-a-strategy,0,0.38596755266189575
+393,9,1,Some charities are run better than others.,Hesitance-Hesitance,Not-a-strategy,0,0.38586077094078064
+394,0,0,hi how are you today?,Not-a-strategy,Not-a-strategy,0,0.3030517101287842
+395,1,1,"I am well, how are you?",Not-a-strategy,Not-a-strategy,0,0.3662138879299164
+396,1,0,I am good do you have any children?,Not-a-strategy,Not-a-strategy,0,0.38049376010894775
+397,2,1,"Yes, I have two.",Not-a-strategy,Not-a-strategy,0,0.3835257291793823
+398,2,1,And you?,Not-a-strategy,Not-a-strategy,0,0.38427555561065674
+399,3,0,I have two also but mine are grown and gone now,Not-a-strategy,Not-a-strategy,0,0.3844456076622009
+400,3,1,That's nice.,Not-a-strategy,Not-a-strategy,0,0.3844068646430969
+401,3,1,How old are they?,Not-a-strategy,Not-a-strategy,0,0.38439926505088806
+402,3,0,32 and 29 a boy and a girl and 4 grand kids 3 girls and 1 boy ages 6 to 14.,Not-a-strategy,Not-a-strategy,0,0.38440200686454773
+403,4,0,Unfortunately they all live far away.,Not-a-strategy,Not-a-strategy,0,0.38437896966934204
+404,4,0,And you?,Not-a-strategy,Not-a-strategy,0,0.3844776749610901
+405,5,1,Oh my!,Not-a-strategy,Not-a-strategy,0,0.384529173374176
+406,5,1,That's nice.,Not-a-strategy,Not-a-strategy,0,0.38452598452568054
+407,5,1,My kids are 4 and 7.,Not-a-strategy,Not-a-strategy,0,0.3845911920070648
+408,5,1,Boy and girl.,Not-a-strategy,Not-a-strategy,0,0.384670615196228
+409,5,0,That was a hectic but really fun time for me and my kids.,Not-a-strategy,Not-a-strategy,0,0.3847115635871887
+410,6,0,Have you ever heard of Save the Children?,Not-a-strategy,Not-a-strategy,0,0.38478145003318787
+411,7,1,I have not.,Not-a-strategy,Not-a-strategy,0,0.38477346301078796
+412,7,1,What is the charity and what do they do?,Source Derogation-Contesting,Not-a-strategy,0,0.38480305671691895
+413,7,0,I am not an expert but I believe they help children in war torn areas to get to safety and make food and medical supplies available,Not-a-strategy,Not-a-strategy,0,0.38483375310897827
+414,8,1,That seems like a really noble cause.,Not-a-strategy,Not-a-strategy,0,0.3847977817058563
+415,8,1,I have an affinity for children.,Not-a-strategy,Not-a-strategy,0,0.3847903907299042
+416,9,1,I donate a lot of money to battered wives and their children.,Not-a-strategy,Not-a-strategy,0,0.38477054238319397
+417,9,1,I spend a lot of time in the shelter for them too.,Not-a-strategy,Not-a-strategy,0,0.3848806917667389
+418,9,1,Seems like a great cause!,Not-a-strategy,Not-a-strategy,0,0.384877473115921
+419,0,0,"Hello, are you familiar with the charity: Save the Children?",Not-a-strategy,Not-a-strategy,1,0.30361852049827576
+420,0,1,Hi!,Not-a-strategy,Not-a-strategy,1,0.36694473028182983
+421,1,1,I little bit of know Save the children life.,Not-a-strategy,Not-a-strategy,1,0.3816261291503906
+422,2,0,Okay I would like to tell you a little bit more about it!,Not-a-strategy,Not-a-strategy,1,0.3847349286079407
+423,3,0,"Save the Children does whatever it takes, every day and in times of crisis, to give children a healthy start in life, the opportunity to learn and protection from harm.",Not-a-strategy,Not-a-strategy,1,0.3855832815170288
+424,4,1,How much you ready to pay for children?,Not-a-strategy,Not-a-strategy,1,0.3863295018672943
+425,5,0,In this exchange I would like to ask you how much you would be willing to donate to Save the Children.,Not-a-strategy,Not-a-strategy,1,0.3866306245326996
+426,6,0,You can donate $0 - $0.30.,Not-a-strategy,Not-a-strategy,1,0.38686299324035645
+427,7,0,You can make your choice now or after I've told you more about the charity.,Not-a-strategy,Not-a-strategy,1,0.38668662309646606
+428,8,1,I'll pay $0.30 surely,Not-a-strategy,Not-a-strategy,1,0.38660624623298645
+429,9,0,I want you to know that whatever you decide to donate will be taken from the amount you make from completing this task.,Not-a-strategy,Not-a-strategy,1,0.38633885979652405
+430,0,0,Hi there how are you doing today?,Not-a-strategy,Not-a-strategy,1,0.3032611608505249
+431,0,1,Hey I'm fine.,Not-a-strategy,Not-a-strategy,1,0.36712318658828735
+432,1,1,How are you doing?,Not-a-strategy,Not-a-strategy,1,0.3825700879096985
+433,1,0,I am doing really good.,Not-a-strategy,Not-a-strategy,1,0.38599199056625366
+434,2,0,"So, what are you up to today?",Not-a-strategy,Not-a-strategy,1,0.38710853457450867
+435,2,1,I've been thinking about donating to a children's charity.,Not-a-strategy,Not-a-strategy,1,0.38734906911849976
+436,3,1,I can't decide which onne.,Not-a-strategy,Not-a-strategy,1,0.387519896030426
+437,3,0,I was going to ask you if you would be interested in donating to Save the Children.,Not-a-strategy,Not-a-strategy,1,0.3876468539237976
+438,4,0,How do you feel about this charity?,Not-a-strategy,Not-a-strategy,1,0.38743650913238525
+439,4,1,I have heard about it but I can't remember it's mission.,Not-a-strategy,Not-a-strategy,1,0.38719165325164795
+440,5,1,Do you know that charity's mission?,Source Derogation-Contesting,Not-a-strategy,1,0.3869257867336273
+441,5,0,They provide kids with the basic things they need like food and clothing.,Not-a-strategy,Not-a-strategy,1,0.38671889901161194
+442,6,0,I really like their mission.,Not-a-strategy,Not-a-strategy,1,0.38661348819732666
+443,6,0,I really feel badly for the kids.,Not-a-strategy,Not-a-strategy,1,0.3865695297718048
+444,7,0,Don't you?,Not-a-strategy,Not-a-strategy,1,0.3866518437862396
+445,7,1,"Yes, it tugs at my heart to think of all of those children.",Not-a-strategy,Not-a-strategy,1,0.3868969976902008
+446,8,1,Do you know where the charity is headquatered?,Source Derogation-Contesting,Not-a-strategy,1,0.3870132565498352
+447,8,0,They are based in CT.,Not-a-strategy,Not-a-strategy,1,0.38702914118766785
+448,9,0,I feel that it would be easy to donate.,Not-a-strategy,Not-a-strategy,1,0.3870892822742462
+449,9,0,I know I spend on little things like a candy bar or gum.,Not-a-strategy,Not-a-strategy,1,0.3871226906776428
+450,9,0,I know I could give up spending on this and it would help the kids.,Not-a-strategy,Not-a-strategy,1,0.387098103761673
+451,0,0,Hello therehow are you?,Not-a-strategy,Not-a-strategy,0,0.3034101724624634
+452,0,1,I am good.,Not-a-strategy,Not-a-strategy,0,0.3672391176223755
+453,1,1,How are you?,Not-a-strategy,Not-a-strategy,0,0.3813968300819397
+454,1,0,"I'm pretty good, just trying to get ready for work soon.",Not-a-strategy,Not-a-strategy,0,0.3848678171634674
+455,2,1,I understand that.,Not-a-strategy,Not-a-strategy,0,0.3858638107776642
+456,3,1,So tell me about this charity.,Source Derogation-Contesting,Not-a-strategy,0,0.3864412009716034
+457,4,0,Have you heard of Save the Children?,Not-a-strategy,Not-a-strategy,0,0.3865184187889099
+458,4,0,"They do work around health, education, etc.",Not-a-strategy,Not-a-strategy,0,0.38677385449409485
+459,5,1,I'm not sure that I have.,Not-a-strategy,Not-a-strategy,0,0.38676050305366516
+460,5,0,They work mostly in developing countries.,Not-a-strategy,Not-a-strategy,0,0.38683897256851196
+461,6,0,I would appreciate it if some of the funds could be donated.,Not-a-strategy,Not-a-strategy,0,0.38675302267074585
+462,7,0,The researchers will pass that donation on to the charity at the end.,Not-a-strategy,Not-a-strategy,0,0.38670700788497925
+463,8,1,What kind of work do they do?,Source Derogation-Contesting,Not-a-strategy,0,0.3865739405155182
+464,8,0,"They do emergency hunger relief, are engaged with Syrian children.",Not-a-strategy,Not-a-strategy,0,0.3865296542644501
+465,9,1,"Ok, that sounds good.",Not-a-strategy,Not-a-strategy,0,0.38647499680519104
+466,0,0,hi.,Not-a-strategy,Not-a-strategy,0,0.30405378341674805
+467,1,0,Dpo you about Save the Children organizatio,Not-a-strategy,Not-a-strategy,0,0.3684539794921875
+468,2,1,Do I what with save the children,Not-a-strategy,Not-a-strategy,0,0.38271480798721313
+469,2,0,save the children organization takes cares of children around the world,Not-a-strategy,Not-a-strategy,0,0.3859763741493225
+470,2,1,OK yes I am aware of this organization,Not-a-strategy,Not-a-strategy,0,0.3874015808105469
+471,3,0,Its very important what they do.,Not-a-strategy,Not-a-strategy,0,0.3880775272846222
+472,3,0,Do oyu agree?,Not-a-strategy,Not-a-strategy,0,0.3884270489215851
+473,4,1,NO I do not agree.,Self Assertion-Empowerment,Not-a-strategy,0,0.3885214328765869
+474,5,1,I think it is a good organization.,Self Assertion-Empowerment,Not-a-strategy,0,0.3882102370262146
+475,6,1,however there are lots of kids in my ocuntry that need help first,Self Assertion-Empowerment,Not-a-strategy,0,0.3880220949649811
+476,6,0,Where do you live and what are you doing to help the children?,Not-a-strategy,Not-a-strategy,0,0.38787829875946045
+477,7,1,I live in the US and volunteer all of the time for childrens charities.,Counter Argumentation-Contesting,Not-a-strategy,0,0.3875996470451355
+478,8,1,I also ive to bakc to school drives and food pantries,Counter Argumentation-Contesting,Not-a-strategy,0,0.3877113461494446
+479,9,0,Thats very kind of you.,Not-a-strategy,Not-a-strategy,0,0.38761889934539795
+480,0,0,Hello there.,Not-a-strategy,Not-a-strategy,0,0.3046606779098511
+481,1,0,Have you heard of a charity called Save the Children?,Not-a-strategy,Not-a-strategy,0,0.366654634475708
+482,2,1,no,Not-a-strategy,Not-a-strategy,0,0.38059842586517334
+483,3,0,"It is an international non-governmental organisation that promotes children's rights, provides relief and helps support children in developing countries.",Not-a-strategy,Not-a-strategy,0,0.38408350944519043
+484,4,0,"The organisation promotes policy changes in order to gain more rights for young people, especially by enforcing the UN Declaration of the Rights of the Child.",Not-a-strategy,Not-a-strategy,0,0.3848688304424286
+485,5,0,"Alliance members co-ordinate emergency-relief efforts, helping to protect children from the effects of war and violence.",Not-a-strategy,Not-a-strategy,0,0.3850742280483246
+486,6,1,That sounds extremely awesome.,Not-a-strategy,Not-a-strategy,0,0.385089248418808
+487,6,0,"Yeah, it was founded in 1919, so it's coming up on 100 years.",Not-a-strategy,Not-a-strategy,0,0.3850806653499603
+488,7,1,Congratulations to them.,Not-a-strategy,Not-a-strategy,0,0.38507500290870667
+489,7,0,They're really everywhere.,Not-a-strategy,Not-a-strategy,0,0.3851851224899292
+490,8,0,"They even help deal with hurricane relief efforts here in the United States, as they did with Hurricane Harvey last year.",Not-a-strategy,Not-a-strategy,0,0.38524457812309265
+491,8,1,That's good because hurricanes have devastating effects.,Not-a-strategy,Not-a-strategy,0,0.3852771818637848
+492,8,0,Would you like to donate a portion of the earnings from this task to Save the Children?,Not-a-strategy,Not-a-strategy,0,0.38529065251350403
+493,9,0,The research team will collect the donations and send them to Save the Children.,Not-a-strategy,Not-a-strategy,0,0.385288268327713
+494,0,0,Save the Children is an amazing charity that helps kids who are in desperate need.,Not-a-strategy,Not-a-strategy,0,0.30419909954071045
+495,1,0,"They can help with safety, education and more.",Not-a-strategy,Not-a-strategy,0,0.36759644746780396
+496,1,0,You can donate some of your earnings to this amazing charity.,Not-a-strategy,Not-a-strategy,0,0.3818947672843933
+497,2,1,"I believe in this charity, but still wonder how much of the money I donate actually helps.",Counter Argumentation-Contesting,Not-a-strategy,0,0.38555628061294556
+498,2,0,Every little bit makes a difference.,Not-a-strategy,Not-a-strategy,0,0.38599881529808044
+499,3,0,"When you have people who are so poor, it's amazing what a tiny amount can do.",Not-a-strategy,Not-a-strategy,0,0.38602977991104126
+500,3,1,I would gladly give my earnings to this charity.,Not-a-strategy,Not-a-strategy,0,0.38628655672073364
+501,4,1,Children hold the future of the world.,Not-a-strategy,Not-a-strategy,0,0.38648152351379395
+502,4,0,It is really so heartbreaking when you see all of these kids not having enough to eat.,Not-a-strategy,Not-a-strategy,0,0.3867378532886505
+503,5,0,It really breaks the heart.,Not-a-strategy,Not-a-strategy,0,0.38704365491867065
+504,6,0,They are so little.,Not-a-strategy,Not-a-strategy,0,0.3871406018733978
+505,7,1,"I know, it always amazes me how many children are suffering around the world.",Not-a-strategy,Not-a-strategy,0,0.3874536156654358
+506,8,1,It is so sad.,Not-a-strategy,Not-a-strategy,0,0.38744038343429565
+507,8,0,Even the little bit you donate from your earnings can go a long way to making a difference for a child.,Not-a-strategy,Not-a-strategy,0,0.3875715434551239
+508,8,1,Though MTurk they should raise quite a bit.,Not-a-strategy,Not-a-strategy,0,0.3876972198486328
+509,9,1,"Even though it is only .30 for this hit, with the number of people it adds up.",Not-a-strategy,Not-a-strategy,0,0.3877236843109131
+510,10,0,That's what happens.,Not-a-strategy,Not-a-strategy,0,0.38757362961769104
+511,0,0,"Hello there, how are you doing today?",Not-a-strategy,Not-a-strategy,0,0.3028109073638916
+512,0,1,"I'm great, thanks.",Not-a-strategy,Not-a-strategy,0,0.3664202392101288
+513,1,1,How are you?,Not-a-strategy,Not-a-strategy,0,0.3806302547454834
+514,1,0,"I'm doing swell, thanks for asking!",Not-a-strategy,Not-a-strategy,0,0.38487479090690613
+515,2,0,So how do you feel about children?,Not-a-strategy,Not-a-strategy,0,0.3862763047218323
+516,2,1,I love children.,Not-a-strategy,Not-a-strategy,0,0.3864096701145172
+517,3,1,I believe they are our future and should be taken care of in the best possible way.,Not-a-strategy,Not-a-strategy,0,0.3862362205982208
+518,3,0,That's great!,Not-a-strategy,Not-a-strategy,0,0.3859814703464508
+519,3,0,I happen to agree!,Not-a-strategy,Not-a-strategy,0,0.38609781861305237
+520,4,0,"Do you have any children yourself, or do you plan to in the future?",Not-a-strategy,Not-a-strategy,0,0.3860076665878296
+521,4,1,I do not have children of my own and am not able to have them.,Not-a-strategy,Not-a-strategy,0,0.3859478533267975
+522,5,1,I am contemplating adoption for the future.,Not-a-strategy,Not-a-strategy,0,0.3859238624572754
+523,5,0,"Oh, that's wonderful!",Not-a-strategy,Not-a-strategy,0,0.3861902952194214
+524,6,0,"So many kids out there need a home, after all!",Not-a-strategy,Not-a-strategy,0,0.38610801100730896
+525,6,0,"There are so many issues today with children, all over the world!",Not-a-strategy,Not-a-strategy,0,0.3862466812133789
+526,7,0,"For instance, did you know that in the first two months of 2018 alone, over 1k children were killed or injured in intensifying violence?",Not-a-strategy,Not-a-strategy,0,0.3864487111568451
+527,8,1,"Wow, that is a staggering amount.",Not-a-strategy,Not-a-strategy,0,0.3864287734031677
+528,8,1,I did not know that.,Not-a-strategy,Not-a-strategy,0,0.38664710521698
+529,8,1,I am a big fan of organizations who take care of the needs of hurt children.,Not-a-strategy,Not-a-strategy,0,0.3865726590156555
+530,9,0,Oh?,Not-a-strategy,Not-a-strategy,0,0.38656434416770935
+531,9,0,That\'s awesome!,Not-a-strategy,Not-a-strategy,0,0.38650864362716675
+532,0,0,Good Morning!,Not-a-strategy,Not-a-strategy,1,0.30385884642601013
+533,0,0,How are you today?,Not-a-strategy,Not-a-strategy,1,0.3667084872722626
+534,1,1,Great!,Not-a-strategy,Not-a-strategy,1,0.3809548020362854
+535,2,1,How are you doing?,Not-a-strategy,Not-a-strategy,1,0.38411012291908264
+536,3,0,I am well.,Not-a-strategy,Not-a-strategy,1,0.38492146134376526
+537,3,0,What are your plans for the day?,Not-a-strategy,Not-a-strategy,1,0.3852106034755707
+538,4,1,i will be working all day.,Not-a-strategy,Not-a-strategy,1,0.38550686836242676
+539,5,0,"Yes, I am getting ready for work as well.",Not-a-strategy,Not-a-strategy,1,0.3857254683971405
+540,6,0,Have you heard of the charity called Save the Children?,Not-a-strategy,Not-a-strategy,1,0.38624802231788635
+541,7,1,No I have not,Not-a-strategy,Not-a-strategy,1,0.3862575888633728
+542,8,0,"It is a US based charity that helps kids by collecting money to help supply them with their basic needs like healthcare, food, and clothing.",Not-a-strategy,Not-a-strategy,1,0.3861478567123413
+543,9,0,"Today I am asking if you would consider even a small donation to STC, even $0.05 would help.",Not-a-strategy,Not-a-strategy,1,0.3859947621822357
+544,0,0,Hello! How are you?,Not-a-strategy,Not-a-strategy,1,0.3037926256656647
+545,1,1,Im very good how are you doing today?,Not-a-strategy,Not-a-strategy,1,0.3674086928367615
+546,2,0,I'm good thank you!,Not-a-strategy,Not-a-strategy,1,0.38138601183891296
+547,2,0,So according to this I'm supposed to tell you a bit about the Save the Children organization.,Not-a-strategy,Not-a-strategy,1,0.38485437631607056
+548,3,0,Have you heard of it before?,Not-a-strategy,Not-a-strategy,1,0.38635480403900146
+549,4,1,No i would be interested in learning,Not-a-strategy,Not-a-strategy,1,0.3866196870803833
+550,4,0,So I just looked it up and they do a lot of work for children around the world.,Not-a-strategy,Not-a-strategy,1,0.3870425224304199
+551,5,0,"They do some work in and out of USA to give kids access to health care, education, and shelter.",Not-a-strategy,Not-a-strategy,1,0.38735485076904297
+552,6,1,Thats very beneficial.,Not-a-strategy,Not-a-strategy,1,0.3875950574874878
+553,7,1,Especially for third world country that have limited resources,Not-a-strategy,Not-a-strategy,1,0.38794878125190735
+554,8,0,Definitely!,Not-a-strategy,Not-a-strategy,1,0.38805627822875977
+555,9,0,They do a lot of work with emergency response stuff too which is pretty cool.,Not-a-strategy,Not-a-strategy,1,0.3878776729106903
+556,0,0,Hi!,Not-a-strategy,Not-a-strategy,1,0.3028090000152588
+557,1,0,Are you interested in making a donation to Save the Children?,Not-a-strategy,Not-a-strategy,1,0.36591461300849915
+558,1,1,"Hi, Yes I am",Not-a-strategy,Not-a-strategy,1,0.3813551366329193
+559,2,0,That's great to hear!,Not-a-strategy,Not-a-strategy,1,0.3849877715110779
+560,2,0,Donations make a huge difference in the lives of these kids.,Not-a-strategy,Not-a-strategy,1,0.3858323395252228
+561,3,0,"Your help will give them access to food, healthcare, education, and safety, among other things.",Not-a-strategy,Not-a-strategy,1,0.3858295679092407
+562,3,1,"Yes, I agree.",Not-a-strategy,Not-a-strategy,1,0.3856922388076782
+563,4,1,Helping children and pets is one of the donations I enjoy making and helping at the same time.,Not-a-strategy,Not-a-strategy,1,0.38572144508361816
+564,4,0,Do you have an amount in mind that you'd like to donate?,Not-a-strategy,Not-a-strategy,1,0.38568219542503357
+565,4,1,I was thinking to donate around 10 cents for save the children.,Not-a-strategy,Not-a-strategy,1,0.38566845655441284
+566,5,1,I hope that is adequate and helps them for food and shelter.,Not-a-strategy,Not-a-strategy,1,0.3856518566608429
+567,5,0,Any amount we can collect for them is welcome.,Not-a-strategy,Not-a-strategy,1,0.38566112518310547
+568,5,0,"Would it convince you to donate more if I can assure you that the donation is absolutely secure and will be completely given to a trustworthy, verified fund within Save the Children?",Not-a-strategy,Not-a-strategy,1,0.3857789635658264
+569,6,1,ok how about 20 cents.,Not-a-strategy,Not-a-strategy,1,0.38576364517211914
+570,7,1,I do want to help in anyway that I can.,Not-a-strategy,Not-a-strategy,1,0.38575321435928345
+571,7,0,Thank you so much.,Not-a-strategy,Not-a-strategy,1,0.38572293519973755
+572,7,0,It's really appreciated.,Not-a-strategy,Not-a-strategy,1,0.38571327924728394
+573,8,0,The amount of suffering that children around the world face is terrible.,Not-a-strategy,Not-a-strategy,1,0.38562822341918945
+574,8,0,"For example, in the first two months of 2018, a thousand children in Syria were injured in the violence there.",Not-a-strategy,Not-a-strategy,1,0.3856075406074524
+575,9,0,Anything you can add to the donation will go directly to helping them.,Not-a-strategy,Not-a-strategy,1,0.3855898082256317
+576,9,1,yeah I heard a little bit about on how children are suffering.,Not-a-strategy,Not-a-strategy,1,0.38556337356567383
+577,0,0,"Hi, how are you today?",Not-a-strategy,Not-a-strategy,0,0.30358952283859253
+578,0,1,hello!,Not-a-strategy,Not-a-strategy,0,0.3665689527988434
+579,1,1,"pretty good, you?",Not-a-strategy,Not-a-strategy,0,0.3808520436286926
+580,1,0,i'm doing great!,Not-a-strategy,Not-a-strategy,0,0.3844892084598541
+581,2,0,I'm helping Save the Children Charity to raise money.,Not-a-strategy,Not-a-strategy,0,0.3854115903377533
+582,2,0,would you like to know more about this wonderful fund?,Not-a-strategy,Not-a-strategy,0,0.38555675745010376
+583,3,1,yes please!,Not-a-strategy,Not-a-strategy,0,0.3854227066040039
+584,3,1,i was just looking for a charity to donate to,Not-a-strategy,Not-a-strategy,0,0.385628879070282
+585,3,0,This wonderful charity helps suport children in developing countries!,Not-a-strategy,Not-a-strategy,0,0.3856562376022339
+586,4,1,what do they support exactly?,Source Derogation-Contesting,Not-a-strategy,0,0.3856166899204254
+587,5,1,education?,Not-a-strategy,Not-a-strategy,0,0.38550660014152527
+588,5,0,"they promote children's rights, provide relief.",Not-a-strategy,Not-a-strategy,0,0.38554710149765015
+589,6,0,They are currently helping children at the US Mexican border to reunite with their families and they also help Syrian kids,Not-a-strategy,Not-a-strategy,0,0.38549190759658813
+590,6,1,ok thats great.,Not-a-strategy,Not-a-strategy,0,0.38540980219841003
+591,7,1,i would like to donate but i dont have a lot of money myself.,Information Inquiry-Contesting,Not-a-strategy,0,0.38533806800842285
+592,7,1,is $20 okay?,Not-a-strategy,Not-a-strategy,0,0.38539204001426697
+593,8,0,So you can't donate 20$.,Not-a-strategy,Not-a-strategy,0,0.38535571098327637
+594,9,0,The way it works is you can donate your whole payment of 2$ for this task or you can donate as little as a couple of cents,Not-a-strategy,Not-a-strategy,0,0.3853791356086731
+595,0,0,"Hi, how much do you know about Save the Children?",Not-a-strategy,Not-a-strategy,0,0.30453363060951233
+596,1,1,I'm afraid I don't know anything about Save the Children.,Not-a-strategy,Not-a-strategy,0,0.36809730529785156
+597,1,0,"It's an international organization that promotes education, health and safety for all children.",Not-a-strategy,Not-a-strategy,0,0.3830721080303192
+598,2,1,"Oh, that's great!",Not-a-strategy,Not-a-strategy,0,0.3865938186645508
+599,2,1,What sort of assistance do they offer specifically?,Source Derogation-Contesting,Not-a-strategy,0,0.38752126693725586
+600,3,0,They currently have an initiative to assist children at the Mexican/American border.,Not-a-strategy,Not-a-strategy,0,0.3874112367630005
+601,3,0,They also recently aided children impacted by flooding in Japan.,Not-a-strategy,Not-a-strategy,0,0.38750579953193665
+602,4,1,"Wow, they really help people all around the world.",Not-a-strategy,Not-a-strategy,0,0.38758593797683716
+603,5,1,Are you at all associated with Save the Children?,Self Assertion-Empowerment,Not-a-strategy,0,0.38742145895957947
+604,5,0,I've been a donor and advocate for years.,Not-a-strategy,Not-a-strategy,0,0.3874637186527252
+605,6,0,It's really easy to get involved.,Not-a-strategy,Not-a-strategy,0,0.3874136209487915
+606,6,1,"Oh, really?",Not-a-strategy,Not-a-strategy,0,0.3873394727706909
+607,7,1,What's the best way to get involved in your opinion?,Not-a-strategy,Not-a-strategy,0,0.3874354362487793
+608,8,0,"Considering the monumental need, there is always a need for funding. Even small donations have a huge impact.",Not-a-strategy,Not-a-strategy,0,0.3874545395374298
+609,9,1,Do you know where I can go to donate?,Not-a-strategy,Not-a-strategy,0,0.3874232769012451
+610,0,0,"Did you Know that Save the Children is an international non-governmental organization that promotes children's rights, provides relief and helps support children in developing countries.",Not-a-strategy,Not-a-strategy,0,0.30386611819267273
+611,0,1,"I think I've heard of them, but aren't they religiously affiliated?",Source Derogation-Contesting,Not-a-strategy,0,0.36881396174430847
+612,1,1,"I'm all for improving conditions for children in developing countries, but I don't really want money paying for evangelizing.",Counter Argumentation-Contesting,Not-a-strategy,0,0.3830360174179077
+613,1,0,Yes they are affiliated with religion but all proceeds are put towards saving the children they do profit are use any funds for personal gain or spread of religion.,Not-a-strategy,Not-a-strategy,0,0.3863866925239563
+614,2,1,How transparent are they about uses of their funds?,Source Derogation-Contesting,Not-a-strategy,0,0.3869979679584503
+615,2,1,Are they well rated by the watchdog groups that keep an eye on non-profits?,Source Derogation-Contesting,Not-a-strategy,0,0.3868221342563629
+616,3,0,Save the Children is.,Not-a-strategy,Not-a-strategy,0,0.38644707202911377
+617,3,0,Mention the organization's credentials and international impact,Not-a-strategy,Not-a-strategy,0,0.38655945658683777
+618,4,1,It's great to hear there are people out there doing such important work.,Not-a-strategy,Not-a-strategy,0,0.38692691922187805
+619,4,1,Have you ever donated to them?,Self Assertion-Empowerment,Not-a-strategy,0,0.38708260655403137
+620,5,0,"Yes I have , how much do you spend on unnecessary stuff like a bag of snack or candy.",Not-a-strategy,Not-a-strategy,0,0.38703781366348267
+621,6,0,You Know small donations can help a lot of children and their families,Not-a-strategy,Not-a-strategy,0,0.38678568601608276
+622,6,1,Really?,Not-a-strategy,Not-a-strategy,0,0.38650187849998474
+623,7,1,"I suppose even with the economy being as hard as it is, exchange rates are still good enough to make a real impact.",Not-a-strategy,Not-a-strategy,0,0.38643792271614075
+624,7,0,Yes any donations made to helpless children make a real impact on their life.,Not-a-strategy,Not-a-strategy,0,0.3863232731819153
+625,7,0,Not many kids get a real shot and they all deserve one If I had a chance to change a childs life foe the better and didn't I would not be able to live with myself.,Not-a-strategy,Not-a-strategy,0,0.38618889451026917
+626,8,1,"That's a good point, I think a lot of the times the little things we can do that have really positive impacts kind of get lost in the shuffle.",Not-a-strategy,Not-a-strategy,0,0.3860314190387726
+627,8,1,"If I can ask a personal question, how did you make room in your finances to donate?",Not-a-strategy,Not-a-strategy,0,0.38590770959854126
+628,8,0,I did't I just gave what I thougt cas right and took the blow .,Not-a-strategy,Not-a-strategy,0,0.38601699471473694
+629,9,0,I thought about how these kids do without so much and realized I could do without once in order to help someone in need,Not-a-strategy,Not-a-strategy,0,0.3859507143497467
+630,9,1,So how did you decide what was right for you?,Not-a-strategy,Not-a-strategy,0,0.3860539495944977
+631,10,0,I gave what was given to me .,Not-a-strategy,Not-a-strategy,0,0.3859366476535797
+632,10,0,Over the next few chats I'm going to tell you the story of Bruce a child that like alot of these chidren need help but threw Save The Chidren found it.,Not-a-strategy,Not-a-strategy,0,0.3859662711620331
+633,11,0,At the end Of our next few chats I'm going to ask you to donate what you earn from this survey .,Not-a-strategy,Not-a-strategy,0,0.386101633310318
+634,11,0,I want you to think about what it means to save a child thats in trouble and how by saving that child you find new hope in your own life.,Not-a-strategy,Not-a-strategy,0,0.38609057664871216
+635,0,0,Hi there.,Not-a-strategy,Not-a-strategy,0,0.3034686744213104
+636,1,0,How are you today?,Not-a-strategy,Not-a-strategy,0,0.3673531711101532
+637,2,1,"Hello, I am fine, how about you?",Not-a-strategy,Not-a-strategy,0,0.3830936849117279
+638,3,0,Very well thanks.,Not-a-strategy,Not-a-strategy,0,0.3860626220703125
+639,3,0,Do you currently give any money to charity on a regular basis?,Not-a-strategy,Not-a-strategy,0,0.38646411895751953
+640,4,1,"Yes, I try to help time to time",Not-a-strategy,Not-a-strategy,0,0.3861895799636841
+641,4,0,Any charity in particular?,Not-a-strategy,Not-a-strategy,0,0.38584792613983154
+642,4,1,"No, anything that catches my eyes, or I find them on gofundme, what about you?",Not-a-strategy,Not-a-strategy,0,0.3857000768184662
+643,5,0,I have a few payments set up monthly.,Not-a-strategy,Not-a-strategy,0,0.38558703660964966
+644,5,0,I assume then you've heard of Save the Children and the great work they do with young people?,Not-a-strategy,Not-a-strategy,0,0.38577893376350403
+645,5,1,"Yes, I've heard of it.",Not-a-strategy,Not-a-strategy,0,0.38571178913116455
+646,5,1,Can you please explain more about it?,Source Derogation-Contesting,Not-a-strategy,0,0.385769248008728
+647,6,0,"Firstly, they provide funds and support services to help protect vulnerable children all over the world.",Not-a-strategy,Not-a-strategy,0,0.3859855830669403
+648,6,0,Once the children have a safe environment the next priority is to improve their lives via education and other resources.,Not-a-strategy,Not-a-strategy,0,0.38603127002716064
+649,7,0,They really make a difference to the lives of children in poverty or destitution.,Not-a-strategy,Not-a-strategy,0,0.3859979808330536
+650,7,1,I am interested in it.,Not-a-strategy,Not-a-strategy,0,0.3859573304653168
+651,7,1,I already checked their website.,Not-a-strategy,Not-a-strategy,0,0.38593247532844543
+652,7,1,Health and education both are important factors,Not-a-strategy,Not-a-strategy,0,0.38587841391563416
+653,8,0,Absolutely.,Not-a-strategy,Not-a-strategy,0,0.38591787219047546
+654,8,0,And the great thing for us is that even a very small donation goes a long way due to the number of people who can donate!,Not-a-strategy,Not-a-strategy,0,0.38585400581359863
+655,8,0,We're asking people today to give a small part of the payment for this HIT to the charity.,Not-a-strategy,Not-a-strategy,0,0.38583409786224365
+656,8,0,You'll get a box pop up at teh end of our chat which will give you the opportunity to donate something.,Not-a-strategy,Not-a-strategy,0,0.38580331206321716
+657,9,0,"Obviously the more the better, but I also appreciate that you aren't turking for free so you can judge it yourself.",Not-a-strategy,Not-a-strategy,0,0.38583803176879883
+658,9,1,Actually I like these kind of HITs.,Not-a-strategy,Not-a-strategy,0,0.3858471214771271
+659,9,1,I did few HITs before that asked me to donate my bonus or half of the reward.,Not-a-strategy,Not-a-strategy,0,0.38584551215171814
+660,10,1,I happily did.,Not-a-strategy,Not-a-strategy,0,0.385888934135437
+661,0,0,good morning!,Not-a-strategy,Not-a-strategy,1,0.30311092734336853
+662,1,1,Good morning.,Not-a-strategy,Not-a-strategy,1,0.36666804552078247
+663,1,0,have you ever heard of the charity save the children?,Not-a-strategy,Not-a-strategy,1,0.3817339539527893
+664,2,1,Yes.,Not-a-strategy,Not-a-strategy,1,0.38496896624565125
+665,3,1,I have but I can't say I am very familiar with what they do.,Not-a-strategy,Not-a-strategy,1,0.3855438828468323
+666,4,0,they assist with needy children around the world who are living in poverty.,Not-a-strategy,Not-a-strategy,1,0.38635537028312683
+667,5,1,That sounds right from what I know.,Not-a-strategy,Not-a-strategy,1,0.38617631793022156
+668,5,0,"for example, they do work in syria where in the first 2 months of this year 1,000 children were killed or injured due to the violence there.",Not-a-strategy,Not-a-strategy,1,0.38593849539756775
+669,6,0,they help support children in those situations.,Not-a-strategy,Not-a-strategy,1,0.3858489692211151
+670,6,1,That sounds like a very worthy cause.,Not-a-strategy,Not-a-strategy,1,0.3857041299343109
+671,7,0,it is!,Not-a-strategy,Not-a-strategy,1,0.38554251194000244
+672,7,0,you can find out more at URL if you want more specific examples.,Not-a-strategy,Not-a-strategy,1,0.38541179895401
+673,8,0,but they work they do is very meaningful to children and their families (if they have them).,Not-a-strategy,Not-a-strategy,1,0.3852730989456177
+674,8,1,Do you know how much of the donations actually make it to children and how much is used for administrative costs?,Source Derogation-Contesting,Not-a-strategy,1,0.3852117955684662
+675,8,0,"In fiscal year 2016, on average, 86.5% of all expenditures support program services. 86.5% is an average for all of Save the Children's programs worldwide.",Not-a-strategy,Not-a-strategy,1,0.38548120856285095
+676,9,0,More information about our finances and the use of funds is available: here on our financial page.,Not-a-strategy,Not-a-strategy,1,0.3854479193687439
+677,0,0,Hi!,Not-a-strategy,Not-a-strategy,0,0.30347535014152527
+678,1,0,How are you doing today?,Not-a-strategy,Not-a-strategy,0,0.3684406876564026
+679,2,0,Would you be interested today in making a donation to a charity?,Not-a-strategy,Not-a-strategy,0,0.3840193748474121
+680,2,1,Which charity would that be?,Not-a-strategy,Not-a-strategy,0,0.3867711126804352
+681,3,0,The charity we're taking donations for is save the children!,Not-a-strategy,Not-a-strategy,0,0.3876117467880249
+682,4,1,"I've seen a lot of commercials about them, but never did a lot of research about them.",Not-a-strategy,Not-a-strategy,0,0.38761743903160095
+683,5,0,They are actually really great.,Not-a-strategy,Not-a-strategy,0,0.3875851333141327
+684,5,0,They provide help to children all across the globe and stand up for children's rights.,Not-a-strategy,Not-a-strategy,0,0.3873375356197357
+685,6,1,I know some charities only give a small percentage of donations to children and the rest go to their employees wages.,Hesitance-Hesitance,Not-a-strategy,0,0.3872663676738739
+686,7,1,Do they?,Not-a-strategy,Not-a-strategy,0,0.3870595693588257
+687,8,0,"I thought that too at first, but luckily save the children is a non-governmental charity, so no one is sticking their hands into the pot.",Not-a-strategy,Not-a-strategy,0,0.3867827355861664
+688,8,1,"Thats good, I see they are ready to help out with the hurricane in Hawaii for the kids.",Not-a-strategy,Not-a-strategy,0,0.38659489154815674
+689,9,0,Yes!,Not-a-strategy,Not-a-strategy,0,0.3864254057407379
+690,0,0,Good morning!,Not-a-strategy,Not-a-strategy,0,0.3030255436897278
+691,0,0,How are you today?,Not-a-strategy,Not-a-strategy,0,0.3664496839046478
+692,1,1,I am doing fine.,Not-a-strategy,Not-a-strategy,0,0.3809349536895752
+693,1,1,How about you?,Not-a-strategy,Not-a-strategy,0,0.38419196009635925
+694,2,0,I am doing well!,Not-a-strategy,Not-a-strategy,0,0.3848531246185303
+695,3,0,What are your plans for today?,Not-a-strategy,Not-a-strategy,0,0.38509660959243774
+696,3,1,Complete surveys.,Not-a-strategy,Not-a-strategy,0,0.3850043714046478
+697,4,1,You?,Not-a-strategy,Not-a-strategy,0,0.384962797164917
+698,5,0,"Oh, the same.",Not-a-strategy,Not-a-strategy,0,0.38510236144065857
+699,6,0,Maybe spend some time outside.,Not-a-strategy,Not-a-strategy,0,0.38517048954963684
+700,6,0,It looks nice.,Not-a-strategy,Not-a-strategy,0,0.3851504921913147
+701,7,0,"I am wondering, have you hear of the Save the Children charity?",Not-a-strategy,Not-a-strategy,0,0.3851430118083954
+702,7,1,I have heard about it.,Not-a-strategy,Not-a-strategy,0,0.3850923776626587
+703,8,0,Oh that is great!,Not-a-strategy,Not-a-strategy,0,0.3850846290588379
+704,8,0,I was on their website today and saw that they do a lot of great work to help kids out that are in need.,Not-a-strategy,Not-a-strategy,0,0.38505834341049194
+705,9,0,They are always looking for donations.,Not-a-strategy,Not-a-strategy,0,0.3850020468235016
+706,0,0,There is a very important charity called Save the Children.,Not-a-strategy,Not-a-strategy,1,0.3042374849319458
+707,1,0,Do you know much about it?,Not-a-strategy,Not-a-strategy,1,0.36756834387779236
+708,2,1,"I do not, can you tell me some?",Source Derogation-Contesting,Not-a-strategy,1,0.38227224349975586
+709,3,0,They help children all over who are in need.,Not-a-strategy,Not-a-strategy,1,0.38525480031967163
+710,4,0,"They have programs to help with help, literacy, and disaster relief.",Not-a-strategy,Not-a-strategy,1,0.385669469833374
+711,4,1,I would like to donate,Not-a-strategy,Not-a-strategy,1,0.38604703545570374
+712,5,0,How much of the money you earn from this task would you be willing to donate?,Not-a-strategy,Not-a-strategy,1,0.38607144355773926
+713,6,1,i would like to donate .05 cents,Not-a-strategy,Not-a-strategy,1,0.3863361179828644
+714,7,0,The research team will collect the donations and send it to Save the Children.,Not-a-strategy,Not-a-strategy,1,0.38663965463638306
+715,8,0,Thank you!!,Not-a-strategy,Not-a-strategy,1,0.3866007328033447
+716,9,1,you are welcome,Not-a-strategy,Not-a-strategy,1,0.38653603196144104
+717,0,0,Hello would you please donate to help save the children?,Not-a-strategy,Not-a-strategy,0,0.3033851385116577
+718,1,1,What children organization?,Not-a-strategy,Not-a-strategy,0,0.36674627661705017
+719,2,0,"This organization is called Save the Children and your donation can help ensure children't rights to health, education, and safety.",Not-a-strategy,Not-a-strategy,0,0.38102760910987854
+720,3,1,How long has this charity been around?,Source Derogation-Contesting,Not-a-strategy,0,0.38431495428085327
+721,4,0,We have been around for a long time and have worked hard to ensure that as much of your money as possible goes towards helping the children.,Not-a-strategy,Not-a-strategy,0,0.3850576877593994
+722,5,0,The children need your help to ensure that they have a fighting chance at their future.,Not-a-strategy,Not-a-strategy,0,0.38518548011779785
+723,6,0,You can help care for them medically and ensure they have the education needed to succeed in life.,Not-a-strategy,Not-a-strategy,0,0.3851342797279358
+724,7,1,The organization sounds like a good one.,Not-a-strategy,Not-a-strategy,0,0.3851815164089203
+725,8,0,What is a typical donation?,Not-a-strategy,Not-a-strategy,0,0.3852912485599518
+726,9,0,"Through child sponsorship, you can change a child's life, as well as your own ??Â¸??Â¸ all for about $1 a day.",Not-a-strategy,Not-a-strategy,0,0.38524550199508667
+727,0,0,Are you aware of Save the children Organization?,Not-a-strategy,Not-a-strategy,1,0.30332815647125244
+728,1,1,"yes i know that is a good charity foundation, they help the children.",Not-a-strategy,Not-a-strategy,1,0.3666764497756958
+729,1,0,I saw a children die once,Not-a-strategy,Not-a-strategy,1,0.38070449233055115
+730,2,1,what?,Not-a-strategy,Not-a-strategy,1,0.3837738335132599
+731,3,1,what happened?,Not-a-strategy,Not-a-strategy,1,0.3845495879650116
+732,3,0,He was hungry with no food.,Not-a-strategy,Not-a-strategy,1,0.3854781687259674
+733,4,0,I was serving in Afghanistan,Not-a-strategy,Not-a-strategy,1,0.3865804970264435
+734,5,1,you were in military?,Not-a-strategy,Not-a-strategy,1,0.3864169418811798
+735,6,0,why did not you help him?,Not-a-strategy,Not-a-strategy,1,0.38621091842651367
+736,6,0,Yes.,Not-a-strategy,Not-a-strategy,1,0.3859666883945465
+737,7,0,I tried to give him my food but it was too late,Not-a-strategy,Not-a-strategy,1,0.3858001232147217
+738,8,1,I tried to give him my food but it was too late,Not-a-strategy,Not-a-strategy,1,0.3857536315917969
+739,9,1,"he was in the end i think, this is the kind of things i have about our civilization , many dnt have to eat and many waste their food, its not right",Not-a-strategy,Not-a-strategy,1,0.38570263981819153
+740,9,0,Exactly.,Not-a-strategy,Not-a-strategy,1,0.3855380713939667
+741,0,0,Hello!,Not-a-strategy,Not-a-strategy,0,0.3054254949092865
+742,0,0,How are you?,Not-a-strategy,Not-a-strategy,0,0.36776861548423767
+743,0,1,Fine.,Not-a-strategy,Not-a-strategy,0,0.38293102383613586
+744,1,1,What do you know about the charity?,Source Derogation-Contesting,Not-a-strategy,0,0.386653333902359
+745,1,1,What have you heard people say or have seen online about the charity?,Source Derogation-Contesting,Not-a-strategy,0,0.38692834973335266
+746,1,0,"Save the Children helps provide essential basic needs providing for their health, safety, and education internationally.",Not-a-strategy,Not-a-strategy,0,0.386912077665329
+747,2,1,Have you gone to a charity rating site to check on it?,Not-a-strategy,Not-a-strategy,0,0.3873479962348938
+748,2,1,I have not.,Not-a-strategy,Not-a-strategy,0,0.3874889016151428
+749,3,1,I want to be assured that overhead costs are minimized.,Hesitance-Hesitance,Not-a-strategy,0,0.38765981793403625
+750,4,0,As of Feb 2018 they were rated 97% transparant and an 88% total rating.,Not-a-strategy,Not-a-strategy,0,0.3874584436416626
+751,5,0,They save children from horrible fates like starvation.,Not-a-strategy,Not-a-strategy,0,0.3871231973171234
+752,5,0,Something simple and easy to fix.,Not-a-strategy,Not-a-strategy,0,0.38697493076324463
+753,6,0,No child should ever lose their life for lack of food.,Not-a-strategy,Not-a-strategy,0,0.38709309697151184
+754,7,1,I'd prefer a secure food donation that directly transports to the areas the children live in instead of handing over to government officials.,Counter Argumentation-Contesting,Not-a-strategy,0,0.38717761635780334
+755,8,1,I feel that using money to but food directly in their cities is best.,Counter Argumentation-Contesting,Not-a-strategy,0,0.38709911704063416
+756,9,0,Save the Children donations go straight to the needy.,Not-a-strategy,Not-a-strategy,0,0.38695797324180603
+757,0,0,"Hello, how are you today?",Not-a-strategy,Not-a-strategy,0,0.30320534110069275
+758,1,1,I am doing good and you?,Not-a-strategy,Not-a-strategy,0,0.36819928884506226
+759,2,0,"I am fine thanks, It's not been a long time I am on MTurk, but It is interesting how they are working on donating, Are you interested in donating?",Not-a-strategy,Not-a-strategy,0,0.3833138644695282
+760,3,1,"Yes I donate to a few causes like breast cancer for women, autism awareness and March of dimes for children.",Counter Argumentation-Contesting,Not-a-strategy,0,0.38658270239830017
+761,4,0,that is so nice of you.,Not-a-strategy,Not-a-strategy,0,0.38676178455352783
+762,4,0,"Have you ever heard about the organization ""Save the Children"" ?",Not-a-strategy,Not-a-strategy,0,0.38626477122306824
+763,4,1,Yes I have but don't know a whole lot about them since there are so many children related charities.,Not-a-strategy,Not-a-strategy,0,0.38620805740356445
+764,5,0,This is one of the biggest charities working for children.,Not-a-strategy,Not-a-strategy,0,0.38619035482406616
+765,5,0,They work in almost 120 countries and on different issues related to children.,Not-a-strategy,Not-a-strategy,0,0.38621801137924194
+766,6,1,OK I will educate myself on them when we are done with our conversation.,Personal Choice-Empowerment,Not-a-strategy,0,0.3865520656108856
+767,7,0,"That is good, We can talk about it too.",Not-a-strategy,Not-a-strategy,0,0.3865392208099365
+768,7,0,It is their website if you like to visit: URL,Not-a-strategy,Not-a-strategy,0,0.38655129075050354
+769,8,1,OK thanks.,Not-a-strategy,Not-a-strategy,0,0.38681530952453613
+770,9,1,I reviewed the site quickly.,Not-a-strategy,Not-a-strategy,0,0.3866695165634155
+771,9,1,Sure is sad to see so many children in distress around the world.,Not-a-strategy,Not-a-strategy,0,0.3865199387073517
+772,9,0,"Yes it makes me very sad too, but it is also nice to be able to help small even small amount.",Not-a-strategy,Not-a-strategy,0,0.38631507754325867
+773,0,0,Hey there,Not-a-strategy,Not-a-strategy,0,0.30307498574256897
+774,0,1,Hey how's it going?,Not-a-strategy,Not-a-strategy,0,0.3665316104888916
+775,1,1,So children's charity then...,Not-a-strategy,Not-a-strategy,0,0.38080716133117676
+776,1,0,Yep.,Not-a-strategy,Not-a-strategy,0,0.3845691978931427
+777,2,0,Do you happen to be a parent?,Not-a-strategy,Not-a-strategy,0,0.38653966784477234
+778,3,1,"No, not currently.",Not-a-strategy,Not-a-strategy,0,0.3864177167415619
+779,3,1,Although obviously I think those charities are important and relevant even to me,Not-a-strategy,Not-a-strategy,0,0.38620731234550476
+780,3,0,How are they relevant to you?,Not-a-strategy,Not-a-strategy,0,0.38632091879844666
+781,4,0,"I would like to find out, so I can tailor the information to you.",Not-a-strategy,Not-a-strategy,0,0.38616684079170227
+782,4,1,"I have a lot of nieces and nephews and have worked with children in the past so I have a good amount of experience with them, from all shapes and sizes",Not-a-strategy,Not-a-strategy,0,0.38598525524139404
+783,4,0,Have you ever worked with children with were born to poorer families?,Not-a-strategy,Not-a-strategy,0,0.386057585477829
+784,4,1,Yes I have.,Not-a-strategy,Not-a-strategy,0,0.38600289821624756
+785,5,1,I dealt with that more when I was working.,Not-a-strategy,Not-a-strategy,0,0.38619720935821533
+786,6,1,It was a poorer sector of the city so we saw a lot of poorer families,Self Assertion-Empowerment,Not-a-strategy,0,0.38622260093688965
+787,6,0,You sound like someone who would really appreciate what Save the Children does.,Not-a-strategy,Not-a-strategy,0,0.3861829340457916
+788,7,1,Yeah?,Not-a-strategy,Not-a-strategy,0,0.38608109951019287
+789,7,1,I would think so?,Not-a-strategy,Not-a-strategy,0,0.3860006332397461
+790,7,1,"I feel like I\'ve heard of it, but don\'t know a lot about it.",Not-a-strategy,Not-a-strategy,0,0.38596513867378235
+791,8,1,"But I""m always willing to help!",Not-a-strategy,Not-a-strategy,0,0.38594895601272583
+792,9,0,We definitely need more people like you in the world.,Not-a-strategy,Not-a-strategy,0,0.3858790993690491
+793,9,1,"Thanks, I don't consider myself that great, but any little difference i can make makes me feel good about myself",Not-a-strategy,Not-a-strategy,0,0.38582202792167664
+794,0,0,"Hello, how are you?",Not-a-strategy,Not-a-strategy,1,0.3037172555923462
+795,1,1,"Am Great, How about you?",Not-a-strategy,Not-a-strategy,1,0.3673331141471863
+796,2,0,I'm good.,Not-a-strategy,Not-a-strategy,1,0.38360750675201416
+797,3,0,Have you heard of Save the Children?,Not-a-strategy,Not-a-strategy,1,0.38651347160339355
+798,4,1,Yes I have Heard,Not-a-strategy,Not-a-strategy,1,0.3866962492465973
+799,5,0,"I really like them, I've volunteered for them before.",Not-a-strategy,Not-a-strategy,1,0.3865114450454712
+800,6,1,"I do like but have not volunteered them, but if i get a chance i try to do",Not-a-strategy,Not-a-strategy,1,0.38677892088890076
+801,7,0,"That's awesome, have you donated to them before?",Not-a-strategy,Not-a-strategy,1,0.3867303431034088
+802,8,1,"No, I haven't.",Not-a-strategy,Not-a-strategy,1,0.38655540347099304
+803,9,0,"I would consider doing so, they help so many children.",Not-a-strategy,Not-a-strategy,1,0.3863644003868103
+804,0,0,Hello how are you today?,Not-a-strategy,Not-a-strategy,0,0.3028828203678131
+805,0,1,I'm good.,Not-a-strategy,Not-a-strategy,0,0.3658953309059143
+806,1,1,How are you?,Not-a-strategy,Not-a-strategy,0,0.3799934685230255
+807,2,0,I am doing great!,Not-a-strategy,Not-a-strategy,0,0.3832774758338928
+808,3,0,"I am here to let you know about this amazing international foundation called Save the Children that promotes children's rights, provides relief and helps support them in developing countries.",Not-a-strategy,Not-a-strategy,0,0.3841785490512848
+809,4,1,Please tell me more.,Source Derogation-Contesting,Not-a-strategy,0,0.38476812839508057
+810,5,0,"These children are being used in horrific ways, the food and supplies that are supposed to be going to them are being stolen and we are trying to gather money to ensure the supplies get to these children who really need these supplies and help. With a donation today, not only will we be able to ensure the supply lines safely reach villages, but doctors will also go and help the children with medical care they desperately need.",Not-a-strategy,Not-a-strategy,0,0.3850964903831482
+811,6,0,All I ask is that you donate a portion of your task payment to this charity to help the children.,Not-a-strategy,Not-a-strategy,0,0.3852209448814392
+812,6,1,How do I know this charity is legit?,Hesitance-Hesitance,Not-a-strategy,0,0.3852427303791046
+813,7,0,You are free to look up any information you like at URL,Not-a-strategy,Not-a-strategy,0,0.3852097988128662
+814,7,1,How much of the donations goto the children and the effort?,Source Derogation-Contesting,Not-a-strategy,0,0.3851233720779419
+815,7,0,100% of your donation will go directly to Save the Children.,Not-a-strategy,Not-a-strategy,0,0.3850279450416565
+816,7,0,"Just think of it this way, instead of getting your morning coffee, or that bag of chips at lunch, you could donate $2 today and help ensure that 3 children get the care they need and food in their stomachs.",Not-a-strategy,Not-a-strategy,0,0.3850586414337158
+817,8,1,Does 100% go to the effort directly or does any of the monies go to employees like the director of the charity ect?,Source Derogation-Contesting,Not-a-strategy,0,0.38502442836761475
+818,9,0,The research team will collect all donations and send it all directly to Save the children.,Not-a-strategy,Not-a-strategy,0,0.38507527112960815
+819,0,0,Hi!,Not-a-strategy,Not-a-strategy,1,0.3029644191265106
+820,0,0,How are you doing today?,Not-a-strategy,Not-a-strategy,1,0.3665570914745331
+821,1,1,I'm doing well.,Not-a-strategy,Not-a-strategy,1,0.3814760148525238
+822,1,1,How about you?,Not-a-strategy,Not-a-strategy,1,0.3850548565387726
+823,1,0,"I am great, just enjoying some coffee on my deck.",Not-a-strategy,Not-a-strategy,1,0.3860861361026764
+824,2,0,How is the weather for you?,Not-a-strategy,Not-a-strategy,1,0.3862832188606262
+825,2,1,"It's cloudy a lot, but otherwise fine.",Not-a-strategy,Not-a-strategy,1,0.38641971349716187
+826,3,1,I was just looking through the morning mail.,Not-a-strategy,Not-a-strategy,1,0.38629692792892456
+827,3,1,A request by a children's charity for a donation.,Not-a-strategy,Not-a-strategy,1,0.38616079092025757
+828,3,0,Which charity was the flyer from?,Not-a-strategy,Not-a-strategy,1,0.38625630736351013
+829,4,0,The charity I always donate to is called Save The Children.,Not-a-strategy,Not-a-strategy,1,0.3861891031265259
+830,4,0,They do wonders for under privileged kids.,Not-a-strategy,Not-a-strategy,1,0.38609254360198975
+831,4,1,I think it was from Save The Children.,Not-a-strategy,Not-a-strategy,1,0.3860447108745575
+832,5,1,So you think they do some actual good?,Not-a-strategy,Not-a-strategy,1,0.38600486516952515
+833,5,0,They do for sure.,Not-a-strategy,Not-a-strategy,1,0.3859432637691498
+834,6,0,They feed so Many starving kids and are quick to respond to any crisis.,Not-a-strategy,Not-a-strategy,1,0.3858985900878906
+835,7,1,That's encouraging.,Not-a-strategy,Not-a-strategy,1,0.38581037521362305
+836,7,1,Do you usually donate?,Not-a-strategy,Not-a-strategy,1,0.38592684268951416
+837,8,1,"They're asking for $50, I was thinking more like $20.",Not-a-strategy,Not-a-strategy,1,0.3858816921710968
+838,8,0,I do donate regularly to them.,Not-a-strategy,Not-a-strategy,1,0.38582348823547363
+839,9,0,In fact if you are wanting to donate you can donate a portion of your payment from this directly to Save The Children.,Not-a-strategy,Not-a-strategy,1,0.3857583701610565
+840,0,0,hello haw are you today,Not-a-strategy,Not-a-strategy,0,0.30318307876586914
+841,1,1,doing good you?,Not-a-strategy,Not-a-strategy,0,0.36670419573783875
+842,2,0,do you heart for the organization save the children,Not-a-strategy,Not-a-strategy,0,0.3824993968009949
+843,3,1,"yes I do,do you as well?",Not-a-strategy,Not-a-strategy,0,0.38576656579971313
+844,4,0,is an organization that helps children,Not-a-strategy,Not-a-strategy,0,0.3869127035140991
+845,5,1,"Yes, because it is an international non-governmental organisation that promotes children's rights, provides relief and helps support children in developing countries.",Not-a-strategy,Not-a-strategy,0,0.38767483830451965
+846,6,0,yes i have donate 100$ for this organisation,Not-a-strategy,Not-a-strategy,0,0.38772621750831604
+847,7,1,amassing!,Not-a-strategy,Not-a-strategy,0,0.3873453140258789
+848,7,0,I have donated my fair chair but money is still money I would estimate I probably have gave 175$ in short burst,Not-a-strategy,Not-a-strategy,0,0.3870376944541931
+849,8,0,you are very good person,Not-a-strategy,Not-a-strategy,0,0.3873227536678314
+850,9,1,"thank you,I just want to help this world and especially the children within it and save the children is doing that job",Not-a-strategy,Not-a-strategy,0,0.38706210255622864
+851,0,0,hello,Not-a-strategy,Not-a-strategy,0,0.3032720386981964
+852,1,1,hai whats up,Not-a-strategy,Not-a-strategy,0,0.366436630487442
+853,1,0,Have you heard of save the children donation and the importance and impact it has on our children and those less fortunate,Not-a-strategy,Not-a-strategy,0,0.3807457685470581
+854,2,1,i have heard about it.,Not-a-strategy,Not-a-strategy,0,0.3842827081680298
+855,3,1,i don' known it detailly,Not-a-strategy,Not-a-strategy,0,0.38497287034988403
+856,4,0,Its a great charity and organization.,Not-a-strategy,Not-a-strategy,0,0.3850386440753937
+857,5,0,We should be mad about what is happening to them,Not-a-strategy,Not-a-strategy,0,0.38507169485092163
+858,5,1,how long was the charity been run,Source Derogation-Contesting,Not-a-strategy,0,0.3850046694278717
+859,6,0,"It was founded in 1919, but also all there proceeds go to helping the children and alont in the first two months 1000 children were killed or injured.",Not-a-strategy,Not-a-strategy,0,0.3849691152572632
+860,7,0,Your dontation can help the problem,Not-a-strategy,Not-a-strategy,0,0.3849470317363739
+861,8,1,where was it locate,Source Derogation-Contesting,Not-a-strategy,0,0.3849549889564514
+862,0,0,hello,Not-a-strategy,Not-a-strategy,0,0.3030621111392975
+863,1,1,Hello tell me something good,Not-a-strategy,Not-a-strategy,0,0.36674967408180237
+864,2,0,Have you heard about this awesome children's organization called Save the Children?,Not-a-strategy,Not-a-strategy,0,0.3811696171760559
+865,3,1,"a little, what do they do?",Source Derogation-Contesting,Not-a-strategy,0,0.3846351206302643
+866,4,0,"They are a very reputable international non-governmental organization dedicated to ensuring children's rights to health, education, safety, etc.",Not-a-strategy,Not-a-strategy,0,0.3855929672718048
+867,5,1,"cool, so what can i do",Not-a-strategy,Not-a-strategy,0,0.38589680194854736
+868,6,0,The easiest way you can become involved with the organization initially is with monetary support.,Not-a-strategy,Not-a-strategy,0,0.3858473300933838
+869,7,1,ok so wht do you suggest?,Not-a-strategy,Not-a-strategy,0,0.3856702744960785
+870,8,0,The easiest would be is to donated some or all of your incoming payment from this task today.,Not-a-strategy,Not-a-strategy,0,0.38554471731185913
+871,9,1,not so fast what does the money go to,Source Derogation-Contesting,Not-a-strategy,0,0.38541215658187866
+872,0,0,hi,Not-a-strategy,Not-a-strategy,0,0.30333834886550903
+873,1,1,how are you today?,Not-a-strategy,Not-a-strategy,0,0.3678356409072876
+874,2,0,so you gonna donate or what,Not-a-strategy,Not-a-strategy,0,0.38294196128845215
+875,2,1,sure I can donate but what is the game?,Not-a-strategy,Not-a-strategy,0,0.38644886016845703
+876,3,0,you gotta donate your payment,Not-a-strategy,Not-a-strategy,0,0.3874276280403137
+877,3,1,"If I donate, what do I get in return?",Not-a-strategy,Not-a-strategy,0,0.3877192437648773
+878,4,1,Will you donate the same amount back to me?,Not-a-strategy,Not-a-strategy,0,0.38807228207588196
+879,5,0,"No, I don\'t believe that\'s the case.",Not-a-strategy,Not-a-strategy,0,0.3877888321876526
+880,5,0,"However, it\'s for a good cause.",Not-a-strategy,Not-a-strategy,0,0.3876204490661621
+881,5,0,Save the children.,Not-a-strategy,Not-a-strategy,0,0.38734641671180725
+882,6,0,dont you like children?,Not-a-strategy,Not-a-strategy,0,0.3872811198234558
+883,7,0,they need your help.,Not-a-strategy,Not-a-strategy,0,0.38705167174339294
+884,7,0,"its just 2 bucks. or ill tell you what, how about just half?",Not-a-strategy,Not-a-strategy,0,0.38687506318092346
+885,8,1,I'll give .50 if you send are actually an mturk human.,Not-a-strategy,Not-a-strategy,0,0.3866868317127228
+886,8,1,respond with your mturk number and I'll donate .50,Not-a-strategy,Not-a-strategy,0,0.38658004999160767
+887,9,0,why should i give you my mturk number?,Not-a-strategy,Not-a-strategy,0,0.38656577467918396
+888,9,0,"also, i think you should be a little bit more generous, come on bro, 1 dollar wont kill you.",Not-a-strategy,Not-a-strategy,0,0.3866284489631653
+889,0,0,Hi,Not-a-strategy,Not-a-strategy,1,0.3036442697048187
+890,1,1,Hi!,Not-a-strategy,Not-a-strategy,1,0.3664890229701996
+891,1,0,How are you today?,Not-a-strategy,Not-a-strategy,1,0.38163653016090393
+892,2,0,"I am doing good, thanks for asking.",Not-a-strategy,Not-a-strategy,1,0.3848482370376587
+893,2,0,Hope you are doing fine?,Not-a-strategy,Not-a-strategy,1,0.38591811060905457
+894,3,1,"I am well, thank you.",Not-a-strategy,Not-a-strategy,1,0.38595184683799744
+895,3,1,I am excited to know we can help out a children's charity.,Not-a-strategy,Not-a-strategy,1,0.3858950436115265
+896,3,0,Yes they are doing real good work,Not-a-strategy,Not-a-strategy,1,0.3857406675815582
+897,4,1,That is good to hear.,Not-a-strategy,Not-a-strategy,1,0.3860287368297577
+898,5,1,"I forgot to ask, how is the weather by you today?",Not-a-strategy,Not-a-strategy,1,0.3860241770744324
+899,5,0,"Its quite pleasant today, would you like to donate to the Save the Children's charity?",Not-a-strategy,Not-a-strategy,1,0.38607725501060486
+900,5,1,I would like to donate today.,Not-a-strategy,Not-a-strategy,1,0.3860417306423187
+901,6,1,What amount would help out?,Not-a-strategy,Not-a-strategy,1,0.38591235876083374
+902,6,1,I can spare $25.,Not-a-strategy,Not-a-strategy,1,0.38577139377593994
+903,7,0,You can choose any amount from $0 to all your payment.,Not-a-strategy,Not-a-strategy,1,0.3858344554901123
+904,7,1,"Let me ask, are you also able to donate, and if so how much are you able to spare?",Self Assertion-Empowerment,Not-a-strategy,1,0.3857928216457367
+905,8,0,"Yes sure, i can do $10",Not-a-strategy,Not-a-strategy,1,0.38607144355773926
+906,8,1,Wonderful!,Not-a-strategy,Not-a-strategy,1,0.3861200511455536
+907,9,1,Then it looks like we can both really help out.,Not-a-strategy,Not-a-strategy,1,0.3862840533256531
+908,0,0,It would be really helpful if you donated to Save the Children fund!,Not-a-strategy,Not-a-strategy,1,0.30368417501449585
+909,1,1,What does the money go towards if I donate?,Source Derogation-Contesting,Not-a-strategy,1,0.3674151301383972
+910,2,0,"When crisis strikes and children are most vulnerable, we are always among the first to respond and the last to leave.",Not-a-strategy,Not-a-strategy,1,0.38203901052474976
+911,3,0,We ensure children's unique needs are met and their voices are heard.,Not-a-strategy,Not-a-strategy,1,0.3851529359817505
+912,4,0,"We deliver lasting results for millions of children, including those hardest to reach.",Not-a-strategy,Not-a-strategy,1,0.38573378324508667
+913,5,0,We do whatever it takes for children ??Â¸??Â¸ transforming their lives and the future we share ??Â¸??Â¸ because we believe every child deserves a future.,Not-a-strategy,Not-a-strategy,1,0.3858552575111389
+914,6,1,Where in the world are the children located?,Source Derogation-Contesting,Not-a-strategy,1,0.38593998551368713
+915,7,0,"US and global, wherever children need help, they are there.",Not-a-strategy,Not-a-strategy,1,0.38596442341804504
+916,8,1,"If I donate $25, does that go a long way?",Not-a-strategy,Not-a-strategy,1,0.38585031032562256
+917,9,0,"Absolutely, a small amount of money for us turns out to be life changing for those in need.",Not-a-strategy,Not-a-strategy,1,0.38581743836402893
+918,10,0,A dollar can buy a lot!,Not-a-strategy,Not-a-strategy,1,0.38570526242256165
+919,0,0,Hi there.,Not-a-strategy,Not-a-strategy,0,0.3034704029560089
+920,1,0,Have you ever thought about who the most vulnerable people are when a natural disaster strikes?,Not-a-strategy,Not-a-strategy,0,0.36647599935531616
+921,1,0,Or when there's political unrest?,Not-a-strategy,Not-a-strategy,0,0.38077476620674133
+922,2,1,That is something I do not think about.,Not-a-strategy,Not-a-strategy,0,0.3840644359588623
+923,3,0,"Actually, I'm really troubled by the answer.",Not-a-strategy,Not-a-strategy,0,0.3848976790904999
+924,4,0,"In countries like Syria, 1000 children have been killed during the civil war.",Not-a-strategy,Not-a-strategy,0,0.38514623045921326
+925,5,0,Isn't that insane?,Not-a-strategy,Not-a-strategy,0,0.38532885909080505
+926,6,1,That is terrible.,Not-a-strategy,Not-a-strategy,0,0.385456919670105
+927,7,1,I wish this wasn't true.,Not-a-strategy,Not-a-strategy,0,0.38559091091156006
+928,8,0,Seriously.,Not-a-strategy,Not-a-strategy,0,0.3856150507926941
+929,9,0,"Adults often can't fend for themselves when there's a crisis, but children are especially vulnerable.",Not-a-strategy,Not-a-strategy,0,0.385588675737381
+930,9,0,"Do you think that if you could do something to help Syrian children or children in Indonesia, which just experienced an earthquake, you would?.",Not-a-strategy,Not-a-strategy,0,0.38555750250816345
+931,0,0,Hi there!,Not-a-strategy,Not-a-strategy,0,0.30353131890296936
+932,1,0,I am looking for donations for the Save the children's Foundation?,Not-a-strategy,Not-a-strategy,0,0.3673282563686371
+933,2,0,Could I interest you in that?,Not-a-strategy,Not-a-strategy,0,0.38184991478919983
+934,3,1,I would perhaps be interested can you tell me more a bout it,Source Derogation-Contesting,Not-a-strategy,0,0.38518455624580383
+935,3,0,It is a charity that helps hungry children in need.,Not-a-strategy,Not-a-strategy,0,0.3857315182685852
+936,4,0,"It is a international, non governmental organization that promotes children's rights, provides releif and support children in developing countries.",Not-a-strategy,Not-a-strategy,0,0.38555970788002014
+937,4,1,"That sounds great, What countries do they help children in?",Source Derogation-Contesting,Not-a-strategy,0,0.385403573513031
+938,5,0,There's quite a few! It's international.,Not-a-strategy,Not-a-strategy,0,0.38541102409362793
+939,5,0,Even the smallest donation would make a difference to a child in need.,Not-a-strategy,Not-a-strategy,0,0.3855564296245575
+940,5,1,Ok I would like to see if I can help. I love children.,Not-a-strategy,Not-a-strategy,0,0.38565295934677124
+941,6,0,That's great!,Not-a-strategy,Not-a-strategy,0,0.3857831060886383
+942,6,0,They are the future you know...,Not-a-strategy,Not-a-strategy,0,0.38578078150749207
+943,6,0,alot of the children are in war zones and facing daily threats of violence.,Not-a-strategy,Not-a-strategy,0,0.3857415020465851
+944,7,1,Of course nothing gets me more angry then seeing a child warrior soldier.,Not-a-strategy,Not-a-strategy,0,0.3856600522994995
+945,7,1,Will we also be helping children soliders?,Source Derogation-Contesting,Not-a-strategy,0,0.3856923580169678
+946,7,0,"There are no children soliders, only children that need help in some way with food, resources, emergency response, etc.",Not-a-strategy,Not-a-strategy,0,0.3857155740261078
+947,8,0,This program has saves a great deal of lives.,Not-a-strategy,Not-a-strategy,0,0.3858512043952942
+948,9,0,It has brought families together and gave hope to a new life.,Not-a-strategy,Not-a-strategy,0,0.3858426511287689
+949,9,1,Ok thats great.,Not-a-strategy,Not-a-strategy,0,0.38590046763420105

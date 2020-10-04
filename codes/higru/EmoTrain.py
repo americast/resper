@@ -87,7 +87,7 @@ def emotrain(model, data_loader, tr_emodict, emodict, args, focus_emo):
 	if 'negotiation' in args.dataset:
 		f = open("../../data/higru_bert_data/train"+args.dataset[-1]+"neg.json", "r")
 	else:
-		f = open("../../data/higru_bert_data/oldtrain"+args.dataset[-1]+".json", "r")
+		f = open("../../data/higru_bert_data/train"+args.dataset[-1]+".json", "r")
 	
 	json_dict = json.load(f)
 	f.close()
@@ -98,7 +98,7 @@ def emotrain(model, data_loader, tr_emodict, emodict, args, focus_emo):
 			if "negotiation" in args.dataset:
 				donor_here.append(e["ratio_bucket"])
 			else:
-				donor_here.append(e["donor"])
+				donor_here.append(0)
 		donors.append(donor_here)
 
 	# Optimizer
@@ -175,12 +175,12 @@ def emotrain(model, data_loader, tr_emodict, emodict, args, focus_emo):
 			if args.gpu != None:
 				os.environ['CUDA_VISIBLE_DEVICES'] = args.gpu
 				# device = torch.device("cuda: 0")
-				feat = torch.cat([x.unsqueeze(0) for x,y in zip(feat, mask) if y == 1], dim = 0) 
-				lens = torch.tensor([float(x) for x,y in zip(lens, mask) if y == 1])
-				if addn_feature != None:
-					addn_feature = torch.cat([x.unsqueeze(0) for x,y in zip(addn_feature, mask) if y == 1], dim = 0)
-				mask = torch.tensor([float(x) for x in mask if x == 1])
-				label = torch.cat([x.unsqueeze(0) for x,y in zip(label, mask) if y == 1], dim = 0)
+				# feat = torch.cat([x.unsqueeze(0) for x,y in zip(feat, mask) if y == 1], dim = 0) 
+				# lens = torch.tensor([float(x) for x,y in zip(lens, mask) if y == 1])
+				# if addn_feature != None:
+				# 	addn_feature = torch.cat([x.unsqueeze(0) for x,y in zip(addn_feature, mask) if y == 1], dim = 0)
+				# mask = torch.tensor([float(x) for x in mask if x == 1])
+				# label = torch.cat([x.unsqueeze(0) for x,y in zip(label, mask) if y == 1], dim = 0)
 				model = model.cuda()
 				feat = feat.cuda()
 				label = label.cuda()
@@ -218,89 +218,89 @@ def emotrain(model, data_loader, tr_emodict, emodict, args, focus_emo):
 				import pdb; pdb.set_trace()
 
 			# loss.backward()
+			if "outcome" in args.type:
+				if log_donor_prob == None:
+					if args.sec_loss =='mse':
+						mse   = torch.nn.MSELoss(reduction='sum')
+						loss2 = mse(pred_outs[-1],donor_float_label[-1])
+					else:
 
-			if log_donor_prob == None:
-				if args.sec_loss =='mse':
-					mse   = torch.nn.MSELoss(reduction='sum')
-					loss2 = mse(pred_outs[-1],donor_float_label[-1])
+						logits = torch.log(pred_outs/(1+eps-pred_outs))
+						loss2  = F.binary_cross_entropy_with_logits(logits, donor_float_label,reduction='none')
+
+						# loss2  = F.binary_cross_entropy_with_logits(logits, donor_float_label, pos_weight=torch.Tensor([0.2]).cuda(device),reduction='none')
+						loss2  = (loss2.squeeze(1)*donor_mask).sum()
+						# loss2 = F.binary_cross_entropy(pred_outs.reshape(-1, 1), donor_float_label, weights=sample_weights[bz])
+						# loss2 = criterion(pred_outs.reshape(-1,1), donor_float_label)*donor_mask
+
+					if loss2!=loss2:
+						pu.db
+					
+
 				else:
-
-					logits = torch.log(pred_outs/(1+eps-pred_outs))
-					loss2  = F.binary_cross_entropy_with_logits(logits, donor_float_label,reduction='none')
-
-					# loss2  = F.binary_cross_entropy_with_logits(logits, donor_float_label, pos_weight=torch.Tensor([0.2]).cuda(device),reduction='none')
-					loss2  = (loss2.squeeze(1)*donor_mask).sum()
-					# loss2 = F.binary_cross_entropy(pred_outs.reshape(-1, 1), donor_float_label, weights=sample_weights[bz])
-					# loss2 = criterion(pred_outs.reshape(-1,1), donor_float_label)*donor_mask
-
-				if loss2!=loss2:
-					pu.db
+					loss2 = torch.gather(log_donor_prob, 1, donor_label).squeeze(1)*donor_mask
+					loss2 = -loss2.sum()/donor_mask.sum()
 				
+				if args.interpret  =='combined_trainable_loss': # add both losses as it happens
+					loss = loss + loss2
+					loss.backward()
+				elif args.interpret == 'single_loss':  # add them in a weighed fashion
+					loss = alpha*loss + (1- alpha)*loss2
+					loss.backward()
 
-			else:
-				loss2 = torch.gather(log_donor_prob, 1, donor_label).squeeze(1)*donor_mask
-				loss2 = -loss2.sum()/donor_mask.sum()
-			
-			if args.interpret  =='combined_trainable_loss': # add both losses as it happens
-				loss = loss + loss2
-				loss.backward()
-			elif args.interpret == 'single_loss':  # add them in a weighed fashion
-				loss = alpha*loss + (1- alpha)*loss2
-				loss.backward()
+				# if log_donor_prob == None:
+				# 	if args.sec_loss =='mse':
+				# 		mse   = torch.nn.MSELoss(reduction='sum')
+				# 		loss2 = mse(pred_outs[-1],donor_float_label[-1])
 
-			# if log_donor_prob == None:
-			# 	if args.sec_loss =='mse':
-			# 		mse   = torch.nn.MSELoss(reduction='sum')
-			# 		loss2 = mse(pred_outs[-1],donor_float_label[-1])
+				# 	else:
 
-			# 	else:
+				# 		logits = torch.log(pred_outs/(1+eps-pred_outs))
+				# 		loss2  = F.binary_cross_entropy_with_logits(logits, donor_float_label,reduction='none')
 
-			# 		logits = torch.log(pred_outs/(1+eps-pred_outs))
-			# 		loss2  = F.binary_cross_entropy_with_logits(logits, donor_float_label,reduction='none')
+				# 		# loss2  = F.binary_cross_entropy_with_logits(logits, donor_float_label, pos_weight=torch.Tensor([0.2]).cuda(),reduction='none')
+				# 		loss2  = (loss2.squeeze(1)*donor_mask).sum()
+				# 		# loss2 = F.binary_cross_entropy(pred_outs.reshape(-1, 1), donor_float_label, weights=sample_weights[bz])
+				# 		# loss2 = criterion(pred_outs.reshape(-1,1), donor_float_label)*donor_mask
 
-			# 		# loss2  = F.binary_cross_entropy_with_logits(logits, donor_float_label, pos_weight=torch.Tensor([0.2]).cuda(),reduction='none')
-			# 		loss2  = (loss2.squeeze(1)*donor_mask).sum()
-			# 		# loss2 = F.binary_cross_entropy(pred_outs.reshape(-1, 1), donor_float_label, weights=sample_weights[bz])
-			# 		# loss2 = criterion(pred_outs.reshape(-1,1), donor_float_label)*donor_mask
+				# 	if loss2!=loss2:
+				# 		import pdb; pdb.set_trace()
+					
 
-			# 	if loss2!=loss2:
-			# 		import pdb; pdb.set_trace()
-				
-
-			# else:
-			# 	loss2 = torch.gather(log_donor_prob, 1, donor_label).squeeze(1)*donor_mask
-			# 	loss2 = -loss2.sum()/donor_mask.sum()
-	
-			# if args.interpret  =='combined_trainable_loss': # add both losses as it happens
-			# 	loss = loss + loss2
-			# 	loss.backward()
-			# elif args.interpret == 'single_loss':  # add them in a weighed fashion
-			# 	loss = alpha*loss + (1- alpha)*loss2
-			# 	loss.backward()
-			# elif args.interpret =='combined_non_trainable_loss':
-			# 	loss.backward(retain_graph=True)
-			# 	param_list=[]
-			# 	for name, param in model.named_parameters():
-			# 		if name.startswith('classifier2')==False and param.requires_grad:
-			# 			param.requires_grad=False
-			# 			param_list.append((name, param))
-			# 	loss2.backward()
-			# else:
-			# 	loss.backward()
+				# else:
+				# 	loss2 = torch.gather(log_donor_prob, 1, donor_label).squeeze(1)*donor_mask
+				# 	loss2 = -loss2.sum()/donor_mask.sum()
+		
+				# if args.interpret  =='combined_trainable_loss': # add both losses as it happens
+				# 	loss = loss + loss2
+				# 	loss.backward()
+				# elif args.interpret == 'single_loss':  # add them in a weighed fashion
+				# 	loss = alpha*loss + (1- alpha)*loss2
+				# 	loss.backward()
+				# elif args.interpret =='combined_non_trainable_loss':
+				# 	loss.backward(retain_graph=True)
+				# 	param_list=[]
+				# 	for name, param in model.named_parameters():
+				# 		if name.startswith('classifier2')==False and param.requires_grad:
+				# 			param.requires_grad=False
+				# 			param_list.append((name, param))
+				# 	loss2.backward()
+				# else:
+				# 	loss.backward()
 
 
-			report_loss += loss.item()
-			glob_steps += 1
+				report_loss += loss.item()
+				glob_steps += 1
 
-			# gradient clip
-			torch.nn.utils.clip_grad_norm_(model.parameters(), max_norm=5)
+				# gradient clip
+				torch.nn.utils.clip_grad_norm_(model.parameters(), max_norm=5)
 
-			model_opt.step()
-			model_opt.zero_grad()
+				model_opt.step()
+				model_opt.zero_grad()
 
-			if glob_steps % args.report_loss == 0:
-				print("Steps: {} Loss: {} LR: {}".format(glob_steps, report_loss/args.report_loss, model_opt.param_groups[0]['lr']))
-				report_loss = 0
+				if glob_steps % args.report_loss == 0:
+					print("Steps: {} Loss: {} LR: {}".format(glob_steps, report_loss/args.report_loss, model_opt.param_groups[0]['lr']))
+					report_loss = 0
 		
 
 		# pAccs, acc, mf1, don_acc, don_mf1, _  = emoeval(model=model, data_loader=train_loader, tr_emodict=tr_emodict, emodict=emodict, args=args, focus_emo=focus_emo, data_type="train")
@@ -638,7 +638,7 @@ def emoeval(model, data_loader, tr_emodict, emodict, args, focus_emo, name="mode
 	if 'negotiation' in args.dataset:
 		f = open("../../data/higru_bert_data/"+data_type+args.dataset[-1]+"neg.json", "r")
 	else:
-		f = open("../../data/higru_bert_data/old"+data_type+args.dataset[-1]+".json", "r")
+		f = open("../../data/higru_bert_data/"+data_type+args.dataset[-1]+".json", "r")
 	
 	json_dict = json.load(f)
 	f.close()
@@ -649,7 +649,7 @@ def emoeval(model, data_loader, tr_emodict, emodict, args, focus_emo, name="mode
 			if 'negotiation' in args.dataset:
 				donor_here.append(e["ratio_bucket"])
 			else:
-				donor_here.append(e["donor"])
+				donor_here.append(0)
 		donors.append(donor_here)
 
 	speakers = []
@@ -724,7 +724,6 @@ def emoeval(model, data_loader, tr_emodict, emodict, args, focus_emo, name="mode
 		# EE_weights = torch.FloatTensor([0 if i in ['4'] else 1 for i,j in emodict.word2index.items()])
 		# ER_weights = torch.FloatTensor([0 if i in ['0','7'] else 1 for i,j in emodict.word2index.items()])
 
-
 		donor_mask= torch.LongTensor([0 for i in range(len(speakers[bz]))])	
 		donor_mask[len(donor_mask)-args.ldm:]=1
 
@@ -735,14 +734,14 @@ def emoeval(model, data_loader, tr_emodict, emodict, args, focus_emo, name="mode
 		if args.gpu != None:
 			os.environ['CUDA_VISIBLE_DEVICES'] = args.gpu
 			# device = torch.device("cuda: 0")
-			feat = torch.cat([x.unsqueeze(0) for x,y in zip(feat, mask) if y == 1], dim = 0) 
-			lens = torch.tensor([float(x) for x,y in zip(lens, mask) if y == 1])
-			if addn_feature != None:
-				addn_feature = torch.cat([x.unsqueeze(0) for x,y in zip(addn_feature, mask) if y == 1], dim = 0)
+			# feat = torch.cat([x.unsqueeze(0) for x,y in zip(feat, mask) if y == 1], dim = 0) 
+			# lens = torch.tensor([float(x) for x,y in zip(lens, mask) if y == 1])
+			# if addn_feature != None:
+			# 	addn_feature = torch.cat([x.unsqueeze(0) for x,y in zip(addn_feature, mask) if y == 1], dim = 0)
 			org_mask = mask.clone()
-			mask = torch.tensor([float(x) for x in mask if x == 1])
-			donor_mask = torch.tensor([float(x) for x in mask if x == 1])
-			label = torch.cat([x.unsqueeze(0) for x,y in zip(label, mask) if y == 1], dim = 0)
+			# mask = torch.tensor([float(x) for x in mask if x == 1])
+			# donor_mask = torch.tensor([float(x) for x in mask if x == 1])
+			# label = torch.cat([x.unsqueeze(0) for x,y in zip(label, mask) if y == 1], dim = 0)
 
 			model = model.cuda()
 			feat = feat.cuda()
@@ -864,85 +863,107 @@ def emoeval(model, data_loader, tr_emodict, emodict, args, focus_emo, name="mode
 			# 	except:
 			# 		pu.db
 
-		turn_all.extend([i for i,j in zip(turn_here, mask) if j==1])
+		turn_all.extend(turn_here)
+
+
+		if "outcome" in args.type:
+			# donor prediction and accuracy computed here. 
+
+			donor_trueidx= donor_label.view(donor_label.size(0))
+			donor_trueidx= np.array(donor_trueidx.cpu())
+			donor_mask= np.array(donor_mask.cpu())
+
+			donor_predidx = None
+			dons = None
+
+			if log_donor_prob !=None:
+
+				dons=np.array(F.softmax(log_donor_prob, dim=1).cpu().detach())
+				donor_probs.append(dons)
+				donor_predidx= torch.argmax(log_donor_prob, dim=1)
+				donor_predidx= np.array(donor_predidx.cpu())
+				
+				
+			else:
+				dons = np.array(pred_outs.cpu().detach())
+				donor_probs.append(dons)
+				# donor_predidx =[1 if elem[0] >args.thresh_reg else 0 for elem in dons]
+				donor_predidx =[1 if elem >0.45 else 0 for elem in dons]
 
 
 
-		# donor prediction and accuracy computed here. 
-
-		donor_trueidx= donor_label.view(donor_label.size(0))
-		donor_trueidx= np.array(donor_trueidx.cpu())
-		donor_mask= np.array(donor_mask.cpu())
-
-		donor_predidx = None
-		dons = None
-
-		if log_donor_prob !=None:
-
-			dons=np.array(F.softmax(log_donor_prob, dim=1).cpu().detach())
-			donor_probs.append(dons)
-			donor_predidx= torch.argmax(log_donor_prob, dim=1)
-			donor_predidx= np.array(donor_predidx.cpu())
 			
+			donor_pred.extend([i for i,j in zip(donor_predidx, donor_mask) if j==1])
+			donor_true.extend([i for i,j in zip(donor_trueidx, donor_mask) if j==1])
+			donor_logits.extend([i for i,j in zip([elem for elem in dons], donor_mask) if j==1])
 			
-		else:
-			dons = np.array(pred_outs.cpu().detach())
-			donor_probs.append(dons)
-			# donor_predidx =[1 if elem[0] >args.thresh_reg else 0 for elem in dons]
-			donor_predidx =[1 if elem >0.45 else 0 for elem in dons]
+			num_turns = len([i for i,j in zip(emo_predidx, mask) if j==1])
+			
+			don_true_here = [i for i,j in zip(donor_trueidx, donor_mask) if j==1][0]
+			don_true_list_here = [don_true_here for x in range(num_turns)]
+			
+			# don_prob_here = [i for i,j in zip(dons, donor_mask) if j==1][0]
+			# don_prob_list_here = [don_prob_here[0] for x in range(num_turns)]
 
-
-
-		
-		donor_pred.extend([i for i,j in zip(donor_predidx, donor_mask) if j==1])
-		donor_true.extend([i for i,j in zip(donor_trueidx, donor_mask) if j==1])
-		donor_logits.extend([i for i,j in zip([elem for elem in dons], donor_mask) if j==1])
-		
-		num_turns = len([i for i,j in zip(emo_predidx, mask) if j==1])
-		
-		don_true_here = [i for i,j in zip(donor_trueidx, donor_mask) if j==1][0]
-		don_true_list_here = [don_true_here for x in range(num_turns)]
-		
-		# don_prob_here = [i for i,j in zip(dons, donor_mask) if j==1][0]
-		# don_prob_list_here = [don_prob_here[0] for x in range(num_turns)]
-
-		don_true_all.extend(don_true_list_here)
-		don_prob_all_here = [x[0] for x in dons]
-		don_prob_all.extend([i for i,j in zip(don_prob_all_here, mask) if j==1])
+			don_true_all.extend(don_true_list_here)
+			don_prob_all_here = [x[0] for x in dons]
+			don_prob_all.extend([i for i,j in zip(don_prob_all_here, mask) if j==1])
 		speaker_all.extend([i for i,j in zip(speaker, mask) if j==1])
 
 	# pu.db
-	data = {
-		"Turn": 	turn_all,
-		"Speaker":  speaker_all,
-		"Text": 	text_all,
-		"True": 	[map_labels[x] for x in y_true],
-		"Pred": 	[map_labels[x] for x in y_pred],
-		"Don_true": don_true_all,
-		"Don_pred": don_prob_all
-	}
+	if "outcome" in args.type:
+		data = {
+			"Turn": 	turn_all,
+			"Speaker":  speaker_all,
+			"Text": 	text_all,
+			"True": 	[map_labels[x] for x in y_true],
+			"Pred": 	[map_labels[x] for x in y_pred],
+			"Don_true": don_true_all,
+			"Don_pred": don_prob_all
+		}
 
-	df = pd.DataFrame(data)
-	df.to_csv("outputs/"+args.type+"_"+args.dataset+".csv")
-	model.train()
-	Total=val_loss
+		df = pd.DataFrame(data)
+		df.to_csv("outputs/"+args.type+"_"+args.dataset+".csv")
+		model.train()
+		Total=val_loss
+
+		don_acc= accuracy_score(donor_true, donor_pred)
+		don_mf1= f1_score(donor_true, donor_pred, average='macro')
+
+		t, max_f1 = tune_thresholds(np.array(donor_true).reshape(-1,1), np.array(donor_logits).reshape(-1,1))
+		
+		new_donor_pred = [1 if elem > t else 0 for elem in donor_logits]
+
+		new_don_acc= accuracy_score(donor_true, new_donor_pred)
+		new_don_mf1= f1_score(donor_true, new_donor_pred, average='macro')
+
+		print(don_acc, don_mf1)
+		print(new_don_mf1, new_don_mf1)
+		print(t)	
+
+	else:
+		data = {
+			"Turn": 	turn_all,
+			"Speaker":  speaker_all,
+			"Text": 	text_all,
+			"True": 	[map_labels[x] for x in y_true],
+			"Pred": 	[map_labels[x] for x in y_pred]
+			# "Don_true": don_true_all,
+			# "Don_pred": don_prob_all
+		}
+
+		df = pd.DataFrame(data)
+		df.to_csv("outputs/"+args.type+"_"+args.dataset+".csv")
+		model.train()
+		Total=val_loss
+		don_acc, don_mf1, donor_probs = -1, - 1, -1
 
 	acc=accuracy_score(y_true,y_pred)
 	mf1= f1_score(y_true,y_pred,average='macro')
 
-	don_acc= accuracy_score(donor_true, donor_pred)
-	don_mf1= f1_score(donor_true, donor_pred, average='macro')
-
-	t, max_f1 = tune_thresholds(np.array(donor_true).reshape(-1,1), np.array(donor_logits).reshape(-1,1))
-	
-	new_donor_pred = [1 if elem > t else 0 for elem in donor_logits]
-
-	new_don_acc= accuracy_score(donor_true, new_donor_pred)
-	new_don_mf1= f1_score(donor_true, new_donor_pred, average='macro')
 
 	# # print(donor_logits)
 	# # print(donor_true)
-
 
 	print(classification_report(y_true, y_pred))
 
@@ -953,9 +974,6 @@ def emoeval(model, data_loader, tr_emodict, emodict, args, focus_emo, name="mode
 	# print(classification_report(EE_true, EE_pred))
 
 	print(acc, mf1)
-	print(don_acc, don_mf1)
-	print(new_don_mf1, new_don_mf1)
-	print(t)	
 
 	return Total, acc, mf1, don_acc, don_mf1, donor_probs  
 
