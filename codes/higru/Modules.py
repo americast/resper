@@ -163,7 +163,9 @@ class UttEncoder(nn.Module):
 		self.encoder = GRUencoder(d_word_vec, d_h1, num_layers=1)
 		self.d_input = 2 * d_h1
 		self.model = type
-		if '-f' not in self.model:
+		if '-no' in self.model:
+			self.d_input = 2 * d_h1
+		elif '-f' not in self.model:
 			self.d_input = 4 * d_h1 + d_word_vec
 		else:
 			self.d_input = 2 * d_h1 + d_word_vec
@@ -181,7 +183,9 @@ class UttEncoder(nn.Module):
 		w_context = self.encoder(sents, lengths)
 		combined = w_context
 
-		if '-f' not in self.model:
+		if '-no' in self.model:
+			pass
+		elif '-f' not in self.model:
 			w_lcont, w_rcont = w_context.chunk(2, -1)
 			sa_lcont, _ = get_attention(w_lcont, w_lcont, w_lcont, attn_mask=sa_mask)
 			sa_rcont, _ = get_attention(w_rcont, w_rcont, w_rcont, attn_mask=sa_mask)
@@ -1228,10 +1232,13 @@ class BERT_HiGRU(nn.Module):
 		self.max_length = worddict.max_length
 		self.max_dialog = worddict.max_dialog
 		self.d_h2 = d_h2
+		self.long_bert = long_bert
 		if long_bert == 2:
 			self.bert_emb_dim=1024
-		else:
+		elif long_bert == 1:
 			self.bert_emb_dim=768
+		else:
+			self.bert_emb_dim=300
 		# load word2vec
 		self.embeddings = embedding
 		self.feature_dim = feature_dim
@@ -1243,12 +1250,13 @@ class BERT_HiGRU(nn.Module):
 			self.bert = BertModel.from_pretrained('bert-base-uncased')
 			print("Base BERT chosen")
 
-		for p in self.bert.parameters():
-			p.requires_grad = trainable
-			# if trainable == 1:
-			# 	p.requires_grad = True
-			# if trainable == 0:
-			# 	p.requires_grad = False
+		if long_bert:
+			for p in self.bert.parameters():
+				p.requires_grad = trainable
+				# if trainable == 1:
+				# 	p.requires_grad = True
+				# if trainable == 0:
+				# 	p.requires_grad = False
 
 		self.uttenc = UttEncoder(self.bert_emb_dim, d_h1, self.model)
 		self.dropout_in = nn.Dropout(0.5)
@@ -1316,14 +1324,18 @@ class BERT_HiGRU(nn.Module):
 		# w_embed = self.embeddings(sents)
 		sa_mask = get_attn_pad_mask(sents, sents)
 		
-		bert_sa_mask = get_word_pad_attns(sents)
+		if self.long_bert:
+			
+			bert_sa_mask = get_word_pad_attns(sents)
 
-		# import pdb; pdb.set_trace()
-		outputs = self.bert(input_ids = sents, attention_mask = bert_sa_mask, token_type_ids=None, position_ids= None, head_mask= None, inputs_embeds= None)
-		# s_embed = outputs[1]    # This is the BERT sentence embedding              # BERT CLS TOKEN
-		# w_embed = self.bert_dropout(outputs[0]) # This is the bert word embeddings
+			# import pdb; pdb.set_trace()
+			outputs = self.bert(input_ids = sents, attention_mask = bert_sa_mask, token_type_ids=None, position_ids= None, head_mask= None, inputs_embeds= None)
+			# s_embed = outputs[1]    # This is the BERT sentence embedding              # BERT CLS TOKEN
+			# w_embed = self.bert_dropout(outputs[0]) # This is the bert word embeddings
+			w_embed = outputs[0]
+		else:
+			w_embed = self.embeddings(sents)
 
-		w_embed = outputs[0]
 		s_embed = self.uttenc(w_embed, lens, sa_mask)           # HIGRU utterance encoder
 		s_embed = self.dropout_in(s_embed)  # batch x d_h1
 

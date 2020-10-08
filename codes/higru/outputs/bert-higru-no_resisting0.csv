@@ -1,0 +1,1151 @@
+,Turn,Speaker,Text,True,Pred
+0,0,1,Hi there how are you?,Not-a-strategy,Information Inquiry-Contesting
+1,1,1,"I am doing fine, thanks for asking.",Not-a-strategy,Information Inquiry-Contesting
+2,2,1,You sure can,Not-a-strategy,Information Inquiry-Contesting
+3,3,1,I don't have any children but there are many children in my family.,Not-a-strategy,Information Inquiry-Contesting
+4,4,1,"I do have a big family, I enjoy it at times, other times I don't",Not-a-strategy,Information Inquiry-Contesting
+5,5,1,Yes I do.,Not-a-strategy,Information Inquiry-Contesting
+6,6,1,No I haven't.,Not-a-strategy,Information Inquiry-Contesting
+7,6,1,Could you QUICKLY tell me about it,Hesitance-Hesitance,Information Inquiry-Contesting
+8,7,1,Okay that sounds nice and an important service,Not-a-strategy,Information Inquiry-Contesting
+9,8,1,I would like to help in the future when I am more financially stable.,Personal Choice-Empowerment,Information Inquiry-Contesting
+10,9,1,I am sure but I just am not able at this time,Personal Choice-Empowerment,Information Inquiry-Contesting
+11,0,1,"Hello, yes I have but I am not sure what the charity works towards",Hesitance-Hesitance,Information Inquiry-Contesting
+12,1,1,Ah ok very nice.,Not-a-strategy,Information Inquiry-Contesting
+13,1,1,It sounds like a good charity.,Not-a-strategy,Information Inquiry-Contesting
+14,1,1,Are you thinking of donating to it?,Counter Argumentation-Contesting,Information Inquiry-Contesting
+15,2,1,"Yes, I definitely understand you.",Not-a-strategy,Information Inquiry-Contesting
+16,2,1,It is very difficult to see on the news what is happening in Syria and the violence and terrorism that is going on in the country,Counter Argumentation-Contesting,Information Inquiry-Contesting
+17,3,1,Yes that is very true.,Not-a-strategy,Information Inquiry-Contesting
+18,3,1,I usually donate $1.00 or $2.00 at restaurants or stores whenever they ask me if I would like to donate.,Self Assertion-Empowerment,Information Inquiry-Contesting
+19,3,1,I think it is the least I could do.,Not-a-strategy,Information Inquiry-Contesting
+20,4,1,Yes I understand.,Not-a-strategy,Information Inquiry-Contesting
+21,4,1,I have been to third world countries in South America and seeing the living conditions of some people is very tough.,Not-a-strategy,Information Inquiry-Contesting
+22,4,1,The poverty there is a lot higher than what we are used to seeing and it can be shocking.,Not-a-strategy,Information Inquiry-Contesting
+23,5,1,Yes I know.,Not-a-strategy,Information Inquiry-Contesting
+24,5,1,Any amount of money can help.,Not-a-strategy,Information Inquiry-Contesting
+25,5,1,"I think that we take many things for granted such as running water, and always having food on the table.",Not-a-strategy,Information Inquiry-Contesting
+26,6,1,"Yes, I would be willing to donate a small portion as well.",Not-a-strategy,Information Inquiry-Contesting
+27,6,1,I think it would really help them out,Not-a-strategy,Information Inquiry-Contesting
+28,7,1,"Ok, that's great.",Not-a-strategy,Information Inquiry-Contesting
+29,7,1,I happy to help them.,Not-a-strategy,Information Inquiry-Contesting
+30,7,1,Every month I always try to donate a little to charity,Self Assertion-Empowerment,Information Inquiry-Contesting
+31,8,1,I would like to donate $.50,Not-a-strategy,Information Inquiry-Contesting
+32,9,1,Yes anything I can do to help.,Not-a-strategy,Information Inquiry-Contesting
+33,9,1,I hope that it makes a difference!,Not-a-strategy,Information Inquiry-Contesting
+34,0,1,I don't know I haven't found anyone good ones,Information Inquiry-Contesting,Information Inquiry-Contesting
+35,1,1,"No, I have never hear of it",Not-a-strategy,Information Inquiry-Contesting
+36,2,1,Do they help children right here in America,Hesitance-Hesitance,Information Inquiry-Contesting
+37,3,1,That is awesome.,Not-a-strategy,Information Inquiry-Contesting
+38,3,1,I am more willing to help a charity that will help right here in America,Self Assertion-Empowerment,Information Inquiry-Contesting
+39,4,1,"I would like to, but I really can afford to donate anything right now.",Personal Choice-Empowerment,Information Inquiry-Contesting
+40,5,1,I don't understand what you mean,Not-a-strategy,Information Inquiry-Contesting
+41,6,1,"Yes, it sounds like a good charity.",Not-a-strategy,Information Inquiry-Contesting
+42,7,1,"Yes, I have.",Not-a-strategy,Information Inquiry-Contesting
+43,7,1,Some don't give the money out like they are suppose to.,Counter Argumentation-Contesting,Information Inquiry-Contesting
+44,8,1,"No, I have not hear that",Not-a-strategy,Information Inquiry-Contesting
+45,9,1,How does me saying I will donate fake money make a good impression for future hits.,Not-a-strategy,Information Inquiry-Contesting
+46,0,1,Hello.,Not-a-strategy,Information Inquiry-Contesting
+47,0,1,I hope you are well.,Not-a-strategy,Information Inquiry-Contesting
+48,1,1,I think it is very important to help children that are less fortunate.,Not-a-strategy,Information Inquiry-Contesting
+49,1,1,"Tell me more about ""Save the children.""",Hesitance-Hesitance,Information Inquiry-Contesting
+50,2,1,What service does this charity provide?,Hesitance-Hesitance,Information Inquiry-Contesting
+51,3,1,I like the sound of that.,Not-a-strategy,Information Inquiry-Contesting
+52,3,1,Does it work by sponsoring a specific child who you get to know or does everything run through the organization?,Hesitance-Hesitance,Information Inquiry-Contesting
+53,4,1,That makes sense and I do like the money to be spread to everyone.,Not-a-strategy,Information Inquiry-Contesting
+54,4,1,Is this primarily in African and South America?,Hesitance-Hesitance,Information Inquiry-Contesting
+55,5,1,How do we know that our donation is reaching those in need?,Information Inquiry-Contesting,Information Inquiry-Contesting
+56,6,1,I hope that is the case as I hate to read about children in danger.,Not-a-strategy,Information Inquiry-Contesting
+57,6,1,Is this donation a one-time thing?,Hesitance-Hesitance,Information Inquiry-Contesting
+58,7,1,I think I could donate $5.00.,Not-a-strategy,Information Inquiry-Contesting
+59,8,1,You are welcome,Not-a-strategy,Information Inquiry-Contesting
+60,9,1,I hope you have a great day as well!,Not-a-strategy,Information Inquiry-Contesting
+61,0,1,I'm doing well thank you,Not-a-strategy,Information Inquiry-Contesting
+62,1,1,That is absolutely terrible.,Not-a-strategy,Information Inquiry-Contesting
+63,1,1,Are there any good charities that are helping on this issue?,Hesitance-Hesitance,Information Inquiry-Contesting
+64,2,1,How can someone help?,Not-a-strategy,Information Inquiry-Contesting
+65,2,1,I would be willing to donate my time and perhaps some money.,Not-a-strategy,Information Inquiry-Contesting
+66,3,1,How exactly does the money help the cause?,Hesitance-Hesitance,Information Inquiry-Contesting
+67,3,1,What's it spent on?,Hesitance-Hesitance,Information Inquiry-Contesting
+68,4,1,I'd be willing to donate a dollar or two,Not-a-strategy,Information Inquiry-Contesting
+69,5,1,Perfect.,Not-a-strategy,Information Inquiry-Contesting
+70,5,1,How do I donate then?,Hesitance-Hesitance,Information Inquiry-Contesting
+71,6,1,You need to type faster.,Not-a-strategy,Information Inquiry-Contesting
+72,6,1,Our HITs are going to expire on us.,Not-a-strategy,Information Inquiry-Contesting
+73,6,1,"I'd rather send the money on my accord, rather than have it deducted.",Not-a-strategy,Information Inquiry-Contesting
+74,6,1,Where can I go to send it?,Hesitance-Hesitance,Information Inquiry-Contesting
+75,7,1,Ok i'll check it out.,Not-a-strategy,Information Inquiry-Contesting
+76,7,1,thank you.,Not-a-strategy,Information Inquiry-Contesting
+77,8,1,I'll donate right away.,Not-a-strategy,Information Inquiry-Contesting
+78,8,1,thank you.,Not-a-strategy,Information Inquiry-Contesting
+79,8,1,Are you going to donate too?,Counter Argumentation-Contesting,Information Inquiry-Contesting
+80,9,1,Awesome.,Not-a-strategy,Information Inquiry-Contesting
+81,9,1,Have a wonderful day.,Not-a-strategy,Information Inquiry-Contesting
+82,9,1,I hope those kids get the money they need.,Not-a-strategy,Information Inquiry-Contesting
+83,0,1,"Hey, I am doing well",Not-a-strategy,Information Inquiry-Contesting
+84,1,1,That is terrible.,Not-a-strategy,Information Inquiry-Contesting
+85,1,1,Are there any charities that work in that area?,Hesitance-Hesitance,Information Inquiry-Contesting
+86,2,1,It hurts my heart when I see those children's charity commercials.,Not-a-strategy,Information Inquiry-Contesting
+87,3,1,30 dollars a month can change a child's life,Not-a-strategy,Information Inquiry-Contesting
+88,4,1,I know!,Not-a-strategy,Information Inquiry-Contesting
+89,4,1,What a worthwhile cause!,Not-a-strategy,Information Inquiry-Contesting
+90,5,1,"Yeah, I have used Gospel for Asia in the past",Self Assertion-Empowerment,Information Inquiry-Contesting
+91,6,1,It feels good to make a difference if only for one child,Not-a-strategy,Information Inquiry-Contesting
+92,7,1,That is freat!!,Not-a-strategy,Information Inquiry-Contesting
+93,7,1,Good for you!,Not-a-strategy,Information Inquiry-Contesting
+94,8,1,I may donate something!!,Not-a-strategy,Information Inquiry-Contesting
+95,9,1,I am not sure,Source Derogation-Contesting,Information Inquiry-Contesting
+96,0,1,"Sure, as long as you can help me out as well... you see, I have a child that is overseas, in a warzone.",Personal Choice-Empowerment,Information Inquiry-Contesting
+97,0,1,they are hungry and injured and also short,Personal Choice-Empowerment,Information Inquiry-Contesting
+98,1,1,"yeah, i mean, i guess",Not-a-strategy,Information Inquiry-Contesting
+99,2,1,what is save the children,Hesitance-Hesitance,Information Inquiry-Contesting
+100,3,1,do they help lots of kids,Hesitance-Hesitance,Information Inquiry-Contesting
+101,4,1,do they help kids in africa too,Hesitance-Hesitance,Information Inquiry-Contesting
+102,5,1,do they provide medical help too though?,Hesitance-Hesitance,Information Inquiry-Contesting
+103,6,1,"I see, and it's called Save the Children",Not-a-strategy,Information Inquiry-Contesting
+104,7,1,Do they help adults?,Hesitance-Hesitance,Information Inquiry-Contesting
+105,8,1,"I see, and do they provide medical help as well?",Hesitance-Hesitance,Information Inquiry-Contesting
+106,9,1,"If you can promise me that none of the money will go to help ANY Muslim child, then I will donate two dollars from my payment",Information Inquiry-Contesting,Information Inquiry-Contesting
+107,10,1,"then unfortunately, i cannot give any money",Self Pity-Empowement,Information Inquiry-Contesting
+108,0,1,Do nothing about what?,Hesitance-Hesitance,Information Inquiry-Contesting
+109,1,1,That's awful.,Not-a-strategy,Information Inquiry-Contesting
+110,1,1,Are you talking about around the world or in the states?,Hesitance-Hesitance,Information Inquiry-Contesting
+111,2,1,I totally agree.,Not-a-strategy,Information Inquiry-Contesting
+112,2,1,There are people helping but its a drop in the bucket.,Not-a-strategy,Information Inquiry-Contesting
+113,2,1,The kids dying is really disturbing.,Not-a-strategy,Information Inquiry-Contesting
+114,2,1,They didn't choose that life.,Not-a-strategy,Information Inquiry-Contesting
+115,3,1,Absolutely!,Not-a-strategy,Information Inquiry-Contesting
+116,3,1,I think every little bit helps but as a whole it's not enough.,Not-a-strategy,Information Inquiry-Contesting
+117,3,1,Have you ever donated?,Counter Argumentation-Contesting,Information Inquiry-Contesting
+118,4,1,That is great!,Not-a-strategy,Information Inquiry-Contesting
+119,4,1,you sound very passionate about this subject.,Not-a-strategy,Information Inquiry-Contesting
+120,4,1,I should do more to help.,Not-a-strategy,Information Inquiry-Contesting
+121,5,1,That is an incredible figure!!!,Not-a-strategy,Information Inquiry-Contesting
+122,5,1,62% is amazing.,Not-a-strategy,Information Inquiry-Contesting
+123,5,1,What is the charity?,Hesitance-Hesitance,Information Inquiry-Contesting
+124,5,1,I may consider a donation.,Not-a-strategy,Information Inquiry-Contesting
+125,6,1,That is convenient!!!,Not-a-strategy,Information Inquiry-Contesting
+126,6,1,I will definitely do that.,Not-a-strategy,Information Inquiry-Contesting
+127,6,1,At least a portion of it.,Not-a-strategy,Information Inquiry-Contesting
+128,7,1,I need to think about it.,Source Derogation-Contesting,Information Inquiry-Contesting
+129,8,1,I hear ya!,Not-a-strategy,Information Inquiry-Contesting
+130,8,1,I will donate I'm just not sure how much.,Source Derogation-Contesting,Information Inquiry-Contesting
+131,9,1,Thank you!,Not-a-strategy,Information Inquiry-Contesting
+132,9,1,you have been great.,Not-a-strategy,Information Inquiry-Contesting
+133,0,1,I DO,Not-a-strategy,Information Inquiry-Contesting
+134,1,1,"To church, I return tithes and I also do the offerings",Self Assertion-Empowerment,Information Inquiry-Contesting
+135,2,1,"no, can you tell me more about it?",Hesitance-Hesitance,Information Inquiry-Contesting
+136,3,1,nice!,Not-a-strategy,Information Inquiry-Contesting
+137,3,1,I have a child so i'm all about helping kids,Not-a-strategy,Information Inquiry-Contesting
+138,4,1,I would like to know more before i donate.,Hesitance-Hesitance,Information Inquiry-Contesting
+139,4,1,How do i know if it's a legit organization,Information Inquiry-Contesting,Information Inquiry-Contesting
+140,5,1,interesting.,Not-a-strategy,Information Inquiry-Contesting
+141,5,1,So if i donate will 100% of my donation go to a child?,Information Inquiry-Contesting,Information Inquiry-Contesting
+142,6,1,i just don't know why i've never heard about it,Information Inquiry-Contesting,Information Inquiry-Contesting
+143,7,1,"it is sad, i agree with you",Not-a-strategy,Information Inquiry-Contesting
+144,8,1,that breaks my heart.,Not-a-strategy,Information Inquiry-Contesting
+145,8,1,I would do anything to protect my son,Not-a-strategy,Information Inquiry-Contesting
+146,9,1,"okay, I might donate",Not-a-strategy,Information Inquiry-Contesting
+147,0,1,"Hi, I'm in Hawaii!",Not-a-strategy,Information Inquiry-Contesting
+148,0,1,What kind of children's charities do you know about?,Hesitance-Hesitance,Information Inquiry-Contesting
+149,1,1,It sounds familiar.,Not-a-strategy,Information Inquiry-Contesting
+150,1,1,What do they do?,Hesitance-Hesitance,Information Inquiry-Contesting
+151,2,1,"Sure, what is it?",Hesitance-Hesitance,Information Inquiry-Contesting
+152,3,1,They look really good.,Not-a-strategy,Information Inquiry-Contesting
+153,3,1,I think I've seen their commercials.,Information Inquiry-Contesting,Information Inquiry-Contesting
+154,4,1,I see.,Not-a-strategy,Information Inquiry-Contesting
+155,4,1,It seems like they're involved in a lot of areas.,Not-a-strategy,Information Inquiry-Contesting
+156,5,1,I would be fine with that.,Not-a-strategy,Information Inquiry-Contesting
+157,5,1,I don't mind donating because I think the money is more important to them than it is to me.,Information Inquiry-Contesting,Information Inquiry-Contesting
+158,6,1,How about .20?,Not-a-strategy,Information Inquiry-Contesting
+159,7,1,That's nice.,Not-a-strategy,Information Inquiry-Contesting
+160,7,1,I would like that.,Not-a-strategy,Information Inquiry-Contesting
+161,8,1,"Ok, you too.",Not-a-strategy,Information Inquiry-Contesting
+162,8,1,Glad this worked out!,Not-a-strategy,Information Inquiry-Contesting
+163,9,1,"I think we have to complete 10 turns, so here's to another one!",Not-a-strategy,Information Inquiry-Contesting
+164,9,1,Let's save the children together!,Not-a-strategy,Information Inquiry-Contesting
+165,0,1,"I spend about 5 dollars a day, you?",Not-a-strategy,Information Inquiry-Contesting
+166,1,1,I think it would in many places,Not-a-strategy,Information Inquiry-Contesting
+167,2,1,No i am not can you explain?,Hesitance-Hesitance,Information Inquiry-Contesting
+168,3,1,Wow thats great.,Not-a-strategy,Information Inquiry-Contesting
+169,3,1,How can I help?,Not-a-strategy,Information Inquiry-Contesting
+170,4,1,Thank you.,Not-a-strategy,Information Inquiry-Contesting
+171,4,1,How do i donate?,Not-a-strategy,Information Inquiry-Contesting
+172,5,1,Ok i will donate some,Not-a-strategy,Information Inquiry-Contesting
+173,6,1,Tha k you so much for the infkrmation,Not-a-strategy,Information Inquiry-Contesting
+174,7,1,I will donate 10 cents,Not-a-strategy,Information Inquiry-Contesting
+175,8,1,That is all i can afford,Not-a-strategy,Information Inquiry-Contesting
+176,9,1,Tha k you for my awareness,Not-a-strategy,Information Inquiry-Contesting
+177,0,1,What kind of children does it help?,Hesitance-Hesitance,Information Inquiry-Contesting
+178,1,1,What is the name of the organization?,Not-a-strategy,Information Inquiry-Contesting
+179,2,1,How do they help children?,Hesitance-Hesitance,Information Inquiry-Contesting
+180,2,1,Food?,Hesitance-Hesitance,Information Inquiry-Contesting
+181,2,1,Clothing?,Hesitance-Hesitance,Information Inquiry-Contesting
+182,2,1,Shelter?,Hesitance-Hesitance,Information Inquiry-Contesting
+183,2,1,Education?,Hesitance-Hesitance,Information Inquiry-Contesting
+184,3,1,Is this charity local?,Hesitance-Hesitance,Information Inquiry-Contesting
+185,3,1,global?,Hesitance-Hesitance,Information Inquiry-Contesting
+186,3,1,Just in my country (United States)?,Hesitance-Hesitance,Information Inquiry-Contesting
+187,4,1,"I thinkit's important to support initiatives to help children get a good education, and have the things they need to go to school and learn.",Not-a-strategy,Information Inquiry-Contesting
+188,4,1,How much should we donate?,Not-a-strategy,Information Inquiry-Contesting
+189,5,1,"Sponsorship of a child might be interesting....I'd like to know what my donation is being used for, and that it's actually helping someone.",Not-a-strategy,Information Inquiry-Contesting
+190,6,1,That is appealing.,Not-a-strategy,Information Inquiry-Contesting
+191,6,1,Does the charity send updates on how the child is doing if I sponsor?,Hesitance-Hesitance,Information Inquiry-Contesting
+192,7,1,How does the sponsorship work?,Hesitance-Hesitance,Information Inquiry-Contesting
+193,7,1,Do I make a monthly donation?,Hesitance-Hesitance,Information Inquiry-Contesting
+194,7,1,I can't afford much.,Personal Choice-Empowerment,Information Inquiry-Contesting
+195,7,1,What is the minimum dollar amount?,Not-a-strategy,Information Inquiry-Contesting
+196,8,1,What do you think?,Not-a-strategy,Information Inquiry-Contesting
+197,9,1,OK. Glad that we came to an agreement.,Not-a-strategy,Information Inquiry-Contesting
+198,9,1,How do we end this task?,Not-a-strategy,Information Inquiry-Contesting
+199,0,1,"No, to be honest I am doing this task to save up extra money for myself.",Not-a-strategy,Information Inquiry-Contesting
+200,1,1,"I appreciate your position, but what exactly is Save the Children and how do I know that money will truly be used to help kids?",Hesitance-Hesitance,Information Inquiry-Contesting
+201,2,1,"It sounds like a good idea, but I often get peppered with requests to donate money to various charities -- when I donate I do it to causes that I know about.",Self Assertion-Empowerment,Information Inquiry-Contesting
+202,2,1,If I donated to every cause I would be giving away a lot of money and I already lose 20% to taxes.,Personal Choice-Empowerment,Information Inquiry-Contesting
+203,3,1,What exactly would that 30 cents be used for and how would it help?,Hesitance-Hesitance,Information Inquiry-Contesting
+204,3,1,What part of the world will it go to?,Hesitance-Hesitance,Information Inquiry-Contesting
+205,4,1,I have to respectfully question the necessity -- don't my taxes already go towards billions of dollars of foreign aid?,Counter Argumentation-Contesting,Information Inquiry-Contesting
+206,4,1,And why do so many of these countries continually need help?,Counter Argumentation-Contesting,Information Inquiry-Contesting
+207,5,1,I have seen some of the images and video of the civil war there.,Not-a-strategy,Information Inquiry-Contesting
+208,6,1,True -- but how much money is currently being provided by US and NATO to help?,Counter Argumentation-Contesting,Information Inquiry-Contesting
+209,7,1,I have to question that they have provided only tents.,Counter Argumentation-Contesting,Information Inquiry-Contesting
+210,7,1,Many countries have absorbed many refugees and I am fairly certain that way more aid than tents has been provided.,Counter Argumentation-Contesting,Information Inquiry-Contesting
+211,8,1,It may -- but at this point I really still have no idea what Save the Children is and I would want to research it anyway before I would agree to give money to it.,Source Derogation-Contesting,Information Inquiry-Contesting
+212,9,1,"Additionally, I am just very skeptical of any organization that asks for money.",Information Inquiry-Contesting,Information Inquiry-Contesting
+213,9,1,"I never know who is in charge, who is taking what, and where the money truly goes.",Information Inquiry-Contesting,Information Inquiry-Contesting
+214,0,1,"Hi, how are you?",Not-a-strategy,Information Inquiry-Contesting
+215,1,1,Thanks.,Not-a-strategy,Information Inquiry-Contesting
+216,1,1,"We're here to talk about a children's charity, is that right?",Not-a-strategy,Information Inquiry-Contesting
+217,2,1,What is the charity?,Not-a-strategy,Information Inquiry-Contesting
+218,3,1,I've heard of them.,Not-a-strategy,Information Inquiry-Contesting
+219,3,1,It's a good charity.,Not-a-strategy,Information Inquiry-Contesting
+220,4,1,"The violence in Syria is one of the saddest things happening in the world today, as far as I know.",Not-a-strategy,Information Inquiry-Contesting
+221,4,1,I heard a really heartbreaking interview with a Syrian child who lost his dad on NPR the other day.,Not-a-strategy,Information Inquiry-Contesting
+222,5,1,I'm really sorry.,Not-a-strategy,Information Inquiry-Contesting
+223,5,1,Does Save the Children help find a place for refugees?,Hesitance-Hesitance,Information Inquiry-Contesting
+224,6,1,Thanks.,Not-a-strategy,Information Inquiry-Contesting
+225,6,1,"I don't have a lot of money, but I'll ask my family and friends to donate to them for my birthday.",Not-a-strategy,Information Inquiry-Contesting
+226,6,1,For today I would like to donate $.30,Not-a-strategy,Information Inquiry-Contesting
+227,7,1,"Thanks, you too.",Not-a-strategy,Information Inquiry-Contesting
+228,7,1,I hope you're able to raise a lot of donations.,Not-a-strategy,Information Inquiry-Contesting
+229,8,1,Is there anything else you can think of that we could do?,Not-a-strategy,Information Inquiry-Contesting
+230,9,1,I will.,Not-a-strategy,Information Inquiry-Contesting
+231,9,1,Good luck to you,Not-a-strategy,Information Inquiry-Contesting
+232,0,1,"Good, thanks!",Not-a-strategy,Information Inquiry-Contesting
+233,0,1,How are you?,Not-a-strategy,Information Inquiry-Contesting
+234,1,1,In the past few years I rarely have.,Not-a-strategy,Information Inquiry-Contesting
+235,2,1,"That seems so hard to believe, but I guess lots of pennies still add up!",Not-a-strategy,Information Inquiry-Contesting
+236,3,1,"Wow, that definitely puts it in perspective!",Not-a-strategy,Information Inquiry-Contesting
+237,4,1,I agree with you!,Not-a-strategy,Information Inquiry-Contesting
+238,5,1,I have!,Not-a-strategy,Information Inquiry-Contesting
+239,5,1,"I used to volunteer often, but I have so little time it feels like now!",Not-a-strategy,Information Inquiry-Contesting
+240,6,1,You're right!,Not-a-strategy,Information Inquiry-Contesting
+241,6,1,It doesn't take much sacrifice to think of small ways to help!,Not-a-strategy,Information Inquiry-Contesting
+242,7,1,Haha that's true!,Not-a-strategy,Information Inquiry-Contesting
+243,8,1,I think so!,Not-a-strategy,Information Inquiry-Contesting
+244,9,1,I'm not sure!,Not-a-strategy,Information Inquiry-Contesting
+245,9,1,What is the range of options?,Not-a-strategy,Information Inquiry-Contesting
+246,0,1,good morning too and am also same as your location,Not-a-strategy,Information Inquiry-Contesting
+247,1,1,ok what can i help with that,Not-a-strategy,Information Inquiry-Contesting
+248,2,1,i did only charity walks and rare to take the donations,Not-a-strategy,Information Inquiry-Contesting
+249,3,1,i also usually focus that,Not-a-strategy,Information Inquiry-Contesting
+250,4,1,i mostly deal with friend and other persons,Not-a-strategy,Information Inquiry-Contesting
+251,5,1,support children in more development country?,Hesitance-Hesitance,Information Inquiry-Contesting
+252,6,1,awareness is less than the more countries so they need some help,Not-a-strategy,Information Inquiry-Contesting
+253,7,1,yes of course,Not-a-strategy,Information Inquiry-Contesting
+254,8,1,no $5 to spend us,Not-a-strategy,Information Inquiry-Contesting
+255,9,1,yes of course,Not-a-strategy,Information Inquiry-Contesting
+256,0,1,"Hello, do you have any charities in mind that you support?",Not-a-strategy,Information Inquiry-Contesting
+257,1,1,I've never heard of that one.,Not-a-strategy,Information Inquiry-Contesting
+258,1,1,What is their goal?,Hesitance-Hesitance,Information Inquiry-Contesting
+259,2,1,Oh that is interesting.,Not-a-strategy,Information Inquiry-Contesting
+260,2,1,Have you ever made a donation to them?,Not-a-strategy,Information Inquiry-Contesting
+261,3,1,Nice!,Not-a-strategy,Information Inquiry-Contesting
+262,3,1,How much do they recommend you donate?,Not-a-strategy,Information Inquiry-Contesting
+263,4,1,I could definitely justify giving $20 to them.,Not-a-strategy,Information Inquiry-Contesting
+264,5,1,"Sounds good, do I just go to the website to donate?",Not-a-strategy,Information Inquiry-Contesting
+265,6,1,I will just go ahead and do the $20.,Not-a-strategy,Information Inquiry-Contesting
+266,7,1,Thank you!,Not-a-strategy,Information Inquiry-Contesting
+267,7,1,I am glad I found a charity I can support.,Not-a-strategy,Information Inquiry-Contesting
+268,8,1,No problem.,Not-a-strategy,Information Inquiry-Contesting
+269,8,1,I always like to help when I can.,Not-a-strategy,Information Inquiry-Contesting
+270,9,1,Same to you!,Not-a-strategy,Information Inquiry-Contesting
+271,9,1,The work you do is important.,Not-a-strategy,Information Inquiry-Contesting
+272,0,1,"Yes, 2.",Not-a-strategy,Information Inquiry-Contesting
+273,0,1,You?,Not-a-strategy,Information Inquiry-Contesting
+274,1,1,I am.,Not-a-strategy,Information Inquiry-Contesting
+275,1,1,"I tend to read news articles from aboard. BBC, ect.",Not-a-strategy,Information Inquiry-Contesting
+276,1,1,I read that their are quite a few places that could use help.,Not-a-strategy,Information Inquiry-Contesting
+277,2,1,"I have heard of them, but have not looked into what they do.",Not-a-strategy,Information Inquiry-Contesting
+278,3,1,"That's very interesting, sounds like they do good work.",Not-a-strategy,Information Inquiry-Contesting
+279,4,1,Do you know anyone that has worked for them?,Hesitance-Hesitance,Information Inquiry-Contesting
+280,5,1,Sounds like they do a lot of good for a lot of people around the world.,Not-a-strategy,Information Inquiry-Contesting
+281,5,1,Are you involved with them at all?,Not-a-strategy,Information Inquiry-Contesting
+282,6,1,I have.,Not-a-strategy,Information Inquiry-Contesting
+283,6,1,"I donate to my local charities, plus the United Way.",Not-a-strategy,Information Inquiry-Contesting
+284,7,1,I might.,Source Derogation-Contesting,Information Inquiry-Contesting
+285,7,1,I wonder sometimes how much of the actual money that gets donated goes to helping people and not into the pockets of those running the charity.,Information Inquiry-Contesting,Information Inquiry-Contesting
+286,8,1,Well that seems better than some I have read about.,Not-a-strategy,Information Inquiry-Contesting
+287,8,1,Have you ever donated to them?,Not-a-strategy,Information Inquiry-Contesting
+288,9,1,I think I would donated to donate .50,Not-a-strategy,Information Inquiry-Contesting
+289,0,1,Hey there how's it going?,Not-a-strategy,Information Inquiry-Contesting
+290,1,1,Today is beautiful!!,Not-a-strategy,Information Inquiry-Contesting
+291,1,1,I think it's time to take a walk a little later!,Not-a-strategy,Information Inquiry-Contesting
+292,2,1,It depends on the charity!,Not-a-strategy,Information Inquiry-Contesting
+293,2,1,There are some good ones and some that have turned out to be scams.,Not-a-strategy,Information Inquiry-Contesting
+294,3,1,I have not!,Not-a-strategy,Information Inquiry-Contesting
+295,3,1,Do you work for them or have you donated with them before?,Not-a-strategy,Information Inquiry-Contesting
+296,4,1,What kind of stuff do they do to help the children?,Hesitance-Hesitance,Information Inquiry-Contesting
+297,5,1,Oh that's great!!,Not-a-strategy,Information Inquiry-Contesting
+298,5,1,I think children deserve all the help they can get.,Not-a-strategy,Information Inquiry-Contesting
+299,5,1,Is this an American charity?,Hesitance-Hesitance,Information Inquiry-Contesting
+300,6,1,I would possibly be interested in that.,Not-a-strategy,Information Inquiry-Contesting
+301,6,1,How can I be sure that it will go where it's supposed to?,Hesitance-Hesitance,Information Inquiry-Contesting
+302,7,1,What are the typical donations to the charity like?,Hesitance-Hesitance,Information Inquiry-Contesting
+303,8,1,Unfortunately I am having some money troubles right now so it's a little hard for me to promise any significant amount of money at the moment.,Personal Choice-Empowerment,Information Inquiry-Contesting
+304,9,1,I would be interested in donating five cents.,Not-a-strategy,Information Inquiry-Contesting
+305,9,1,I could definitely do that.,Not-a-strategy,Information Inquiry-Contesting
+306,9,1,Sorry I can't donate more :(,Not-a-strategy,Information Inquiry-Contesting
+307,0,1,wow that is neat,Not-a-strategy,Information Inquiry-Contesting
+308,1,1,that sounds expensive,Personal Choice-Empowerment,Information Inquiry-Contesting
+309,2,1,how much do you give,Not-a-strategy,Information Inquiry-Contesting
+310,3,1,ok how ill give that much,Not-a-strategy,Information Inquiry-Contesting
+311,4,1,ok great im in,Not-a-strategy,Information Inquiry-Contesting
+312,5,1,about thousand dollars at least,Not-a-strategy,Information Inquiry-Contesting
+313,6,1,ok ill give that,Not-a-strategy,Information Inquiry-Contesting
+314,7,1,oh at least a thousand,Counter Argumentation-Contesting,Information Inquiry-Contesting
+315,8,1,"yes, in fact ill most likely give ten thousand",Counter Argumentation-Contesting,Information Inquiry-Contesting
+316,9,1,oh thats good,Not-a-strategy,Information Inquiry-Contesting
+317,0,1,I am good.,Not-a-strategy,Information Inquiry-Contesting
+318,0,1,How are you?,Not-a-strategy,Information Inquiry-Contesting
+319,1,1,I understand that.,Not-a-strategy,Information Inquiry-Contesting
+320,1,1,So tell me about this charity.,Hesitance-Hesitance,Information Inquiry-Contesting
+321,2,1,I'm not sure that I have.,Not-a-strategy,Information Inquiry-Contesting
+322,3,1,What kind of work do they do?,Hesitance-Hesitance,Information Inquiry-Contesting
+323,4,1,"Ok, that sounds good.",Not-a-strategy,Information Inquiry-Contesting
+324,4,1,How do I know it is a legitimate charity?,Information Inquiry-Contesting,Information Inquiry-Contesting
+325,5,1,That's good to know.,Not-a-strategy,Information Inquiry-Contesting
+326,5,1,How long have they been around?,Hesitance-Hesitance,Information Inquiry-Contesting
+327,6,1,That's pretty impressive.,Not-a-strategy,Information Inquiry-Contesting
+328,7,1,I just can't see doing that.,Self Pity-Empowement,Information Inquiry-Contesting
+329,8,1,I understand that.,Not-a-strategy,Information Inquiry-Contesting
+330,8,1,"But, I choose my own charities independently.",Self Assertion-Empowerment,Information Inquiry-Contesting
+331,9,1,"Ok, you too!",Not-a-strategy,Information Inquiry-Contesting
+332,0,1,I think I would be willing to donate a portion.,Not-a-strategy,Information Inquiry-Contesting
+333,1,1,"Yes, that was going to be my next question.",Not-a-strategy,Information Inquiry-Contesting
+334,2,1,What types of children's rights?,Hesitance-Hesitance,Information Inquiry-Contesting
+335,3,1,What type of people or who manages this fund?,Hesitance-Hesitance,Information Inquiry-Contesting
+336,4,1,Does Save the Children help children in the United States?,Hesitance-Hesitance,Information Inquiry-Contesting
+337,5,1,That is awesome.,Not-a-strategy,Information Inquiry-Contesting
+338,5,1,I work hard to help children as well.,Not-a-strategy,Information Inquiry-Contesting
+339,6,1,"I am curious why you chose the words ""rural America""?",Not-a-strategy,Information Inquiry-Contesting
+340,7,1,"mmmm that is interesting, I did not know that statistic.",Not-a-strategy,Information Inquiry-Contesting
+341,7,1,"I work with children more in an ""urban"" setting that are incredibly in bad circumstances.",Self Assertion-Empowerment,Information Inquiry-Contesting
+342,8,1,I am interested.,Not-a-strategy,Information Inquiry-Contesting
+343,8,1,I am curious if I can state if money goes to children in this country though?,Not-a-strategy,Information Inquiry-Contesting
+344,9,1,That is awesome then I will donate $1.,Not-a-strategy,Information Inquiry-Contesting
+345,9,1,"I feel very strongly about ""our own children"" !!",Not-a-strategy,Information Inquiry-Contesting
+346,0,1,Hi.,Not-a-strategy,Information Inquiry-Contesting
+347,0,1,"I really do not know much about children's charity, do you?",Not-a-strategy,Information Inquiry-Contesting
+348,1,1,I think so.,Not-a-strategy,Information Inquiry-Contesting
+349,1,1,Does it have commercials on tv?,Hesitance-Hesitance,Information Inquiry-Contesting
+350,2,1,"Does this charity help children in the United States, or do they deal mostly with children in African nations?",Hesitance-Hesitance,Information Inquiry-Contesting
+351,3,1,I will copy and save the website address.,Not-a-strategy,Information Inquiry-Contesting
+352,3,1,What do volunteers do for this charity?,Hesitance-Hesitance,Information Inquiry-Contesting
+353,3,1,I ask that because volunteering would be easier for me than sending money.,Self Assertion-Empowerment,Information Inquiry-Contesting
+354,4,1,That is awesome that your friend does that!,Not-a-strategy,Information Inquiry-Contesting
+355,4,1,"I'm not a nurse though, and couldn't possibly travel to Africa or anywhere else.",Not-a-strategy,Information Inquiry-Contesting
+356,5,1,"No, I honestly don't have any money.",Personal Choice-Empowerment,Information Inquiry-Contesting
+357,5,1,"If I did have extra money, I would probably donate to St Jude's.",Self Assertion-Empowerment,Information Inquiry-Contesting
+358,5,1,I have given a few extra cents sometimes at the checkout in grocery stores.,Self Assertion-Empowerment,Information Inquiry-Contesting
+359,6,1,"No, not really.",Self Pity-Empowement,Information Inquiry-Contesting
+360,6,1,I can count on one hand the number of times I've had starbucks coffee.,Personal Choice-Empowerment,Information Inquiry-Contesting
+361,6,1,"Very rarely do I spend money on unnecessary things, money is that tight.",Personal Choice-Empowerment,Information Inquiry-Contesting
+362,6,1,"I do feel bad there are starving kids in this world, but until my situation changes, there is nothing I can do for them or anyone else.",Personal Choice-Empowerment,Information Inquiry-Contesting
+363,7,1,I've done that before on other tasks.,Not-a-strategy,Information Inquiry-Contesting
+364,7,1,"Wouldn't it be easier for the research team to have their survey, and ask for donations at the end of the survey?",Not-a-strategy,Information Inquiry-Contesting
+365,8,1,"So if my reward amount on this hit is .30 cents, just give ""Save the Children"" this .30 cents, and we will call this task complete.",Not-a-strategy,Information Inquiry-Contesting
+366,9,1,"Thank you, you too.",Not-a-strategy,Information Inquiry-Contesting
+367,0,1,Hi...,Not-a-strategy,Information Inquiry-Contesting
+368,1,1,Fine...what about you..?,Not-a-strategy,Information Inquiry-Contesting
+369,2,1,Why....What's happen and which think do you get upset...?,Not-a-strategy,Information Inquiry-Contesting
+370,3,1,Yea...I am also feel bad that incident...,Not-a-strategy,Information Inquiry-Contesting
+371,4,1,Ok ....what kind of charity to provide a donation...?,Hesitance-Hesitance,Information Inquiry-Contesting
+372,5,1,Yea...I was donate the charity of save the children.....,Not-a-strategy,Information Inquiry-Contesting
+373,6,1,If did they amount was 0..,Not-a-strategy,Information Inquiry-Contesting
+374,7,1,I was donate the amount of 10 cents......,Not-a-strategy,Information Inquiry-Contesting
+375,8,1,Yea...It was feel good...what's about you...?,Not-a-strategy,Information Inquiry-Contesting
+376,9,1,Yea..It's nice too hear....,Not-a-strategy,Information Inquiry-Contesting
+377,9,1,Have a nice day!,Not-a-strategy,Information Inquiry-Contesting
+378,0,1,I think I would like to donate 5,Not-a-strategy,Information Inquiry-Contesting
+379,1,1,"Ok, I saw the website and I am willing to donate $10",Not-a-strategy,Information Inquiry-Contesting
+380,2,1,I did not know that,Not-a-strategy,Information Inquiry-Contesting
+381,3,1,"I was not aware of that fact, no.",Not-a-strategy,Information Inquiry-Contesting
+382,4,1,"well, I've already promised 10.",Not-a-strategy,Information Inquiry-Contesting
+383,4,1,My families poor too and I don't get a lot of extra stuff like drinks and snacks.,Personal Choice-Empowerment,Information Inquiry-Contesting
+384,4,1,It's not easy for me to give anything and no charity has ever helped me.,Personal Choice-Empowerment,Information Inquiry-Contesting
+385,4,1,I wonder how much their CEO makes for saving the children.,Personal Choice-Empowerment,Information Inquiry-Contesting
+386,4,1,I'm guessing a lot more than me.,Personal Choice-Empowerment,Information Inquiry-Contesting
+387,5,1,It is in fact 10 or 5% of my weekly income.,Not-a-strategy,Information Inquiry-Contesting
+388,5,1,can I confirm that you would also like to donate 5% of yours?,Not-a-strategy,Information Inquiry-Contesting
+389,6,1,I understand that we will both be donating.,Not-a-strategy,Information Inquiry-Contesting
+390,6,1,I hope it is helpful to the children,Not-a-strategy,Information Inquiry-Contesting
+391,7,1,"ok, got it.",Not-a-strategy,Information Inquiry-Contesting
+392,7,1,cheers,Not-a-strategy,Information Inquiry-Contesting
+393,8,1,I think charities would recieve a lot more if the country would go after the 1% to help,Not-a-strategy,Information Inquiry-Contesting
+394,9,1,no problem.,Not-a-strategy,Information Inquiry-Contesting
+395,9,1,thanks,Not-a-strategy,Information Inquiry-Contesting
+396,0,1,I am well.,Not-a-strategy,Information Inquiry-Contesting
+397,0,1,How are you?,Not-a-strategy,Information Inquiry-Contesting
+398,1,1,Yes I have heard about it.,Not-a-strategy,Information Inquiry-Contesting
+399,2,1,I am actually not sure.,Not-a-strategy,Information Inquiry-Contesting
+400,2,1,I donate to charities often and can lose track of what I donate to.,Not-a-strategy,Information Inquiry-Contesting
+401,3,1,That sounds good.,Not-a-strategy,Information Inquiry-Contesting
+402,3,1,Tell me more.,Not-a-strategy,Information Inquiry-Contesting
+403,4,1,"Okay, what are my options?",Not-a-strategy,Information Inquiry-Contesting
+404,5,1,Do I have a choice of how much to donate?,Not-a-strategy,Information Inquiry-Contesting
+405,6,1,I would like to donate half of my payment.,Not-a-strategy,Information Inquiry-Contesting
+406,7,1,Thanks.,Not-a-strategy,Information Inquiry-Contesting
+407,7,1,Is there anything else I need to do?,Not-a-strategy,Information Inquiry-Contesting
+408,8,1,Okay.,Not-a-strategy,Information Inquiry-Contesting
+409,8,1,"Well, it's been nice talking to you.",Not-a-strategy,Information Inquiry-Contesting
+410,9,1,Have a good one!,Not-a-strategy,Information Inquiry-Contesting
+411,0,1,No I havent.,Not-a-strategy,Information Inquiry-Contesting
+412,0,1,What is it about?,Hesitance-Hesitance,Information Inquiry-Contesting
+413,1,1,No thank you.,Self Pity-Empowement,Information Inquiry-Contesting
+414,2,1,I am already making a difference in many children lives.,Self Assertion-Empowerment,Information Inquiry-Contesting
+415,3,1,I have donated 15 years of my life to charity,Self Assertion-Empowerment,Information Inquiry-Contesting
+416,4,1,No thank you,Self Pity-Empowement,Information Inquiry-Contesting
+417,5,1,No thank you,Self Pity-Empowement,Information Inquiry-Contesting
+418,6,1,Where are those childrens parent?,Not-a-strategy,Information Inquiry-Contesting
+419,7,1,My small change won't do a thing for those kids.,Counter Argumentation-Contesting,Information Inquiry-Contesting
+420,7,1,What they need is to be extracted from those countries so that they can have a better life not 0.25,Not-a-strategy,Information Inquiry-Contesting
+421,8,1,"If it makes you happy, go ahead and take .50",Not-a-strategy,Information Inquiry-Contesting
+422,9,1,No problem have a good night,Not-a-strategy,Information Inquiry-Contesting
+423,0,1,hello how are oyu,Not-a-strategy,Information Inquiry-Contesting
+424,1,1,ok great i have one for you also.,Not-a-strategy,Information Inquiry-Contesting
+425,1,1,"i'm sure you love children, right?",Not-a-strategy,Information Inquiry-Contesting
+426,2,1,of course or i wouldnt be online!,Not-a-strategy,Information Inquiry-Contesting
+427,2,1,so have you ever considered donating to a charity for kids,Not-a-strategy,Information Inquiry-Contesting
+428,3,1,"Oh yes, I have heard that they do very important work!",Not-a-strategy,Information Inquiry-Contesting
+429,4,1,"Me too, if only we could help!",Not-a-strategy,Information Inquiry-Contesting
+430,5,1,That is very sad.,Not-a-strategy,Information Inquiry-Contesting
+431,5,1,I would like to donate money to a charity to help this cause,Not-a-strategy,Information Inquiry-Contesting
+432,6,1,I think we should donate at least 17 dollars but less than 19 dollars,Not-a-strategy,Information Inquiry-Contesting
+433,7,1,I could maybe do less as well?,Not-a-strategy,Information Inquiry-Contesting
+434,7,1,How about 15?,Not-a-strategy,Information Inquiry-Contesting
+435,8,1,That sounds good.,Not-a-strategy,Information Inquiry-Contesting
+436,8,1,I agree to 20,Not-a-strategy,Information Inquiry-Contesting
+437,9,1,hopefully many more people help out so that they can get food and medicine,Not-a-strategy,Information Inquiry-Contesting
+438,0,1,Im very good how are you doing today?,Not-a-strategy,Information Inquiry-Contesting
+439,1,1,No i would be interested in learning,Not-a-strategy,Information Inquiry-Contesting
+440,2,1,Thats very beneficial.,Not-a-strategy,Information Inquiry-Contesting
+441,2,1,Especially for third world country that have limited resources,Not-a-strategy,Information Inquiry-Contesting
+442,3,1,If we can donate alot to these organizations alot can be accomplished in the world.,Not-a-strategy,Information Inquiry-Contesting
+443,4,1,definitely.,Not-a-strategy,Information Inquiry-Contesting
+444,4,1,The more the merrier however anything as little as 10 cents can make a huge impact,Not-a-strategy,Information Inquiry-Contesting
+445,5,1,If we can get a group of Investors this organization can reach a larger spectrum,Not-a-strategy,Information Inquiry-Contesting
+446,6,1,Yeah that means they need to develop a good marketing strategy to attract more attention,Not-a-strategy,Information Inquiry-Contesting
+447,7,1,"Yea they should hire a specialist that can go into social media like Facebook, Instagram, and other sites to build a presence",Not-a-strategy,Information Inquiry-Contesting
+448,8,1,Sure I like their mission and believe it can help a long way to help others,Not-a-strategy,Information Inquiry-Contesting
+449,9,1,I would love to donate $.50 cents,Not-a-strategy,Information Inquiry-Contesting
+450,0,1,Could you tell me more about the charity?,Hesitance-Hesitance,Information Inquiry-Contesting
+451,1,1,Where did you get that information and who specifically is the money going to?,Hesitance-Hesitance,Information Inquiry-Contesting
+452,2,1,People aren't likely to donate to charities that they know nothing about.,Self Assertion-Empowerment,Information Inquiry-Contesting
+453,3,1,"I\'m not going to donate to some generic ""Save the Children"" charity with no information.",Self Pity-Empowement,Information Inquiry-Contesting
+454,3,1,"So, do we need to chat back and forth a few for times for this to be over?",Not-a-strategy,Information Inquiry-Contesting
+455,4,1,What's their website address?,Hesitance-Hesitance,Information Inquiry-Contesting
+456,5,1,Good to know.,Not-a-strategy,Information Inquiry-Contesting
+457,5,1,I'm not going to donate.,Self Pity-Empowement,Information Inquiry-Contesting
+458,6,1,Are you going to donate?,Counter Argumentation-Contesting,Information Inquiry-Contesting
+459,6,1,What is in it for you if I donate?,Not-a-strategy,Information Inquiry-Contesting
+460,7,1,"I'd rather donate my time or if I do donate money, it will be to a charity that's important to me of my choosing.",Self Assertion-Empowerment,Information Inquiry-Contesting
+461,8,1,I won't be donating as part of this survey.,Self Pity-Empowement,Information Inquiry-Contesting
+462,9,1,I appreciate you trying to get me to though.,Not-a-strategy,Information Inquiry-Contesting
+463,9,1,I've never been on an MTurk Hit like this.,Not-a-strategy,Information Inquiry-Contesting
+464,0,1,"Hi, Yes I am",Not-a-strategy,Information Inquiry-Contesting
+465,1,1,"Yes, I agree.",Not-a-strategy,Information Inquiry-Contesting
+466,1,1,Helping children and pets is one of the donations I enjoy making and helping at the same time.,Not-a-strategy,Information Inquiry-Contesting
+467,2,1,I was thinking to donate around 10 cents for save the children.,Not-a-strategy,Information Inquiry-Contesting
+468,2,1,I hope that is adequate and helps them for food and shelter.,Not-a-strategy,Information Inquiry-Contesting
+469,3,1,ok how about 20 cents.,Not-a-strategy,Information Inquiry-Contesting
+470,3,1,I do want to help in anyway that I can.,Not-a-strategy,Information Inquiry-Contesting
+471,4,1,yeah I heard a little bit about on how children are suffering.,Not-a-strategy,Information Inquiry-Contesting
+472,4,1,I want to give a donation to help them.,Not-a-strategy,Information Inquiry-Contesting
+473,4,1,I am glad I can help in anyway that I can.,Not-a-strategy,Information Inquiry-Contesting
+474,5,1,"Yes, I believe it is good to be ethical.",Not-a-strategy,Information Inquiry-Contesting
+475,5,1,And to help children and animals as much as we can.,Not-a-strategy,Information Inquiry-Contesting
+476,5,1,Most of all save the children is a trustworthy organization which I trust to put my donations in with.,Not-a-strategy,Information Inquiry-Contesting
+477,6,1,Yes that is correct,Not-a-strategy,Information Inquiry-Contesting
+478,7,1,I feel that 20 cents is adequate for the donation.,Not-a-strategy,Information Inquiry-Contesting
+479,7,1,I want to help in any way that I can.,Not-a-strategy,Information Inquiry-Contesting
+480,7,1,Also I want to verify that this organization is most trusting.,Not-a-strategy,Information Inquiry-Contesting
+481,8,1,thank you.,Not-a-strategy,Information Inquiry-Contesting
+482,8,1,I wanted to help and want to help with a donation,Not-a-strategy,Information Inquiry-Contesting
+483,9,1,what hobbies do you like?,Not-a-strategy,Information Inquiry-Contesting
+484,9,1,and where are you from?,Not-a-strategy,Information Inquiry-Contesting
+485,0,1,Hello there!,Not-a-strategy,Information Inquiry-Contesting
+486,1,1,"Yes, what would this charity be doing to save the children?",Hesitance-Hesitance,Information Inquiry-Contesting
+487,2,1,What have they done in the past?,Hesitance-Hesitance,Information Inquiry-Contesting
+488,3,1,What countries have they been able to help?,Hesitance-Hesitance,Information Inquiry-Contesting
+489,4,1,"I am aware of the violence in Syria but what has ""Save the Children"" done to aid in health, education and safety?",Hesitance-Hesitance,Information Inquiry-Contesting
+490,5,1,Before I can donate I will need to know how this organization has help.,Source Derogation-Contesting,Information Inquiry-Contesting
+491,6,1,"How has ""Save the Children"" helped to aid in health, education and safety of the Syrian children?",Hesitance-Hesitance,Information Inquiry-Contesting
+492,7,1,Send over rights?,Not-a-strategy,Information Inquiry-Contesting
+493,7,1,I do not understand.,Not-a-strategy,Information Inquiry-Contesting
+494,7,1,"I also agreed to donate but before that I need more information, why do you keep asking me to donate?",Not-a-strategy,Information Inquiry-Contesting
+495,8,1,"Exactly, in today\'s world one must be weary of scammers.",Information Inquiry-Contesting,Information Inquiry-Contesting
+496,8,1,"Those who are really trying to do ""good"" for others will be more than happy to show proof of where donations are going or at least letting one know how those donations will be put to use.",Information Inquiry-Contesting,Information Inquiry-Contesting
+497,8,1,Telling me where it goes really does nothing for me.,Information Inquiry-Contesting,Information Inquiry-Contesting
+498,9,1,"Why the aggressive tone of me ""donating or not""?",Not-a-strategy,Information Inquiry-Contesting
+499,0,1,They definitely do.,Not-a-strategy,Information Inquiry-Contesting
+500,0,1,Do you participate in any local children's charities?,Not-a-strategy,Information Inquiry-Contesting
+501,1,1,Right.,Not-a-strategy,Information Inquiry-Contesting
+502,1,1,I used to tutor kids in my spare time in college.,Not-a-strategy,Information Inquiry-Contesting
+503,1,1,I also tutored kids at a battered woman's shelter.,Not-a-strategy,Information Inquiry-Contesting
+504,1,1,I have a bunch of baby clothes inwant to donate as well.,Not-a-strategy,Information Inquiry-Contesting
+505,1,1,Helping children abroad is on my bucket list.,Not-a-strategy,Information Inquiry-Contesting
+506,2,1,I saw a disheartening bstory on the news about some children that were injured due to that very violence.,Not-a-strategy,Information Inquiry-Contesting
+507,2,1,What do you think is the best solution or way to help for the average person like you or Me to render aid?,Not-a-strategy,Information Inquiry-Contesting
+508,3,1,So you think monetary donations are the best course of action?,Not-a-strategy,Information Inquiry-Contesting
+509,3,1,"When iIsaid helping children around the world was on my bucket list (and iIshould not have ised that term, nor did I mean it lightly, I meant physically donating time and skills.",Not-a-strategy,Information Inquiry-Contesting
+510,4,1,St Jude's is another great organisation.,Not-a-strategy,Information Inquiry-Contesting
+511,5,1,I'm aware of how to donate and how easy it is.,Not-a-strategy,Information Inquiry-Contesting
+512,5,1,You seem partial to save the children.,Not-a-strategy,Information Inquiry-Contesting
+513,5,1,Do you have any personal connection with that charity?,Not-a-strategy,Information Inquiry-Contesting
+514,6,1,I used to manage a store and we often picked childrens charities to give to.,Not-a-strategy,Information Inquiry-Contesting
+515,6,1,It always bothered me when folks would say '' need y'all to donate to me' and then decline to donate.,Not-a-strategy,Information Inquiry-Contesting
+516,6,1,"I think people fail to realize that without healthy, cared for, nurtured children, our future as a humanity becomes jeapodized.",Not-a-strategy,Information Inquiry-Contesting
+517,7,1,I would be willing to donate the money from this task for sure.,Not-a-strategy,Information Inquiry-Contesting
+518,8,1,I woiwo be willing to donate $2,Not-a-strategy,Information Inquiry-Contesting
+519,9,1,Awesome.,Not-a-strategy,Information Inquiry-Contesting
+520,9,1,Glad to know it will go to a child in need.,Not-a-strategy,Information Inquiry-Contesting
+521,0,1,I am fine how are you?,Not-a-strategy,Information Inquiry-Contesting
+522,1,1,well I have to go to work in a little while here how about you?,Not-a-strategy,Information Inquiry-Contesting
+523,2,1,"Iwork in an office setting as well, I guess we are to talk about childrens charity's.",Not-a-strategy,Information Inquiry-Contesting
+524,2,1,Do you donate to any on a regular base?,Counter Argumentation-Contesting,Information Inquiry-Contesting
+525,3,1,"I usually like to donate to more local charities, this way it seems safer to actually go where it is needed and it is for poor homeless kids around my own area",Self Assertion-Empowerment,Information Inquiry-Contesting
+526,4,1,I could maybe help can you tell me more about it where is it based out of and how much will actually be used for the cause?,Hesitance-Hesitance,Information Inquiry-Contesting
+527,5,1,do you work for them directly how did you get involved in this?,Counter Argumentation-Contesting,Information Inquiry-Contesting
+528,6,1,"I understand that, and you guys raise money here on this site?",Not-a-strategy,Information Inquiry-Contesting
+529,6,1,is that even worth it?,Not-a-strategy,Information Inquiry-Contesting
+530,7,1,yes you can you can have my $0.30,Not-a-strategy,Information Inquiry-Contesting
+531,8,1,and the money goes complety to the charity or does a part stay for handeling and administration,Hesitance-Hesitance,Information Inquiry-Contesting
+532,9,1,yes that would be great I would like to see that,Not-a-strategy,Information Inquiry-Contesting
+533,0,1,What is the best organizations and charities for children?,Not-a-strategy,Information Inquiry-Contesting
+534,1,1,I think I have heard of it.,Not-a-strategy,Information Inquiry-Contesting
+535,1,1,Children really need people to help them.,Not-a-strategy,Information Inquiry-Contesting
+536,1,1,"Oh, in answer to your first question I have not done a task like this before.",Not-a-strategy,Information Inquiry-Contesting
+537,2,1,I would if I could.,Not-a-strategy,Information Inquiry-Contesting
+538,2,1,I would like to go to some of the countries and help in person too.,Not-a-strategy,Information Inquiry-Contesting
+539,3,1,I wouldb but I don't have any money right now.,Personal Choice-Empowerment,Information Inquiry-Contesting
+540,4,1,I could donate 10 cents.,Not-a-strategy,Information Inquiry-Contesting
+541,4,1,I wish I could more but I am trying to pay my bills with what I make here.,Personal Choice-Empowerment,Information Inquiry-Contesting
+542,5,1,I could give 5 more cents but that is all for now.,Not-a-strategy,Information Inquiry-Contesting
+543,6,1,"Yes, and I am sure they will appreciate and need it.",Not-a-strategy,Information Inquiry-Contesting
+544,7,1,I just went there.,Not-a-strategy,Information Inquiry-Contesting
+545,7,1,They have a lot of information there.,Not-a-strategy,Information Inquiry-Contesting
+546,8,1,Yes.,Not-a-strategy,Information Inquiry-Contesting
+547,8,1,Some of them are in school too.,Not-a-strategy,Information Inquiry-Contesting
+548,8,1,They could use some of that money for school supplies.,Not-a-strategy,Information Inquiry-Contesting
+549,9,1,You are welcome.,Not-a-strategy,Information Inquiry-Contesting
+550,9,1,I might go back to the website to learn more.,Source Derogation-Contesting,Information Inquiry-Contesting
+551,0,1,"Hello, I am fine, how about you?",Not-a-strategy,Information Inquiry-Contesting
+552,1,1,"Yes, I try to help time to time",Not-a-strategy,Information Inquiry-Contesting
+553,2,1,"No, anything that catches my eyes, or I find them on gofundme, what about you?",Not-a-strategy,Information Inquiry-Contesting
+554,3,1,"Yes, I've heard of it.",Not-a-strategy,Information Inquiry-Contesting
+555,3,1,Can you please explain more about it?,Hesitance-Hesitance,Information Inquiry-Contesting
+556,4,1,I am interested in it.,Not-a-strategy,Information Inquiry-Contesting
+557,4,1,I already checked their website.,Not-a-strategy,Information Inquiry-Contesting
+558,4,1,Health and education both are important factors,Not-a-strategy,Information Inquiry-Contesting
+559,5,1,Actually I like these kind of HITs.,Not-a-strategy,Information Inquiry-Contesting
+560,5,1,I did few HITs before that asked me to donate my bonus or half of the reward.,Not-a-strategy,Information Inquiry-Contesting
+561,5,1,I happily did.,Not-a-strategy,Information Inquiry-Contesting
+562,5,1,I am sure there are people who need it more than me,Not-a-strategy,Information Inquiry-Contesting
+563,6,1,"Yes, few dollars can save a child or can help a family to survive for a month.",Not-a-strategy,Information Inquiry-Contesting
+564,6,1,How long have you worked there?,Not-a-strategy,Information Inquiry-Contesting
+565,7,1,That is so nice of you.,Not-a-strategy,Information Inquiry-Contesting
+566,7,1,It is a big thing to do.,Not-a-strategy,Information Inquiry-Contesting
+567,7,1,Thinking about starving children makes me so sad.,Not-a-strategy,Information Inquiry-Contesting
+568,7,1,I wish I could do more,Not-a-strategy,Information Inquiry-Contesting
+569,8,1,"Yes you are right, I help as much as I can.",Not-a-strategy,Information Inquiry-Contesting
+570,8,1,at least I try.,Not-a-strategy,Information Inquiry-Contesting
+571,8,1,save the children sounds like an amazing organization.,Not-a-strategy,Information Inquiry-Contesting
+572,8,1,They work in 120 countries already,Not-a-strategy,Information Inquiry-Contesting
+573,9,1,Yes It looks like a trustworthy organization with no doubt.,Not-a-strategy,Information Inquiry-Contesting
+574,9,1,I already read few of their reports on their website.,Not-a-strategy,Information Inquiry-Contesting
+575,9,1,I wish they can help even more countries,Not-a-strategy,Information Inquiry-Contesting
+576,10,1,"Thank you, I will do it for sure, have a nice day",Not-a-strategy,Information Inquiry-Contesting
+577,0,1,Hey how are you today?,Not-a-strategy,Information Inquiry-Contesting
+578,1,1,"Good, What do you think is the greatest social issue we are facing right now?",Not-a-strategy,Information Inquiry-Contesting
+579,2,1,Yes I have- I feel its violence too,Not-a-strategy,Information Inquiry-Contesting
+580,3,1,I believe it is- I've seen commericals for it on TV before....,Not-a-strategy,Information Inquiry-Contesting
+581,3,1,have you?,Not-a-strategy,Information Inquiry-Contesting
+582,4,1,Yes- I've donated to a similar charity before but it was based on supporting kids education,Not-a-strategy,Information Inquiry-Contesting
+583,5,1,It would feed a child for almost 3 days.,Not-a-strategy,Information Inquiry-Contesting
+584,6,1,I'm going to donate half .10 - So i Can feed a child for a day,Not-a-strategy,Information Inquiry-Contesting
+585,7,1,Its paying me .30,Not-a-strategy,Information Inquiry-Contesting
+586,8,1,I'm not doing half I'm doing a third.,Not-a-strategy,Information Inquiry-Contesting
+587,9,1,"Yes I am,",Not-a-strategy,Information Inquiry-Contesting
+588,0,1,"I'm not sure, what do they do for children?",Hesitance-Hesitance,Information Inquiry-Contesting
+589,1,1,sounds like a good charity.,Not-a-strategy,Information Inquiry-Contesting
+590,2,1,I would consider it.,Not-a-strategy,Information Inquiry-Contesting
+591,2,1,"What about Big Brother, Big Sister, they are very much in need of donations",Counter Argumentation-Contesting,Information Inquiry-Contesting
+592,3,1,What about helping children who are living in poverty in America.,Counter Argumentation-Contesting,Information Inquiry-Contesting
+593,3,1,There are thousands that need help,Counter Argumentation-Contesting,Information Inquiry-Contesting
+594,4,1,"Good point, I think I may consider it",Source Derogation-Contesting,Information Inquiry-Contesting
+595,5,1,how much of the donation would actually go to the kids>,Hesitance-Hesitance,Information Inquiry-Contesting
+596,6,1,I'm thinking about whether this is better than other charities I give to,Source Derogation-Contesting,Information Inquiry-Contesting
+597,7,1,"Perhaps people could go and help in person, rather than donating money?",Counter Argumentation-Contesting,Information Inquiry-Contesting
+598,8,1,How much is a good donation?,Not-a-strategy,Information Inquiry-Contesting
+599,9,1,"Okay, I will make a donation for $10.",Not-a-strategy,Information Inquiry-Contesting
+600,9,1,You convinced me that it's a worthwhile charity.,Not-a-strategy,Information Inquiry-Contesting
+601,0,1,"Hi, I'm great, how are you?",Not-a-strategy,Information Inquiry-Contesting
+602,1,1,"Yes, I have.",Not-a-strategy,Information Inquiry-Contesting
+603,1,1,"I am not extremely familiar with them, but I have seen several ads for them.",Not-a-strategy,Information Inquiry-Contesting
+604,2,1,"Yes, I would be happy to donate to that charity.",Not-a-strategy,Information Inquiry-Contesting
+605,2,1,Do you have an amount in mind?,Not-a-strategy,Information Inquiry-Contesting
+606,3,1,"I do, too.",Not-a-strategy,Information Inquiry-Contesting
+607,3,1,I tend to find it easy to be sympathetic towards several different types of charities.,Not-a-strategy,Information Inquiry-Contesting
+608,3,1,From what I have seen about Save the Children I've always been impressed with the work they do.,Not-a-strategy,Information Inquiry-Contesting
+609,4,1,I agree.,Not-a-strategy,Information Inquiry-Contesting
+610,4,1,I feel much better donating to places where I feel confident that the moneyis going to where they say it will.,Not-a-strategy,Information Inquiry-Contesting
+611,4,1,I think Save the Children is the biggest charity of it's kind.,Not-a-strategy,Information Inquiry-Contesting
+612,5,1,I'm like you.,Not-a-strategy,Information Inquiry-Contesting
+613,5,1,I always try to donate anonymously.,Not-a-strategy,Information Inquiry-Contesting
+614,5,1,I don't feel the need to be recognized for any good I can do.,Not-a-strategy,Information Inquiry-Contesting
+615,6,1,That's funny that you mention that.,Not-a-strategy,Information Inquiry-Contesting
+616,6,1,I always wonder how many people donate any bonuses that are offered to them.,Not-a-strategy,Information Inquiry-Contesting
+617,6,1,I always donate most if not all of any money I am offered.,Not-a-strategy,Information Inquiry-Contesting
+618,6,1,I figure that I wasn't expecting it to begin with so better to do some good however much.,Not-a-strategy,Information Inquiry-Contesting
+619,7,1,"Yes, some of these Universities really impress me with how much they are willing to donate.",Not-a-strategy,Information Inquiry-Contesting
+620,7,1,I know some of them getreally large amounts for studies and I appreciate when they use the money to do some good while gaining research.,Not-a-strategy,Information Inquiry-Contesting
+621,8,1,"Yes, and then most are willing to provide proof that they actually donated money, so that is good.",Not-a-strategy,Information Inquiry-Contesting
+622,9,1,"Thank you so much, same to you!",Not-a-strategy,Information Inquiry-Contesting
+623,0,1,Fine.,Not-a-strategy,Information Inquiry-Contesting
+624,0,1,What do you know about the charity?,Hesitance-Hesitance,Information Inquiry-Contesting
+625,0,1,What have you heard people say or have seen online about the charity?,Hesitance-Hesitance,Information Inquiry-Contesting
+626,1,1,Have you gone to a charity rating site to check on it?,Not-a-strategy,Information Inquiry-Contesting
+627,1,1,I have not.,Not-a-strategy,Information Inquiry-Contesting
+628,1,1,I want to be assured that overhead costs are minimized.,Information Inquiry-Contesting,Information Inquiry-Contesting
+629,2,1,I'd prefer a secure food donation that directly transports to the areas the children live in instead of handing over to government officials.,Self Assertion-Empowerment,Information Inquiry-Contesting
+630,2,1,I feel that using money to but food directly in their cities is best.,Self Assertion-Empowerment,Information Inquiry-Contesting
+631,3,1,I am willing to agree to 5 percent of my income for 6 months about 800 dollars.,Not-a-strategy,Information Inquiry-Contesting
+632,4,1,I will donate 10 cents.,Not-a-strategy,Information Inquiry-Contesting
+633,5,1,I feel good about this.,Not-a-strategy,Information Inquiry-Contesting
+634,5,1,How much do you agree to?,Not-a-strategy,Information Inquiry-Contesting
+635,6,1,"o.k. 20 cents for now agreed and regular for 6 months, o.k.?",Not-a-strategy,Information Inquiry-Contesting
+636,7,1,"(1, o.k. let's say 1600 dollares total, o.k.?",Not-a-strategy,Information Inquiry-Contesting
+637,8,1,o.k. agreed 1800 dollares done,Not-a-strategy,Information Inquiry-Contesting
+638,9,1,o.k. task done,Not-a-strategy,Information Inquiry-Contesting
+639,0,1,I am doing good and you?,Not-a-strategy,Information Inquiry-Contesting
+640,1,1,"Yes I donate to a few causes like breast cancer for women, autism awareness and March of dimes for children.",Self Assertion-Empowerment,Information Inquiry-Contesting
+641,2,1,Yes I have but don't know a whole lot about them since there are so many children related charities.,Not-a-strategy,Information Inquiry-Contesting
+642,3,1,OK I will educate myself on them when we are done with our conversation.,Source Derogation-Contesting,Information Inquiry-Contesting
+643,4,1,OK thanks.,Not-a-strategy,Information Inquiry-Contesting
+644,4,1,I reviewed the site quickly.,Not-a-strategy,Information Inquiry-Contesting
+645,4,1,Sure is sad to see so many children in distress around the world.,Not-a-strategy,Information Inquiry-Contesting
+646,5,1,"Me too, since I am a parent of 2 children myself.",Not-a-strategy,Information Inquiry-Contesting
+647,5,1,As a parent you want to do all you can for them.,Not-a-strategy,Information Inquiry-Contesting
+648,6,1,"Yes I don't mind if there is a feature I can turn on where every hit I do, a few cents go to the charity of my choice.",Not-a-strategy,Information Inquiry-Contesting
+649,7,1,"Yes everything counts, that's how it starts.",Not-a-strategy,Information Inquiry-Contesting
+650,7,1,All we could do is our part since problem is so big.,Not-a-strategy,Information Inquiry-Contesting
+651,8,1,"I agree, Save the children foundation work with the children through out their lives to make sure they grow up in a safe environment and get a chance to succeed based on their website.",Not-a-strategy,Information Inquiry-Contesting
+652,9,1,Thanks for your time too.,Not-a-strategy,Information Inquiry-Contesting
+653,9,1,It was really nice chatting with you.,Not-a-strategy,Information Inquiry-Contesting
+654,9,1,Take care.,Not-a-strategy,Information Inquiry-Contesting
+655,0,1,I agree!,Not-a-strategy,Information Inquiry-Contesting
+656,1,1,Oh that's great.,Not-a-strategy,Information Inquiry-Contesting
+657,1,1,What is the name of the organization?,Not-a-strategy,Information Inquiry-Contesting
+658,2,1,Well the have a great cause.,Not-a-strategy,Information Inquiry-Contesting
+659,3,1,No child deserves to feel unsafe and go hungry.,Not-a-strategy,Information Inquiry-Contesting
+660,3,1,It's heartbreaking!,Not-a-strategy,Information Inquiry-Contesting
+661,4,1,I am not sure if I have seen that picture.,Not-a-strategy,Information Inquiry-Contesting
+662,4,1,I would have to see it to know.,Counter Argumentation-Contesting,Information Inquiry-Contesting
+663,5,1,There are ways to make a difference for sure.,Not-a-strategy,Information Inquiry-Contesting
+664,6,1,Yes that is a common way.,Not-a-strategy,Information Inquiry-Contesting
+665,7,1,Have you presonally donated to them?,Information Inquiry-Contesting,Information Inquiry-Contesting
+666,7,1,Would you whole heartedly donate?,Information Inquiry-Contesting,Information Inquiry-Contesting
+667,7,1,How do you know that they are effective?,Information Inquiry-Contesting,Information Inquiry-Contesting
+668,7,1,How do you know the money actually gets to where it needs to go?,Information Inquiry-Contesting,Information Inquiry-Contesting
+669,8,1,Okay.,Not-a-strategy,Information Inquiry-Contesting
+670,8,1,That's good of you to donate.,Not-a-strategy,Information Inquiry-Contesting
+671,9,1,Sure I will donate 20 cents.,Not-a-strategy,Information Inquiry-Contesting
+672,0,1,I'm doing very well thank you!,Not-a-strategy,Information Inquiry-Contesting
+673,0,1,How is your day going so far?,Not-a-strategy,Information Inquiry-Contesting
+674,1,1,"It sounds familiar to me, could you tell me more about it?",Hesitance-Hesitance,Information Inquiry-Contesting
+675,2,1,The charity sounds like it is doing some good work in an area that badly needs it.,Not-a-strategy,Information Inquiry-Contesting
+676,2,1,Children should be our top priority all across the world.,Not-a-strategy,Information Inquiry-Contesting
+677,2,1,How can someone get involved and help out with this charity?,Hesitance-Hesitance,Information Inquiry-Contesting
+678,3,1,I do believe I would like to donate some money to the Save the Children charity.,Not-a-strategy,Information Inquiry-Contesting
+679,3,1,Could I pledge $1/day to start with?,Not-a-strategy,Information Inquiry-Contesting
+680,4,1,I like to donate money and time to charities that help children so I also want to thank you for educating me on this charity!,Not-a-strategy,Information Inquiry-Contesting
+681,5,1,They are our future exactly.,Not-a-strategy,Information Inquiry-Contesting
+682,5,1,Any time I can help improve a situation for a child in need I hope to be able to do so.,Not-a-strategy,Information Inquiry-Contesting
+683,5,1,How long have you been supporting this charity?,Not-a-strategy,Information Inquiry-Contesting
+684,6,1,I would like to start making a difference today.,Not-a-strategy,Information Inquiry-Contesting
+685,6,1,I would want to still donate $1 to the Save the Children charity.,Not-a-strategy,Information Inquiry-Contesting
+686,7,1,I hate hearing about children being subjected to violence.,Not-a-strategy,Information Inquiry-Contesting
+687,7,1,It hurts my heart.,Not-a-strategy,Information Inquiry-Contesting
+688,7,1,I do hope I can help and that my small donation does some good for a child.,Not-a-strategy,Information Inquiry-Contesting
+689,8,1,Well that sounds just great to me!,Not-a-strategy,Information Inquiry-Contesting
+690,9,1,You are welcome and thank you for bringing my attention to such a well deserved charity!,Not-a-strategy,Information Inquiry-Contesting
+691,9,1,I will spread the word!,Not-a-strategy,Information Inquiry-Contesting
+692,0,1,I'm good how about you?,Not-a-strategy,Information Inquiry-Contesting
+693,1,1,"Hot, and well, I think the sun is coming around",Not-a-strategy,Information Inquiry-Contesting
+694,2,1,"Mostly working on surveys, so how do you feel about children's charities?",Not-a-strategy,Information Inquiry-Contesting
+695,3,1,"Yeah, I think mostly everyone has, I think charities are mostly good but I don't know that they always accomplis all they could well, with expenses and all",Information Inquiry-Contesting,Information Inquiry-Contesting
+696,4,1,"sure, I'll donate $0.05.....",Not-a-strategy,Information Inquiry-Contesting
+697,5,1,"yeah, horrible huh?",Not-a-strategy,Information Inquiry-Contesting
+698,6,1,"no, can't say I've been",Not-a-strategy,Information Inquiry-Contesting
+699,7,1,"I don't personally I have a niece, and lots of cousins",Not-a-strategy,Information Inquiry-Contesting
+700,8,1,Mostly working on surveys,Not-a-strategy,Information Inquiry-Contesting
+701,9,1,"yes, I can do that.....",Not-a-strategy,Information Inquiry-Contesting
+702,0,1,"Yes, I am interested in donating.",Not-a-strategy,Information Inquiry-Contesting
+703,0,1,What specific causes the charity donate to?,Hesitance-Hesitance,Information Inquiry-Contesting
+704,1,1,Are there different tiers for donations available?,Hesitance-Hesitance,Information Inquiry-Contesting
+705,2,1,Can I donate $30 a month?,Not-a-strategy,Information Inquiry-Contesting
+706,3,1,"Yes, I am okay with that.",Not-a-strategy,Information Inquiry-Contesting
+707,3,1,How do I sign up?,Not-a-strategy,Information Inquiry-Contesting
+708,4,1,I would like to donate $10 right now.,Not-a-strategy,Information Inquiry-Contesting
+709,5,1,I'm glad and happy to help!,Not-a-strategy,Information Inquiry-Contesting
+710,6,1,"Sounds good, please feel free to share!",Not-a-strategy,Information Inquiry-Contesting
+711,7,1,"That's awesome, what other countries does it support besides Syria?",Hesitance-Hesitance,Information Inquiry-Contesting
+712,8,1,I am good with donating $10 right now.,Not-a-strategy,Information Inquiry-Contesting
+713,9,1,Is there any follow up information you will be able to share once the donation is complete?,Not-a-strategy,Information Inquiry-Contesting
+714,9,1,Like a newsletter?,Not-a-strategy,Information Inquiry-Contesting
+715,0,1,"Good morning, how are you doing?",Not-a-strategy,Information Inquiry-Contesting
+716,1,1,"Sure, I'd love to hear what charity you participate in",Not-a-strategy,Information Inquiry-Contesting
+717,2,1,Sounds wonderful!,Not-a-strategy,Information Inquiry-Contesting
+718,2,1,Do you only work in the US?,Hesitance-Hesitance,Information Inquiry-Contesting
+719,3,1,"What a great charity, is there anything I can do to help?",Not-a-strategy,Information Inquiry-Contesting
+720,4,1,How much are you looking for?,Not-a-strategy,Information Inquiry-Contesting
+721,5,1,"And specifically, where does that money go towards?",Hesitance-Hesitance,Information Inquiry-Contesting
+722,6,1,I'd be interested in donating to your cause,Not-a-strategy,Information Inquiry-Contesting
+723,7,1,Happy to be able to help such a worthy cause!,Not-a-strategy,Information Inquiry-Contesting
+724,8,1,One last question - are all members who help volunteer based?,Hesitance-Hesitance,Information Inquiry-Contesting
+725,9,1,Great! Thanks so much and I'm just so happy to be able to donate,Not-a-strategy,Information Inquiry-Contesting
+726,0,1,I'm doing well.,Not-a-strategy,Information Inquiry-Contesting
+727,0,1,How about you?,Not-a-strategy,Information Inquiry-Contesting
+728,1,1,"It's cloudy a lot, but otherwise fine.",Not-a-strategy,Information Inquiry-Contesting
+729,1,1,I was just looking through the morning mail.,Not-a-strategy,Information Inquiry-Contesting
+730,1,1,A request by a children's charity for a donation.,Not-a-strategy,Information Inquiry-Contesting
+731,2,1,I think it was from Save The Children.,Not-a-strategy,Information Inquiry-Contesting
+732,2,1,So you think they do some actual good?,Not-a-strategy,Information Inquiry-Contesting
+733,3,1,That's encouraging.,Not-a-strategy,Information Inquiry-Contesting
+734,3,1,Do you usually donate?,Not-a-strategy,Information Inquiry-Contesting
+735,3,1,"They're asking for $50, I was thinking more like $20.",Not-a-strategy,Information Inquiry-Contesting
+736,4,1,That's a thought.,Not-a-strategy,Information Inquiry-Contesting
+737,4,1,I guess I could do that.,Not-a-strategy,Information Inquiry-Contesting
+738,4,1,Maybe 1/2 of the payment.,Not-a-strategy,Information Inquiry-Contesting
+739,5,1,Okay.,Not-a-strategy,Information Inquiry-Contesting
+740,5,1,Let's do that then.,Not-a-strategy,Information Inquiry-Contesting
+741,6,1,"That's the goal, for sure.",Not-a-strategy,Information Inquiry-Contesting
+742,7,1,Glad to help.,Not-a-strategy,Information Inquiry-Contesting
+743,7,1,"I have a needy child of my own, and know how desperate that can make you feel.",Personal Choice-Empowerment,Information Inquiry-Contesting
+744,8,1,I may do that.,Source Derogation-Contesting,Information Inquiry-Contesting
+745,8,1,Enjoy your day also.,Not-a-strategy,Information Inquiry-Contesting
+746,9,1,You are welcome.,Not-a-strategy,Information Inquiry-Contesting
+747,0,1,I have a very rudimentary understanding.,Not-a-strategy,Information Inquiry-Contesting
+748,0,1,I think it has to do with helping sick children.,Not-a-strategy,Information Inquiry-Contesting
+749,1,1,That is a great cause.,Not-a-strategy,Information Inquiry-Contesting
+750,1,1,"However, I am of the opinion that we should provide relief to causes in our country first.",Counter Argumentation-Contesting,Information Inquiry-Contesting
+751,1,1,Especially animal organizations.,Counter Argumentation-Contesting,Information Inquiry-Contesting
+752,2,1,that is true.,Not-a-strategy,Information Inquiry-Contesting
+753,2,1,I guess I am naive and like to live in ignorance where it is bliss.,Not-a-strategy,Information Inquiry-Contesting
+754,2,1,How do you feel about animal charities?,Counter Argumentation-Contesting,Information Inquiry-Contesting
+755,3,1,That is true that it requires very little money to help children in developing nations.,Not-a-strategy,Information Inquiry-Contesting
+756,3,1,So you charity of choice is Save the Children?,Not-a-strategy,Information Inquiry-Contesting
+757,3,1,Or do you donate to other ones also?,Counter Argumentation-Contesting,Information Inquiry-Contesting
+758,4,1,Do you donate money only?,Counter Argumentation-Contesting,Information Inquiry-Contesting
+759,4,1,Or do you also volunteer your time?,Counter Argumentation-Contesting,Information Inquiry-Contesting
+760,5,1,I would be willing to donate 10 cents.,Not-a-strategy,Information Inquiry-Contesting
+761,5,1,I make large donations every year so my budget is limited.,Self Assertion-Empowerment,Information Inquiry-Contesting
+762,5,1,But I do agree with the points you made in support.,Not-a-strategy,Information Inquiry-Contesting
+763,5,1,Would you consider volunteering time in addition to money?,Not-a-strategy,Information Inquiry-Contesting
+764,6,1,My charity of choice is the italian gryhound florida rescue group.,Not-a-strategy,Information Inquiry-Contesting
+765,6,1,They save miniture IG dogs.,Not-a-strategy,Information Inquiry-Contesting
+766,6,1,I adopted one years ago and she is the best.,Not-a-strategy,Information Inquiry-Contesting
+767,6,1,But children's charities are great too.,Not-a-strategy,Information Inquiry-Contesting
+768,6,1,Are you familiar with the one where they make dreams come true?,Not-a-strategy,Information Inquiry-Contesting
+769,7,1,Celebrities often get involved and donate time.,Not-a-strategy,Information Inquiry-Contesting
+770,7,1,It's really cool.,Not-a-strategy,Information Inquiry-Contesting
+771,7,1,I think Disney World participates too.,Not-a-strategy,Information Inquiry-Contesting
+772,8,1,For sure.,Not-a-strategy,Information Inquiry-Contesting
+773,8,1,It gets the word out and makes people want to follow suit.,Not-a-strategy,Information Inquiry-Contesting
+774,8,1,Plus it is good for celebs because it gets people to have soft spots for them.,Not-a-strategy,Information Inquiry-Contesting
+775,9,1,Helping others is necessary and makes you feel good too.,Not-a-strategy,Information Inquiry-Contesting
+776,0,1,Hello how are,Not-a-strategy,Information Inquiry-Contesting
+777,1,1,Yes pleas do,Not-a-strategy,Information Inquiry-Contesting
+778,2,1,Sounds like a good charity.,Not-a-strategy,Information Inquiry-Contesting
+779,2,1,What countries do they provide service to?,Hesitance-Hesitance,Information Inquiry-Contesting
+780,3,1,What kind of health benefits to they provide to the children?,Hesitance-Hesitance,Information Inquiry-Contesting
+781,4,1,What is the standard monthly donation someone usually gives.,Not-a-strategy,Information Inquiry-Contesting
+782,5,1,What percentage of my donation actually makes it to the children?,Hesitance-Hesitance,Information Inquiry-Contesting
+783,6,1,Could you provide a breakdown of where that 14% goes?,Hesitance-Hesitance,Information Inquiry-Contesting
+784,7,1,Is save the children backed by any religious organizations?,Hesitance-Hesitance,Information Inquiry-Contesting
+785,8,1,Could you pleas give examples of the large companies?,Hesitance-Hesitance,Information Inquiry-Contesting
+786,9,1,What percentage of your total donations come from these large corporations.,Hesitance-Hesitance,Information Inquiry-Contesting
+787,10,1,Yes I would,Not-a-strategy,Information Inquiry-Contesting
+788,0,1,hello,Not-a-strategy,Information Inquiry-Contesting
+789,1,1,how much of the money is put to work?,Hesitance-Hesitance,Information Inquiry-Contesting
+790,2,1,how much % of the money that goes to the charity is overhead that will be absorbed and not given to children?,Hesitance-Hesitance,Information Inquiry-Contesting
+791,3,1,how does the operation afford staff?,Hesitance-Hesitance,Information Inquiry-Contesting
+792,4,1,in which regions are the donations applied?,Hesitance-Hesitance,Information Inquiry-Contesting
+793,5,1,what is a recent successful program?,Hesitance-Hesitance,Information Inquiry-Contesting
+794,6,1,how long has STC been around?,Hesitance-Hesitance,Information Inquiry-Contesting
+795,7,1,does it do any work in the USA?,Hesitance-Hesitance,Information Inquiry-Contesting
+796,8,1,in all 50 states?,Hesitance-Hesitance,Information Inquiry-Contesting
+797,9,1,can i direct my money?,Not-a-strategy,Information Inquiry-Contesting
+798,0,1,"Hello, I'm fine.",Not-a-strategy,Information Inquiry-Contesting
+799,0,1,How are you?,Not-a-strategy,Information Inquiry-Contesting
+800,1,1,Hi Tommy I'm Cassidy.,Not-a-strategy,Information Inquiry-Contesting
+801,1,1,I've been using mTurk on and off for about half a year but the past month I've really commmited to doing tasks everyday.,Not-a-strategy,Information Inquiry-Contesting
+802,1,1,It's great to earn extra money here and there.,Not-a-strategy,Information Inquiry-Contesting
+803,1,1,I'm glad you're enjoying it.,Not-a-strategy,Information Inquiry-Contesting
+804,2,1,I do enjoy donating to charities.,Not-a-strategy,Information Inquiry-Contesting
+805,2,1,I don't usually have a ton of extra money so it's not an every month kind of thing for me but I try to give at least once a year.,Personal Choice-Empowerment,Information Inquiry-Contesting
+806,2,1,"And when I can't give monetarily donate food, my time, and go to blood drives on my university",Self Assertion-Empowerment,Information Inquiry-Contesting
+807,3,1,"No, I haven't heard of Save the Children.",Not-a-strategy,Information Inquiry-Contesting
+808,3,1,And its awesome that you help out those kids in need,Not-a-strategy,Information Inquiry-Contesting
+809,4,1,"Yeah, 50 cents isn't too bad.",Not-a-strategy,Information Inquiry-Contesting
+810,4,1,Maybe I'll consider donating to them,Source Derogation-Contesting,Information Inquiry-Contesting
+811,5,1,"No, I didn't know but thank you for telling me!",Not-a-strategy,Information Inquiry-Contesting
+812,5,1,I think I might donate mine too!,Source Derogation-Contesting,Information Inquiry-Contesting
+813,6,1,"Yes I do, you've really inspired me Tommy",Not-a-strategy,Information Inquiry-Contesting
+814,7,1,I'l do 20 cents,Not-a-strategy,Information Inquiry-Contesting
+815,8,1,I do too,Not-a-strategy,Information Inquiry-Contesting
+816,9,1,It was nice chatting with you too,Not-a-strategy,Information Inquiry-Contesting
+817,0,1,"Yes, I would be willing to donate a fraction of my earnings to Save the Children.",Not-a-strategy,Information Inquiry-Contesting
+818,1,1,I would be okay with donating $0.10 from the task payment towards the charity.,Not-a-strategy,Information Inquiry-Contesting
+819,2,1,Okay.,Not-a-strategy,Information Inquiry-Contesting
+820,2,1,What does the charity do/what are my funds going to be used for?,Hesitance-Hesitance,Information Inquiry-Contesting
+821,3,1,Interesting.,Not-a-strategy,Information Inquiry-Contesting
+822,4,1,"That's very impressive, I am glad that I am donating this charity now that I know more about them.",Not-a-strategy,Information Inquiry-Contesting
+823,5,1,"Thank you for your time, and for the opportunity.",Not-a-strategy,Information Inquiry-Contesting
+824,6,1,You're welcome!,Not-a-strategy,Information Inquiry-Contesting
+825,6,1,Thank you also.,Not-a-strategy,Information Inquiry-Contesting
+826,7,1,"Besides working in the morning, I plan to go out to a concert with a few friends on Saturday, so that should be fun.",Not-a-strategy,Information Inquiry-Contesting
+827,8,1,That's fine.,Not-a-strategy,Information Inquiry-Contesting
+828,8,1,I hope you still have a good week!,Not-a-strategy,Information Inquiry-Contesting
+829,8,1,"I didn't really do that much last week, but it was still relaxing.",Not-a-strategy,Information Inquiry-Contesting
+830,9,1,I hope you enjoy!,Not-a-strategy,Information Inquiry-Contesting
+831,9,1,Thanks again for chatting with me.,Not-a-strategy,Information Inquiry-Contesting
+832,0,1,I have heard about it.,Not-a-strategy,Information Inquiry-Contesting
+833,0,1,What do you know about it?,Hesitance-Hesitance,Information Inquiry-Contesting
+834,1,1,Do you have any experince dealing with them at all?,Not-a-strategy,Information Inquiry-Contesting
+835,2,1,I have heard that they work hard to give kids a better life.,Not-a-strategy,Information Inquiry-Contesting
+836,3,1,"Yes, I think I would be will to donate to the cause.",Not-a-strategy,Information Inquiry-Contesting
+837,4,1,Oh that is really a great idea.,Not-a-strategy,Information Inquiry-Contesting
+838,4,1,I think I would be able to donate some of my earnings.,Not-a-strategy,Information Inquiry-Contesting
+839,4,1,Would $1 help at all?,Not-a-strategy,Information Inquiry-Contesting
+840,5,1,I would be glad to.,Not-a-strategy,Information Inquiry-Contesting
+841,5,1,How much are you giving?,Counter Argumentation-Contesting,Information Inquiry-Contesting
+842,6,1,Well that is really great.,Not-a-strategy,Information Inquiry-Contesting
+843,6,1,It sounds like a great charity.,Not-a-strategy,Information Inquiry-Contesting
+844,6,1,"I think they might even help in Hawaii with the recent floods, don't you think?",Not-a-strategy,Information Inquiry-Contesting
+845,6,1,I bet the kids there are in need.,Not-a-strategy,Information Inquiry-Contesting
+846,7,1,"Yes, I'm not sure either, but it just kills me to know there are ids suffering.",Not-a-strategy,Information Inquiry-Contesting
+847,7,1,How do you feel?,Not-a-strategy,Information Inquiry-Contesting
+848,8,1,"Yes, sometimes I feel a little guilty that I have it so easy.",Not-a-strategy,Information Inquiry-Contesting
+849,8,1,I can not imagine food or clothing being a luxury.,Not-a-strategy,Information Inquiry-Contesting
+850,8,1,Can you?,Not-a-strategy,Information Inquiry-Contesting
+851,9,1,"Yes, it really does cause feelings of guilt!",Not-a-strategy,Information Inquiry-Contesting
+852,9,1,I completely agree!,Not-a-strategy,Information Inquiry-Contesting
+853,9,1,"It's not that we don't all have our own struggles, but it's just on a completely different level.",Not-a-strategy,Information Inquiry-Contesting
+854,0,1,HI there!,Not-a-strategy,Information Inquiry-Contesting
+855,0,1,Are you having a good day?,Not-a-strategy,Information Inquiry-Contesting
+856,1,1,"OK, i have donated to them before!!",Not-a-strategy,Information Inquiry-Contesting
+857,2,1,That sounds fantastic!,Not-a-strategy,Information Inquiry-Contesting
+858,2,1,How do I make the donation?,Hesitance-Hesitance,Information Inquiry-Contesting
+859,3,1,I would like to donate 20 cents,Not-a-strategy,Information Inquiry-Contesting
+860,4,1,"I actually really need the money that I am making from this hit, so I would only like to donate 20 cents",Personal Choice-Empowerment,Information Inquiry-Contesting
+861,5,1,"THat sounds good, deal",Not-a-strategy,Information Inquiry-Contesting
+862,6,1,THis has been a great hit.,Not-a-strategy,Information Inquiry-Contesting
+863,7,1,"ok, i also read we have to communicate atleast 10 times for the chat to end",Not-a-strategy,Information Inquiry-Contesting
+864,8,1,I think we have a few turns to go,Not-a-strategy,Information Inquiry-Contesting
+865,9,1,Have a great day!,Not-a-strategy,Information Inquiry-Contesting
+866,0,1,It's an excellent charity that helps get children the necessary things that they need to survive,Not-a-strategy,Information Inquiry-Contesting
+867,0,1,"sometimes i donate to charity, but when someone comes right out and asks it feels a little pushy ya know?",Self Assertion-Empowerment,Information Inquiry-Contesting
+868,0,1,I feel that the organization is wonderful.,Not-a-strategy,Information Inquiry-Contesting
+869,0,1,It's called Save the Children.,Not-a-strategy,Information Inquiry-Contesting
+870,0,1,Have you heard of it?,Not-a-strategy,Information Inquiry-Contesting
+871,0,1,"I have, what a great cause.",Not-a-strategy,Information Inquiry-Contesting
+872,0,1,I have a grown daughter and two precious grandchildren.,Not-a-strategy,Information Inquiry-Contesting
+873,0,1,And you?,Not-a-strategy,Information Inquiry-Contesting
+874,0,1,WE just have a cat named Sissy.,Not-a-strategy,Information Inquiry-Contesting
+875,0,1,She's our child.,Not-a-strategy,Information Inquiry-Contesting
+876,0,1,LOL,Not-a-strategy,Information Inquiry-Contesting
+877,0,1,"I am doing pretty well, thank you.",Not-a-strategy,Information Inquiry-Contesting
+878,0,1,Do you donate often?,Not-a-strategy,Information Inquiry-Contesting
+879,0,1,I do not.,Not-a-strategy,Information Inquiry-Contesting
+880,0,1,"Good, so you're in agreement to donate your $2 to Save the Children?",Not-a-strategy,Information Inquiry-Contesting
+881,0,1,"Yes, I am in agreement to donate $2 to Save the Children.",Not-a-strategy,Information Inquiry-Contesting
+882,0,1,Do you donate a lot?,Not-a-strategy,Information Inquiry-Contesting
+883,0,1,I have not donated in the past but there are organizations I have considered donating to.,Not-a-strategy,Information Inquiry-Contesting
+884,0,1,they promote children's rights and provide relief and support in developing countries,Not-a-strategy,Information Inquiry-Contesting
+885,0,1,That sounds awesome!,Not-a-strategy,Information Inquiry-Contesting
+886,0,1,Do you donate to them?,Counter Argumentation-Contesting,Information Inquiry-Contesting
+887,0,1,"Well today, we are asking MTurk workers to donate a portion or all of their earnings connected with this HIT to Save the CHildren.",Not-a-strategy,Information Inquiry-Contesting
+888,0,1,It is an easy way to support a very good cause.,Not-a-strategy,Information Inquiry-Contesting
+889,0,1,Okay.,Not-a-strategy,Information Inquiry-Contesting
+890,0,1,Sounds like a good way to raise some money.,Not-a-strategy,Information Inquiry-Contesting
+891,0,1,Is that organization currently helping the children in need?,Not-a-strategy,Information Inquiry-Contesting
+892,0,1,yes.,Not-a-strategy,Information Inquiry-Contesting
+893,0,1,they are helping sick children.,Not-a-strategy,Information Inquiry-Contesting
+894,0,1,"I'm fine, How are you?",Not-a-strategy,Information Inquiry-Contesting
+895,0,1,fine.,Not-a-strategy,Information Inquiry-Contesting
+896,0,1,what about you?,Not-a-strategy,Information Inquiry-Contesting
+897,0,1,that is good because when it comes to save the children they are very trrusting and the funds go to the children and help make their lives better.,Not-a-strategy,Information Inquiry-Contesting
+898,0,1,i believe in helping the children of this our generation because they are our future Leaders so any amount of money spent on them is worth it...,Not-a-strategy,Information Inquiry-Contesting
+899,0,1,Wonderful.,Not-a-strategy,Information Inquiry-Contesting
+900,0,1,I'm great now.,Not-a-strategy,Information Inquiry-Contesting
+901,0,1,Because you saved all those children.,Not-a-strategy,Information Inquiry-Contesting
+902,0,1,"awesome, do you have any specific charity on your mind?",Not-a-strategy,Information Inquiry-Contesting
+903,0,1,I'm doing pretty good.,Not-a-strategy,Information Inquiry-Contesting
+904,0,1,what will you talk to me about today?,Not-a-strategy,Information Inquiry-Contesting
+905,0,1,whats the issue?,Not-a-strategy,Information Inquiry-Contesting
+906,0,1,"I'm very well, thank you.",Not-a-strategy,Information Inquiry-Contesting
+907,0,1,Are you ready for fall?,Not-a-strategy,Information Inquiry-Contesting
+908,0,1,I am so ready!,Not-a-strategy,Information Inquiry-Contesting
+909,0,1,Me and the heat are not friends and this electric bill is killing my pockets!,Not-a-strategy,Information Inquiry-Contesting
+910,0,1,What about you?,Not-a-strategy,Information Inquiry-Contesting
+911,0,1,"I am doing well, thank you.",Not-a-strategy,Information Inquiry-Contesting
+912,0,1,Do you donate at all?,Not-a-strategy,Information Inquiry-Contesting
+913,0,1,I've thought about it but never have.,Not-a-strategy,Information Inquiry-Contesting
+914,0,1,Do you?,Not-a-strategy,Information Inquiry-Contesting
+915,0,1,"Good, you have any holiday plans?",Not-a-strategy,Information Inquiry-Contesting
+916,0,1,"Today, not particularly.",Not-a-strategy,Information Inquiry-Contesting
+917,0,1,Unless you mean something further off.,Not-a-strategy,Information Inquiry-Contesting
+918,0,1,TELL THE CHARITY NAME AND I DONATE ALSO,Not-a-strategy,Information Inquiry-Contesting
+919,0,1,well a good charity name could be For The Kids and donation could be in clothes and money don't you think so?,Not-a-strategy,Information Inquiry-Contesting
+920,0,1,im good thanks.,Not-a-strategy,Information Inquiry-Contesting
+921,0,1,do you like kids,Not-a-strategy,Information Inquiry-Contesting
+922,0,1,"they are ok, i do not have any",Not-a-strategy,Information Inquiry-Contesting
+923,0,1,"The donation would be to Save the Children, which is an internation organization that provides relief and helps children in developing countries, and you could donate as much as you would like to.",Not-a-strategy,Information Inquiry-Contesting
+924,0,1,do you know alot about save the children and how much of the money they raise would actually go to the children,Hesitance-Hesitance,Information Inquiry-Contesting
+925,0,1,Doing great thanks.,Not-a-strategy,Information Inquiry-Contesting
+926,0,1,Have you heard of a charity called Save the Children?,Not-a-strategy,Information Inquiry-Contesting
+927,0,1,"No, I have not.",Not-a-strategy,Information Inquiry-Contesting
+928,0,1,What do they do?,Hesitance-Hesitance,Information Inquiry-Contesting
+929,0,1,Where are you from?,Not-a-strategy,Information Inquiry-Contesting
+930,0,1,i am from oakhom?,Not-a-strategy,Information Inquiry-Contesting
+931,0,1,u?,Not-a-strategy,Information Inquiry-Contesting
+932,0,1,"i'm fine, then how are you?",Not-a-strategy,Information Inquiry-Contesting
+933,0,1,HI WHAT R U DOING,Not-a-strategy,Information Inquiry-Contesting
+934,0,1,I'm a little skeptical.,Not-a-strategy,Information Inquiry-Contesting
+935,0,1,Can you prove it by saying something a typical response script wouldn't say?,Not-a-strategy,Information Inquiry-Contesting
+936,0,1,I'm literally a human and I just want to talk about a charity so I can get paid.,Not-a-strategy,Information Inquiry-Contesting
+937,0,1,I agree!,Not-a-strategy,Information Inquiry-Contesting
+938,0,1,"I think it's really important, though, to know that the charity you're giving to is going to use the funds well and isn't corrupt.",Not-a-strategy,Information Inquiry-Contesting
+939,0,1,Agreed.,Not-a-strategy,Information Inquiry-Contesting
+940,0,1,We try to actually know people involved before we give regularly.,Hesitance-Hesitance,Information Inquiry-Contesting
+941,0,1,Same here.,Not-a-strategy,Information Inquiry-Contesting
+942,0,1,Waiting for coffee to kick in!,Not-a-strategy,Information Inquiry-Contesting
+943,0,1,I was surprised to wake up to such cold 56 degree weather.,Not-a-strategy,Information Inquiry-Contesting
+944,0,1,How is it by you?,Not-a-strategy,Information Inquiry-Contesting
+945,0,1,Same here!,Not-a-strategy,Information Inquiry-Contesting
+946,0,1,Looks good for today maybe some rain this weekend,Not-a-strategy,Information Inquiry-Contesting
+947,0,1,"Pretty good, thanks.",Not-a-strategy,Information Inquiry-Contesting
+948,0,1,do you ever donate to charities?,Not-a-strategy,Information Inquiry-Contesting
+949,0,1,I do sometimes.,Not-a-strategy,Information Inquiry-Contesting
+950,0,1,I have a few favorites.,Not-a-strategy,Information Inquiry-Contesting
+951,0,1,"I am doing fine, I just ask in case you would like to donate to a nonprofit organization called Save The Children",Not-a-strategy,Information Inquiry-Contesting
+952,0,1,What exactly does the organization do?,Hesitance-Hesitance,Information Inquiry-Contesting
+953,0,1,Yeah.,Not-a-strategy,Information Inquiry-Contesting
+954,0,1,"Pretty much what they do is use donations from charitable, and caring citizens to help children around the world get on a better path to the future.",Not-a-strategy,Information Inquiry-Contesting
+955,0,1,Oh.,Not-a-strategy,Information Inquiry-Contesting
+956,0,1,Well I think that the donations that go there are supporting a good cause.,Not-a-strategy,Information Inquiry-Contesting
+957,0,1,Especially for hungry children without food and water,Not-a-strategy,Information Inquiry-Contesting
+958,0,1,You have the opportunity to donate the money you earned to a noble cause called Save the Children.,Not-a-strategy,Information Inquiry-Contesting
+959,0,1,Any small amount of money can make a significant impact when thousands of people decide to donate.,Not-a-strategy,Information Inquiry-Contesting
+960,0,1,What does this charity do specifically?,Hesitance-Hesitance,Information Inquiry-Contesting
+961,0,1,"I am doing really, really well today.",Not-a-strategy,Information Inquiry-Contesting
+962,0,1,"It's so encouraging to be a part of something bigger than myself, ya know?",Not-a-strategy,Information Inquiry-Contesting
+963,0,1,To what larger thing are you referring?,Not-a-strategy,Information Inquiry-Contesting
+964,0,1,Am doing well.,Not-a-strategy,Information Inquiry-Contesting
+965,0,1,I was wondering if you actively donate to any charities?,Not-a-strategy,Information Inquiry-Contesting
+966,0,1,Not right at the moment.,Not-a-strategy,Information Inquiry-Contesting
+967,0,1,I haven't find any good one to donate too.,Not-a-strategy,Information Inquiry-Contesting
+968,0,1,Are you interested in donating?,Not-a-strategy,Information Inquiry-Contesting
+969,0,1,Yes I am.,Not-a-strategy,Information Inquiry-Contesting
+970,0,1,Iam Fine.,Not-a-strategy,Information Inquiry-Contesting
+971,0,1,What about you?,Not-a-strategy,Information Inquiry-Contesting
+972,0,1,I am fine.,Not-a-strategy,Information Inquiry-Contesting
+973,0,1,You know about children's charity,Not-a-strategy,Information Inquiry-Contesting
+974,0,1,Same here.,Not-a-strategy,Information Inquiry-Contesting
+975,0,1,Waiting for coffee to kick in!,Not-a-strategy,Information Inquiry-Contesting
+976,0,1,I was surprised to wake up to such cold 56 degree weather.,Not-a-strategy,Information Inquiry-Contesting
+977,0,1,How is it by you?,Not-a-strategy,Information Inquiry-Contesting
+978,0,1,Same here!,Not-a-strategy,Information Inquiry-Contesting
+979,0,1,Looks good for today maybe some rain this weekend,Not-a-strategy,Information Inquiry-Contesting
+980,0,1,im doing good how are you,Not-a-strategy,Information Inquiry-Contesting
+981,0,1,I am doing really good.,Not-a-strategy,Information Inquiry-Contesting
+982,0,1,How is the weather over by you today?,Not-a-strategy,Information Inquiry-Contesting
+983,0,1,"yes, do you think the money goes to the children?",Not-a-strategy,Information Inquiry-Contesting
+984,0,1,I think it depends on the charity.,Not-a-strategy,Information Inquiry-Contesting
+985,0,1,I think there is sometimes charities that are not as transparent about where the donations go.,Not-a-strategy,Information Inquiry-Contesting
+986,0,1,I'm great!,Not-a-strategy,Information Inquiry-Contesting
+987,0,1,How are you?,Not-a-strategy,Information Inquiry-Contesting
+988,0,1,Doing fairly well.,Not-a-strategy,Information Inquiry-Contesting
+989,0,1,I just ate dinner and feel relaxed.,Not-a-strategy,Information Inquiry-Contesting
+990,0,1,"Very good, thank you.",Not-a-strategy,Information Inquiry-Contesting
+991,0,1,The research team will collect all donations and send it to Save the Children,Not-a-strategy,Information Inquiry-Contesting
+992,0,1,Okay.,Not-a-strategy,Information Inquiry-Contesting
+993,0,1,What children are we saving?,Not-a-strategy,Information Inquiry-Contesting
+994,0,1,from poverty and from disaster mostly.,Not-a-strategy,Information Inquiry-Contesting
+995,0,1,"If you choose to donate money, it goes to providing food to impoverished children",Not-a-strategy,Information Inquiry-Contesting
+996,0,1,I can think of a lot more worthwhile charities.,Information Inquiry-Contesting,Information Inquiry-Contesting
+997,0,1,"I know of a charity that is serving children's rights to  health, education and safety.",Not-a-strategy,Information Inquiry-Contesting
+998,0,1,Would you like to know more?,Not-a-strategy,Information Inquiry-Contesting
+999,0,1,"yes,that would be great!",Not-a-strategy,Information Inquiry-Contesting
+1000,0,1,to know more for my family!,Not-a-strategy,Information Inquiry-Contesting
+1001,0,1,It is an amazing organization that provides a lot of help to many children in the world.,Not-a-strategy,Information Inquiry-Contesting
+1002,0,1,What issues they are working on?,Hesitance-Hesitance,Information Inquiry-Contesting
+1003,0,1,I am doing alright thanks.,Not-a-strategy,Information Inquiry-Contesting
+1004,0,1,"Then, Do you know about children's charity?",Not-a-strategy,Information Inquiry-Contesting
+1005,0,1,How are you?,Not-a-strategy,Information Inquiry-Contesting
+1006,0,1,Iam fine.,Not-a-strategy,Information Inquiry-Contesting
+1007,0,1,How are you?,Not-a-strategy,Information Inquiry-Contesting
+1008,0,1,What kinds of things does the charity do?,Hesitance-Hesitance,Information Inquiry-Contesting
+1009,1,1,I would like to donate.,Not-a-strategy,Information Inquiry-Contesting
+1010,2,1,What percentage of a donation goes directly to helping the kids?,Hesitance-Hesitance,Information Inquiry-Contesting
+1011,3,1,"It is only a one time donation, correct?",Not-a-strategy,Information Inquiry-Contesting
+1012,4,1,I guess I will donate 1.00.,Not-a-strategy,Information Inquiry-Contesting
+1013,5,1,I do not know of anyone the charity has helped.,Not-a-strategy,Information Inquiry-Contesting
+1014,5,1,Does it help children all over the world or is it based in one certain country?,Hesitance-Hesitance,Information Inquiry-Contesting
+1015,6,1,I have donated to some different go fund me campaings.,Self Assertion-Empowerment,Information Inquiry-Contesting
+1016,6,1,I have also donated to different charities that collect outside of stores.,Self Assertion-Empowerment,Information Inquiry-Contesting
+1017,6,1,I am not sure if i have donated to any charities like this one.,Not-a-strategy,Information Inquiry-Contesting
+1018,7,1,I am glad my donation will help but I wish I could help more.,Not-a-strategy,Information Inquiry-Contesting
+1019,7,1,Do you donate to this charity?,Not-a-strategy,Information Inquiry-Contesting
+1020,8,1,Thats great.,Not-a-strategy,Information Inquiry-Contesting
+1021,8,1,We all need to do our part to help those that are struggling.,Not-a-strategy,Information Inquiry-Contesting
+1022,9,1,Thank you for all of the info today.,Not-a-strategy,Information Inquiry-Contesting
+1023,0,1,"Ok, tell me about it.",Not-a-strategy,Information Inquiry-Contesting
+1024,1,1,Do you work for Save the Children?,Not-a-strategy,Information Inquiry-Contesting
+1025,2,1,What countries does Save the Children provide services in?,Hesitance-Hesitance,Information Inquiry-Contesting
+1026,3,1,Well I think it is a noble task you are doing.,Not-a-strategy,Information Inquiry-Contesting
+1027,4,1,I would like to split it - $1 for Save the Children and $1 for me.,Not-a-strategy,Information Inquiry-Contesting
+1028,5,1,I am not the most charitable person but it is something...,Not-a-strategy,Information Inquiry-Contesting
+1029,6,1,So I guess that's it for this task.,Not-a-strategy,Information Inquiry-Contesting
+1030,6,1,Good luck with the others you are talking to.,Not-a-strategy,Information Inquiry-Contesting
+1031,7,1,Well the money was right there... And I do think it is a worthy cause.,Not-a-strategy,Information Inquiry-Contesting
+1032,7,1,So it was a pretty easy decision.,Not-a-strategy,Information Inquiry-Contesting
+1033,8,1,Ok. Have a good afternoon.,Not-a-strategy,Information Inquiry-Contesting
+1034,9,1,"I don't see an option to submit, so I assume that is done on your end.",Not-a-strategy,Information Inquiry-Contesting
+1035,0,1,"Ok, tell me more about it please?",Hesitance-Hesitance,Information Inquiry-Contesting
+1036,1,1,That is so sad to here.,Not-a-strategy,Information Inquiry-Contesting
+1037,2,1,I may be willing to donate some of my payment.,Source Derogation-Contesting,Information Inquiry-Contesting
+1038,3,1,Do you know how much of every dollar they get?,Hesitance-Hesitance,Information Inquiry-Contesting
+1039,4,1,Great.,Not-a-strategy,Information Inquiry-Contesting
+1040,4,1,I hate when charities get only pennies on the dollar,Self Assertion-Empowerment,Information Inquiry-Contesting
+1041,5,1,"Ok, I will give 25 cents today.",Not-a-strategy,Information Inquiry-Contesting
+1042,6,1,"ok, i will do 50 cents, but no more",Not-a-strategy,Information Inquiry-Contesting
+1043,7,1,"ok, ok, I will give $1.",Not-a-strategy,Information Inquiry-Contesting
+1044,8,1,I will do a $1.,Not-a-strategy,Information Inquiry-Contesting
+1045,8,1,"I give to many other organizations such as MS, healthy kids, etc",Self Assertion-Empowerment,Information Inquiry-Contesting
+1046,9,1,I know but $1 is what I will do,Not-a-strategy,Information Inquiry-Contesting
+1047,0,1,"I think they are the future of the world and in general, I like them.",Not-a-strategy,Information Inquiry-Contesting
+1048,1,1,"I think we have bigger problems to solve than helping children in poor third-world countries, and if I decide to donate money it would be to a different organization",Self Assertion-Empowerment,Information Inquiry-Contesting
+1049,2,1,"because I prefer to donate money to organizations attacking bigger problems, it's just a matter of priorities",Self Assertion-Empowerment,Information Inquiry-Contesting
+1050,3,1,There are a lot of problems more important than feeding kids.,Counter Argumentation-Contesting,Information Inquiry-Contesting
+1051,3,1,"Cancer research for example, water or basic health in poor countries.",Counter Argumentation-Contesting,Information Inquiry-Contesting
+1052,3,1,Basic human decency is not just food.,Counter Argumentation-Contesting,Information Inquiry-Contesting
+1053,4,1,If you think that way then you have never seen sickness and people suffering from easily treated health problems.,Counter Argumentation-Contesting,Information Inquiry-Contesting
+1054,4,1,I've seen cancer way too close to me to make me believe that's way more important to solve than feeding kids in another country.,Self Assertion-Empowerment,Information Inquiry-Contesting
+1055,5,1,I would donate and I donated every year way more than that but to organizations attacking problems that I think should be solved first,Self Assertion-Empowerment,Information Inquiry-Contesting
+1056,6,1,"I think you got the wrong person, I don't spend money on luxuries because I have not enough money to be able to do that.",Personal Choice-Empowerment,Information Inquiry-Contesting
+1057,6,1,"I cook my own food and I don't drink coffee or soda, and I still donate money to help causes I believe should be solved.",Self Assertion-Empowerment,Information Inquiry-Contesting
+1058,6,1,I do believe that money could be used better than sending it to Syria,Self Assertion-Empowerment,Information Inquiry-Contesting
+1059,7,1,You are the one short-sighted.,Counter Argumentation-Contesting,Information Inquiry-Contesting
+1060,7,1,"I didn't say anything about repairing infrastructure, and yes, solving cancer would be way better used money than sending it to Syria.",Self Assertion-Empowerment,Information Inquiry-Contesting
+1061,8,1,"No, you are wrong, water is not infrastructure, you should read a little bit before you say something liked that",Counter Argumentation-Contesting,Information Inquiry-Contesting
+1062,9,1,"First, 'lol' shouldn't be in a serious conversation, and second, It's not just that you are wrong, I actually support an organization providing clean water access to people, and helping with that problem it's not just a matter of infrastructure",Self Assertion-Empowerment,Information Inquiry-Contesting
+1063,0,1,hi!,Not-a-strategy,Information Inquiry-Contesting
+1064,1,1,i do!,Not-a-strategy,Information Inquiry-Contesting
+1065,1,1,i really try to,Personal Choice-Empowerment,Information Inquiry-Contesting
+1066,2,1,i agree.,Not-a-strategy,Information Inquiry-Contesting
+1067,2,1,I work in social work so i try to support through job too.,Self Assertion-Empowerment,Information Inquiry-Contesting
+1068,2,1,do you like to help?,Not-a-strategy,Information Inquiry-Contesting
+1069,3,1,how do you like to help?,Not-a-strategy,Information Inquiry-Contesting
+1070,4,1,oh that's great!,Not-a-strategy,Information Inquiry-Contesting
+1071,4,1,how often?,Not-a-strategy,Information Inquiry-Contesting
+1072,5,1,great!,Not-a-strategy,Information Inquiry-Contesting
+1073,5,1,do you know what the deal is with this hit,Not-a-strategy,Information Inquiry-Contesting
+1074,6,1,yes i do.,Not-a-strategy,Information Inquiry-Contesting
+1075,6,1,what about it,Not-a-strategy,Information Inquiry-Contesting
+1076,7,1,"yes, so how does that relate to this hit",Not-a-strategy,Information Inquiry-Contesting
+1077,8,1,"I prefer to donate my time rather than money, I would not like to donate today, but I do work with children regularly, and I think for me that's more helpful than giving small amounts of money!",Self Assertion-Empowerment,Information Inquiry-Contesting
+1078,9,1,"OK, good to know.",Not-a-strategy,Information Inquiry-Contesting
+1079,9,1,"Ya for now I dont want to donate, thanks though!",Self Pity-Empowement,Information Inquiry-Contesting
+1080,0,1,I'm doing very well.,Not-a-strategy,Information Inquiry-Contesting
+1081,0,1,Thanks.,Not-a-strategy,Information Inquiry-Contesting
+1082,0,1,How is everything with you?,Not-a-strategy,Information Inquiry-Contesting
+1083,1,1,Yes I did.,Not-a-strategy,Information Inquiry-Contesting
+1084,1,1,I did spent it on the beach while doing some barbecue with my friends.,Not-a-strategy,Information Inquiry-Contesting
+1085,1,1,It was lot of fun the past couple of days.,Not-a-strategy,Information Inquiry-Contesting
+1086,1,1,How was your weekend?,Not-a-strategy,Information Inquiry-Contesting
+1087,2,1,Yes I am.,Not-a-strategy,Information Inquiry-Contesting
+1088,2,1,"It is a very great organization and I believe it was founded by two former presidents, Bill Clinton and George W. Bush.",Not-a-strategy,Information Inquiry-Contesting
+1089,2,1,The organization is charity for the children who have been displaced by either hurricanes or other natural disasters and the charity steps in to help those children and families in need.,Not-a-strategy,Information Inquiry-Contesting
+1090,3,1,That is very true because the way that I see it we are all one big family and should be there for one another in a time of crisis and distress.,Not-a-strategy,Information Inquiry-Contesting
+1091,4,1,Yes.,Not-a-strategy,Information Inquiry-Contesting
+1092,4,1,"We can accomplish big things if we care for one another and it shouldn't matter what party we are in whether its Democrat, Republican or Green it shouldn't matter.",Not-a-strategy,Information Inquiry-Contesting
+1093,4,1,We are all Americans and we are one family.,Not-a-strategy,Information Inquiry-Contesting
+1094,5,1,That is both terrible and sad to hear.,Not-a-strategy,Information Inquiry-Contesting
+1095,5,1,Syria has a dictatorship and and someone who is obsessed with power.,Not-a-strategy,Information Inquiry-Contesting
+1096,5,1,This is a bad combination because a lot of people and especially the most vulnerable like children are getting caught in the crossfire.,Not-a-strategy,Information Inquiry-Contesting
+1097,5,1,Its very sad.,Not-a-strategy,Information Inquiry-Contesting
+1098,6,1,That is correct.,Not-a-strategy,Information Inquiry-Contesting
+1099,6,1,If people in the US contribute $1 for Save the Children the world will be indeed a better place.,Not-a-strategy,Information Inquiry-Contesting
+1100,6,1,I will do also give a donation.,Not-a-strategy,Information Inquiry-Contesting
+1101,6,1,Children must never live in fear and in horrible conditions that they can't escape from.,Not-a-strategy,Information Inquiry-Contesting
+1102,7,1,Yes I willing to commit half of my payment from this Hit.,Not-a-strategy,Information Inquiry-Contesting
+1103,7,1,I think it would help many children.,Not-a-strategy,Information Inquiry-Contesting
+1104,8,1,Fantastic.That will be great.,Not-a-strategy,Information Inquiry-Contesting
+1105,8,1,I think many lives will be saved if we all contribute to this organization.,Not-a-strategy,Information Inquiry-Contesting
+1106,9,1,It was very nice talking to you as well.,Not-a-strategy,Information Inquiry-Contesting
+1107,9,1,I hope you have a great week ahead and a great the rest of the year as well.,Not-a-strategy,Information Inquiry-Contesting
+1108,9,1,I wish you always the very best!!,Not-a-strategy,Information Inquiry-Contesting
+1109,0,1,i would like to know more about it,Hesitance-Hesitance,Information Inquiry-Contesting
+1110,1,1,and do they have a website ?,Hesitance-Hesitance,Information Inquiry-Contesting
+1111,2,1,thanks i will definitely check it out,Source Derogation-Contesting,Information Inquiry-Contesting
+1112,3,1,and where does the money go if i do donate ?,Hesitance-Hesitance,Information Inquiry-Contesting
+1113,3,1,Straight to the organization ?,Hesitance-Hesitance,Information Inquiry-Contesting
+1114,4,1,because some organizations do not divide the money properly,Information Inquiry-Contesting,Information Inquiry-Contesting
+1115,5,1,I will certainly consider it,Not-a-strategy,Information Inquiry-Contesting
+1116,6,1,"that is just wonderful, i love hearing stories like this",Not-a-strategy,Information Inquiry-Contesting
+1117,7,1,Oh man i was not aware of this,Not-a-strategy,Information Inquiry-Contesting
+1118,8,1,i hardly eat snacks but you have a point,Counter Argumentation-Contesting,Information Inquiry-Contesting
+1119,9,1,i sure will,Not-a-strategy,Information Inquiry-Contesting
+1120,0,1,"I am fantastic, thank you for asking, how about yourself?",Not-a-strategy,Information Inquiry-Contesting
+1121,1,1,"I prefer warmer temperatures, I absolutely despise the cold haha.",Not-a-strategy,Information Inquiry-Contesting
+1122,2,1,That's a loaded question if I've ever heard one...,Not-a-strategy,Information Inquiry-Contesting
+1123,2,1,I thought this was going to be some active participant study on interaction between conflicting personalities or something like that.,Not-a-strategy,Information Inquiry-Contesting
+1124,2,1,I'll play along though.,Not-a-strategy,Information Inquiry-Contesting
+1125,2,1,"I feel sad, helpless and a bit perturbed if I'm honest.",Not-a-strategy,Information Inquiry-Contesting
+1126,3,1,"Yes I have, though I'm wary of doing so currently, too many organizations abuse that funding.",Information Inquiry-Contesting,Information Inquiry-Contesting
+1127,4,1,I currently work with some people who travel the Southwestern US and set up CSA farms and connect them via outreach centers to people who need food or labor.,Self Assertion-Empowerment,Information Inquiry-Contesting
+1128,4,1,"I find action helps more than money, sends a deeper message and imparts a strong work ethic to those you help.",Self Assertion-Empowerment,Information Inquiry-Contesting
+1129,5,1,Couldn't agree more.,Not-a-strategy,Information Inquiry-Contesting
+1130,6,1,Yes I have.,Not-a-strategy,Information Inquiry-Contesting
+1131,7,1,"Like I said, I'm more of the opinion action is the better choice.",Self Assertion-Empowerment,Information Inquiry-Contesting
+1132,7,1,"I always ask myself, why are these kids starving?",Counter Argumentation-Contesting,Information Inquiry-Contesting
+1133,7,1,Why are those directly responsible for the children unable to care for them?,Counter Argumentation-Contesting,Information Inquiry-Contesting
+1134,7,1,To me it comes down to failure as a species.,Counter Argumentation-Contesting,Information Inquiry-Contesting
+1135,7,1,We allow this travesty to continue and think throwing money at it will help.,Counter Argumentation-Contesting,Information Inquiry-Contesting
+1136,7,1,It wont.,Counter Argumentation-Contesting,Information Inquiry-Contesting
+1137,8,1,I don't believe I will donate anything.,Self Pity-Empowement,Information Inquiry-Contesting
+1138,8,1,$0.00,Self Pity-Empowement,Information Inquiry-Contesting
+1139,9,1,"I wish you would come along with us next weekend to Oklahoma and help build the Community Center we are working on, any amount helps.",Self Assertion-Empowerment,Information Inquiry-Contesting
+1140,0,1,hi how are you,Not-a-strategy,Information Inquiry-Contesting
+1141,1,1,don't know you know about that,Not-a-strategy,Information Inquiry-Contesting
+1142,2,1,ok tell about that,Not-a-strategy,Information Inquiry-Contesting
+1143,3,1,you donate that charity?,Not-a-strategy,Information Inquiry-Contesting
+1144,4,1,how much you donate,Not-a-strategy,Information Inquiry-Contesting
+1145,5,1,ok super great,Not-a-strategy,Information Inquiry-Contesting
+1146,6,1,yes i will plan to donate,Not-a-strategy,Information Inquiry-Contesting
+1147,7,1,plan to donate 20$,Not-a-strategy,Information Inquiry-Contesting
+1148,8,1,will donate tomorrow,Source Derogation-Contesting,Information Inquiry-Contesting
+1149,9,1,ok nice to chat with you,Not-a-strategy,Information Inquiry-Contesting
