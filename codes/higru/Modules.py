@@ -8,6 +8,7 @@ import torch.nn.functional as F
 from torch.autograd import Variable
 from torch.nn.utils.rnn import pack_padded_sequence,pad_packed_sequence
 import Const
+import pudb
 
 
 # Dot-product attention
@@ -1323,6 +1324,8 @@ class BERT_HiGRU(nn.Module):
 		
 		# w_embed = self.embeddings(sents)
 		sa_mask = get_attn_pad_mask(sents, sents)
+		# pu.db
+		self.long_bert = False
 		
 		if self.long_bert:
 			

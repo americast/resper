@@ -6,7 +6,7 @@
 4,0,did you have to make any repair? are all the parts orginigal?,1,1
 5,0,"I have newly installed rim tapes, inner tubes, derailleur cable.  all new parts. it is in good condition if that is what you are worried about.",0,0
 6,0,who will deliever the bike?,0,5
-7,0,"I think we can arrange that, i will take care of either delivering it or the shipping. I am asking 240$ witht he shipping included.",6,0
+7,0,"I think we can arrange that, i will take care of either delivering it or the shipping. I am asking 240$ witht he shipping included.",6,6
 8,0,can you do $220?,4,4
 9,0,That seems fair. Deal.,0,0
 10,0,Hey. How long have you had this couch for?,5,5
@@ -17,19 +17,19 @@
 15,0,"Sorry, ,I don't have a photo. But it has no damage, you would see when you picked it up.",0,0
 16,0,Okay.  How much are you trying to sell it for?,0,0
 17,0,I'm asking $40 and have come down a bit to that,4,0
-18,0,40 is good to me.  I can pick it up this weekend.  Cool?,0,0
+18,0,40 is good to me.  I can pick it up this weekend.  Cool?,0,6
 19,0,"Hey, great! It's a deal. This weekend works fine.",0,0
 20,0,Awesome,0,0
 21,0,"Thanks, see you then.",0,0
 22,0,You too. Bye,0,0
 23,0,bye,0,0
-24,0,"Hi, I'm interested in the 2001 Rav 4",0,4
+24,0,"Hi, I'm interested in the 2001 Rav 4",0,0
 25,0,It is a great car. It runs great. I'm asking $4000.,0,0
 26,0,"That's way out of my budget, plus it seems a bit steep for such an old car.",2,2
 27,0,"It may be old, but it runs great. Has lower mileage and a clean title.",2,2
 28,0,Why are you selling it?,1,1
 29,0,I'm going to get a motorcycle instead. How much are you willing to pay?,0,0
-30,0,"I'm very interested, but it's out of my price point. I'd like to pay around 2,500 for my next car.",4,7
+30,0,"I'm very interested, but it's out of my price point. I'd like to pay around 2,500 for my next car.",4,4
 31,0,"You can't get a car like this for that low. I checked the Blue Book, and what I'm asking is right in range. I'll tell you what. I have a friend who is a mechanic. If you give me $3500, I'll have him check it out for you for free.",2,6
 32,0,"I could go up to $3,000",4,4
 33,0,How about $3400?,4,4
@@ -37,19 +37,19 @@
 35,0,"No, too low. I'm close to the Blue Book value. If you pay $3400 and something goes wrong in the next three months, I'll refund your money. You rarely get a warranty like tha!",6,6
 36,0,are you will to buy it,0,0
 37,0,yes,0,0
-38,0,i can offer you this item for 175$ with original box manual and remote,0,6
+38,0,i can offer you this item for 175$ with original box manual and remote,0,0
 39,0,a bit lower than that maybe?,4,4
 40,0,165$ can be a good deal,4,4
 41,0,how about the condition?,5,5
 42,0,"it new light used only, only 6 to 7 month old. still under warranty",0,0
 43,0,how about the shipping?,5,5
 44,0,i you are willing to pay 170 i can make the shipping what  do you say?,6,6
-45,0,but you cant ship with 165?,1,4
-46,0,5$ isn't much for this item.,2,2
-47,0,yeah i know i think 170 is good with free shipping,0,0
+45,0,but you cant ship with 165?,1,6
+46,0,5$ isn't much for this item.,2,0
+47,0,yeah i know i think 170 is good with free shipping,0,6
 48,0,can we have the deal,0,0
 49,0,Hello are you interested in the rental,0,0
-50,0,"Hi. I am yes, it seems to be a nice option. What is the asking price?",0,0
+50,0,"Hi. I am yes, it seems to be a nice option. What is the asking price?",0,5
 51,0,5395,4,0
 52,0,"I see. What comes with it? If I am leasing it, will I get repairs covered?",5,5
 53,0,Yes reparis are covered and you have the chef's kitchen and pool with it.,0,0
@@ -64,18 +64,18 @@
 62,0,yes it's a large fit bit alta,0,0
 63,0,I see that. Does it monitor your sleep and heart rate?,5,5
 64,0,yes i can go a little low but not to low,0,0
-65,0,Well since it is new I could give you 75 for it,4,4
-66,0,"sorry sir i can't go that low, it's brand new and retails higher than $100. How about $85",2,2
+65,0,Well since it is new I could give you 75 for it,4,2
+66,0,"sorry sir i can't go that low, it's brand new and retails higher than $100. How about $85",2,4
 67,0,Well since it is new 85.00 is okay. I will send you an offer,0,0
-68,0,would you like for me to ship it,0,6
+68,0,would you like for me to ship it,0,0
 69,0,Hi! I saw your post about the apartment?,0,0
 70,0,"Hello, yes. The rent is $2698 monthly with all the included amenities.",0,0
 71,0,"I have to admit, that stretches my budget to a point of discomfort. I'm not sold on the location. I'll have a bit of a commute.",7,7
-72,0,"If it helps a bit, the apartment would be fully furnished. It really is a great deal especially for the location you will be in.",2,2
-73,0,I don't doubt it. Any chance you'd like to make my day and let me in for 1500?,4,4
-74,0,That is incredibly low and I have other people who are interested. The best offer I could give you would be $2450.,3,4
-75,0,"I know, that was an insult. Forgive me. Tell me a little more about it. . . make me fall in love, and I could do 2200?",0,4
-76,0,"That is not a problem. Well firstly, it is a quiet location. You could be downtown in about 5 minutes just walking. I didn't ask if you have pets. You would have a private yard for them to roam around in. We have a fitness center so you can keep up with your fitness goals. Our entire property was also recently renovated.",0,2
+72,0,"If it helps a bit, the apartment would be fully furnished. It really is a great deal especially for the location you will be in.",2,0
+73,0,I don't doubt it. Any chance you'd like to make my day and let me in for 1500?,4,7
+74,0,That is incredibly low and I have other people who are interested. The best offer I could give you would be $2450.,3,3
+75,0,"I know, that was an insult. Forgive me. Tell me a little more about it. . . make me fall in love, and I could do 2200?",0,7
+76,0,"That is not a problem. Well firstly, it is a quiet location. You could be downtown in about 5 minutes just walking. I didn't ask if you have pets. You would have a private yard for them to roam around in. We have a fitness center so you can keep up with your fitness goals. Our entire property was also recently renovated.",0,0
 77,0,You're an excellent salesperson. 2200?,4,0
 78,0,I appreciate that. I can do $2375.,4,4
 79,0,Split the difference? 2287.50? We can round to 2287. ;),4,4
@@ -83,12 +83,12 @@
 81,0,Sounds good.,0,0
 82,0,nice bike,0,0
 83,0,"Thanks, it's truly a gem. Do you have questions about the bike?",0,0
-84,0,is the seat comfortable,5,5
+84,0,is the seat comfortable,5,0
 85,0,Yes! I acutally just replaced the seat with a brand new Schwinn seat a few months ago.,0,0
 86,0,looks comphy are there logos on the bike,5,1
 87,0,Yes all the orginal logos are still on the bike,0,0
 88,0,"sweet, i can offer you what i have $380",4,4
-89,0,Would you willing to come it pick up from my place today or tomorrow?,5,6
+89,0,Would you willing to come it pick up from my place today or tomorrow?,5,0
 90,0,actullay i'm in the area so i can be there today,0,0
 91,0,"Ok great, Yeah I can do $380 I just need to get rid of the bike.",0,0
 92,0,see ya in a few thanks,0,0
@@ -98,7 +98,7 @@
 96,0,"No heavy wear it is over all in great condition, I would consider it to be like new.",0,0
 97,0,Okay. That sounds pretty good. Any stains on the mattress?,1,1
 98,0,No it had a mattress pad in smoke free home,0,0
-99,0,All great sounding. What finish is the wood? I just want to make sure it matches the rest of my furniture? Mahogany?,5,5
+99,0,All great sounding. What finish is the wood? I just want to make sure it matches the rest of my furniture? Mahogany?,5,1
 100,0,"Actually, the lighting in the picture makes the color a bit off it is a dark reddish brown.",0,0
 101,0,Okay that'll work. How about 150?,4,4
 102,0,"Could you meet me maybe somewhere in the middle, I have kept it in excellent condition.",2,2
@@ -108,7 +108,7 @@
 106,0,how are you,0,0
 107,0,"Hi, I'm well and yourself?",0,0
 108,0,"great thanks, so you are interested in my camcorder?",0,0
-109,0,"Yes, I am very interested.  Have you had it long? Does everything work properly?",5,5
+109,0,"Yes, I am very interested.  Have you had it long? Does everything work properly?",5,1
 110,0,I haven't had it long and everything works great.  Make me an offer.  I am willing to negotiate,0,0
 111,0,Does it have a warranty?,5,5
 112,0,"Yes, through Canon",0,0
@@ -117,14 +117,14 @@
 115,0,"Awesome, thank you!",0,0
 116,0,"Hello, I am interested in your product.",0,0
 117,0,Hi there,0,0
-118,0,Is your sofa in good shape,5,1
+118,0,Is your sofa in good shape,5,0
 119,0,It is used but in good condition,0,0
 120,0,"Ok good, do you think it is better for sleeping or just relaxing?",5,5
 121,0,You can use it as a sofa and convert it into a sleeper. I love it but I am moving to another state and I can't bring it with me,0,0
 122,0,Oh ok.,0,0
 123,0,I'm selling it for 40. nice price,0,0
 124,0,Do you think you can go a little lower?,4,4
-125,0,hmm Can you pick it up before saturday?,6,0
+125,0,hmm Can you pick it up before saturday?,6,6
 126,0,Yes.,0,0
 127,0,How about 30?,4,4
 128,0,That sounds good.,0,0
@@ -136,10 +136,10 @@
 134,0,That's way high for me. I have a budget of $760,4,7
 135,0,"I'd already be giving you a discount if we went to 900, she's really a beauty",2,4
 136,0,That doesn't fit into my budget at all.,7,7
-137,0,875 then? I can't go down to 760.,3,3
+137,0,875 then? I can't go down to 760.,3,4
 138,0,Yeah that sounds like a fair deal.,0,0
 139,0,Thank you,0,0
-140,0,I am interested in your bike. It does seem to be priced quite high. Is there room for negotiation?,0,7
+140,0,I am interested in your bike. It does seem to be priced quite high. Is there room for negotiation?,0,4
 141,0,"yes, there is some wiggle room.",0,0
 142,0,Great. Is there anything wrong with the bike?,1,1
 143,0,"Nope, I have put some work into it, so it is in great condition.",0,0
@@ -153,12 +153,12 @@
 151,0,"Yes, I am very interested! It looks like a beautiful bike.",0,0
 152,0,Ok cool! The bike has very low miles and has and upgraded WTB saddle! It also has carbon blade forks and 105 brakes. I am willing to sell for as low as $750.,0,0
 153,0,$750 seems a little steep since the bike already has some miles on it. Would you accept $400?,2,2
-154,0,$595 is the lowest for a fact!,3,3
-155,0,"$595 is a little high for my budget. Are there any accessories you'd be willing to throw in--for instance, a basket, lights, and/or bike pump? That would make it a lot more appealing for me.",6,6
-156,0,"I will throw in my 700c wheelset, instead of the standard wheelset. How about that!",6,6
-157,0,"I am excited for the 700c wheelset, but it looks like that was already listed in the ad. Is there anything else you can include?",5,0
-158,0,Nothing unfortunately. How about 550 and we can call it a night!,4,4
-159,0,"That sounds pretty reasonable. Before we make the final agreement, could you just let me know roughly how may miles are on the bike?",5,6
+154,0,$595 is the lowest for a fact!,3,4
+155,0,"$595 is a little high for my budget. Are there any accessories you'd be willing to throw in--for instance, a basket, lights, and/or bike pump? That would make it a lot more appealing for me.",6,7
+156,0,"I will throw in my 700c wheelset, instead of the standard wheelset. How about that!",6,0
+157,0,"I am excited for the 700c wheelset, but it looks like that was already listed in the ad. Is there anything else you can include?",5,2
+158,0,Nothing unfortunately. How about 550 and we can call it a night!,4,6
+159,0,"That sounds pretty reasonable. Before we make the final agreement, could you just let me know roughly how may miles are on the bike?",5,5
 160,0,Well I bought the bike from someone else and have not used it. He did not specify on the miles but just said that it was very low!,0,0
 161,0,"Hmm--the ad says that you bought it new. Since you actually bought it (lightly) used from someone else, can we lower the price to $450?",2,2
 162,0,Sounds good!,0,0
@@ -170,8 +170,8 @@
 168,0,"$30 per pet, and they have to be fixed. 5 max pets per lease.",0,0
 169,0,"ok, I just have a cat.",0,0
 170,0,That'd be fine. We ask for $2311 a month.,0,0
-171,0,any chance you could do it for 1800? I only need one parking space.,2,7
-172,0,"I wish, but for some reason you want to live in California near the bay. Everything's way more expensive here. We offer 2 pools, so you can urinate in one and move to the next.",2,2
+171,0,any chance you could do it for 1800? I only need one parking space.,2,4
+172,0,"I wish, but for some reason you want to live in California near the bay. Everything's way more expensive here. We offer 2 pools, so you can urinate in one and move to the next.",2,0
 173,0,"Well you must be very busy , your response time is very slow.  I am willing to come up to $2000.",1,4
 174,0,"Sorry, that must be the service. Can you do $2200 and I'll give you a month free.",6,6
 175,0,"okay I suppose that is fair.sorry to harp on you , probably the connection.",0,0
@@ -187,7 +187,7 @@
 185,0,Yes I can do that for you!,0,0
 186,0,Hi!  I am interested in your bike.  How long have you had it?,5,5
 187,0,I'm glad you're interested. We've only had it for about 6 months. It only has about 50 miles on it!,0,0
-188,0,"That's definitely a plus!  My wife is an avid biker and I want to surprise her with a nice bike.  Something like this would normally be way out of my price range.  But, I figured I would give it a try.",7,2
+188,0,"That's definitely a plus!  My wife is an avid biker and I want to surprise her with a nice bike.  Something like this would normally be way out of my price range.  But, I figured I would give it a try.",7,7
 189,0,"Well my wife has definitely enjoyed it, so if yours is like mine I'm sure she will too! I've listed this at $1100 and I expect it to go quickly.",0,0
 190,0,"I won't argue that it is a decent price.  Just wondering, is there anything wrong with it?  Seems like a lot to spend on a bike that only has 50 miles of usage...",1,2
 191,0,I'm not aware of anything wrong with it - unless you count the fact that it's taking up space in my garage that I'd like to use for other things!,0,0
@@ -195,11 +195,11 @@
 193,0,"If you can make it $900 and pick it up today, I think we can make a deal",6,6
 194,0,$900.  I think we have a deal!,0,0
 195,0,Fantastic!,0,0
-196,0,"Hey there, you're interested in one of these cell phone batteries?",0,1
-197,0,"Hello, are these batteries used?",5,5
+196,0,"Hey there, you're interested in one of these cell phone batteries?",0,0
+197,0,"Hello, are these batteries used?",5,0
 198,0,"Nope, I couldn't sell them if they were used, we're a third-party distributor of excess batteries.",0,0
-199,0,Okay and how many batteries are you selling for $10?,5,5
-200,0,"Oh, it's 1 for 10, but if you want multiple we can sell at a discount for bulk",6,6
+199,0,Okay and how many batteries are you selling for $10?,5,4
+200,0,"Oh, it's 1 for 10, but if you want multiple we can sell at a discount for bulk",6,4
 201,0,"Thanks but I only need the one battery. And since this is an older model, would you accept $5 for it?",2,2
 202,0,"No, we need 8 to at least break even",4,4
 203,0,If I pay $8 can you throw in a phone case?,6,6
@@ -213,10 +213,10 @@
 211,0,"True, but it is in great condition. The title is clean, and it has never been in an accident. I will be willing to sell it for $3000.",2,2
 212,0,2900 and we have a deal.,3,3
 213,0,$2950 and I will even drive it to you.,6,6
-214,0,with a full tank of gas?,6,5
+214,0,with a full tank of gas?,6,6
 215,0,Why not? It even had an oil change last week.,0,0
 216,0,Hello,0,0
-217,0,Hello there. I was wondering if I would be able to stop by and check this house out to see the inside,5,5
+217,0,Hello there. I was wondering if I would be able to stop by and check this house out to see the inside,5,0
 218,0,"Sure, you can come by anytime after 1 pm tomorrow. How much are you hoping to spend on this?",0,0
 219,0,"I am looking to pay around 1350, are you willing to lower the price you are asking?",4,4
 220,0,"Yes, but 1350 seems a bit too much for me to lower it. Does 2300 work for you?",4,4
@@ -229,13 +229,13 @@
 227,0,"Hello, interest in my bike?",0,0
 228,0,Hey hows it going i have interest,0,0
 229,0,I'm asking $250 but the price is negotiable,0,0
-230,0,OK Thats good to hear. I really like the bike but i think $250 would have been a fair price about 5 years ago :/,2,2
+230,0,OK Thats good to hear. I really like the bike but i think $250 would have been a fair price about 5 years ago :/,2,4
 231,0,"Lol  hey!  vintage is in!!  Ok, since you're being a good sport how does 200 sound?",4,4
 232,0,"its a little bit out of my price range still, I really need the bike to get to my new job. I have $125 to spare but i can walk to pick it up from you if that helps?? We are about a 45 minute drive but if you can get it to me for 125 ill cut your grass when i pick it up",6,6
 233,0,"I'm in a condo, it's already taken care of but nice of you to offer.  You're killing me!!  The lowest I can go is $150",4,3
 234,0,I might be able to do 150 but i will have to ask my new boss to loan me the money :/ it would be great if you could help me out and I will pay it forward in the future to a stranger :),7,6
-235,0,"You know what, I really appreciate what you're saying but this is a great bike and I'm already losing by selling it for $150.  I have to get $150.  Stop breaking my heart!!",7,3
-236,0,"Ahh make me one more compromise, i know im the worst. i can scrounge an extra 15 up, how about 140?",7,6
+235,0,"You know what, I really appreciate what you're saying but this is a great bike and I'm already losing by selling it for $150.  I have to get $150.  Stop breaking my heart!!",7,2
+236,0,"Ahh make me one more compromise, i know im the worst. i can scrounge an extra 15 up, how about 140?",7,4
 237,0,ok you drive a hard bargain.  please remember to pay it forward.  $140 - sold to the whinney person over there!  lol,0,0
 238,0,"You are the best :) Thank you this is super helpful for me, see you soon!",0,0
 239,0,"Hello, are you interested in leasing my apartment?",0,0
@@ -244,34 +244,34 @@
 242,0,65 sq ft?  Is it more like a studio?,5,5
 243,0,sorry...that s/h been 565.  This is an excellent apartment complex.  Too many amenities to list but I will guarantee you would find everything you are looking for here.,0,0
 244,0,The price is a little high for me?  Would you be willing to come down?,4,4
-245,0,I understand.  I can come down a little but I will not be able to honor the $500 off move in.  What price range did you have in mind?,0,0
-246,0,"$1500.  Of course, if utilities are covered and there is a gym and a pool, I could go a bit higher.",6,6
-247,0,"Well, we have 2 pools, a beautifully lit tennis court, and fitness center and free wi-fi in the common area.  The apartment has a/c, central heat, private patios or balconies with views of the East Bay hills.  Location is ideal - close to local shopping and dining and easy commute to local business centers and the BART station.  I can accept $2000",2,6
+245,0,I understand.  I can come down a little but I will not be able to honor the $500 off move in.  What price range did you have in mind?,0,6
+246,0,"$1500.  Of course, if utilities are covered and there is a gym and a pool, I could go a bit higher.",6,4
+247,0,"Well, we have 2 pools, a beautifully lit tennis court, and fitness center and free wi-fi in the common area.  The apartment has a/c, central heat, private patios or balconies with views of the East Bay hills.  Location is ideal - close to local shopping and dining and easy commute to local business centers and the BART station.  I can accept $2000",2,0
 248,0,You have me convinced.  I will go $2000.,0,3
 249,0,Great.  Can you stop over this evening and sign a lease?,0,0
 250,0,"Hello, I'm am interested in your apartment.",0,0
 251,0,It's a great place!,0,0
-252,0,It looks nice. I am on a budget can we negotiate.,0,7
+252,0,It looks nice. I am on a budget can we negotiate.,0,4
 253,0,"sure, what did you have in mind?",0,0
 254,0,I would like to spend about $1037.00 for your apartment.,4,4
 255,0,"Sorry, that is way lower than my asking price. We need to come a bit on that.",4,4
-256,0,Does your price include water and trash?,5,5
+256,0,Does your price include water and trash?,5,6
 257,0,"Yea, it does. And central air and heating.",0,0
 258,0,"Oh great, does $1800.00 work for you?",4,4
 259,0,I can do $1950 and offer my patio furniture to go with the apartment?,6,6
 260,0,"Thats great, thank you.",0,0
 261,0,Hi! You were interested in the Ranger?,0,0
-262,0,"It looks nice, but I really don't think it's worth what you're asking.",1,4
-263,0,"How come? It was very well maintained through our company, everything runs perfect on it. Just like new.",0,2
-264,0,It's 6 years old and that mileage seems high. If it was a company truck that could mean a lot of wear and tear. The engine and trans could go out at any time,1,1
+262,0,"It looks nice, but I really don't think it's worth what you're asking.",1,0
+263,0,"How come? It was very well maintained through our company, everything runs perfect on it. Just like new.",0,0
+264,0,It's 6 years old and that mileage seems high. If it was a company truck that could mean a lot of wear and tear. The engine and trans could go out at any time,1,2
 265,0,"The company has maintained it very well, the transmission shifts good. As you know even a high mileage truck, if maintained well, will last you forever.",0,2
 266,0,"I understand. But even with it being maintained well, these things are going to happen. I'll offer $4,000",2,4
 267,0,"4,000 is too low. I'll be willing to give you a 1 year warranty on the engine and transmission if that's what is concerning you.",6,6
-268,0,"I'll come up to $5,500. With a 2 year warranty",6,6
+268,0,"I'll come up to $5,500. With a 2 year warranty",6,4
 269,0,"I'm sorry, I'm willing to work with you but $5,500 is not acceptable. How about $8,000 with a 2 year warranty. We'll even throw in a toolbox for the back!",6,6
 270,0,"Definitely can't do 8. I'll do $6,300. That's my final offer.",3,3
 271,0,"If you can come up with $7,500 I think we can approve that amount. I'll pend you an offer. Think about it. Thank you for your time either way!",4,6
-272,0,Ive got $80 I can spend on the phone.,4,3
+272,0,Ive got $80 I can spend on the phone.,4,0
 273,0,"The phone is listed at 160, I'm not taking 80 for it.",2,3
 274,0,it would be productive fro both of us if you tell me what you would be willng to take.,0,4
 275,0,What if I bring the price down to 140?,4,4
@@ -283,9 +283,9 @@
 281,0,125 and you come pick it up.,6,6
 282,0,Hey are you still selling the chair and ottoman?,0,0
 283,0,Yes it is still for sale.,0,0
-284,0,Great. Can you tell me what condition they are in? Any wear and tear?,1,1
+284,0,Great. Can you tell me what condition they are in? Any wear and tear?,1,5
 285,0,They do have some scratches and usual wear and tear and the cushion is a bit faded.,0,0
-286,0,Okay well considering it does have cosmetic damage can you bring the price down?,2,1
+286,0,Okay well considering it does have cosmetic damage can you bring the price down?,2,2
 287,0,I'm willing to negotiate a fair price but nothing too crazy.,0,4
 288,0,Would you take 25 for the set?,4,4
 289,0,25 is too low but I will go down to 40.,4,4
@@ -293,10 +293,10 @@
 291,0,Well I do want to get rid of these so I think we have a deal.,0,0
 292,0,Cool! 35 it is then!,0,0
 293,0,"Hello, are you interested in this charming bungalow?",0,0
-294,0,"Hi there, yes, your property seems to have some of the features that I'm looking for.",0,1
+294,0,"Hi there, yes, your property seems to have some of the features that I'm looking for.",0,0
 295,0,I am asking $3000.,0,0
 296,0,That is a little steep for my current budget. Is there any chance you'd be able to come down a bit?,4,7
-297,0,"It is a great deal, as a 2 bdrm home in the Upper Diamond District.  A great, friendly neighborhood, convenient to lots of bakeries, restaurants, Montclair Village, parks.  Also, easy access to highways 580 and 13.",2,2
+297,0,"It is a great deal, as a 2 bdrm home in the Upper Diamond District.  A great, friendly neighborhood, convenient to lots of bakeries, restaurants, Montclair Village, parks.  Also, easy access to highways 580 and 13.",2,0
 298,0,"I know, it's a great location. Would you consider a $300 price break if I was to take care of the lawn care and yard maintenance?",6,6
 299,0,Yes.,0,0
 300,0,That's fantastic. I think I could swing $2700. Would you accept that offer?,0,4
@@ -308,11 +308,11 @@
 306,0,Is that price negotiable?,0,4
 307,0,Sure I'll come off a little so make an offer and I'll let you know. They have only been used twice and are really nice.,2,0
 308,0,That's awesome. $75 cash? I can also pick them up from your house today and pay cash or venmo you the money now.,6,6
-309,0,I'm afraid you a bit low; half off for like new condition hurts.,2,2
-310,0,What did you originally pay?,5,0
+309,0,I'm afraid you a bit low; half off for like new condition hurts.,2,4
+310,0,What did you originally pay?,5,5
 311,0,I paid $150 for them and I only used them on to flights and put them away.,0,0
 312,0,"If the headphones cost the same price brand new, then I'll just do that then. I'll pay $100, final offer",2,3
-313,0,"Agreed, you got a good deal at $100. Thanks",0,4
+313,0,"Agreed, you got a good deal at $100. Thanks",0,0
 314,0,Hi,0,0
 315,0,Hi ... interested in your listed headphones.,0,0
 316,0,"Great, they are in really great condition still, only used twice.",0,0
@@ -320,26 +320,26 @@
 318,0,It works wonders if you want to limit the noise in the environment.,0,0
 319,0,how long is the connecting cable?,5,5
 320,0,"Not sure of the lenghts but two different sizes , one is quite long.",0,0
-321,0,Are they still under mfrs warranty?,5,1
+321,0,Are they still under mfrs warranty?,5,5
 322,0,Yes and it is good for 5 more years,0,0
 323,0,what are you asking for them?,0,5
 324,0,$150.00,0,0
-325,0,"Well, that's considerably more than budget will allow. I have seen some of them elsewhere at around $80. Would you take 90 for them?",2,2
-326,0,They must be a different model because these are already a price cut at 150. I would come down to 125.,2,2
+325,0,"Well, that's considerably more than budget will allow. I have seen some of them elsewhere at around $80. Would you take 90 for them?",2,7
+326,0,They must be a different model because these are already a price cut at 150. I would come down to 125.,2,4
 327,0,"That's still higher than budget ... would you go for $105, including shipping cost?",6,6
 328,0,"I think that is really too low, I can come down to 120.",4,4
 329,0,Hi there.. are they still available?,0,0
 330,0,They are still available.,0,0
-331,0,What is the condition? New used?,5,1
+331,0,What is the condition? New used?,5,5
 332,0,"They are brand new, in the box.",0,0
-333,0,Have you ever tested them to make sure they work?,1,1
+333,0,Have you ever tested them to make sure they work?,1,5
 334,0,They are still available.,0,0
-335,0,My son tested them and yes believe me they do work.,0,0
+335,0,My son tested them and yes believe me they do work.,0,5
 336,0,"They are brand new, in the box.",0,0
 337,0,"Okay, Would you willing to come down a little in price?",0,4
 338,0,I can come down some in the price. Can you pick them up?,6,6
 339,0,"Yes, I would be willing.",0,0
-340,0,I could come down to $85.,4,3
+340,0,I could come down to $85.,4,4
 341,0,My son tested them and yes believe me they do work.,0,0
 342,0,That is great. I can come get them today if you like?,0,0
 343,0,Today sounds great. As soon as possible.,0,0
@@ -353,14 +353,14 @@
 351,0,do you think you can find another $5 to make it $50,4,4
 352,0,If this comes with a charger I'll do $50,6,6
 353,0,"done, ive got plenty of those lying around.",0,0
-354,0,Is the theatre system still available?,0,0
-355,0,Is the property still available to rent?,5,5
+354,0,Is the theatre system still available?,0,5
+355,0,Is the property still available to rent?,5,0
 356,0,"Yes, it has a minimum contract of one year (but I would love a longer contract). I just need your last pay stub and last 2 months of bank statements.",0,0
 357,0,Is the property still available to rent?,0,5
-358,0,I could do a longer contract if you would consider coming down on the rent a little. Say to $3000?,6,0
-359,0,"It is a very nice location! I could go as low as $3200. It has brand new kitchen fixtures, a washer and dryer, and a hot tub. It's a great deal!",2,2
-360,0,I could do a longer contract if you would consider coming down on the rent a little. Say to $3000?,6,6
-361,0,So we could meet in the middle. I can do a two year contract for $3100 a month.,4,4
+358,0,I could do a longer contract if you would consider coming down on the rent a little. Say to $3000?,6,4
+359,0,"It is a very nice location! I could go as low as $3200. It has brand new kitchen fixtures, a washer and dryer, and a hot tub. It's a great deal!",2,0
+360,0,I could do a longer contract if you would consider coming down on the rent a little. Say to $3000?,6,4
+361,0,So we could meet in the middle. I can do a two year contract for $3100 a month.,4,3
 362,0,"Okay, that sounds like a fair deal. Thank you!",0,0
 363,0,Thank you. I am looking forward to all those amenties.,0,0
 364,0,$50 seems like a pretty great deal,0,0
@@ -375,24 +375,24 @@
 373,0,okay works for me. Then will see you on monday or tuesday! thanks!,0,0
 374,0,"Hi, is the Jaguar still available?",0,0
 375,0,"Yes, I still have it",0,0
-376,0,Good I see by your post the smog registration runs out this month?,1,1
+376,0,Good I see by your post the smog registration runs out this month?,1,5
 377,0,"Hi, is the Jaguar still available?",0,0
 378,0,"Yes, it sure does. That's the only negative though, it's a great car. No issues at all, everything works reliably.",0,0
 379,0,That's good. No picture. I would like to offer $2250.,4,4
-380,0,Good I see by your post the smog registration runs out this month?,1,1
+380,0,Good I see by your post the smog registration runs out this month?,1,5
 381,0,That's good. No picture. I would like to offer $2250.,4,4
 382,0,"Sorry, that's a bit too low. Everything works, including a security system, pioneer system, bluetooth and auxiliary. I can take $3000.",2,2
-383,0,"Wow, the ad doesn't mention all that. Okay, I can go to $2650.",1,4
-384,0,"Wow, the ad doesn't mention all that. Okay, I can go to $2650.",1,3
-385,0,"It's also very clean inside, with leather seats and decent paint. Everything automatic. I can meet you halfway at $2850.",2,2
+383,0,"Wow, the ad doesn't mention all that. Okay, I can go to $2650.",1,7
+384,0,"Wow, the ad doesn't mention all that. Okay, I can go to $2650.",1,7
+385,0,"It's also very clean inside, with leather seats and decent paint. Everything automatic. I can meet you halfway at $2850.",2,0
 386,0,I think you have yourself a deal. $2850.,0,3
 387,0,Great!,0,0
 388,0,Hi so are interested in this sweet bike?,0,0
 389,0,Yes! it looks amazing!,0,0
 390,0,"It really is. Do you have questions about it? I've taken this boy down so double black trails in Whistler, Canada and it handled like a champ.",0,0
-391,0,"Wow, si its been used often?",5,1
+391,0,"Wow, si its been used often?",5,5
 392,0,Yes fairly often but as you can see from the photos the bike has been very well maintained.,0,0
-393,0,"Yea, that is absolutely true, but can I have a discount?",0,4
+393,0,"Yea, that is absolutely true, but can I have a discount?",0,5
 394,0,Yeah we can work something out. So I'd wiling to sell it for it $1150 if you can pick it up from me today,6,6
 395,0,how about 900 if I pick it up and pay cash.,6,6
 396,0,"Eh, $900 is too low for me. The bike has very expensive custom rotors on both wheels. Those alone are worth $500. I can go down to $1100 but that's my lowest.",2,2
@@ -405,20 +405,20 @@
 403,0,"I was looking for a BMX bike and was hoping to find a good deal, can you help me out?",0,0
 404,0,Sure. I'm selling this bike for $10,0,0
 405,0,Oh interesting is that your bottom dollar?,5,4
-406,0,"Yes, I'm basically selling this for pennies.",0,4
+406,0,"Yes, I'm basically selling this for pennies.",0,0
 407,0,Yea I understand but just for fun would you be willing to drop the price closer to 5 if I run by the bank and grab you some coins?,6,6
-408,0,"Unless they're gold coins, I'm not interested. I'll take something else of equal value, though.",6,0
+408,0,"Unless they're gold coins, I'm not interested. I'll take something else of equal value, though.",6,3
 409,0,"Hmmm, I don't have any gold coins....",0,0
-410,0,Then it's $10 or something of equal value.,6,0
-411,0,Okay I want the bike so I will pay your price of $10.00!,0,6
+410,0,Then it's $10 or something of equal value.,6,3
+411,0,Okay I want the bike so I will pay your price of $10.00!,0,0
 412,0,Okay.,0,0
 413,0,Hello i am selling my yoga bliss cruiser,0,0
 414,0,I see that! I think it is what I have been looking for.,0,0
 415,0,well the condition is good and you will love the features. and it even has a cargo rack,0,0
-416,0,It looks like it is in really great condition but I am not able to pay the 100. Can you come down at all?,7,7
+416,0,It looks like it is in really great condition but I am not able to pay the 100. Can you come down at all?,7,2
 417,0,I understand I would be willing to take a little less. would you be able to pick it up?,6,6
 418,0,Yes I can come this evening around 7 if that works but then what would the price be?,0,0
-419,0,I would accept 90 for it,4,4
+419,0,I would accept 90 for it,4,3
 420,0,I still don't have that much and I really want it. Can we do 70?,7,7
 421,0,70 is quite low my best offer would be 80.,3,3
 422,0,I have 75 dollars cash and I don't have a penny more. Please would you accept that amount?,7,7
@@ -426,18 +426,18 @@
 424,0,Thank you so much!,0,0
 425,0,no problem,0,0
 426,0,hi how are you???,0,0
-427,0,awesome. Need an apartment?,0,0
+427,0,awesome. Need an apartment?,0,5
 428,0,"yeah man, I like the pics and all but damn the price is high",0,0
-429,0,"What can I say, It's a high-end neighborhood.",0,5
+429,0,"What can I say, It's a high-end neighborhood.",0,7
 430,0,"Kool man, but do you got any wiggle room at all?",0,0
 431,0,What were you thinking?,0,0
-432,0,how about a grand cash,0,4
+432,0,how about a grand cash,0,0
 433,0,"Well, that's way too low for this area. I hope you can afford over 2500.",4,4
 434,0,"WOW, I see you point on where it is and all, but how many offers got cash on hand and will meet you today with that cash, how about 1200 cash",6,6
-435,0,We usually only take personal checks. If you have great credit we might rent it for 2400.,4,6
+435,0,We usually only take personal checks. If you have great credit we might rent it for 2400.,4,4
 436,0,I am in the cash only type of buiz.  how about 1600 cash?,4,6
-437,0,It sounds like you need to look in a different type of area for housing.,4,1
-438,0,"nah man, 1600?  To low?  Tell you what thrown the TV in the pic and I will do 1900?",6,0
+437,0,It sounds like you need to look in a different type of area for housing.,4,0
+438,0,"nah man, 1600?  To low?  Tell you what thrown the TV in the pic and I will do 1900?",6,6
 439,0,I'm sorry but it doesn't seem like we will be able to rent to you. Have a nice day.,0,0
 440,0,Hello is there anything wrong with this?,1,1
 441,0,"Hi. Nothing wrong with it, just looking to get something new.",0,0
@@ -445,8 +445,8 @@
 443,0,"50,000 on a rebuilt engine",0,0
 444,0,Nice. And the tires are all good?,5,5
 445,0,"Tires are about a month old, still good.",0,0
-446,0,I only have 3800 cash right now. Would you come down on the price a bit?,7,7
-447,0,I was really hoping to get 4000 at the lowest. Is there anyway you could get that in the next few days?,4,6
+446,0,I only have 3800 cash right now. Would you come down on the price a bit?,7,4
+447,0,I was really hoping to get 4000 at the lowest. Is there anyway you could get that in the next few days?,4,0
 448,0,I could get that in a week if you'd be willing to wait to sell it till then.,4,6
 449,0,I can definitely hold it for you for a small down payment.,6,0
 450,0,Okay I'll give you the down payment and then give you the rest next week then!,0,0
@@ -456,21 +456,21 @@
 454,0,"Sure, go ahead.",0,0
 455,0,Has it been in any major accidents?,1,1
 456,0,"No, I`ve kept it in very good condition.",0,0
-457,0,"All of the electronics are in working order, correct?",5,1
+457,0,"All of the electronics are in working order, correct?",5,5
 458,0,"Yes, everything has been checked out recently.",0,0
 459,0,"Great! Would you take $10,000? 120k miles is kinda a lot.",4,4
 460,0,I`m open to negotiate but 10k is a bit low. We could meet in the middle and say 13 000? I`ll include the extra speakers I recently purchased.,6,6
 461,0,"13,000 is fair, however I can only afford paying 12,500",7,3
-462,0,"Alright, I think that`s reasonable. We can agree on 12,500 then.",0,3
+462,0,"Alright, I think that`s reasonable. We can agree on 12,500 then.",0,0
 463,0,Great!,0,0
-464,0,Hello. I saw your ad. I really would like to buy it for my kid. Is it a reliable equipment,0,5
+464,0,Hello. I saw your ad. I really would like to buy it for my kid. Is it a reliable equipment,0,0
 465,0,It is in great condition.  I would be willing to deliver it to you!,0,0
 466,0,Great and do you have it in different colors?,0,5
 467,0,"I only have the blue one, but it is in like new condition.",5,0
-468,0,"Okay, I can still use that, but now the price is an issue for me. What can we do about that?",4,7
+468,0,"Okay, I can still use that, but now the price is an issue for me. What can we do about that?",4,1
 469,0,"well, I will throw in free delivery and a 3 month warranty for the $100.",6,6
 470,0,I can't afford $100 because I am not working full time. I just have a certain budget. I can only pay $76 for it,7,7
-471,0,"That is a really big difference!  I will also throw in a helmet and bring the price down to $95.  So, you will get the bike, the helmet, delivery, and a 3 month warranty.  I feel that this is more than fair.  Wouldn't you agree?",6,6
+471,0,"That is a really big difference!  I will also throw in a helmet and bring the price down to $95.  So, you will get the bike, the helmet, delivery, and a 3 month warranty.  I feel that this is more than fair.  Wouldn't you agree?",6,0
 472,0,I would appreciate if you waive the other options as I just want the bike for my kid. Can we work $80 for it?,4,6
 473,0,Can we split the difference and agree on 87.50?,4,4
 474,0,okay I think I can do that by taking in more hours at work at least my kid will be happy :),0,0
@@ -488,13 +488,13 @@
 486,0,"Sounds good to me. $190, tomorrow.",3,0
 487,0,See you then!,0,0
 488,0,This is a great offer I'll give you for $165!,0,4
-489,0,Tell me more about the subs.,0,5
+489,0,Tell me more about the subs.,0,0
 490,0,"Well what exactly would you like to know about? I've had this for about a year, and it is still in really nice condition.",0,0
-491,0,Are there in other perks to it other than what you have listed?,5,5
-492,0,I have a 1000 watt rms amp that I'm looking to get rid of for just 135 extra.,0,0
+491,0,Are there in other perks to it other than what you have listed?,5,1
+492,0,I have a 1000 watt rms amp that I'm looking to get rid of for just 135 extra.,0,4
 493,0,"Ok, I'm not looking for an amp at the moment.",0,0
 494,0,That's fine you can get the subs for the original price still!,0,0
-495,0,I've looked at various websites for the same sub and I've seen much lower prices.,4,2
+495,0,I've looked at various websites for the same sub and I've seen much lower prices.,4,0
 496,0,There is a little wiggle room I could provide depending on how much you'd like to spend,4,4
 497,0,"I would like to do $99 because I found one for $75 online, but it is too far away. I prefer to have the subs sooner rather than later, but I don't mind waiting if I only have to spend $75. I can offer $99 and pick it up myself so you don't have to worry about a shipping price or the gas to bring it to my place.",6,6
 498,0,I'd really like $110 for this. Just a bit more than what you're offering.,4,4
@@ -505,7 +505,7 @@
 503,0,"Great, it is an awesome truck I would trust it to drive anywhere.",0,0
 504,0,Are you willing to take less than the asking price?,4,4
 505,0,"I am willing to go down some, what are you thinking?",0,4
-506,0,I'm willing to make you an offer,0,4
+506,0,I'm willing to make you an offer,0,0
 507,0,What is your offer?,0,0
 508,0,"$11,020.00",4,4
 509,0,"That is very low, can you come up to 13000.00",4,4
@@ -513,21 +513,21 @@
 511,0,OK I will accept that,0,0
 512,0,Good deal! Thank you,0,0
 513,0,"Hello, I'd like to rent this apartment but I don't think the price is worth it especially since I cannot have my dog",1,7
-514,0,"While I cannot change the pets policy, I am willing to negotiate the price.",0,6
+514,0,"While I cannot change the pets policy, I am willing to negotiate the price.",0,4
 515,0,Is it possible to go as low as 1000/mo?,4,4
 516,0,"I am sorry, but that is too low. The apartment have modern furnishings, after all. I can do 1750/mo.",2,2
-517,0,"That's quite a bit over the list price, does this include any utilities?",4,5
+517,0,"That's quite a bit over the list price, does this include any utilities?",4,6
 518,0,"It has shared and coined laundry machines. Air conditioning. Redone kitchen counter tops in 2014. Utilities, such as gas, internet, electric, must be covered by you.",0,0
-519,0,What's the justification for renting at above the list price then? I currently rent a similar apartment down the street for $1250/mo and that includes a washer/dryer in the unit.,1,2
+519,0,What's the justification for renting at above the list price then? I currently rent a similar apartment down the street for $1250/mo and that includes a washer/dryer in the unit.,1,6
 520,0,"The location of the apartment is a factor. Also, the landlord pays for water, garbage, sewage, and HOA fees. So I feel you still are getting a good deal. But I can go down to 1600/mo.",2,2
-521,0,"I have a great deal of experience with landscaping, is it possible to negotiate a deal where I maintain the property for a deduction in the monthly rent? I can assure you my work is excellent and I can refer you to previous clients",6,6
+521,0,"I have a great deal of experience with landscaping, is it possible to negotiate a deal where I maintain the property for a deduction in the monthly rent? I can assure you my work is excellent and I can refer you to previous clients",6,2
 522,0,"I am sorry, but I cannot accept that offer. 1600/mo is my final offer.",3,3
 523,0,I will accept 1600/mo then,0,4
 524,0,Hello I am interested in this product!,0,0
-525,0,"Ok, I'm selling it at 60 or obo",0,4
+525,0,"Ok, I'm selling it at 60 or obo",0,0
 526,0,Is the bottom part glass?,5,5
 527,0,The round portion? Yes,0,0
-528,0,Okay and the shade is green correct?,5,0
+528,0,Okay and the shade is green correct?,5,5
 529,0,"Yes, the sage is green",0,0
 530,0,Great. Now the price seems to be very high for me. I would like to get this but I can only pay $36,7,7
 531,0,36 is too low. I can do 55,4,4
@@ -536,10 +536,10 @@
 534,0,Sure I can do that. When can i pick it up?,0,0
 535,0,at 6;30,0,0
 536,0,Sure then we got a deal! Thanks!,0,0
-537,0,i can pay 57,4,4
+537,0,i can pay 57,4,0
 538,0,"I appreciate the offer, but I'm really looking for more as this is an exceptional piece. We've taken really good care of it and recently had the top refinished. It's a lovely design and you can really tell the quality in the piece by it's heft and design.",2,2
-539,0,ok i pay the 95,4,0
-540,0,Well that's great! Would  you be picking it up or do you want it shipped?,5,0
+539,0,ok i pay the 95,4,6
+540,0,Well that's great! Would  you be picking it up or do you want it shipped?,5,6
 541,0,shiped,0,0
 542,0,"Ok, good. We will work out the details later, but I can dismantle the legs without harming the piece so that way it can ship flat and cost less.",0,0
 543,0,ok thats works for me please wrap in plastic,0,0
@@ -549,21 +549,21 @@
 547,0,Thanks,0,0
 548,0,hi,0,0
 549,0,Hello.,0,0
-550,0,how many colorsw do you have,5,5
+550,0,how many colorsw do you have,5,0
 551,0,They are all black. We got them as company phones so all are the same. But brand new and unopened.,0,0
 552,0,tell me a little about the features,5,5
 553,0,"Sadly I'm not a phone salesman but it's easy to find the information about Samsung S8 online. It's the newest model, fantastic camera, resolution and great quality. As I said, brand new, in original box. You won't find a better offer anywhere.",0,0
-554,0,great can you let me get it for 550 please i need a good phone for my wife,4,5
+554,0,great can you let me get it for 550 please i need a good phone for my wife,4,4
 555,0,"I can't lower the price much if you are only buying one. Discount offers is for those willing to buy multiple phones. If you are really looking for a gift for your wife I might go down slightly, but in that case you will need to pick it up yourself. 600 dollars if you can pick it up yourself.",6,6
-556,0,all i have is 598 can u work with that ill pick it up,7,6
+556,0,all i have is 598 can u work with that ill pick it up,7,0
 557,0,"Alright, we can agree on that.",0,0
 558,0,hi,0,0
 559,0,Hey there. Are you interested in the couch?,0,0
 560,0,yes very is there anything wrong with it,1,1
 561,0,"Actually no. It is in perfect condition! NO rips, tears, or signs of wear!",0,0
-562,0,sounds and looks good i can offer $190 right now and ill pick them up please help me out sir i'm running low on cash,6,7
+562,0,sounds and looks good i can offer $190 right now and ill pick them up please help me out sir i'm running low on cash,6,6
 563,0,"Oh man, completely understand that! I am getting married next month and my ol' lady says this doesn't match her decor! haha. So I'm trying to sell it to get the funds to take her on a honeymoon of her dreams! Tell you what, $220, and I'll throw in a coffee table. How's that sound?",6,6
-564,0,can we make it a even $200,4,4
+564,0,can we make it a even $200,4,3
 565,0,"If I throw in an entertainment center, would you come up to $220?",6,6
 566,0,yes that will work can you drop them off,6,0
 567,0,You bet! I'll see you in an hour!,0,0
@@ -571,7 +571,7 @@
 569,0,yo yo yo,0,0
 570,0,Hi there can you tell me a little more about this Bike please.,5,5
 571,0,"sure bro, it's a fully custom bmx built to riiiiiiiiide, aftermarket everything, benny bars, pegs, seat and post, head set, its a sick bike",0,0
-572,0,the add doesn't say how big the bike is i'm worried my 11 year old son will be to tall for it..,1,1
+572,0,the add doesn't say how big the bike is i'm worried my 11 year old son will be to tall for it..,1,7
 573,0,"its 20 in, perfect for a 11 year old",0,0
 574,0,would you take $300 for it?,4,4
 575,0,"I wish i could man, I've got twice that just in after market parts, at $500 this thing is a steaaaaal",2,2
@@ -582,29 +582,29 @@
 580,0,"Hi, how long of a lease are you asking?",5,5
 581,0,2 years minimum,0,0
 582,0,ouch!  Would you accept a 1 year lease?,4,5
-583,0,you would love the place but I am willing to accept for one year,0,4
-584,0,"great, the price you are asking is very high for the amount of space, are you willing to come down on the rent?",4,2
-585,0,"actually everything is new and the place is in a great area , close to every mall and restaurants and I will negotiate but only slightly",2,2
+583,0,you would love the place but I am willing to accept for one year,0,0
+584,0,"great, the price you are asking is very high for the amount of space, are you willing to come down on the rent?",4,4
+585,0,"actually everything is new and the place is in a great area , close to every mall and restaurants and I will negotiate but only slightly",2,0
 586,0,I appreacite that.  Would you be willing to accept $1735?,4,4
 587,0,"that way too low, did you notice that there is a swiming pool and close to schools. the best I could do is 2200",2,2
-588,0,"Yes, this place has great features but 2200 would put a strain on my budget.  Would you be willing to accept 1195?",7,7
+588,0,"Yes, this place has great features but 2200 would put a strain on my budget.  Would you be willing to accept 1195?",7,2
 589,0,did you mean 2195,0,4
-590,0,"sorry, yes I meant 2195.  I'm just excited about this place and really want it.",0,3
+590,0,"sorry, yes I meant 2195.  I'm just excited about this place and really want it.",0,0
 591,0,"yes I could that, when can you come over for  signing the papers ?",0,0
 592,0,great!  are you available at noon today?,0,0
 593,0,"yes I am, but lets make it 1pm, ok ?",0,0
 594,0,1pm it is!  see you then!  and thanks.,0,0
 595,0,thank you,0,0
 596,0,Hello are you interested in my subs?,0,0
-597,0,Yes I am interested how good is the bass response on theses subs?,5,5
+597,0,Yes I am interested how good is the bass response on theses subs?,5,0
 598,0,"The Bass response is excellent, some of the best I've heard",0,0
 599,0,I'm looking for something with a punch but I don't want it to shake my car apart or blow up my trunk.,0,1
 600,0,I think these would work well for you,0,0
 601,0,Does it come with all the standard installation parts?,5,5
 602,0,"They are new, still sealed in the box",0,0
 603,0,Ok I can personally pick these subs up today with 152 in cash would that be an offer you are interested in?,4,6
-604,0,"No, I couldn't go that low.",0,4
-605,0,Then is there anything you could offer to sweeten the deal a little?,4,0
+604,0,"No, I couldn't go that low.",0,3
+605,0,Then is there anything you could offer to sweeten the deal a little?,4,4
 606,0,I could assist in installation,6,0
 607,0,No im pretty adept at installation do you happen to have any dynamatt or other sound insulation material?,6,1
 608,0,I do have a roughly 3x3 piece of dynamatt that I could throw in,6,6
@@ -614,16 +614,16 @@
 612,0,"yes, I could do that",0,0
 613,0,Great then 180 it is then.,0,0
 614,0,"Hi, interested in the motor.",0,0
-615,0,Thanks. I'm listing it for $138,0,0
-616,0,"Ya I saw that, any wiggle room on that price?",0,1
+615,0,Thanks. I'm listing it for $138,0,4
+616,0,"Ya I saw that, any wiggle room on that price?",0,4
 617,0,"As you know, it will be delivered speedily but I'm willing to take $130",0,6
 618,0,I was hoping to pay more like $85.,4,4
 619,0,Oh no! You might want to come up to $125,4,4
-620,0,"Hmm, pretty high for me still.. any thing I could do to lower that price, say pick it up?",7,6
+620,0,"Hmm, pretty high for me still.. any thing I could do to lower that price, say pick it up?",7,7
 621,0,I can take off $10 if you pick it up,6,6
 622,0,ok,0,0
 623,0,Deal!,0,0
-624,0,so 115?,0,4
+624,0,so 115?,0,0
 625,0,Yes. 115. Thanks for your patronage!,0,0
 626,0,Hi!,0,0
 627,0,Hi there. Are you interested in this house?,0,0
@@ -640,20 +640,20 @@
 638,0,Sounds good I'll take it!,0,0
 639,0,Hello!,0,0
 640,0,Are you interested in 6 Commodore Drive Unit C430?,0,0
-641,0,"I am, but I was wondering if there was any chance of the price being negotiable.",4,4
+641,0,"I am, but I was wondering if there was any chance of the price being negotiable.",4,0
 642,0,"Hello, are you there?",0,0
 643,0,I have a little wiggle room.,4,0
 644,0,Computer froze up for a moment.,0,0
 645,0,"I just live everything about it, but I am looking to pay below $2000.",4,4
 646,0,"Hm.  Well, remember that this is a 1 bedroom 1 bath in a fantastic area.",4,2
-647,0,I understand that. This is the one place where I have been lookin for an apartment to become available.,0,2
-648,0,It's also been renovated.  It has a great parking space that comes with the apartment.,0,2
+647,0,I understand that. This is the one place where I have been lookin for an apartment to become available.,0,0
+648,0,It's also been renovated.  It has a great parking space that comes with the apartment.,0,0
 649,0,Would you take $2000? It is only a little less than what you are asking.,4,4
 650,0,"What about $2100?  I think that's fair.  This does include a lot of luxuries, including community laundry rooms, heated pools, hot tubs, saunas, and a fitness center.",2,2
 651,0,What do you think?,0,0
 652,0,"Oh, I wasn't made aware of those amenities!!! If I fixed things up that need repairs would you take the $2000?",6,2
 653,0,"That's still a little low.  Actually, the place has granite counter tops and gorgeous flooring in there already.  I'm still looking for $2100.",2,2
-654,0,It is definitely over my original budget of under $1500 that I was looking for. I may need to keep looking even though this place is great.,7,7
+654,0,It is definitely over my original budget of under $1500 that I was looking for. I may need to keep looking even though this place is great.,7,2
 655,0,I tell you what...let me see if we can do $2050.  What do you think?,4,4
 656,0,I think I could do the extra $50. That seems fair.,0,4
 657,0,Deal!,0,0
@@ -669,7 +669,7 @@
 667,0,Would you be willing to go $2450?,4,4
 668,0,I can go $2700 with furniture or $2500 without furniture.,6,6
 669,0,I can do the 2500 if it comes with appliances in the kitchen at least.,6,6
-670,0,I can make sure there is a refrigerator and stove for $2500.  The refrigerator and stove will be purchased and already installed before you move in.,6,6
+670,0,I can make sure there is a refrigerator and stove for $2500.  The refrigerator and stove will be purchased and already installed before you move in.,6,0
 671,0,Sounds great.,0,0
 672,0,"Hello, is this house still for sale?",5,0
 673,0,"Yes, it is still available for leasing. Would you like to come take a tour?",0,0
@@ -677,19 +677,19 @@
 675,0,It is a 3 Bedroom 1 bath home. In great neighborhood. It's professionally maintained. It is a must see house.,0,0
 676,0,What are you asking for the house?,5,5
 677,0,Rent is $1595 a month. Utilities are not included.,0,0
-678,0,Are you able to go any lower?  The comps around the neighboorhood are cheaper than this price.,4,2
+678,0,Are you able to go any lower?  The comps around the neighboorhood are cheaper than this price.,4,4
 679,0,"We can offer you a discount of $100/mo if you can sign 1 year lease, providing that your application is approved.",6,6
 680,0,Would you be willing to accept 1395 if I signed a 2 year lease?,6,6
-681,0,"Sorry, right now we can only offer the $100 discount. Remember we do the maintenance, including landscapes. That alone adds value to your lease.",6,6
+681,0,"Sorry, right now we can only offer the $100 discount. Remember we do the maintenance, including landscapes. That alone adds value to your lease.",6,0
 682,0,"Ok, well I think 1395 is a fair deal if you will be able to pay for half the utilities.  That is my last offer, take it or leave it.",6,6
 683,0,"Hello, you are interested in the ad for the sofa set?",0,0
 684,0,Yes I really like it can you tell me more about the set?,5,5
 685,0,"Sure, this is a 2 piece set. We've got the sofa and the chair as pictured. You saw the dimensions in the ad I assume? The sofa is 94 inches across and the chair is 38 inches. I would be willing to take $1250 for the pair.",0,0
 686,0,I really like it but could offer you $600 and I will come and pick it up myself and provide my own truck,6,6
-687,0,"Understood, but that's pretty far below what we paid for it and I know the sofa alone is worth more than $600.",4,2
+687,0,"Understood, but that's pretty far below what we paid for it and I know the sofa alone is worth more than $600.",4,4
 688,0,Ok I understand that is a low offer but the condition does not look that great. how about $750,4,4
 689,0,The condition is actually very good. The set has been in a smoke free home and has seen very little wear from use.  I could go to $1100.,2,2
-690,0,that is still quite high can we agree on $1000,4,4
+690,0,that is still quite high can we agree on $1000,4,3
 691,0,"I could do $1,000. Do you have someone who can help you with the pick up?",0,6
 692,0,yes I have a friend who will help me and he has a pick up truck $1000 it is then,0,0
 693,0,Hello.,0,0
@@ -698,8 +698,8 @@
 696,0,"Oh, sure!  They are still available",0,0
 697,0,Are there any problems with the binoculars?,1,1
 698,0,"No, none that I know of.  I just do not use them as much as I thought I would.",0,0
-699,0,"Well, then I suppose I'd be willing to take them off your hands. I'd like to pay$216 for the binoculars.",4,6
-700,0,"My asking price $380.  I could go slightly lower but I can not sell them for $216, sorry.",4,3
+699,0,"Well, then I suppose I'd be willing to take them off your hands. I'd like to pay$216 for the binoculars.",4,4
+700,0,"My asking price $380.  I could go slightly lower but I can not sell them for $216, sorry.",4,4
 701,0,"Well, what would your best price be?",0,0
 702,0,$340 would be fine with me,4,0
 703,0,"Well, I'd be willing to drive over and pick them up, if you can come down to $260.",6,6
@@ -707,36 +707,36 @@
 705,0,"Well, I suppose that's fair. I'll accept that price.",0,0
 706,0,Great!,0,0
 707,0,any questions about the item?,0,0
-708,0,Can you tell me about the apartment? 2450 seems quite a bit above the going rate in that neighboorhood. I was looking for closer to 1225,4,1
+708,0,Can you tell me about the apartment? 2450 seems quite a bit above the going rate in that neighboorhood. I was looking for closer to 1225,4,4
 709,0,this is completely remodeled.  It is like new,0,0
 710,0,"the pictures look great, but it still seems a bit pricey compared to other apartments in the area. I can do 1600, just because I like that building",4,2
 711,0,i can go 2200 a month,4,4
-712,0,"ummm. I don't know, it doesn't even have a washer/dryer. I would have to share with the neighbor. I could go up to 1900 if you put in a washer/dryer",2,6
+712,0,"ummm. I don't know, it doesn't even have a washer/dryer. I would have to share with the neighbor. I could go up to 1900 if you put in a washer/dryer",2,2
 713,0,2100 and the washer and dryer are yours,6,6
 714,0,That is still way too high for the area. I'm pretty firm on the 1900. I have a great history as a renter with lots of referneces. I won't trash your place and pay my rent on time.,3,2
 715,0,"ok, 2000",4,0
-716,0,How about 1950 and the washer and dryer. I think we could both be happy with that.,6,2
+716,0,How about 1950 and the washer and dryer. I think we could both be happy with that.,6,6
 717,0,hi,0,0
 718,0,"Hi, I like your bike. It reminds me of one I used to own back in the day. I would jump it off ramps while rocking a TMNT t-shirt.",0,0
 719,0,its a nice bike normal wear and tear,0,0
-720,0,Is the chain rusty? It looks as though it hasn't been greased in a while.,1,1
-721,0,no rust but it needs a brake,0,0
-722,0,"The asking price is fair, but I think it's a bit high. I'd like to pay $150 for it. If you do the $150, I'll perform some awesome wheelies for you before I leave.",4,6
-723,0,"it is 27 years old you can not find these anymore, how about $170",4,2
+720,0,Is the chain rusty? It looks as though it hasn't been greased in a while.,1,0
+721,0,no rust but it needs a brake,0,2
+722,0,"The asking price is fair, but I think it's a bit high. I'd like to pay $150 for it. If you do the $150, I'll perform some awesome wheelies for you before I leave.",4,4
+723,0,"it is 27 years old you can not find these anymore, how about $170",4,4
 724,0,"You're right, those bikes are hard to come by. How about we meet in the middle and do $160?",4,4
 725,0,$165 is as low as i can go,3,3
-726,0,"If it had the original wheels, I would do the $165. But I need to stay firm at $160. It's a good compromise I feel.",2,4
+726,0,"If it had the original wheels, I would do the $165. But I need to stay firm at $160. It's a good compromise I feel.",2,3
 727,0,"You are right about the wheels, ok $160",0,0
 728,0,Deal!,0,0
 729,0,Ok,0,0
 730,0,Hello,0,0
 731,0,Hello are you still selling the Settee?,0,0
-732,0,"Yes, I am. I am asking 200 dollars for it, but I am willing to listen to offers and make a deal.",0,4
+732,0,"Yes, I am. I am asking 200 dollars for it, but I am willing to listen to offers and make a deal.",0,0
 733,0,Sounds good. What does the wear and tear look like on it though? What kind of condition is it in?,1,1
 734,0,"It is in good condition. There are no holes, or scratches.",0,0
 735,0,How long have you had it for?,1,5
 736,0,Only a year and have barely sat on it. It is like new.,0,0
-737,0,Oh okay that's good. Could you come down on the price at all? I've seen some used ones going for a lot less.,4,2
+737,0,Oh okay that's good. Could you come down on the price at all? I've seen some used ones going for a lot less.,4,4
 738,0,Sure. How much would you like to pay for it?,0,0
 739,0,Could you do it for 80?,4,4
 740,0,How about 100 and I will deliver it to you myself?,6,6
@@ -744,11 +744,11 @@
 742,0,Good,0,0
 743,0,"Hi, can you tell me a little more about this house?",5,5
 744,0,Hello,0,0
-745,0,It is a beautiful house,0,0
+745,0,It is a beautiful house,0,5
 746,0,What are some of the perks?,5,5
 747,0,"Great green lawn, garage",0,0
-748,0,Does it have a swimming pool?  My family and I are new to the area and would like to lease for at least 6 mos. maybe more but the kids really would like a pool.  How much wiggle room in the price?,4,1
-749,0,"$3,100.00",4,0
+748,0,Does it have a swimming pool?  My family and I are new to the area and would like to lease for at least 6 mos. maybe more but the kids really would like a pool.  How much wiggle room in the price?,4,4
+749,0,"$3,100.00",4,4
 750,0,That's a little steep.  Would you accept 2975?,4,4
 751,0,3000,4,4
 752,0,Are utilities included?,5,5
@@ -760,7 +760,7 @@
 758,0,This unit is a 3 bedroom.,0,0
 759,0,Are any utilities included?,5,5
 760,0,Utilities are not included in the rent price.,0,0
-761,0,"I would need a lower rent price so that I can pay for utlities, $1000",4,6
+761,0,"I would need a lower rent price so that I can pay for utlities, $1000",4,7
 762,0,1000 is far too low. We can bring the price down to 2300 if you have good employment.,4,4
 763,0,"you barely moved on price, how about $1200",4,4
 764,0,"You started from too low of a price, this is a platinum upgraded apartment with premium features. You can't just ask any low ball price and expect a deal.",2,2
@@ -769,18 +769,18 @@
 767,0,"I would have to see it in person, does the complex have a pool or gym?",5,5
 768,0,Yes we have a great pool and also a full gym on site.,0,0
 769,0,"That sounds good, I can do $1500",4,0
-770,0,2200 and we cannot lower the price any further.,3,0
+770,0,2200 and we cannot lower the price any further.,3,3
 771,0,ok,0,0
 772,0,"Hey there, I am Brian, I left an email about the apartment for rent.",0,0
 773,0,Hello Brian thanks for writing. Do you have any questions about the apartment?,0,0
-774,0,"I do, it's about the price. I like the location of this apartment very much, but the price is ridiculous. The post says there is a $500 off special. I'm curious, is that deducted from the price you listed the apartment at?",5,1
+774,0,"I do, it's about the price. I like the location of this apartment very much, but the price is ridiculous. The post says there is a $500 off special. I'm curious, is that deducted from the price you listed the apartment at?",5,7
 775,0,It would be on the price we both agree upon.,0,0
 776,0,"So then with the $500 off, how does $700 sound all together?",4,4
-777,0,There is no way that would be possible.,3,4
+777,0,There is no way that would be possible.,3,0
 778,0,Then can we work out a deal close to that? I can assure you that I can pay rent on time.,4,6
 779,0,The lowest I'm authorized to go is 900. And that would be the flat monthly rent. The first month's rent would be 400 with the deduction.,3,3
 780,0,"If I give you 900, could we settle free parking for my first month as well?",6,6
-781,0,Yes that can be done. So overall you'll be saving quite a lot. So 900 is good for you?,0,4
+781,0,Yes that can be done. So overall you'll be saving quite a lot. So 900 is good for you?,0,0
 782,0,"Hello, are you interested in the unit?",0,0
 783,0,Yes. How many rooms and baths?,5,5
 784,0,"This is a two-bedroom, one bath.",0,0
@@ -796,28 +796,28 @@
 794,0,Hello. Are you interested in our services?,0,0
 795,0,Yes I am,0,0
 796,0,Ok. We charge $50 for unlocking and flashing phone devices.,0,0
-797,0,That much. Are you willing to discount the price for first time customers,6,1
-798,0,For first time customers we offer a price of $45 for the service.,6,0
+797,0,That much. Are you willing to discount the price for first time customers,6,4
+798,0,For first time customers we offer a price of $45 for the service.,6,4
 799,0,That's still pretty steep..Hmm what about 35.00?,4,4
 800,0,"Sorry, I can not go that low. The best I could do is $45 and have the device back to you within 30 minutes.",6,6
-801,0,What other services do I get with 45.00?,5,0
+801,0,What other services do I get with 45.00?,5,4
 802,0,There are no other services? We unlock and flash phones to remove them from the network--that's what we do.,0,0
 803,0,If you are flashing my phone I still have to pay for first month service. You are not losing anything with 35.00. I still have to pay for first month service.,1,6
 804,0,"I can make you a final offer of $45 to which you can accept or reject. Sorry, our prices are firm.",3,3
 805,0,Do I get a free phone case with it? What about 40.00?,4,6
-806,0,I do not see us reaching an agreement here.,3,3
+806,0,I do not see us reaching an agreement here.,3,0
 807,0,"Hi, is the Honda CRV EX still for sale?",0,0
 808,0,Hey,0,0
-809,0,Is the car still for sale?,0,0
+809,0,Is the car still for sale?,0,5
 810,0,"Yes, it's still for sale.",0,0
 811,0,I'm looking for a car for my daughter.  Can you tell me more about the car?,5,5
 812,0,"The car gets 27 MPG AVG in the city alone, so I'm not sure where your daughter will need to commute, but it won't cost her much. Also, the car is in great running condition.",0,0
-813,0,She just needs to get back and forth to work but she has to drive freeway miles.  How many miles are on the car?,5,1
+813,0,She just needs to get back and forth to work but she has to drive freeway miles.  How many miles are on the car?,5,5
 814,0,"I apologize, but for some reason I do not have that information on hand. Can I get back to you ASAP with the exact mileage?",0,0
-815,0,Sure.  I just wanted to know if there are a lot of miles on it.  So what's the least you'll take for it?,0,0
-816,0,"There isn't a whole lot of mileage on it, but I'll let you know for sure. The best I can do is $21,000.",4,4
+815,0,Sure.  I just wanted to know if there are a lot of miles on it.  So what's the least you'll take for it?,0,2
+816,0,"There isn't a whole lot of mileage on it, but I'll let you know for sure. The best I can do is $21,000.",4,2
 817,0,"wozer...! I was looking at maybe $11,000",4,4
-818,0,"I'm sorry but I couldn't let the car go for that amount. I know you need the car for your daughter to get back and forth, so I'll definitely work with you. Would you be willing to pay $16,000 for the car?",4,6
+818,0,"I'm sorry but I couldn't let the car go for that amount. I know you need the car for your daughter to get back and forth, so I'll definitely work with you. Would you be willing to pay $16,000 for the car?",4,4
 819,0,"That is still a reach for me.  How about $15,500?",4,4
 820,0,"$15,750 and we have a deal.",4,3
 821,0,Deal!  I can do that.,0,0
@@ -826,14 +826,14 @@
 824,0,hi,0,0
 825,0,Hello.  I'd like to buy the bike for 104.,0,0
 826,0,"That is a little low for me, I am willing to come down slightly.",4,4
-827,0,The most I will pay is 115.,3,3
+827,0,The most I will pay is 115.,3,7
 828,0,well would you be willing to pick it up?,6,6
 829,0,yes I will pick it up,0,0
 830,0,I cannot include the helmet or pump at that price.. or you can have them if you can come up to 145,6,6
-831,0,I don't want the helmet or the pump.  Just the bike.   115 okay?,6,0
-832,0,120 if you can come get it and you have a deal.,6,6
-833,0,I think 115 is a fair price as the one tire has cracks.   115 and I will pick up.,6,2
-834,0,"Sorry that is just too low for me, it was already a price cut at the listed 149.",4,4
+831,0,I don't want the helmet or the pump.  Just the bike.   115 okay?,6,7
+832,0,120 if you can come get it and you have a deal.,6,3
+833,0,I think 115 is a fair price as the one tire has cracks.   115 and I will pick up.,6,6
+834,0,"Sorry that is just too low for me, it was already a price cut at the listed 149.",4,3
 835,0,Hello,0,0
 836,0,"Hi, I am interested in what you are selling. Is it in good condition?",5,1
 837,0,"Yes, they are very comfortable and perfect condition apartments.",0,0
@@ -852,13 +852,13 @@
 850,0,"It can't ""go"" at all... it is an antique. It is being sold as an art piece, to be displayed. Conceivably it could be restored by an expert who knew how to do such a thing but as it is it is just for display.",0,0
 851,0,hmm then i can only offer $75,3,4
 852,0,You seem to not be interested in the item for sale.,1,0
-853,0,i want it but i have to factor in its rarity,2,4
+853,0,i want it but i have to factor in its rarity,2,2
 854,0,"Indeed, it is very rare. Which is why $75 is far too low an offer. The list price of $200 is very reasonable for an item this rare.",4,2
-855,0,i have a meeting to get to what is your best offer,4,4
+855,0,i have a meeting to get to what is your best offer,4,3
 856,0,Thanks for viewing the listing.,0,0
 857,0,Hi is  the phone still for sale?,0,0
 858,0,Yes it is. Do you have any questions?,0,0
-859,0,Yes I have two questions is the phone unlocked and are you willing to negotiate on the price?,5,0
+859,0,Yes I have two questions is the phone unlocked and are you willing to negotiate on the price?,5,4
 860,0,"The phone is locked to Sprint and we can negotiate, if needed. What would you like to pay?",0,0
 861,0,"I was hoping to get the phone for 20, how does that sound?",4,4
 862,0,That's pretty low. Would you be willing to pay $40?,4,4
@@ -869,7 +869,7 @@
 867,0,Hi. Do you have any questions about the listing?,0,0
 868,0,Does the listing include a washer and dryer?,5,5
 869,0,"Yes, we do have washer and dryer hook ups. Any other questions?",0,0
-870,0,Is the listing carpeted?,5,1
+870,0,Is the listing carpeted?,5,5
 871,0,"Yes, most rooms are carpeted but there are some rooms such as the living room that have hardwood floors.",0,0
 872,0,"Do the garage doors include an opener, or are they manual?",5,5
 873,0,The garage doors are automatic. Are you still interested?,0,0
@@ -885,22 +885,22 @@
 883,0,"But they're used so $170 is a little too high. Taking into consideration the fact that they're used, I think $100 sounds fair enough",2,2
 884,0,"I've gt some other folks interested, so if you can't do 170 I understand completely. I'll do it for 160 though if you want to pull the trigger now",6,6
 885,0,I can pay you $120 cash right now but that's my final offer,3,3
-886,0,I'll do 150 and we can just end this now and move on,4,3
-887,0,150 works,0,3
+886,0,I'll do 150 and we can just end this now and move on,4,6
+887,0,150 works,0,0
 888,0,hello,0,0
 889,0,"Hi, how are you doing today?",0,0
 890,0,"im doing well, lets talk about this tv.",0,0
 891,0,Alright great.  So do you need a large TV?,0,5
-892,0,i do. im also on a budget. how much is this tv,5,0
-893,0,"Great I am asking 575 for the TV, what is your budget like?",0,4
-894,0,im looking at below 200 ideally,4,4
+892,0,i do. im also on a budget. how much is this tv,5,5
+893,0,"Great I am asking 575 for the TV, what is your budget like?",0,1
+894,0,im looking at below 200 ideally,4,0
 895,0,Whoa that's really low for a TV like this!  It's also brand new...,2,2
-896,0,"i get it. but its also not a common brand. Ive had vizios before that broke. thats why im not willing to dish out more than 300 for it. for about 350, ill take it off your hands.",4,2
+896,0,"i get it. but its also not a common brand. Ive had vizios before that broke. thats why im not willing to dish out more than 300 for it. for about 350, ill take it off your hands.",4,4
 897,0,"Did you know that they also come with the manufacturer warranty and guarantee?  This is possible because I still have the receipt, can you pay 450?",6,6
 898,0,"with warranty, id give about 385.",6,6
-899,0,"How about 400 because I payed almost 600 for this tv?  You won't find a better deal anywhere else, what do you say friend?",4,4
+899,0,"How about 400 because I payed almost 600 for this tv?  You won't find a better deal anywhere else, what do you say friend?",4,7
 900,0,ill pay 390 and ill pick it up.,6,6
-901,0,Okay but I get to keep the warranty! ;P,6,6
+901,0,Okay but I get to keep the warranty! ;P,6,0
 902,0,done.,0,0
 903,0,"Hi, how old is this piano?",5,5
 904,0,It is about a year old. It's in great shape!,0,0
@@ -909,19 +909,19 @@
 907,0,Was this used by an adult or a child?,5,5
 908,0,It was supposed to be for a child but she decided to take up the saxaphone instead so it has been mostly stored away.,0,0
 909,0,I can do $275 for it.,4,4
-910,0,It comes with a lot of extras so I would like at least 300 for it.,4,2
+910,0,It comes with a lot of extras so I would like at least 300 for it.,4,4
 911,0,Okay would you deliver it for that price?,6,6
 912,0,"Yes, if you live close by, that would not be a problem.",6,0
 913,0,"Okay, you got a deal",0,0
 914,0,great!,0,0
 915,0,Hi I am interested in your bike is it still available?,0,0
 916,0,"Yes, it is. I am asking 100 for it.",0,0
-917,0,Could you tell me what kind of shape it is in?  Is there anything wrong with it?,1,1
+917,0,Could you tell me what kind of shape it is in?  Is there anything wrong with it?,1,5
 918,0,"Some normal wear and tear, but in good condition and ready to ride.",0,0
 919,0,Would you be able to take $75 for it today?,4,4
-920,0,I was hoping to get a bit more out of it so that I can buy a new one. Can we do 85?,4,4
+920,0,I was hoping to get a bit more out of it so that I can buy a new one. Can we do 85?,4,6
 921,0,Well if I do $85 can you possibly deliver?  It is a suprise for my husband and it would be great if I had it here when he gets home from work.,6,6
-922,0,"Sure, I would be happy to deliver it to you for 85.",0,6
+922,0,"Sure, I would be happy to deliver it to you for 85.",0,0
 923,0,Thank you,0,0
 924,0,Thank you.,0,0
 925,0,hello. I am interested in your car. Could you tell me a little more about it?,0,5
@@ -929,23 +929,23 @@
 927,0,What are the miles? And is the inspection up to date?,1,5
 928,0,"It's 153k miles. As for inspection, I can't guarantee anything. It runs great though. Used cars are buy at own risk.",0,0
 929,0,That's a lot of miles. I could offer you 2000,4,4
-930,0,I'm also interested in trades. Do you have a vehicle?,6,5
+930,0,I'm also interested in trades. Do you have a vehicle?,6,0
 931,0,I have a 2000 honda accrod,0,0
 932,0,I'm looking for a small SUV or small pickup.,0,5
-933,0,I am sorry. I have an accord and was looking for something smaller. I can offer 2000 for your car,4,4
+933,0,I am sorry. I have an accord and was looking for something smaller. I can offer 2000 for your car,4,0
 934,0,"Given the high miles, I could possibly let it go for $3000.",4,4
-935,0,That is a little out of my price range. The highest I could go is 2500.,7,7
+935,0,That is a little out of my price range. The highest I could go is 2500.,7,3
 936,0,If you have cash today I'll give it to you for $2700.,6,6
-937,0,I have 2500 in cash,4,4
-938,0,I think I better wait for a better offer. Sorry.,4,4
+937,0,I have 2500 in cash,4,3
+938,0,I think I better wait for a better offer. Sorry.,4,0
 939,0,"Hello, I'm possibly interested in these cell phone chargers, but I'm not sure.",0,0
-940,0,Ok what kind of charger are you looking for?,0,0
+940,0,Ok what kind of charger are you looking for?,0,5
 941,0,I need something to charge my phone in the car.,0,0
-942,0,ok what kind of phone do you have?,0,0
+942,0,ok what kind of phone do you have?,0,5
 943,0,It's an Android.,0,0
-944,0,ok I have plenty of those for $10 a piece.,0,4
-945,0,That's more than I'd like to pay.  Would you be willing to accept three dollars instead?,4,6
-946,0,That is way to low these are brand new and come in a wide variety of colors.  I could get you a plain black or white one for 7,2,6
+944,0,ok I have plenty of those for $10 a piece.,0,0
+945,0,That's more than I'd like to pay.  Would you be willing to accept three dollars instead?,4,4
+946,0,That is way to low these are brand new and come in a wide variety of colors.  I could get you a plain black or white one for 7,2,2
 947,0,"I'm willing to take the plain white or black one, but 7 is too high.  Would you be willing to take 5 dollars if I come and pick it up myself?",6,6
 948,0,I guess I can do that,0,0
 949,0,Deal.,0,0
@@ -954,7 +954,7 @@
 952,0,Sounds good. How many speaks all together?,5,5
 953,0,There are 4 speakers all together. I'm selling the entire set for only $40,0,0
 954,0,"I understand. I can't do $40, but would you accept $20?",4,4
-955,0,No. $20 is too low. These are great quality speakers. I'm only selling them beacuse I'm moving into another place.,4,2
+955,0,No. $20 is too low. These are great quality speakers. I'm only selling them beacuse I'm moving into another place.,4,0
 956,0,I'm sorry. Would you accept $30?,4,4
 957,0,Make it $35 and I'll deliver them myself.,6,6
 958,0,That sounds like a deal,0,0
@@ -967,7 +967,7 @@
 965,0,Yes. Comes with a pad for the top shelf,0,0
 966,0,Are there any damages I should know about,1,1
 967,0,Nope. Overall condition is extremely well,0,0
-968,0,I will pay you $50 cash,4,4
+968,0,I will pay you $50 cash,4,6
 969,0,How about $60 and I deliver it to you?,6,6
 970,0,That sounds great!,0,0
 971,0,"Hey there, I saw that you were interested in the apartment!",0,0
@@ -975,64 +975,64 @@
 973,0,"It sure is, We just recently remodeled, and included some appliances. We have an AC unit, a fridge, a stove, and a washer and dryer!",0,0
 974,0,Awesome! Are any utilities included like cable or electric?,5,5
 975,0,Unfortunately you will have to do all utilities on your own aside from water.,0,0
-976,0,"Okay, that's understandable. Is it well or city water there?",5,5
+976,0,"Okay, that's understandable. Is it well or city water there?",5,1
 977,0,Municipal city water.,0,0
 978,0,"I know you're asking for $2750, but would you be able to come down closer to $1900?",4,4
 979,0,We could work something out. The $2750 asking price has your first 5 months included. Were you looking to go for a lower price for fewer months?,4,4
-980,0,I may be interested in 4 months but does that price include a security deposit?,4,6
+980,0,I may be interested in 4 months but does that price include a security deposit?,4,5
 981,0,"The way our company works is that our security deposit is just one month of rent. the added payment is to ensure that you will in fact be living there for that period of time. If you wanted 4 months, I could do $2000, and that price includes the deposit.",6,6
-982,0,"Seeing as it is furnished and the price includes the deposit, I think 4 months at $2000 is a decent price.",0,2
+982,0,"Seeing as it is furnished and the price includes the deposit, I think 4 months at $2000 is a decent price.",0,0
 983,0,Excellent. Feel free to call the head office if there is anything else you would need. Enjoy your stay with us!,0,0
 984,0,Hello,0,0
 985,0,"hi, are you interested in my car?",0,0
-986,0,Yes I am. Can I come by and take a look at it?,0,5
+986,0,Yes I am. Can I come by and take a look at it?,0,0
 987,0,You absolutely can! Do you have any questions?,0,0
-988,0,"Yes, is the car in good condition?",5,1
+988,0,"Yes, is the car in good condition?",5,5
 989,0,"The car is in very good condition. My daughter is the one who drives it and she has always been a neat freak. The car is very clean inside and out. Oil changes and tune ups are done every 3,000 miles.",0,0
 990,0,Would you be able to lower the price a bit for me?,4,4
-991,0,3800 would be the absolute lowest and I will only do that if you are willing to be here by noon tomorrow. I won't hold it for long for that low of a price.,6,6
+991,0,3800 would be the absolute lowest and I will only do that if you are willing to be here by noon tomorrow. I won't hold it for long for that low of a price.,6,0
 992,0,3800 would work for me. I will be there at noon tomorrow.,0,0
 993,0,okay perfect! see you then!,0,0
-994,0,"What a lovely house! I wonder, how high up is it? I'm afraid of heights.",5,5
+994,0,"What a lovely house! I wonder, how high up is it? I'm afraid of heights.",5,7
 995,0,"Hello, thank you! It is on the side of a hill. The hill is not steep. It is completely safe and secured with a fence around it.",0,0
 996,0,Oh that's not so bad then. I see you have an updated kitchen and bathrooms? Did you use tile and what does the color scheme look like?,5,5
 997,0,We've had a decorator come and in and it has a very modern feel to it. The kitchen and bathrooms have been updated. The backyard is enclosed for privacy. I am asking $4995.,0,0
-998,0,"That is my only concern, it's a little high. I am contractor, I could keep the grounds in order for you if you can come down to...$4200?",6,6
-999,0,"If you are offering to tend to the grounds, there is not much of it, I could come down to $4500",4,6
-1000,0,"I'm sure you have other properties where I can help out, $4300?",4,6
+998,0,"That is my only concern, it's a little high. I am contractor, I could keep the grounds in order for you if you can come down to...$4200?",6,7
+999,0,"If you are offering to tend to the grounds, there is not much of it, I could come down to $4500",4,4
+1000,0,"I'm sure you have other properties where I can help out, $4300?",4,4
 1001,0,"That is the only property I have at the moment. Because of all the upgrades I have done, I am already giving you a great deal by bringing it down to $4500",2,2
 1002,0,"I'm sorry, but I can't squeeze blood from a stone. $4350 is the absolute most I can afford.",7,3
 1003,0,I can do $4450 if you can move in by the first with a deposit.,6,6
 1004,0,Can I sublet a bedroom and rent my space?,5,0
 1005,0,"Yes, you may.",0,0
 1006,0,"$4450, yeah I can come up with that. You have a deal.",0,0
-1007,0,"Hello, im very interested in the sofa you're selling. Why are you selling it?",5,1
+1007,0,"Hello, im very interested in the sofa you're selling. Why are you selling it?",5,0
 1008,0,Hi there. Great. I am moving and dont want to transport it,0,0
-1009,0,Is it in good condition? Any tears to the leather?,5,1
+1009,0,Is it in good condition? Any tears to the leather?,5,5
 1010,0,"Its in great condition. Very high quality leather. There is a small 2 inch tear in the back of the chair. It can easily be repaired, but also is very rarely seen, especially if you have the couch against a wall.",0,0
 1011,0,Great! Are they any pet stains?,1,1
 1012,0,Nope. It's leather- no scratches either,0,0
-1013,0,"Ok I see one of them is power motion, does that work? I can offer $495",4,4
+1013,0,"Ok I see one of them is power motion, does that work? I can offer $495",4,7
 1014,0,"Yup. It works. How about this - If you can do my original price of $550, I'll fix that tear before you pick it up this week.",6,6
-1015,0,$520 and u fix the tear,6,3
+1015,0,$520 and u fix the tear,6,6
 1016,0,Okay Deal,0,0
 1017,0,Hello!,0,0
 1018,0,Hi. How are you?,0,0
 1019,0,"Good, thanks. So you are interested in flashing your phone?",0,0
-1020,0,"I am. The only way I will be able to use this phone is to have it flashed, however, all I have is $50 and I have to buy diapers also this evening. The diapers are 22.97 and all I have is the remainder. Is there a way you could work with me somehow?",7,6
+1020,0,"I am. The only way I will be able to use this phone is to have it flashed, however, all I have is $50 and I have to buy diapers also this evening. The diapers are 22.97 and all I have is the remainder. Is there a way you could work with me somehow?",7,0
 1021,0,I could come down a little. Can you do $40?,4,4
-1022,0,I believe the service is valued at more than I have but if I do $40 I would not be able to afford my sons diapers as well. I believe your service is worth more and if I had it to offer I most definitely would,7,6
-1023,0,I am sorry to hear about your predicament. Could you buy a smaller pack of diapers and pay $30?,4,6
-1024,0,"He is a big boy and the only ones they have are the small pack and it is 22.97, if you can work with me with the last $3 I would be forever grateful and make sure to tell my friends what a wonderful service you provide",6,0
-1025,0,"Okay, but tell your friends that you paid $50.",0,0
+1022,0,I believe the service is valued at more than I have but if I do $40 I would not be able to afford my sons diapers as well. I believe your service is worth more and if I had it to offer I most definitely would,7,7
+1023,0,I am sorry to hear about your predicament. Could you buy a smaller pack of diapers and pay $30?,4,7
+1024,0,"He is a big boy and the only ones they have are the small pack and it is 22.97, if you can work with me with the last $3 I would be forever grateful and make sure to tell my friends what a wonderful service you provide",6,6
+1025,0,"Okay, but tell your friends that you paid $50.",0,3
 1026,0,Absoulutely! Thanks so much,0,0
 1027,0,Hello,0,0
 1028,0,Hi! How's the flooring of the apartments?,0,5
 1029,0,"The apartments are in great condition, I think you'll be pleased.",0,0
-1030,0,What type is it though? Tile or Carpet?,5,5
+1030,0,What type is it though? Tile or Carpet?,5,1
 1031,0,"Oh, the apartments are hardwood throughout, except the bathrooms, which have shag carpeting.",0,0
 1032,0,"That's a big turnoff, carpet in the bathrooms. I am willing to pay 800 a month",2,2
-1033,0,"I'm sorry, but that's just too low an offer. These apartments are already a steal at $1556 a month. I have a little room to negotiate, but I couldn't come down to 800.",4,2
+1033,0,"I'm sorry, but that's just too low an offer. These apartments are already a steal at $1556 a month. I have a little room to negotiate, but I couldn't come down to 800.",4,4
 1034,0,"Oh okay, I am willing to do at least 1000",4,4
 1035,0,"If you can come up to $1400, I could have a crew come in and remove the shag carpeting; it's hardwood underneath in the bathroom.",6,6
 1036,0,"If I pay a years worth of rent up front, can it be 1350?",6,6
@@ -1042,55 +1042,55 @@
 1040,0,"It sure is, We just recently remodeled, and included some appliances. We have an AC unit, a fridge, a stove, and a washer and dryer!",0,0
 1041,0,Awesome! Are any utilities included like cable or electric?,5,5
 1042,0,Unfortunately you will have to do all utilities on your own aside from water.,0,0
-1043,0,"Okay, that's understandable. Is it well or city water there?",5,5
+1043,0,"Okay, that's understandable. Is it well or city water there?",5,1
 1044,0,Municipal city water.,0,0
 1045,0,"I know you're asking for $2750, but would you be able to come down closer to $1900?",4,4
 1046,0,We could work something out. The $2750 asking price has your first 5 months included. Were you looking to go for a lower price for fewer months?,4,4
-1047,0,I may be interested in 4 months but does that price include a security deposit?,5,6
+1047,0,I may be interested in 4 months but does that price include a security deposit?,5,5
 1048,0,"The way our company works is that our security deposit is just one month of rent. the added payment is to ensure that you will in fact be living there for that period of time. If you wanted 4 months, I could do $2000, and that price includes the deposit.",0,6
-1049,0,"Seeing as it is furnished and the price includes the deposit, I think 4 months at $2000 is a decent price.",0,2
+1049,0,"Seeing as it is furnished and the price includes the deposit, I think 4 months at $2000 is a decent price.",0,0
 1050,0,Excellent. Feel free to call the head office if there is anything else you would need. Enjoy your stay with us!,0,0
 1051,0,Hello,0,0
 1052,0,"hi, are you interested in my car?",0,0
-1053,0,Yes I am. Can I come by and take a look at it?,0,5
+1053,0,Yes I am. Can I come by and take a look at it?,0,0
 1054,0,You absolutely can! Do you have any questions?,0,0
-1055,0,"Yes, is the car in good condition?",0,1
+1055,0,"Yes, is the car in good condition?",0,5
 1056,0,"The car is in very good condition. My daughter is the one who drives it and she has always been a neat freak. The car is very clean inside and out. Oil changes and tune ups are done every 3,000 miles.",0,0
 1057,0,Would you be able to lower the price a bit for me?,0,4
-1058,0,3800 would be the absolute lowest and I will only do that if you are willing to be here by noon tomorrow. I won't hold it for long for that low of a price.,0,6
+1058,0,3800 would be the absolute lowest and I will only do that if you are willing to be here by noon tomorrow. I won't hold it for long for that low of a price.,0,0
 1059,0,3800 would work for me. I will be there at noon tomorrow.,0,0
 1060,0,okay perfect! see you then!,0,0
 1061,0,Good morning! How are you today?,0,0
 1062,0,Very good! I wanted to talk with you today about the apartment!,0,0
 1063,0,It's a cute home. Layout is easy and open.,0,0
-1064,0,"I have seen the picture, and yes. It is indeed a very cute home! I was wondering if we could work out a little deal though. I was wanting something a little closer to $3000, this home is just out of my range.",7,7
+1064,0,"I have seen the picture, and yes. It is indeed a very cute home! I was wondering if we could work out a little deal though. I was wanting something a little closer to $3000, this home is just out of my range.",7,4
 1065,0,"This home has all new stainless steel appliances, a new central air system and a screened-in back porch. I could possibly go down to $3200.",2,2
-1066,0,"Its all sounding good, but I am still just short of that. If we could work out $3100, I could move in this week!",6,6
+1066,0,"Its all sounding good, but I am still just short of that. If we could work out $3100, I could move in this week!",6,4
 1067,0,Would you be willing to sign a year lease?,6,6
 1068,0,Ofcorse!,0,0
 1069,0,Okay. I'll go ahead with $3100 a month signing a 1 year lease.,0,0
-1070,0,"What a lovely house! I wonder, how high up is it? I'm afraid of heights.",0,5
+1070,0,"What a lovely house! I wonder, how high up is it? I'm afraid of heights.",0,7
 1071,0,"Hello, thank you! It is on the side of a hill. The hill is not steep. It is completely safe and secured with a fence around it.",0,0
 1072,0,Oh that's not so bad then. I see you have an updated kitchen and bathrooms? Did you use tile and what does the color scheme look like?,0,5
 1073,0,We've had a decorator come and in and it has a very modern feel to it. The kitchen and bathrooms have been updated. The backyard is enclosed for privacy. I am asking $4995.,0,0
-1074,0,"That is my only concern, it's a little high. I am contractor, I could keep the grounds in order for you if you can come down to...$4200?",0,6
-1075,0,"If you are offering to tend to the grounds, there is not much of it, I could come down to $4500",0,6
-1076,0,"I'm sure you have other properties where I can help out, $4300?",0,6
+1074,0,"That is my only concern, it's a little high. I am contractor, I could keep the grounds in order for you if you can come down to...$4200?",0,7
+1075,0,"If you are offering to tend to the grounds, there is not much of it, I could come down to $4500",0,4
+1076,0,"I'm sure you have other properties where I can help out, $4300?",0,4
 1077,0,"That is the only property I have at the moment. Because of all the upgrades I have done, I am already giving you a great deal by bringing it down to $4500",0,2
 1078,0,"I'm sorry, but I can't squeeze blood from a stone. $4350 is the absolute most I can afford.",0,3
 1079,0,I can do $4450 if you can move in by the first with a deposit.,0,6
 1080,0,Can I sublet a bedroom and rent my space?,0,0
 1081,0,"Yes, you may.",0,0
 1082,0,"$4450, yeah I can come up with that. You have a deal.",0,0
-1083,0,"Hello, im very interested in the sofa you're selling. Why are you selling it?",1,1
+1083,0,"Hello, im very interested in the sofa you're selling. Why are you selling it?",1,0
 1084,0,Hi there. Great. I am moving and dont want to transport it,0,0
-1085,0,Is it in good condition? Any tears to the leather?,1,1
+1085,0,Is it in good condition? Any tears to the leather?,1,5
 1086,0,"Its in great condition. Very high quality leather. There is a small 2 inch tear in the back of the chair. It can easily be repaired, but also is very rarely seen, especially if you have the couch against a wall.",0,0
 1087,0,Great! Are they any pet stains?,1,1
 1088,0,Nope. It's leather- no scratches either,0,0
-1089,0,"Ok I see one of them is power motion, does that work? I can offer $495",4,4
+1089,0,"Ok I see one of them is power motion, does that work? I can offer $495",4,7
 1090,0,"Yup. It works. How about this - If you can do my original price of $550, I'll fix that tear before you pick it up this week.",6,6
-1091,0,$520 and u fix the tear,6,3
+1091,0,$520 and u fix the tear,6,6
 1092,0,Okay Deal,0,0
 1093,0,Hi there!,0,0
 1094,0,"Hi, This house is too cute. Does it have a backyard?",5,5
@@ -1104,33 +1104,33 @@
 1102,0,Hello!,0,0
 1103,0,Hi. How are you?,0,0
 1104,0,"Good, thanks. So you are interested in flashing your phone?",0,0
-1105,0,"I am. The only way I will be able to use this phone is to have it flashed, however, all I have is $50 and I have to buy diapers also this evening. The diapers are 22.97 and all I have is the remainder. Is there a way you could work with me somehow?",0,6
+1105,0,"I am. The only way I will be able to use this phone is to have it flashed, however, all I have is $50 and I have to buy diapers also this evening. The diapers are 22.97 and all I have is the remainder. Is there a way you could work with me somehow?",0,0
 1106,0,I could come down a little. Can you do $40?,0,4
-1107,0,I believe the service is valued at more than I have but if I do $40 I would not be able to afford my sons diapers as well. I believe your service is worth more and if I had it to offer I most definitely would,0,6
-1108,0,I am sorry to hear about your predicament. Could you buy a smaller pack of diapers and pay $30?,0,6
-1109,0,"He is a big boy and the only ones they have are the small pack and it is 22.97, if you can work with me with the last $3 I would be forever grateful and make sure to tell my friends what a wonderful service you provide",0,0
-1110,0,"Okay, but tell your friends that you paid $50.",0,0
+1107,0,I believe the service is valued at more than I have but if I do $40 I would not be able to afford my sons diapers as well. I believe your service is worth more and if I had it to offer I most definitely would,0,7
+1108,0,I am sorry to hear about your predicament. Could you buy a smaller pack of diapers and pay $30?,0,7
+1109,0,"He is a big boy and the only ones they have are the small pack and it is 22.97, if you can work with me with the last $3 I would be forever grateful and make sure to tell my friends what a wonderful service you provide",0,6
+1110,0,"Okay, but tell your friends that you paid $50.",0,3
 1111,0,Absoulutely! Thanks so much,0,0
 1112,0,Hello,0,0
 1113,0,Hi! How's the flooring of the apartments?,0,5
 1114,0,"The apartments are in great condition, I think you'll be pleased.",0,0
-1115,0,What type is it though? Tile or Carpet?,0,5
+1115,0,What type is it though? Tile or Carpet?,0,1
 1116,0,"Oh, the apartments are hardwood throughout, except the bathrooms, which have shag carpeting.",0,0
 1117,0,"That's a big turnoff, carpet in the bathrooms. I am willing to pay 800 a month",0,2
-1118,0,"I'm sorry, but that's just too low an offer. These apartments are already a steal at $1556 a month. I have a little room to negotiate, but I couldn't come down to 800.",0,2
+1118,0,"I'm sorry, but that's just too low an offer. These apartments are already a steal at $1556 a month. I have a little room to negotiate, but I couldn't come down to 800.",0,4
 1119,0,"Oh okay, I am willing to do at least 1000",0,4
 1120,0,"If you can come up to $1400, I could have a crew come in and remove the shag carpeting; it's hardwood underneath in the bathroom.",0,6
 1121,0,"If I pay a years worth of rent up front, can it be 1350?",0,6
 1122,0,That sounds fair.,0,0
-1123,0,Hello. What can I tell you about this beautiful sofa sectional?,0,0
+1123,0,Hello. What can I tell you about this beautiful sofa sectional?,0,5
 1124,0,Hey. How are you? When did you buy this sectional?,5,0
 1125,0,It is less than one year old. It is in fantastic condition.,0,0
 1126,0,Okay.  Were any repairs done?,5,1
 1127,0,None have ever been needed. This thing looks like it just came out of the furniture store.,0,0
-1128,0,"From the picture, it does look to be in good condition...not brand new but good. How much are you looking for?",0,1
+1128,0,"From the picture, it does look to be in good condition...not brand new but good. How much are you looking for?",0,4
 1129,0,I'm asking $585. It is in great shape and from a non-smoking home.,0,0
-1130,0,585 is over my budget. Are you willing to go lower? 350?,7,7
-1131,0,I'm sorry I couldn't let it go for that. If you can pick it up I'm willing to do $475. What a deal!,6,6
+1130,0,585 is over my budget. Are you willing to go lower? 350?,7,4
+1131,0,I'm sorry I couldn't let it go for that. If you can pick it up I'm willing to do $475. What a deal!,6,4
 1132,0,I'm definitely willing to pick it up. I can take it off your hands tonight for 375.,4,6
 1133,0,That's great. I think we're close. I need to meet somewhere in the middle. How's $425 sound?,4,4
 1134,0,I'll do 425 and pick it up tonight. Cash in hand. Deal?,6,6
@@ -1139,12 +1139,12 @@
 1137,0,"Hi, I'm selling this house for $1900",0,0
 1138,0,And what color is it?,5,5
 1139,0,"It's a lovely beige, but takes paint very well",0,0
-1140,0,I'd like to pay 1740 for this and do the lawn myself.,6,6
+1140,0,I'd like to pay 1740 for this and do the lawn myself.,6,4
 1141,0,"The hous includes a patio, and the price is low as it is. I can do 1800 but no lower",2,3
 1142,0,Is there a grill provided?,5,5
 1143,0,I'm afraid there is no grill,0,0
 1144,0,Then how about 1780,4,4
-1145,0,"1780 is fine, please submit an application to make an offer.  We do not accept offers 15 minutes before lunch, availability and terms and prices are submit to change without notice.",0,6
+1145,0,"1780 is fine, please submit an application to make an offer.  We do not accept offers 15 minutes before lunch, availability and terms and prices are submit to change without notice.",0,0
 1146,0,"Hi there , I am interested in the galaxy tab you have for sale.",0,0
 1147,0,Hello. How are you today! Sure thing. I am glad that this ad caught your attention :),0,0
 1148,0,"sure  did, just curious about a few details.. has it been used, and if so for how long?",5,5
@@ -1158,22 +1158,22 @@
 1156,0,"okay , deal!",0,0
 1157,0,"Hello there, I'm interested in your item for sale. Can you tell me what condition the item is in.",5,5
 1158,0,the item is in excellent condition and very much portable,0,0
-1159,0,Have any of these adapters been used?,1,1
+1159,0,Have any of these adapters been used?,1,5
 1160,0,None have been used,0,0
 1161,0,Does this come with any kind of warranty?,5,5
 1162,0,It does come with a warranty card,0,0
 1163,0,Excellent. Would you consider taking 9 for it?,4,4
-1164,0,That's way too low for the amount of things that you get inside. I am willing to give it for $12 nothing less than that,3,2
-1165,0,Hmm well I can go as high as 11,4,3
-1166,0,Okay a dollar is not going to take me anywhere. So I will take $11,0,3
+1164,0,That's way too low for the amount of things that you get inside. I am willing to give it for $12 nothing less than that,3,4
+1165,0,Hmm well I can go as high as 11,4,4
+1166,0,Okay a dollar is not going to take me anywhere. So I will take $11,0,4
 1167,0,"Groovy, thanks.",0,0
 1168,0,Hi,0,0
 1169,0,Hello,0,0
 1170,0,Is it used?,1,5
 1171,0,"Yeah, I've been using it for the last 10 years",0,0
-1172,0,Hmm,0,0
+1172,0,Hmm,0,4
 1173,0,Ask me question about it,0,0
-1174,0,"It's pretty old, let me get a discount off the store price",2,2
+1174,0,"It's pretty old, let me get a discount off the store price",2,0
 1175,0,"I will let you get it for a lower price if you can pick it up, or we can make a trade for something else",6,6
 1176,0,I can pick it up if it's a good deal,6,0
 1177,0,I'm will to do 365,0,4
@@ -1182,9 +1182,9 @@
 1180,0,Hey,0,0
 1181,0,hello is the price on the bike negotiable,5,0
 1182,0,What do you have in mind?,0,0
-1183,0,i really need this bike it's perfect for me i can offer 360 please help a brother out,7,7
+1183,0,i really need this bike it's perfect for me i can offer 360 please help a brother out,7,4
 1184,0,im sorry. Hats just not reasonable. It's an $800 bike. Used very rarely.  $600 is already 25% off.,2,2
-1185,0,can you go a little lower i really need the treck,7,7
+1185,0,can you go a little lower i really need the treck,7,3
 1186,0,$500.  Up you will have to come pick it up then. And it has to be tomorrow. Cash only.,6,6
 1187,0,Thanks man that a great deall for a $800 bike whats a good time to pick it up,0,0
 1188,0,2:00 PM,0,0
@@ -1203,55 +1203,55 @@
 1201,0,hi,0,0
 1202,0,are you interested in the phone charger I have for sale?,0,5
 1203,0,yes if i can get it for 5.00,4,0
-1204,0,"not to be mean but it says right in the ad, serious offers only, you're going to offer me a third of what I have it listed for?",2,4
+1204,0,"not to be mean but it says right in the ad, serious offers only, you're going to offer me a third of what I have it listed for?",2,2
 1205,0,ok i'll give you $11 if thats okay,4,4
-1206,0,"I'll take $12, that is still cheaper than buying it at walmart",2,2
+1206,0,"I'll take $12, that is still cheaper than buying it at walmart",2,4
 1207,0,dude come on a barley got the eleven help out please,2,4
 1208,0,"ok, you seem desperate, 11 is fine",0,0
 1209,0,good deal,0,0
 1210,0,How are you this afternoon?,0,0
 1211,0,"good, how are you",0,0
 1212,0,Very well. You are interestd in the Armoire?,0,0
-1213,0,"yes, is the picture of the same armoire or just a similar one",0,1
+1213,0,"yes, is the picture of the same armoire or just a similar one",0,5
 1214,0,"It's the same one, i just took the unpacked photo off HSN's website.",0,0
 1215,0,"gotcha, would you be able to ship it to me?",6,5
 1216,0,"Unfortunately i cannot, that's why i have it local pick up only.",0,0
 1217,0,"sorry, i don't see that note in your listing",2,0
 1218,0,"It's in the last sentence. I was paralyzed in an auto accident so i can no longer drive to the post office, etc.",7,0
-1219,0,"it must have been cut off of the listing i'm looking at.  Since i have to come pick it up, can you work with me on the price a little bit?  How about $55.",2,2
+1219,0,"it must have been cut off of the listing i'm looking at.  Since i have to come pick it up, can you work with me on the price a little bit?  How about $55.",2,4
 1220,0,I can do $55. It would have to be cash tho.,6,6
-1221,0,cash is not a problem.  i can pick it up today if you'd like.,0,0
+1221,0,cash is not a problem.  i can pick it up today if you'd like.,0,6
 1222,0,Hey would you like to purchase my bike,0,0
-1223,0,"Hi there. Yes, I am very much interested in it. Is it very old?",1,1
+1223,0,"Hi there. Yes, I am very much interested in it. Is it very old?",1,5
 1224,0,No only 3 years,0,0
 1225,0,Wow that's a long time. May I ask why didn't you use it? Does it work well or are there any malfunctions associated?,1,1
 1226,0,Well I love the bike but I had been riding cross country on an endurance bike. So this has been fairly unused. No malfunctions I had made sure to periodically spray it with anti rust and anti seeze. Also it was left in a dry and secure environment.,0,0
-1227,0,"Okay that's good ti know. However, the price is very high for me. Is there anyway that we can work on that?",7,4
+1227,0,"Okay that's good ti know. However, the price is very high for me. Is there anyway that we can work on that?",7,7
 1228,0,Yes but Id prefer to not go too low as I said before I love the bike and I am reluctuant to sell. Mainly selling due to me down sizing and lack of use.,0,2
 1229,0,I can offer $390 as its old and has been sitting. Would appreciate it if you consider it,2,2
 1230,0,390 is a bit harsh on me. Tell you what I can add a free delivery and a standard set of maintenace equipment specific to this type of bike,6,6
-1231,0,What's the last price you can give me?,0,3
-1232,0,lets start at 550 and negotiate in increments of 10 from there?,3,4
-1233,0,"I can give you $500 honestly, I can't go beyond that because It doesn't fit my budget after that. ]",3,3
+1231,0,What's the last price you can give me?,0,4
+1232,0,lets start at 550 and negotiate in increments of 10 from there?,3,0
+1233,0,"I can give you $500 honestly, I can't go beyond that because It doesn't fit my budget after that. ]",3,7
 1234,0,Ok 500 I can do and Ill also add a 1 year waranty on the chain to prove how sure I am of this bike.,6,6
 1235,0,That's absolutely great! Thanks then we got a deal!,0,0
 1236,0,"Hi, I'm interested in the couch you have for sale",0,0
 1237,0,Great!,0,0
 1238,0,It looks like a great couch but the price is rather high for me.,7,4
 1239,0,"Well,it is unbelievably comfortable.It just clashed with my other furniture.I can maybe go down a little?",0,2
-1240,0,"I was hoping to pay maybe half if possible, ideally. That seems like a good price for a used couch.",2,2
+1240,0,"I was hoping to pay maybe half if possible, ideally. That seems like a good price for a used couch.",2,4
 1241,0,I wouldn't call it used.I think it was sat on twice so the price listed is practically a steal!How about $950?,2,2
 1242,0,"Hmm. I could go $600, how about that? By the way is the couch easy to disassemble, or does it have to be moved intact? I'm thinking about how easily it could be transported.",4,6
 1243,0,"Hello, Do you have any interest in my couch for sale?",0,0
-1244,0,"Yes, I think it is a quite attractive couch, although that is a lot of money for me right now. I was hoping to pay maybe half of what you're asking--what do you think?",2,4
+1244,0,"Yes, I think it is a quite attractive couch, although that is a lot of money for me right now. I was hoping to pay maybe half of what you're asking--what do you think?",2,0
 1245,0,You are right about it being attractive! Give me a price and I will see what I can do.,0,0
 1246,0,"Well, how about $500? I know it's much less than you are asking for, but I'd be giving it a great home!",6,4
 1247,0,"I'd love for it to have a great home, but I need to have a home too! LoL! How about $850?",4,4
 1248,0,"Oh, we're definitely moving in the right direction! That's still a bit steep for me but...well...I really like that it is made from largely recycled materials. How about $600? By the way can this couch be easily dissasembled for transport? If not I'm probably going to have to rent a small moving truck.",7,2
-1249,0,"Tell you what. I will deliver it to you assembled at no extra charge.Plus, I'll even throw in two free throw pillows all for $825.Oh yes, it is made from recycled materials.That is a wonderful thing!",6,0
+1249,0,"Tell you what. I will deliver it to you assembled at no extra charge.Plus, I'll even throw in two free throw pillows all for $825.Oh yes, it is made from recycled materials.That is a wonderful thing!",6,6
 1250,0,Thanks for offering to deliver it assembled if we can come to an agreement--that will make it much easier on my end. It's still a bit pricey for me. How about $725?,4,4
-1251,0,"If you factor in the price of a moving truck with my offer it is a steal!You'd be paying less with my deal,but since I feel you truly love this couch I will drop it down to $800 and still provide my additional services!",0,6
-1252,0,"Well...that is more than I can comfortably pay but it is a very attractive couch and since you're offering to set it up, I will accept your offer of $800.",0,6
+1251,0,"If you factor in the price of a moving truck with my offer it is a steal!You'd be paying less with my deal,but since I feel you truly love this couch I will drop it down to $800 and still provide my additional services!",0,3
+1252,0,"Well...that is more than I can comfortably pay but it is a very attractive couch and since you're offering to set it up, I will accept your offer of $800.",0,3
 1253,0,Great! You won't be sorry. Let's get this transaction started! Thank you!,0,0
 1254,0,hi,0,0
 1255,0,"Hi, this bike is great! I would like to offer you 510 dollars for it.",4,4
@@ -1279,13 +1279,13 @@
 1277,0,"It's about 3.5 feet tall, I think.",0,0
 1278,0,Perfect. The legs are they chrome?,5,5
 1279,0,Nice. Even better. Could you accept $6?,4,0
-1280,0,Yes I could do $6. Enjoy your chair!,0,4
+1280,0,Yes I could do $6. Enjoy your chair!,0,0
 1281,0,Hi!,0,0
 1282,0,Hello. How are you?,0,0
 1283,0,Great thanks! I am selling this great piece for a cheap price. It is going for $250.,0,0
-1284,0,So you found this trunk in a second hand store?,1,1
+1284,0,So you found this trunk in a second hand store?,1,5
 1285,0,Yes it was incredible! I love the piece and it is a shame that it has to go! But we want someone else to experience its beauty!,0,0
-1286,0,"Could I pick it up today, with cash?",0,5
+1286,0,"Could I pick it up today, with cash?",0,6
 1287,0,"Ok, I will give it to you for two easy payments of $124.99!",0,0
 1288,0,How about $210 all at once?,6,4
 1289,0,"Oh! That is a tough one! How about 225, and we have a deal!",3,4
@@ -1294,20 +1294,20 @@
 1292,0,"Great, it is in excellent condition. I had a leg injury and I really couldn't use it after I bought it.",0,0
 1293,0,"Oh I'm sorry to hear that, I wondered if anything is wrong with it.  So it is in working order and you just can't use it due to your injury?",5,1
 1294,0,"Yes, there is nothing wrong with it at all. I have all manual for it also. I also can put the mat that I bought to go under it with it. I'd like to get $150",6,0
-1295,0,"Oh, I must have read the ad wrong I thought you were asking $125?  So is your price negotiable at all?",4,4
-1296,0,"Oh, I'm sorry I forgot that I changed my mind at the last second and listed it at $125. They are 319 originally.",0,4
+1295,0,"Oh, I must have read the ad wrong I thought you were asking $125?  So is your price negotiable at all?",4,7
+1296,0,"Oh, I'm sorry I forgot that I changed my mind at the last second and listed it at $125. They are 319 originally.",0,3
 1297,0,"Oh ok, would you come down to $75? I have cash and could come get it tonight.",6,6
 1298,0,I can't go that low. I would come down to $135 if you pick it up tonight but no Mat.,6,6
 1299,0,That is more than your ad says...I could do $100 and  I don't need the mat.,6,3
 1300,0,"Sorry, that was supposed to be $105.00. I'll go $100.00. See you tonight then.",0,0
-1301,0,"Hi, I saw these lights for sale?",0,5
+1301,0,"Hi, I saw these lights for sale?",0,0
 1302,0,Yes may I answer any questions you have?,0,0
 1303,0,What condition are they in?,5,5
 1304,0,These are used but in very good condition.,0,0
 1305,0,How long are they?,5,5
 1306,0,They are long but not wide. They rest comfortably on the back of a standard workbench comfortably. They take up the whole length of the bench.,0,0
 1307,0,"Okay well, I could use a pair of these for setting different plastics, I would like to pay $54",4,4
-1308,0,As these are in good shape I would be willing to let them go for $80.,2,2
+1308,0,As these are in good shape I would be willing to let them go for $80.,2,4
 1309,0,"If you'll come down to $75, I'll pick them up tonight.",6,6
 1310,0,I would do that.,0,0
 1311,0,"Okay sounds great, I'll be by your house tonight :)",0,0
@@ -1347,7 +1347,7 @@
 1345,0,hello how we doing today,0,0
 1346,0,Hi there.,0,0
 1347,0,I'm okay and you?,0,0
-1348,0,"I really need this LG cable because I can't find them anymore,",7,7
+1348,0,"I really need this LG cable because I can't find them anymore,",7,0
 1349,0,Well then I can solve your issue.  They're all original.,0,0
 1350,0,"good to know, so how about 10 dollars and let's get this settled right now,",3,4
 1351,0,I've listed these for 15 but I can negotiate. How about 13?,4,4
@@ -1363,33 +1363,33 @@
 1361,0,"Ok, I will offer you 4600 for it.",4,4
 1362,0,"Uh, no.  Book on it is $8300.  I'm already below that.  I'd be willing to consider an offer that is more reasonable, but $4600 is over three-thousand below my asking price.",2,3
 1363,0,Well to be honest I found the same care with less miles for cheaper.  If oyu are willing to throw in a warranty and deliver it for me I will offer more.,6,6
-1364,0,"OK, I can offer a 1 year warranty and will bring it to you, but I need you to make an offer.",6,0
+1364,0,"OK, I can offer a 1 year warranty and will bring it to you, but I need you to make an offer.",6,6
 1365,0,Best I can go is 6900,3,3
-1366,0,Make it an even $7000 and you have a deal.,3,4
-1367,0,I've got a gently used iPad 2 for sale. 32gb and I'll throw in a leather case for you,6,6
+1366,0,Make it an even $7000 and you have a deal.,3,3
+1367,0,I've got a gently used iPad 2 for sale. 32gb and I'll throw in a leather case for you,6,0
 1368,0,I'd like to offer you $122 for the ipad,4,4
-1369,0,I can't go that low. It's barely used. I'll do $175.,2,3
-1370,0,"when you say gently used, what exactly do you mean?",1,0
+1369,0,I can't go that low. It's barely used. I'll do $175.,2,2
+1370,0,"when you say gently used, what exactly do you mean?",1,1
 1371,0,It's less than 8 months old. No noticeable wear on it. Used for about 5 hours a week.,0,0
 1372,0,I feel like $175 is way too high though.,4,4
-1373,0,A brand new iPad 2 would cost you $400,2,4
+1373,0,A brand new iPad 2 would cost you $400,2,2
 1374,0,Are you looking to buy an iPad 2?,0,0
 1375,0,yes definitely,0,0
-1376,0,I've got one... barely used. I can sell it to you for $175. A brand new one would cost you $400.,0,2
-1377,0,yes but I can find a used one for 150 or less.. would you be willing to do 140,2,2
+1376,0,I've got one... barely used. I can sell it to you for $175. A brand new one would cost you $400.,0,6
+1377,0,yes but I can find a used one for 150 or less.. would you be willing to do 140,2,7
 1378,0,No. The lowest I can go is $170.,3,3
 1379,0,how about 160,4,4
-1380,0,Meet me at $165 and you've got a deal. A GREAT deal.,3,3
+1380,0,Meet me at $165 and you've got a deal. A GREAT deal.,3,4
 1381,0,okay,0,0
 1382,0,Hi there,0,0
 1383,0,hello how you doing,0,0
-1384,0,"Good, are you contacting me about the circuit breakers?",0,1
+1384,0,"Good, are you contacting me about the circuit breakers?",0,5
 1385,0,yeah how much are you asking for it,0,0
 1386,0,110,0,4
 1387,0,that seems expensive,4,0
 1388,0,"Well if you read over the ad, they are brand new.  They are older but quality",2,0
-1389,0,i do know they are brand new but i think i can find the same for around 90 on other sites,2,2
-1390,0,ok well if you want to do 90 I am ok with going down to there,0,4
+1389,0,i do know they are brand new but i think i can find the same for around 90 on other sites,2,0
+1390,0,ok well if you want to do 90 I am ok with going down to there,0,0
 1391,0,ok sounds good to me,0,0
 1392,0,Hi I am interested in the rental.,0,0
 1393,0,Hey there. The rental is still available. Any questions?,0,0
@@ -1399,22 +1399,22 @@
 1397,0,The pet deposit is $700.,0,0
 1398,0,oh wow! even for a cat?That is a lot!,4,0
 1399,0,"It's the cover any possible damages. If the place is kept in good condition (no pet stains, scratches, etc) then you get the deposit back.",0,0
-1400,0,fair enough. do you think you could come down some in rent then?,4,6
-1401,0,"I can only negotiate a little bit because that is a fair market price, do you have an offer?",0,4
+1400,0,fair enough. do you think you could come down some in rent then?,4,5
+1401,0,"I can only negotiate a little bit because that is a fair market price, do you have an offer?",0,0
 1402,0,1100?,4,4
 1403,0,Whoa that is way too low. It's avery at towncentre and you wont find that price in this neighborhood. This is a great community.,2,2
-1404,0,"I understand that , I am a single parent trying to do the best I can. 1300?",7,7
+1404,0,"I understand that , I am a single parent trying to do the best I can. 1300?",7,4
 1405,0,Okay I can help you a little bit because of your situation. How about 1900?,4,4
-1406,0,it is listed for 1860.. 1900 is above listing!,2,2
+1406,0,it is listed for 1860.. 1900 is above listing!,2,0
 1407,0,Does this have a lot of miles on it?,5,5
 1408,0,"I only use to get to work and back, so it doesn't have many miles on it at all.  It only has about 20,000 miles on it.",0,0
-1409,0,That's great. And is anything wrong with the interior?,1,1
+1409,0,That's great. And is anything wrong with the interior?,1,5
 1410,0,The interior is in great shape.  I keep the seats covered and recently bought new covers that I will throw in if you choose to take the Nissan.,6,0
 1411,0,That would be awesome. Would you be willing to come down a little on the price?,4,4
 1412,0,I'm willing to negotiate.  How far down are you thinking?,0,4
 1413,0,I would love if you could come down to 7500,4,4
 1414,0,"I bet you would, but that's much lower than I am willing to go considering what a great car this is.  What about $9500?",4,4
-1415,0,What if I buy it today and we make a deal at 9000?,6,6
+1415,0,What if I buy it today and we make a deal at 9000?,6,0
 1416,0,You've got yourself a deal...a great deal!  $9000 it is!,0,0
 1417,0,Hi! Is the Impala still available?,0,0
 1418,0,Hello!  Yes it is.,0,0
@@ -1424,12 +1424,12 @@
 1422,0,"No, it has not.",0,0
 1423,0,Are there any problems with the car that you know of?,1,1
 1424,0,No it has been very well cared for and all maintenance has been done regularly.,0,0
-1425,0,"I hate to sound nit picky, but did your parents smoke in the car or have pets in the car?",5,1
+1425,0,"I hate to sound nit picky, but did your parents smoke in the car or have pets in the car?",5,5
 1426,0,"I totally understand, no smoking and no pets.",0,0
-1427,0,"Cool. I would love to purchase the car from you, but $4900 is a little much for me. I really only have $3400 to spend. Are you willing to come down on the price?",7,7
+1427,0,"Cool. I would love to purchase the car from you, but $4900 is a little much for me. I really only have $3400 to spend. Are you willing to come down on the price?",7,4
 1428,0,I understand your situation but unfortunately I can only come down to $4500.,3,4
 1429,0,"Oh no! I would be able to do maybe $3800, but that't my limit, I'm afraid. I can come pick it up wherever! I'll even bring you some cupcakes!\",6,6
-1430,0,I'm sorry but of the great condition the car is in my absolute lowest is $4300.,3,2
+1430,0,I'm sorry but of the great condition the car is in my absolute lowest is $4300.,3,3
 1431,0,"Damn. If you change your mind, let me know!",0,0
 1432,0,Hello,0,0
 1433,0,I'm somewhat interested in your product. Can you give me some more information on it?,5,5
@@ -1442,47 +1442,47 @@
 1440,0,That is low for a brand new IPhone 7. I can't go that low. I can accept $500.00.,2,2
 1441,0,"That sounds fair, I can do $500.00 as long as we meet before and test out the phone.",6,6
 1442,0,2250 how bout dah ?,0,4
-1443,0,Hi!  Is there a deposit required on the unit?,5,1
+1443,0,Hi!  Is there a deposit required on the unit?,5,5
 1444,0,yea but i cant drop the price,3,0
 1445,0,What is the deposit?,5,5
 1446,0,if you move in now no deposit,0,0
 1447,0,"So no deposit, and I get a month free?",5,5
-1448,0,2250 without a dep thats right,0,0
+1448,0,2250 without a dep thats right,0,4
 1449,0,What about utilities?,5,5
 1450,0,not available,0,0
-1451,0,2250 for a place where utilities aren't available?  That sounds ridiculous.,1,2
+1451,0,2250 for a place where utilities aren't available?  That sounds ridiculous.,1,4
 1452,0,"i mean sorry not included, you have to pay on your own pocket but i will throw in over the air antenna for free",6,6
-1453,0,How about 1700?  No utilities is a big factor.,2,4
+1453,0,How about 1700?  No utilities is a big factor.,2,6
 1454,0,i can do 1925 thats my lowest i can go since i just remodeled,3,3
-1455,0,"All right, $1925 with no deposit and one month free then, correct?",6,0
+1455,0,"All right, $1925 with no deposit and one month free then, correct?",6,6
 1456,0,Hi,0,0
 1457,0,Hi,0,0
 1458,0,You interested in the bike?,0,0
-1459,0,Yeah I would like to purchase it but hoped we could talk about the price,4,0
+1459,0,Yeah I would like to purchase it but hoped we could talk about the price,4,4
 1460,0,What price works for you?,0,0
 1461,0,I would like to pay around 950 but willing to go higher if some perks are thrown in.,4,6
-1462,0,"950 is a bit low, considering all the features on the bike. I can deliver it to you, if that changes your mind on the price at all",6,2
+1462,0,"950 is a bit low, considering all the features on the bike. I can deliver it to you, if that changes your mind on the price at all",6,6
 1463,0,"Well delivery would be nice, what price would you be willing to accept with delivery included?",0,6
-1464,0,1200 works for me,4,3
+1464,0,1200 works for me,4,4
 1465,0,How about 1150 and you got a deal,3,4
 1466,0,Hello,0,0
 1467,0,Hi! I see you've found my apartment in Richmond!,0,0
 1468,0,Yes. Is it in a nice area?,5,5
 1469,0,Absolutely! It is within walking distance to Bart,0,0
-1470,0,Are you willing to negotiate on the price a bit? It is a bit too high for me.,7,7
-1471,0,Absolutely. I will listen to any price within reason,0,0
+1470,0,Are you willing to negotiate on the price a bit? It is a bit too high for me.,7,4
+1471,0,Absolutely. I will listen to any price within reason,0,4
 1472,0,I would like to pay 1100 for it. Is that okay?,4,4
 1473,0,"Ouch, thats a little too low. With this apartment, your also getting a designated parking space of your own (a great value), new kitchen appliances, and a fullsized bathroom. I can go to $1425",2,2
 1474,0,1400 and you have yourself a deal.,3,3
 1475,0,I can accept that!,0,0
 1476,0,Is the theatre system still available?,0,0
 1477,0,Yes. and It's for pick up only,6,0
-1478,0,"Fair enough, I can come and pick them up. No problem. Just a question or two. Do they work?",1,0
+1478,0,"Fair enough, I can come and pick them up. No problem. Just a question or two. Do they work?",1,5
 1479,0,Is the theatre system still available?,0,0
 1480,0,Yes they are brand new,0,0
-1481,0,"I see they are still in the box. Since I have agreed to come and pick them up, would you accept $70 for them?",6,6
+1481,0,"I see they are still in the box. Since I have agreed to come and pick them up, would you accept $70 for them?",6,0
 1482,0,Yes $70 is good since you have to travel to pick them up.,0,0
-1483,0,"Fair enough, I can come and pick them up. No problem. Just a question or two. Do they work?",0,0
+1483,0,"Fair enough, I can come and pick them up. No problem. Just a question or two. Do they work?",0,6
 1484,0,"Thank you, I can pick them up today.",0,0
 1485,0,Ok see you then,0,0
 1486,0,Hi. You were interested in the Scion?,0,0
@@ -1490,7 +1490,7 @@
 1488,0,You can come by and see for yourself. The car's features are listed in the ad.,0,0
 1489,0,I actually cannot see the mileage,1,5
 1490,0,I can send you some pictures later of the dashboard including the mileage.,0,0
-1491,0,OK I can offer 23100,4,4
+1491,0,OK I can offer 23100,4,0
 1492,0,It's much too low for the features I'm offering on this car. Phantasy Kolors completely disassembled this car and professionally painted this car.,2,2
 1493,0,"Interesting, ok I can come up to 27,000",4,4
 1494,0,"This car is extremely custom, it's a one of a kind. I can't go below $30,000. I'll give you the warranty papers on all the work that was put in on it.",6,2
@@ -1499,26 +1499,26 @@
 1497,0,OK,0,0
 1498,0,hi,0,0
 1499,0,Hey get this great car today before it is gone!,0,0
-1500,0,"it looks good, is it in good condition?",1,1
+1500,0,"it looks good, is it in good condition?",1,5
 1501,0,It is in great condition. It has 53K miles on it.,0,0
-1502,0,"I can offer you 15,000 in cash today if you are interested.",6,6
-1503,0,You have that all in cash?,0,5
+1502,0,"I can offer you 15,000 in cash today if you are interested.",6,4
+1503,0,You have that all in cash?,0,6
 1504,0,"yes, I own a string of self-serve car washes. I assume small bills are okay?",0,0
 1505,0,That is fine. I will gladly take your offer then!,0,0
 1506,0,"so 15,000?",0,4
 1507,0,Works for me,0,0
 1508,0,hi,0,0
-1509,0,"Are willing to negotiate with the price quite a bit? I don't want to waste your time if you're stuck on the list price, but I would love to look into your home. It looks lovely.",4,4
-1510,0,"I am a littleflexible, perahps you wanto knwo more about the property?",0,1
+1509,0,"Are willing to negotiate with the price quite a bit? I don't want to waste your time if you're stuck on the list price, but I would love to look into your home. It looks lovely.",4,0
+1510,0,"I am a littleflexible, perahps you wanto knwo more about the property?",0,0
 1511,0,"Yes, how many square feet?",5,5
 1512,0,3000 so pretty large,0,0
-1513,0,"I have a pretty strict budget, so I'd have to negotiate, but I'm interested in finding out more about your home.",7,4
+1513,0,"I have a pretty strict budget, so I'd have to negotiate, but I'm interested in finding out more about your home.",7,7
 1514,0,Yes I already said we coudl work on the price,0,0
-1515,0,"Sorry, do you know how close it is to grocery shopping?",5,1
+1515,0,"Sorry, do you know how close it is to grocery shopping?",5,5
 1516,0,"no problem it is about a 4 minute drive to 3 different grcoery stores, walmart market, publix, and whole foods .. Alsi is a further 5 min drive down the road",0,0
-1517,0,Thanks! I'll tell you what. I will offer you $1736 right now.,4,0
+1517,0,Thanks! I'll tell you what. I will offer you $1736 right now.,4,4
 1518,0,"well I can work with you on lowering the $2480, but 1736 si far too low.",4,4
-1519,0,Are there any other amenities or perks you can offer?,5,0
+1519,0,Are there any other amenities or perks you can offer?,5,6
 1520,0,well I can offer it furnished if you can 2300.,6,6
 1521,0,"Being furnished sounds nice, but that's still too high. How about $2000?",4,4
 1522,0,"no sorry, thisis one of the nicest homes in the area at an already great price of 2480, which is low for the area.",2,2
@@ -1528,11 +1528,11 @@
 1526,0,"Yes, I am.",0,0
 1527,0,"I have a beautiful one bedroom apartment in Richmond, CA for only $1595",0,0
 1528,0,That's great. I would like to rent it for $797.,4,4
-1529,0,"Half the price? I'm sorry but I cannot accept that...You have a parking space, a fall bathroom and kitchen",2,6
-1530,0,I can move in right away if I get it for 797.,6,6
+1529,0,"Half the price? I'm sorry but I cannot accept that...You have a parking space, a fall bathroom and kitchen",2,2
+1530,0,I can move in right away if I get it for 797.,6,4
 1531,0,"I can't go lower than $1400, not with the perfect location",2,3
 1532,0,I can sign a 3 year lease.,6,0
-1533,0,I'll lock in the price for you (rent typically increases over time) at $1400,3,0
+1533,0,I'll lock in the price for you (rent typically increases over time) at $1400,3,6
 1534,0,Can you lock it in at 1200?,4,6
 1535,0,Deal!,0,0
 1536,0,I have some great phones that work and only have broken glasses.,0,0
@@ -1542,7 +1542,7 @@
 1540,0,"No. This is a great deal. six phones, plus you give me a t-mobile phone and $50. I can even drive them over if you don't live more than 10 miles from Tracy.",6,0
 1541,0,"Well since they have broken glass and I would need to get that repaired and you are not sure how old they are, would you be willing to do $35 and I will pick them up?",2,6
 1542,0,How about $38 and you pick them up?,4,6
-1543,0,Well I would be coming more then 10 miles to get them so is there any way you could do the $35 considering all this plus it is going to be a cost to get these fixed as well.,2,2
+1543,0,Well I would be coming more then 10 miles to get them so is there any way you could do the $35 considering all this plus it is going to be a cost to get these fixed as well.,2,6
 1544,0,"OK. You pick them up, bring the phone for trade, and I'll give you $35.",0,6
 1545,0,You got yourself a deal.,0,0
 1546,0,"Hi, is it leather interior?",5,5
@@ -1557,18 +1557,18 @@
 1555,0,Yes there is a fender.  I can see what you are talking about those are chrome air vents on the bottom that is exactally how it is suppose to look,0,0
 1556,0,Moon roof?,5,5
 1557,0,It sure does.  This car has every single available option that Toyota offers.,0,0
-1558,0,"Ok, I like the car, but I can't afford the 21,900. I was hoping you could let it go for $15329.",7,4
+1558,0,"Ok, I like the car, but I can't afford the 21,900. I was hoping you could let it go for $15329.",7,7
 1559,0,"Sorry I can't do that I still owe 20,000 on the car that is the absolute lowest that i can go.",7,3
-1560,0,I was hoping we could negotiate.,0,4
+1560,0,I was hoping we could negotiate.,0,0
 1561,0,"I can come down almost 2000 from what i was asking but there is no way that i could go down as low as you are thinking.  Are you able to get close to 20,000",4,4
 1562,0,"I may be able to do $17,000",4,4
-1563,0,"Well I am actually financing something bigger and can take a small hit I guess if I have to.  I could let you have it for 19,000.  Once you drive this car you will not regret it.  It is an amazing car I really wish I didn't need to sell it.",2,6
-1564,0,"Hello, this is my faithful and trusted Dodge Ram for the low price of $13000. I am relocating to another country so I am selling everything and I need every penny I can get.",0,7
+1563,0,"Well I am actually financing something bigger and can take a small hit I guess if I have to.  I could let you have it for 19,000.  Once you drive this car you will not regret it.  It is an amazing car I really wish I didn't need to sell it.",2,2
+1564,0,"Hello, this is my faithful and trusted Dodge Ram for the low price of $13000. I am relocating to another country so I am selling everything and I need every penny I can get.",0,0
 1565,0,How many miles does it have?,5,5
 1566,0,"The  mileage is 100,000",0,0
 1567,0,Does it need any repairs?,1,1
 1568,0,No it does not. I just had work done on it and everything runs smoothly. I am and have been the sole owner of the truck. I have had no accidents and it is very sturdy and reliable. If I was not relocating to another country I would not sell it.,0,0
-1569,0,Are you smoker? I'm allergic to cigarette smoke.,1,1
+1569,0,Are you smoker? I'm allergic to cigarette smoke.,1,0
 1570,0,"You don't have to worry, I have never smoked a day in my life. The interior is perfect.",0,0
 1571,0,Great. Would you accept $7000 for it?,4,4
 1572,0,"That is really low. Please remember that I am relocating, I have a ton of expenses. This is a Dodge and it is in tip top condition. Give me $12000",2,2
@@ -1589,14 +1589,14 @@
 1587,0,"Hey, how's it going?  This is an awesome bike which I've put a lot of work into and I'm a BIKE EXPERT",0,0
 1588,0,Oh great I am interested...,0,0
 1589,0,"The list price is $100 and I actually think that's reallllly fair.  A bargain, even !",0,0
-1590,0,I am 5'7'' is this an appropriate size bike for me?,5,5
+1590,0,I am 5'7'' is this an appropriate size bike for me?,5,1
 1591,0,"Yes!  I would estimate this bike is perfect for anyone 5'2"" to 6'11""",0,0
 1592,0,great. i am little nervous that you repaired it yourself. Is there any guarentee for it?,1,1
 1593,0,"Sure, we can set up a contract guaranteeing it works perfectly for 30 days, otherwise I will return your money to you",0,0
 1594,0,Any wiggle room in the price I was hoping to pay closer to $50.,4,4
-1595,0,"Yikes, that's way lower than what I'm shooting for.  I can go down to $90, but that's really it.",3,4
+1595,0,"Yikes, that's way lower than what I'm shooting for.  I can go down to $90, but that's really it.",3,3
 1596,0,"could you do 80 , If I pick it up?",6,6
-1597,0,"Uh, you're going to pick it up regardless, I can't really lug it around in my Smart Car.  And no, I really don't want to move below $90, sorry.",3,6
+1597,0,"Uh, you're going to pick it up regardless, I can't really lug it around in my Smart Car.  And no, I really don't want to move below $90, sorry.",3,3
 1598,0,fine I guess 90 and a moneyback offer works,0,0
 1599,0,Do you still have the phone for sale?,0,0
 1600,0,Hi yes I do. Its the last one left,0,0
@@ -1615,29 +1615,29 @@
 1613,0,I was thinking around $1900.,4,4
 1614,0,That is too far from our asking price.  However we are willing to come down to 2500,2,4
 1615,0,Could you waive the deposit if I pay 2500?,6,6
-1616,0,Yeah that would work for us if you are willing to give up the cleaning services,6,0
+1616,0,Yeah that would work for us if you are willing to give up the cleaning services,6,6
 1617,0,Yes. deal,0,0
 1618,0,okay great,0,0
 1619,0,"Hello, do you still have the SD card",0,0
 1620,0,"I do, are you interested in it?",0,0
-1621,0,Yes I am whats your bottom dollar on it?,5,0
+1621,0,Yes I am whats your bottom dollar on it?,5,5
 1622,0,At the store they're selling for 100 so not much lower.,2,0
 1623,0,I don't have a lot to spend here and I need one really bad.,7,7
 1624,0,$65?,4,4
 1625,0,I was thinking more like $25,4,4
-1626,0,For 200Gb? I can't go that low. Do you have anything you could trade?,2,6
-1627,0,I can do $37 a Nintendo Game Cube that's in great shape.,6,2
+1626,0,For 200Gb? I can't go that low. Do you have anything you could trade?,2,4
+1627,0,I can do $37 a Nintendo Game Cube that's in great shape.,6,0
 1628,0,"Well, I don't really do those games but my nephew might like that. Okay, 37 is fine",0,0
 1629,0,Thanks for everything!!,0,0
 1630,0,Hello what's the mileage on your truck?,5,5
 1631,0,80k mostly highway miles.,0,0
 1632,0,what's the miles per gallon like on highway?,5,5
 1633,0,Around 18-24.,0,0
-1634,0,"okay, that's not bad for a truck. You're asking 11500?",5,1
+1634,0,"okay, that's not bad for a truck. You're asking 11500?",5,5
 1635,0,"Yes, which I think is more than fair considering the mileage and condition.",0,0
-1636,0,The mileage is great. The price seems high because of how old it is but I guess you just didn't drive it a lot. Are you the original owner?,2,1
+1636,0,The mileage is great. The price seems high because of how old it is but I guess you just didn't drive it a lot. Are you the original owner?,2,7
 1637,0,"Yes, no accidents. Toyotas hold their values and run forever.",0,0
-1638,0,"They do, I had a camry, but it was notorious for not starting if it sat too long without being cranked. Did you keep this truck in a garage while you weren't using it?",5,1
+1638,0,"They do, I had a camry, but it was notorious for not starting if it sat too long without being cranked. Did you keep this truck in a garage while you weren't using it?",5,2
 1639,0,The truck was garage kept. I am willing to sell it for 11k cash.,0,0
 1640,0,"That still seems like a lot for a vehicle that's over a decade old. I'll have to do a tune up on it, new spark plugs, hoses, etc.",2,2
 1641,0,10.5k is the lowest I'll go. I just listed and others have expressed interest.,3,3
@@ -1645,7 +1645,7 @@
 1643,0,Hello,0,0
 1644,0,"Hello, I am interested in purchasing the bike",0,0
 1645,0,Is there anything you want to know about it?,0,0
-1646,0,"Yes, are all the parts original?",1,1
+1646,0,"Yes, are all the parts original?",1,5
 1647,0,"A lot of the parts have been replaced.  It has new shifters, new brakes, new rims, and handlebar grips as of 2 or 3 years ago, but I haven",0,0
 1648,0,I was looking for something more original. Would you be willing to take $100 if I pick it up today,2,6
 1649,0,"well as I was saying before I fatfingered the keyboard, I know it's used but I haven't used it much since I replaced the parts.  The rear brake cable is currently missing but everything else is complete.  There's a little rust too but nothing major.  I was looking for $220, but possibly would take $190",2,2
@@ -1658,7 +1658,7 @@
 1656,0,Is it black or charcoal?,5,5
 1657,0,It is black and has very little scratches on it. It's a great bike!,0,0
 1658,0,That was my next question. thanks. I can offer you $560 and I can pick it up soon,6,6
-1659,0,650 is the lowest I can go. It has a lot of after market parts and I can throw in the extra set of tires.,6,2
+1659,0,650 is the lowest I can go. It has a lot of after market parts and I can throw in the extra set of tires.,6,6
 1660,0,Would you be able to drop it off?,6,6
 1661,0,"Sure, I could do that for you.",0,0
 1662,0,deal,0,0
@@ -1669,47 +1669,47 @@
 1667,0,"Oh that's great, I was going to ask about a carfax report to see if the vehicle has been in any accidents, i can pay for this myself. Would you be able to provide the VIN?",1,1
 1668,0,Yes i could provide the vin and print out a carfax report for you to see if you choose to come check out the vehicle.,0,0
 1669,0,"yes I would love to come check it out but before I do, would you be willing to lower the price a bit since the car is 20 years old?",2,2
-1670,0,It is an older car but I've treated it like my baby. I'm asking $3000 but I would be willing to negotiate.,2,2
-1671,0,"i understand, I was thinking of a price around $2,100? Is that doable? And I can come right now to check it out, look at the car fax and maybe even raise my price a little, accordingly.",6,6
+1670,0,It is an older car but I've treated it like my baby. I'm asking $3000 but I would be willing to negotiate.,2,0
+1671,0,"i understand, I was thinking of a price around $2,100? Is that doable? And I can come right now to check it out, look at the car fax and maybe even raise my price a little, accordingly.",6,4
 1672,0,If you come check the car out and are happy with everything you see I'd be willing to let it go for $2300.,6,6
 1673,0,okay lets do that then!,0,0
 1674,0,Deal thank you.,0,0
-1675,0,You have to negotiate or they will reject it,0,0
+1675,0,You have to negotiate or they will reject it,0,4
 1676,0,im interestedi n your car could you tell me more about it,5,5
 1677,0,"Sure it has 32K miles on it all highway, no scratches. Perfect running condition.",0,0
-1678,0,You have to negotiate or it will reject it,0,1
-1679,0,How about scratches or dents?,1,1
-1680,0,No scratches or dents. Seats are not ripped at all. No spots or tears.,0,0
+1678,0,You have to negotiate or it will reject it,0,4
+1679,0,How about scratches or dents?,1,0
+1680,0,No scratches or dents. Seats are not ripped at all. No spots or tears.,0,2
 1681,0,"Sure it has 32K miles on it all highway, no scratches. Perfect running condition.",0,0
 1682,0,any mechanical problems?,1,1
 1683,0,No scratches or dents. Seats are not ripped at all. No spots or tears.,0,0
-1684,0,None I just had it to the mechanic for a check up. New tires but other than that everything is perfect in it.,0,0
+1684,0,None I just had it to the mechanic for a check up. New tires but other than that everything is perfect in it.,0,2
 1685,0,ok are you willing to take anything less? I really need a car but can't afford much,7,7
-1686,0,We can negotiate. What are you willing to spend?,0,0
+1686,0,We can negotiate. What are you willing to spend?,0,4
 1687,0,None I just had it to the mechanic for a check up. New tires but other than that everything is perfect in it.,0,2
-1688,0,I can't afford much since I just started working,7,7
-1689,0,I can understand that. What did you have in mind?,0,0
-1690,0,I could do about $5500 cash todya,7,4
+1688,0,I can't afford much since I just started working,7,0
+1689,0,I can understand that. What did you have in mind?,0,5
+1690,0,I could do about $5500 cash todya,7,0
 1691,0,"Oh my, that's way too low. I could maybe come down to $11500.",4,4
-1692,0,We can negotiate. What are you willing to spend?,0,0
+1692,0,We can negotiate. What are you willing to spend?,0,4
 1693,0,I have 6300 right now and could possibly do 6500 but I need to pick up the car today so i can get to work tomorrow,6,6
-1694,0,I can understand that. What did you have in mind?,0,0
-1695,0,Still too low. For a 2015? 32K miles? Way too low.,2,4
-1696,0,Im sorry that is the most I can afford right now...,7,7
+1694,0,I can understand that. What did you have in mind?,0,5
+1695,0,Still too low. For a 2015? 32K miles? Way too low.,2,0
+1696,0,Im sorry that is the most I can afford right now...,7,3
 1697,0,"Oh my, that's way too low. I could maybe come down to $11500.",0,4
 1698,0,Well I am sorry too.,0,0
-1699,0,Hi..  How are u?,0,0
+1699,0,Hi..  How are u?,0,5
 1700,0,"Hello, I'm well. Is this bed still available?",0,0
 1701,0,"I am great..  And yes, it is..  Do u have any questions?",0,0
-1702,0,Yes. What didn't your wife like about the bed?,1,5
+1702,0,Yes. What didn't your wife like about the bed?,1,0
 1703,0,There wasn't really one specific thing.  She just enjoys the bed we have now.  It is in excellent condition and comes from a smoke and pet free home.,0,0
 1704,0,How many times was the bed used?,5,5
 1705,0,"We basically took ours off and put this on, but she decided after a nights sleep on it, that she preferred ours better.",0,0
 1706,0,Is it the latest model?,5,5
 1707,0,"Yes..  Cost well over $2,000..",0,0
-1708,0,Why are you selling it for only $500 then?,1,1
+1708,0,Why are you selling it for only $500 then?,1,4
 1709,0,"I just want it out of here.  I figured if I asked more than that, that it wouldn't sell quickly.  I don't have the space to continue to store it and I will deliver for free..",0,6
-1710,0,Okay that makes sense. I will take it off your hands for $500,0,0
+1710,0,Okay that makes sense. I will take it off your hands for $500,0,4
 1711,0,Awesome.. Thx.  You will love it!,0,0
 1712,0,Hello how are you doing?,0,0
 1713,0,Hello there I am interested in this studio building.,0,0
@@ -1720,17 +1720,17 @@
 1718,0,"Yes there is, what is your budget looking like?",0,0
 1719,0,"$1,012.00",4,4
 1720,0,Oh that's very low I may not be able to help you out..,2,4
-1721,0,We can work something out. Can you atleast give me some options?,4,0
+1721,0,We can work something out. Can you atleast give me some options?,4,4
 1722,0,"Yes for sure, if you are able to pay at least 1725 then I can remove your first month of rent?",6,6
 1723,0,would you consider 1500?,4,4
 1724,0,Yes that will work,0,0
-1725,0,Great. And no dogs right?,5,5
+1725,0,Great. And no dogs right?,5,0
 1726,0,"Right no dogs and also I will not be able to give you that no rent on first month for that price, is that okay with you?",6,0
 1727,0,Well that works fine for me as long as you can waive the deposit for me for the first month please?,0,0
 1728,0,would you like this item,0,0
 1729,0,Hi! I am interested in your night stand. Is it still available?,0,0
 1730,0,yes it's still aviable,0,0
-1731,0,Great! is it in a good condition?,1,1
+1731,0,Great! is it in a good condition?,1,5
 1732,0,yes it's in great condition,0,0
 1733,0,What color is it? is it white or beige?,5,5
 1734,0,It's brown and white,0,0
@@ -1747,7 +1747,7 @@
 1745,0,Yeah but the price is way way high for me. Do you think there is any room for negotiating ?,7,7
 1746,0,"Yeah, if you could come pick it up. How does $1000 sound?",6,6
 1747,0,Its high for me. Would you be willing to go towards $550?,7,4
-1748,0,Ouch. You pick up for $750?,6,4
+1748,0,Ouch. You pick up for $750?,6,6
 1749,0,Okay that still sounds fair on your part so I will take it. Thanks so much!,0,0
 1750,0,Awesome. See you soon!,0,0
 1751,0,See ya!,0,0
@@ -1758,29 +1758,29 @@
 1756,0,I was thinking around $1900.,0,4
 1757,0,That is too far from our asking price. However we are willing to come down to 2500,0,4
 1758,0,Could you waive the deposit if I pay 2500?,0,6
-1759,0,Yeah that would work for us if you are willing to give up the cleaning services,0,0
+1759,0,Yeah that would work for us if you are willing to give up the cleaning services,0,6
 1760,0,Yes. deal,0,0
 1761,0,okay great,0,0
 1762,0,"Hello, do you still have the SD card",0,0
 1763,0,"I do, are you interested in it?",0,0
-1764,0,Yes I am whats your bottom dollar on it?,0,0
+1764,0,Yes I am whats your bottom dollar on it?,0,5
 1765,0,At the store they're selling for 100 so not much lower.,0,0
 1766,0,I don't have a lot to spend here and I need one really bad.,0,7
 1767,0,$65?,0,4
 1768,0,I was thinking more like $25,0,4
-1769,0,For 200Gb? I can't go that low. Do you have anything you could trade?,0,6
-1770,0,I can do $37 a Nintendo Game Cube that's in great shape.,0,2
+1769,0,For 200Gb? I can't go that low. Do you have anything you could trade?,0,4
+1770,0,I can do $37 a Nintendo Game Cube that's in great shape.,0,0
 1771,0,"Well, I don't really do those games but my nephew might like that. Okay, 37 is fine",0,0
 1772,0,Thanks for everything!!,0,0
 1773,0,Hello what's the mileage on your truck?,0,5
 1774,0,80k mostly highway miles.,0,0
 1775,0,what's the miles per gallon like on highway?,0,5
 1776,0,Around 18-24.,0,0
-1777,0,"okay, that's not bad for a truck. You're asking 11500?",0,1
+1777,0,"okay, that's not bad for a truck. You're asking 11500?",0,5
 1778,0,"Yes, which I think is more than fair considering the mileage and condition.",0,0
-1779,0,The mileage is great. The price seems high because of how old it is but I guess you just didn't drive it a lot. Are you the original owner?,0,1
+1779,0,The mileage is great. The price seems high because of how old it is but I guess you just didn't drive it a lot. Are you the original owner?,0,7
 1780,0,"Yes, no accidents. Toyotas hold their values and run forever.",0,0
-1781,0,"They do, I had a camry, but it was notorious for not starting if it sat too long without being cranked. Did you keep this truck in a garage while you weren't using it?",0,1
+1781,0,"They do, I had a camry, but it was notorious for not starting if it sat too long without being cranked. Did you keep this truck in a garage while you weren't using it?",0,2
 1782,0,The truck was garage kept. I am willing to sell it for 11k cash.,0,0
 1783,0,"That still seems like a lot for a vehicle that's over a decade old. I'll have to do a tune up on it, new spark plugs, hoses, etc.",0,2
 1784,0,10.5k is the lowest I'll go. I just listed and others have expressed interest.,0,3
@@ -1788,7 +1788,7 @@
 1786,0,Hello,0,0
 1787,0,"Hello, I am interested in purchasing the bike",0,0
 1788,0,Is there anything you want to know about it?,0,0
-1789,0,"Yes, are all the parts original?",0,1
+1789,0,"Yes, are all the parts original?",0,5
 1790,0,"A lot of the parts have been replaced. It has new shifters, new brakes, new rims, and handlebar grips as of 2 or 3 years ago, but I haven",0,0
 1791,0,I was looking for something more original. Would you be willing to take $100 if I pick it up today,0,6
 1792,0,"well as I was saying before I fatfingered the keyboard, I know it's used but I haven't used it much since I replaced the parts. The rear brake cable is currently missing but everything else is complete. There's a little rust too but nothing major. I was looking for $220, but possibly would take $190",0,2
@@ -1801,7 +1801,7 @@
 1799,0,Is it black or charcoal?,0,5
 1800,0,It is black and has very little scratches on it. It's a great bike!,0,0
 1801,0,That was my next question. thanks. I can offer you $560 and I can pick it up soon,0,6
-1802,0,650 is the lowest I can go. It has a lot of after market parts and I can throw in the extra set of tires.,0,2
+1802,0,650 is the lowest I can go. It has a lot of after market parts and I can throw in the extra set of tires.,0,6
 1803,0,Would you be able to drop it off?,0,6
 1804,0,"Sure, I could do that for you.",0,0
 1805,0,deal,0,0
@@ -1812,47 +1812,47 @@
 1810,0,"Oh that's great, I was going to ask about a carfax report to see if the vehicle has been in any accidents, i can pay for this myself. Would you be able to provide the VIN?",0,1
 1811,0,Yes i could provide the vin and print out a carfax report for you to see if you choose to come check out the vehicle.,0,0
 1812,0,"yes I would love to come check it out but before I do, would you be willing to lower the price a bit since the car is 20 years old?",0,2
-1813,0,It is an older car but I've treated it like my baby. I'm asking $3000 but I would be willing to negotiate.,0,2
-1814,0,"i understand, I was thinking of a price around $2,100? Is that doable? And I can come right now to check it out, look at the car fax and maybe even raise my price a little, accordingly.",0,6
+1813,0,It is an older car but I've treated it like my baby. I'm asking $3000 but I would be willing to negotiate.,0,0
+1814,0,"i understand, I was thinking of a price around $2,100? Is that doable? And I can come right now to check it out, look at the car fax and maybe even raise my price a little, accordingly.",0,4
 1815,0,If you come check the car out and are happy with everything you see I'd be willing to let it go for $2300.,0,6
 1816,0,okay lets do that then!,0,0
 1817,0,Deal thank you.,0,0
-1818,0,You have to negotiate or they will reject it,0,0
+1818,0,You have to negotiate or they will reject it,0,4
 1819,0,im interestedi n your car could you tell me more about it,0,5
 1820,0,"Sure it has 32K miles on it all highway, no scratches. Perfect running condition.",0,0
-1821,0,You have to negotiate or it will reject it,0,1
-1822,0,How about scratches or dents?,0,1
-1823,0,No scratches or dents. Seats are not ripped at all. No spots or tears.,0,0
+1821,0,You have to negotiate or it will reject it,0,4
+1822,0,How about scratches or dents?,0,0
+1823,0,No scratches or dents. Seats are not ripped at all. No spots or tears.,0,2
 1824,0,"Sure it has 32K miles on it all highway, no scratches. Perfect running condition.",0,0
 1825,0,any mechanical problems?,0,1
 1826,0,No scratches or dents. Seats are not ripped at all. No spots or tears.,0,0
-1827,0,None I just had it to the mechanic for a check up. New tires but other than that everything is perfect in it.,0,0
+1827,0,None I just had it to the mechanic for a check up. New tires but other than that everything is perfect in it.,0,2
 1828,0,ok are you willing to take anything less? I really need a car but can't afford much,0,7
-1829,0,We can negotiate. What are you willing to spend?,0,0
+1829,0,We can negotiate. What are you willing to spend?,0,4
 1830,0,None I just had it to the mechanic for a check up. New tires but other than that everything is perfect in it.,0,2
-1831,0,I can't afford much since I just started working,0,7
-1832,0,I can understand that. What did you have in mind?,0,0
-1833,0,I could do about $5500 cash todya,0,4
+1831,0,I can't afford much since I just started working,0,0
+1832,0,I can understand that. What did you have in mind?,0,5
+1833,0,I could do about $5500 cash todya,0,0
 1834,0,"Oh my, that's way too low. I could maybe come down to $11500.",0,4
-1835,0,We can negotiate. What are you willing to spend?,0,0
+1835,0,We can negotiate. What are you willing to spend?,0,4
 1836,0,I have 6300 right now and could possibly do 6500 but I need to pick up the car today so i can get to work tomorrow,0,6
-1837,0,I can understand that. What did you have in mind?,0,0
-1838,0,Still too low. For a 2015? 32K miles? Way too low.,0,4
-1839,0,Im sorry that is the most I can afford right now...,0,7
+1837,0,I can understand that. What did you have in mind?,0,5
+1838,0,Still too low. For a 2015? 32K miles? Way too low.,0,0
+1839,0,Im sorry that is the most I can afford right now...,0,3
 1840,0,"Oh my, that's way too low. I could maybe come down to $11500.",0,4
 1841,0,Well I am sorry too.,0,0
-1842,0,Hi.. How are u?,0,0
+1842,0,Hi.. How are u?,0,5
 1843,0,"Hello, I'm well. Is this bed still available?",0,0
 1844,0,"I am great.. And yes, it is.. Do u have any questions?",0,0
-1845,0,Yes. What didn't your wife like about the bed?,0,5
+1845,0,Yes. What didn't your wife like about the bed?,0,0
 1846,0,There wasn't really one specific thing. She just enjoys the bed we have now. It is in excellent condition and comes from a smoke and pet free home.,0,0
 1847,0,How many times was the bed used?,0,5
 1848,0,"We basically took ours off and put this on, but she decided after a nights sleep on it, that she preferred ours better.",0,0
 1849,0,Is it the latest model?,0,5
 1850,0,"Yes.. Cost well over $2,000..",0,0
-1851,0,Why are you selling it for only $500 then?,0,1
+1851,0,Why are you selling it for only $500 then?,0,4
 1852,0,"I just want it out of here. I figured if I asked more than that, that it wouldn't sell quickly. I don't have the space to continue to store it and I will deliver for free..",0,6
-1853,0,Okay that makes sense. I will take it off your hands for $500,0,0
+1853,0,Okay that makes sense. I will take it off your hands for $500,0,4
 1854,0,Awesome.. Thx. You will love it!,0,0
 1855,0,Hello how are you doing?,0,0
 1856,0,Hello there I am interested in this studio building.,0,0
@@ -1863,17 +1863,17 @@
 1861,0,"Yes there is, what is your budget looking like?",0,0
 1862,0,"$1,012.00",0,4
 1863,0,Oh that's very low I may not be able to help you out..,0,4
-1864,0,We can work something out. Can you atleast give me some options?,0,0
+1864,0,We can work something out. Can you atleast give me some options?,0,4
 1865,0,"Yes for sure, if you are able to pay at least 1725 then I can remove your first month of rent?",0,6
 1866,0,would you consider 1500?,0,4
 1867,0,Yes that will work,0,0
-1868,0,Great. And no dogs right?,0,5
+1868,0,Great. And no dogs right?,0,0
 1869,0,"Right no dogs and also I will not be able to give you that no rent on first month for that price, is that okay with you?",0,0
 1870,0,Well that works fine for me as long as you can waive the deposit for me for the first month please?,0,0
 1871,0,would you like this item,0,0
 1872,0,Hi! I am interested in your night stand. Is it still available?,0,0
 1873,0,yes it's still aviable,0,0
-1874,0,Great! is it in a good condition?,0,1
+1874,0,Great! is it in a good condition?,0,5
 1875,0,yes it's in great condition,0,0
 1876,0,What color is it? is it white or beige?,0,5
 1877,0,It's brown and white,0,0
@@ -1890,7 +1890,7 @@
 1888,0,Yeah but the price is way way high for me. Do you think there is any room for negotiating ?,0,7
 1889,0,"Yeah, if you could come pick it up. How does $1000 sound?",0,6
 1890,0,Its high for me. Would you be willing to go towards $550?,0,4
-1891,0,Ouch. You pick up for $750?,0,4
+1891,0,Ouch. You pick up for $750?,0,6
 1892,0,Okay that still sounds fair on your part so I will take it. Thanks so much!,0,0
 1893,0,Awesome. See you soon!,0,0
 1894,0,See ya!,0,0
